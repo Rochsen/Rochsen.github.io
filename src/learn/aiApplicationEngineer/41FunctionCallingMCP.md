@@ -1,8 +1,8 @@
 ---
-title: Dify本地化部署和应用
+title: Function Calling与MCP
 date: 2026-07-04
 categories: [教程, 知乎]
-tags: [AI, Agent, 低代码]
+tags: [AI, mcp]
 ---
 
 <!-- more -->

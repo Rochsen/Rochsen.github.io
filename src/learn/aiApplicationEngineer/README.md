@@ -75,6 +75,8 @@ star: true
 - [第三十八节：Agent的能力优化与效果评估](./38agentOptimize.md)
 - [第三十九节：项目实战：OpenManus开发实战](./39openManusProject.md)
 
+
+<!-- 
 ## 第九部分: 模型预训练
 
 - [第四十一节：预训练+微调的训练凡是 开原生态OpenAI的差异详解](./41pretrainBase.md)
@@ -109,7 +111,7 @@ star: true
 - [第六十二节：人力资源部门核心demo实战-1——数字人培训视频](./62hrdemo-1.md)
 - [第六十三节：人力资源部门核心demo实战-2——AI培训对练](./63hrdemo-2.md)
 - [第六十四节：电商行业核心demo实战1——电商评论区互动助手](./64ecomDemo-1.md)
-- [第六十五节：泛娱乐内容行业核心demo实战1——AI生成视频工作流](./65entertainmentDemo-1.md)
+- [第六十五节：泛娱乐内容行业核心demo实战1——AI生成视频工作流](./65entertainmentDemo-1.md) -->
 
 ## 就业培训系列
 
