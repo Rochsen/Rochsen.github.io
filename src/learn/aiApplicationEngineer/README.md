@@ -17,11 +17,11 @@ star: true
 
 ## 第一部分: 现在的AI是什么
 
-- [第一节：公开课](./1techOfBigModel.md)
-- [第二节：从提示词工程到RAG：构建大模型的知识和交互基础](./2promptEngToRag.md)
-- [第三节：Agent：从可控性到自主反省](./3agentfromControl2selfthink.md)
-- [第四节：多模态AI](./4multimodalAI.md)
-- [第五节：AI概念通俗解释大全](./5aiNameProduce.md)
+- [第一节：AI 大模型应用公开课](./1techOfBigModel.md)
+- [第二节：构建大模型的知识与交互基础](./2promptEngToRag.md)
+- [第三节：Agent：从可控性到自主反思](./3agentfromControl2selfthink.md)
+- [第四节：多模态AI入门指南](./4multimodalAI.md)
+- [第五节：AI 概念通俗解释大全](./5aiNameProduce.md)
 
 
 ## 第二部分: langchain 开发基础
@@ -43,7 +43,7 @@ star: true
 - [第十五节：视觉与多模态模型](./15cvandMultiModal.md)
 - [第十六节：项目实战：AI质检](./16aiChecK.md)
 
-## 第五部分: AI部署
+## 第五部分: AI部署以及低代码平台使用
 
 - [第十八节：企业级AI部署：从硬件选型到框架选择](./18aiDeployCompany.md)
 - [第十九节：AI服务核心：高并发原理与性能监控调优](./19aiServiceCore.md)
@@ -53,28 +53,45 @@ star: true
 
 ## 第六部分: AI应用
 
-- [第二十三节：Agent调试、运维与系统集成](./23aiAgentRetry.md)
-- [第二十四节：智能编码革命：AI辅助编程](./24aihelpCoding.md)
-- [第二十五节：AI赋能的智能测试与质量保障](./25aiTestAndProtect.md)
-- [第二十六节：从Text-to-SQL到数据智能](./26test2Sql.md)
-- [第二十七节：项目实战：ChatBI开发实战](./27chatBI.md)
+- [第二十三节：Agent调试、运维与系统集成](./23agentDebug.md)
+- [第二十四节：智能编码革命：AI辅助编程](./24aiAssistCoding.md)
+- [第二十五节：AI赋能的智能测试与质量保障](./25aiforIntelTest.md)
+- [第二十六节：从Text-to-SQL到数据智能](./26text2SQL-DataIntel.md)
+- [第二十七节：项目实战：ChatBI开发实战](./27ChatBI.md)
 
 ## 第七部分: 模型优化
 
-- [第二十九节：Embeddings和向量数据库](./29embeddingsAndVectorDB.md)
-- [第三十节：RAG技术与应用](./30ragTechAndApp.md)
-- [第三十一节：RAG多模态数据处理](./31ragMultiModal.md)
-- [第三十二节：RAG调优](./32ragOpt.md)
-- [第三十三节：项目实战：企业知识库（企业RAG大赛冠军项目）](./33ragKnowledgeProject.md)
+- [第二十九节：Embeddings和向量数据库](./29Embeddings.md)
+- [第三十节：RAG技术与应用](./30RAGTechApply.md)
+- [第三十一节：RAG多模态数据处理](./31RAGmutilProcess.md)
+- [第三十二节：RAG调优](./32RAGenhance.md)
+- [第三十三节：项目实战：企业知识库](./33KnowledgeDataBase.md)
+- [第三十四节：部分场景中可以取代RAG的技术](./34partofReplaceRAG.md)
 
-## 第八部分: 模型的协调能力
+## 第八部分: AI Coding与工程实践
 
-- [第三十五节：Function Calling 与 MCP](./35functionCallingMCP.md)
-- [第三十六节：Agent的自主规划与工具开发](./36Coord.md)
-- [第三十七节：构建Agent的数据决策能力](./37knowledgeGraphQA.md)
-- [第三十八节：Agent的能力优化与效果评估](./38agentOptimize.md)
-- [第三十九节：项目实战：OpenManus开发实战](./39openManusProject.md)
+- [第三十五节：LLM Wiki](./35LLMWiki.md)
+- [第三十七节：大厂优秀工程师使用AI Coding的最新方法与经验](./37aiCodingExp.md)
+- [第三十八节：大型软件项目的AI开发与AI重构](./38aiCodingForBigProj.md)
+- [第三十九节：AI Coding中的团队重新分工与新协作模式](./39aiTeamMode.md)
+- [第四十节：在华为昇腾显卡上部署Deepseek-V4模型并连通本地Claude Code](./40dsv4inHuawei.md)
+- [第四十五节：Harness Engineering](./45HarnessEngineering.md)
+- [第四十六节：搭建Hermes Agent中的长期记忆和自进化能力](./46HermesAgentAbility.md)
+- [第四十七节：实现Hermes中的多Agent协作、主Agent调度](./47HermesAgentRuler.md)
 
+## 第九部分: Agent与MCP
+
+- [第四十一节：Function Calling与MCP](./41FunctionCallingMCP.md)
+- [第四十二节：Agent的自主规划与工具开发](./42AgentRuler.md)
+- [第四十三节：Agent的能力优化与效果评估](./43AgentEnchance.md)
+- [第四十四节：OpenManus开发实战](./44OpenManusProj.md)
+
+## 就业培训系列
+
+- [第十一节：开发框架相关简历+面试问题辅导](./11jobForFrame.md)
+- [第二十八节：部署及提效相关简历+面试问题辅导](./28jobForBuild.md)
+- [第三十六节：RAG相关简历+面试问题辅导](./36jobForRAG.md)
+- [第四十八节：Agent相关简历+面试问题辅导](./48jobForAgent.md)
 
 <!-- 
 ## 第九部分: 模型预训练
@@ -112,9 +129,3 @@ star: true
 - [第六十三节：人力资源部门核心demo实战-2——AI培训对练](./63hrdemo-2.md)
 - [第六十四节：电商行业核心demo实战1——电商评论区互动助手](./64ecomDemo-1.md)
 - [第六十五节：泛娱乐内容行业核心demo实战1——AI生成视频工作流](./65entertainmentDemo-1.md) -->
-
-## 就业培训系列
-
-- [第十一节：开发框架相关简历+面试问题辅导](./11aiJobInterview.md)
-- [第三十四节：RAG相关简历+面试问题辅导](./34ragJobInterview.md)
-- [第四十节：Agent相关简历+面试问题辅导](./40agentJobInterview.md)

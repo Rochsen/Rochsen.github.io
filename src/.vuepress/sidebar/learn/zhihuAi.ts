@@ -57,7 +57,7 @@ export const zhihuAi = arraySidebar([
     children: [
       "37aiCodingExp",
       "38aiCodingForBigProj",
-      "39aiTeamMode-DataIntel",
+      "39aiTeamMode",
       "40dsv4inHuawei",
       "41FunctionCallingMCP"
     ],
@@ -67,7 +67,7 @@ export const zhihuAi = arraySidebar([
     children: [
       "42AgentRuler",
       "43AgentEnchance",
-      "44OpenManusProj-DataIntel",
+      "44OpenManusProj",
       "45HarnessEngineering",
       "46HermesAgentAbility",
       "47HermesAgentRuler"
