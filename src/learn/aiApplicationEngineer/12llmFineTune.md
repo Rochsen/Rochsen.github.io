@@ -1,6 +1,6 @@
 ---
 title: LLM微调原理
-date: 2026-03-21
+date: 2026-04-19
 categories: [教程, 知乎]
 tags: [AI, LLM]
 ---
