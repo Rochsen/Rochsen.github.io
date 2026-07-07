@@ -11,6 +11,8 @@ export default defineUserConfig({
 
   theme,
 
+  port: 9080,
+
   // 和 PWA 一起启用
   // shouldPrefetch: false,
 });
