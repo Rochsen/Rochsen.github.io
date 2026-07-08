@@ -11,6 +11,8 @@ export default defineUserConfig({
 
   theme,
 
+  host: '127.0.0.1',
+
   port: 9080,
 
   // 和 PWA 一起启用
