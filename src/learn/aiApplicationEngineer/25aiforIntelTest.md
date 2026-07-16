@@ -1,6 +1,6 @@
 ---
 title: AI赋能的智能测试与质量保障
-date: 2026-07-04
+date: 2026-07-12
 categories: [教程, 知乎]
 tags: [AI, 开发规范]
 ---
