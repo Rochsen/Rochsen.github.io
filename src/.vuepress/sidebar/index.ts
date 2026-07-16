@@ -1,5 +1,5 @@
 import { sidebar } from "vuepress-theme-hope";
-import { gamesSideBarConfig } from "./strategy/games.js";
+import { gamesSideBarConfig } from "./strategy/index.js";
 import { learnSideBar, deploy, zhihuAi } from "./learn/index.js";
 
 export const sideBarConfig = sidebar({
@@ -9,6 +9,7 @@ export const sideBarConfig = sidebar({
 
   // "/about/": "structure",
   "/strategy/": [
+    "",
     {
       text: "游戏",
       icon: "gamepad",

@@ -1,5 +1,5 @@
 ---
-title: 笔记
+title: 学习
 index: false
 icon: pen
 # category:
@@ -13,7 +13,4 @@ article: false
 
 <!-- more -->
 
-## 学习
-
-- [部署](./deploy/README.md)
-- [大模型应用开发](./aiApplicationEngineer/README.md)
+记录学习（更新ing）

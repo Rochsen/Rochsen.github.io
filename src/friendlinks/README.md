@@ -83,11 +83,11 @@ link: https://blog.anheyu.com/
 background: rgba(253, 230, 138, 0.15)
 ```
 
-
+<!-- 
 ```component VPCard
 title: 可利姆船长
 desc: 我在做一些有意思的应用
 logo: https://kecream.cn/favicon.svg
 link: https://kecream.cn/
 background: rgba(253, 230, 138, 0.15)
-```
+``` -->

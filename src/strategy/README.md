@@ -11,8 +11,4 @@ article: false
 
 <!-- more -->
 
-## 游戏
-
-- [印象游戏库](./games/gameStorage.md)
-
-
+记录爱好（更新ing）
