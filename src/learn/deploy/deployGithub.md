@@ -2,10 +2,10 @@
 title: 将静态博客部署到Github
 date: 2026-01-21
 order: 2
-category: 指南
+category: 部署
 tag:
-    - 使用指南
-    - 部署
+    - 指南
+    - 博客
 breadcrumb: true
 sticky: true
 star: true
