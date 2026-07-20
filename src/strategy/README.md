@@ -1,7 +1,7 @@
 ---
-title: 爱好
-icon: pen-to-square
+title: 其他
 index: false
+icon: pen-to-square
 breadcrumb: false
 article: false
 # pageInfo: false
@@ -11,4 +11,4 @@ article: false
 
 <!-- more -->
 
-记录爱好（更新ing）
+空闲中ing

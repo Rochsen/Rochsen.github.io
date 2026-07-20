@@ -2,10 +2,10 @@
 title: 学习
 index: false
 icon: pen
-# category:
-#   - 使用指南
 breadcrumb: false
 article: false
+# category:
+#   - 使用指南
 # pageInfo: false
 # toc: true
 # comment: false

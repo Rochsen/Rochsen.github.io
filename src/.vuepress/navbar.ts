@@ -13,9 +13,12 @@ export default navbar([
   "/friendlinks/",
   // 笔记
   "/learn/",
-  // 爱好
+  // 游戏
+  "/games/",
+  // 其他
   "/strategy/",
 
+  // 示例
   // {
   //   text: "攻略",
   //   // icon: "pen-to-square",
