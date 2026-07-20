@@ -3,21 +3,21 @@ import { navbar } from "vuepress-theme-hope";
 export default navbar([
   // 主页
   "/",
+  // 笔记
+  "/learns/",
+  // 游戏
+  "/games/",
+  // 歌单
+  "/songs/",
+  // 导航
+  "/navigation/",
   // 关于
   {
     text: "关于",
     link: "/about/",
     icon: "at",
   },
-  // 友链
-  "/friendlinks/",
-  // 笔记
-  "/learn/",
-  // 游戏
-  "/games/",
-  // 其他
-  "/strategy/",
-
+  
   // 示例
   // {
   //   text: "攻略",

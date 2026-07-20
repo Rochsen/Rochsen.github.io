@@ -1,7 +1,7 @@
 ---
-title: 其他
+title: 歌单
 index: false
-icon: pen-to-square
+icon: music
 breadcrumb: false
 article: false
 # pageInfo: false
@@ -11,4 +11,4 @@ article: false
 
 <!-- more -->
 
-空闲中ing
+收集中ing

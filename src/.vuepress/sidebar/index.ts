@@ -3,10 +3,14 @@ import { gamesSideBarConfig } from "./games/index.js";
 import { learnSideBar, deploy, zhihuAi } from "./learn/index.js";
 
 export const sideBarConfig = sidebar({
-  "/learn/": learnSideBar,
-  "/learn/deploy/": deploy,
-  "/learn/aiApplicationEngineer": zhihuAi,
+  "/learns/": learnSideBar,
+  "/learns/deploy/": deploy,
+  "/learns/aiApplicationEngineer": zhihuAi,
   "/games/": gamesSideBarConfig,
+
+
+
+
 
   // 示例：左侧折叠
   // "/strategy/": [
@@ -19,7 +23,6 @@ export const sideBarConfig = sidebar({
   //     collapsible: true,
   //   },
   // ],
-
   // 官方示例
   // "/about/": "structure",
   //   "/": [

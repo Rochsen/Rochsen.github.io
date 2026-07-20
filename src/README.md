@@ -5,9 +5,9 @@ icon: house
 title: 主页
 # bgImage: /20250527-2.jpg
 # bgImage: light-bgimage-1.png
-# bgImage: https://file.mo7.cc/api/public/bz
+bgImage: https://file.mo7.cc/api/public/bz
 # bgImageDark: /dark-bgimage-1.png
-bgImage: /light-bgimage-2.png
+# bgImage: /light-bgimage-2.png
 bgImageDark: /dark-bgimage-2.jpg
 # heroImage: /wechat-avatar.png
 # heroImageDark: /avatar.png

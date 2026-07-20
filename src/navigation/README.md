@@ -1,5 +1,5 @@
 ---
-title: 收藏
+title: 导航
 index: false
 icon: link
 breadcrumb: false
