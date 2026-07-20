@@ -8,6 +8,9 @@ article: false
 
 <!-- more -->
 
+> [!tip]
+> Steam年度游戏记录
+
 ## 2022年
 <a href="https://s.team/y22/gjmcfmhr?l=schinese" target="_blank">点击此处查看详情</a>
 
