@@ -22,6 +22,22 @@
       </div>
     </div>
 
+    <!-- 人格类型 -->
+    <div class="personality-type-block">
+      <!-- 人格类型说明 -->
+      <div class="personality-type-block-content">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 10px">
+          <span class="personality-type-name" style="color: gray; font-size: 25px;">人格类型</span>
+          <span class="personality-type-code" style="font-size: 45px; font-weight: bold; color: #f0b100">ISTP-A</span>
+          <span class="personality-type-name" style="font-size: 30px; color: #f0b100">鉴赏家</span>
+        </div>
+      </div>
+      <!-- 人格图片 -->
+      <a class="personality-link" href="https://www.16personalities.com/ch/istp-%E4%BA%BA%E6%A0%BC" target="_blank">
+        <img class="istp-img-style" src="/about/ISTP-A.svg" loading="lazy" />
+      </a>
+    </div>
+
     <!-- 个人职业生涯纪录 -->
     <div class="career-block">
       <div class="career-content">
@@ -60,22 +76,6 @@
           </div>
         </a-space>
       </div>
-    </div>
-
-    <!-- 人格类型 -->
-    <div class="personality-type-block">
-      <!-- 人格类型说明 -->
-      <div class="personality-type-block-content">
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 10px">
-          <span class="personality-type-name" style="color: gray; font-size: 25px;">人格类型</span>
-          <span class="personality-type-code" style="font-size: 45px; font-weight: bold; color: #f0b100">ISTP-A</span>
-          <span class="personality-type-name" style="font-size: 30px; color: #f0b100">鉴赏家</span>
-        </div>
-      </div>
-      <!-- 人格图片 -->
-      <a class="personality-link" href="https://www.16personalities.com/ch/istp-%E4%BA%BA%E6%A0%BC" target="_blank">
-        <img class="istp-img-style" src="/about/ISTP-A.svg" loading="lazy" />
-      </a>
     </div>
 
     <!-- 联系 -->
