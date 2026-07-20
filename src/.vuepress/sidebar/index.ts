@@ -1,6 +1,7 @@
 import { sidebar } from "vuepress-theme-hope";
 import { gamesSideBarConfig } from "./games/index.js";
 import { learnSideBar, deploy, zhihuAi } from "./learn/index.js";
+// import { JieZhou } from "./songs/JieZhou.js";
 
 export const sideBarConfig = sidebar({
   "/learns/": learnSideBar,
@@ -8,8 +9,7 @@ export const sideBarConfig = sidebar({
   "/learns/aiApplicationEngineer": zhihuAi,
   "/games/": gamesSideBarConfig,
 
-
-
+  "/songs/": "structure",
 
 
   // 示例：左侧折叠
