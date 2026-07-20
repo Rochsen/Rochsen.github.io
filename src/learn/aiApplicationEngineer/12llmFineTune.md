@@ -321,7 +321,7 @@ $$x_u = (Y_u Y_u^T + \lambda I)^{-1} Y_u R_u$$
 ### 5.4 RMSE评估指标
 
 **MSE（均方误差）**：
-$$MSE = \frac{1}{n} \sum (预测值 - 真实值)^2$$
+$$MSE = \frac{1}{n} \sum (\text{预测值} - \text{真实值})^2$$
 
 **RMSE（均方根误差）**：
 $$RMSE = \sqrt{MSE}$$
