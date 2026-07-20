@@ -63,7 +63,7 @@
           <img src="/about/zhkulogo.png" width="120" height="120" loading="lazy" />
           <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
             <div class="background-item-time">2018.09 ~ 2022.06</div>
-            <div class="background-item-title">仲恺农业工程学院 (本科)</div>
+            <div class="background-item-title">仲恺农业工程大学</div>
             <div class="background-item-desc">种子科学与工程</div>
           </div>
         </a-space>
@@ -71,7 +71,7 @@
           <img src="/about/gszx.png" width="120" height="120" loading="lazy" />
           <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
             <div class="background-item-time">2015.09 ~ 2018.06</div>
-            <div class="background-item-title">中山市桂山中学 (高中)</div>
+            <div class="background-item-title">中山市桂山中学</div>
             <div class="background-item-desc">理科 - 物化生</div>
           </div>
         </a-space>
