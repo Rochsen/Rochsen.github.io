@@ -4,7 +4,7 @@ icon: scissors
 breadcrumb: false
 date: 2026-07-23
 article: false
-star: true
+star: false
 category: 
     - 课程
 tag:
