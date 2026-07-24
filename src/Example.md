@@ -3,7 +3,7 @@ title: title
 breadcrumb: false
 date: 2026-03-17
 article: false
-# article: true
+# star: true
 category: 
     - 分类
 tag:
