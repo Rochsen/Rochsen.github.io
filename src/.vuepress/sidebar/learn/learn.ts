@@ -6,5 +6,5 @@ export const learnSideBar = arraySidebar([
   // "",
   "deploy/",                        // 部署笔记
   "aiApplicationEngineer/",         // AI应用工程师笔记
-  "yingdao/"                        // 影刀学习笔记
+  // "yingdao/"                        // 影刀学习笔记
 ]);

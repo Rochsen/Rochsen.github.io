@@ -1,15 +1,13 @@
 import { sidebar } from "vuepress-theme-hope";
 import { gamesSideBarConfig } from "./games/index.js";
-import { learnSideBar, deploy, zhihuAi, yingDao } from "./learn/index.js";
+import { learnSideBar, deploy, zhihuAi } from "./learn/index.js";
 
-// import { JieZhou } from "./songs/JieZhou.js";
 
 export const sideBarConfig = sidebar({
   // 学习 - 侧边栏
   "/learns/": learnSideBar,
   "/learns/deploy/": deploy,
   "/learns/aiApplicationEngineer": zhihuAi,
-  "/learns/yingdao/": yingDao,
 
   // 游戏 - 侧边栏
   "/games/": gamesSideBarConfig,
