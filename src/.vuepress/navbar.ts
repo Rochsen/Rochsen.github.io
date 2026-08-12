@@ -7,8 +7,12 @@ export default navbar([
   "/learns/",
   // 游戏
   "/games/",
-  // 歌单
-  "/songs/",
+  // 音乐
+  {
+    text: "音乐",
+    link: "/songs/",
+    icon: "music",
+  },
   // 导航
   "/navigation/",
   // 关于
