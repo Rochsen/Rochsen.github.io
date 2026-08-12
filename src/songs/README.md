@@ -1,20 +1,22 @@
 ---
-title: 歌单
+# title: 音乐馆
 index: false
-icon: music
+# icon: music
+navbar: true
+# sidebar: false
 breadcrumb: false
-article: false
-# pageInfo: false
+pageInfo: false
+contributors: false
+editLink: false
+lastUpdated: false
+prev: false
+next: false
+comment: false
+footer: false
+backtotop: true
 toc: false
-
-# comment: false
+article: false
 ---
 
 <!-- more -->
 
-- [周杰伦](./JieZhou.md)
-- [陈奕迅](./ChenYiXun.md)
-- [林俊杰](./LinJunJie.md)
-- [邓紫棋](./DengZiQi.md)
-- [薛之谦](./XueZhiQian.md)
-- [张学友](./ZhangXueYou.md)
