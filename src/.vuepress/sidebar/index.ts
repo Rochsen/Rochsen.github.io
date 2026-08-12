@@ -13,7 +13,7 @@ export const sideBarConfig = sidebar({
   "/games/": gamesSideBarConfig,
 
   // 歌曲 - 侧边栏
-  "/songs/": "structure",
+  // "/songs/": "structure",
 
 
 

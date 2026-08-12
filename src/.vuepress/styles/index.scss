@@ -5,3 +5,8 @@
 .vp-nav-item {
   font-size: 1rem;
 }
+
+// 隐藏「音乐馆」页面标题下的 hr 分隔线
+.music-page .vp-page-title hr {
+  display: none;
+}

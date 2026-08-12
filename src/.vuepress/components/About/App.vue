@@ -33,8 +33,8 @@
         </div>
       </div>
       <!-- 人格图片 -->
-      <a class="personality-link" href="https://www.16personalities.com/ch/istp-%E4%BA%BA%E6%A0%BC" target="_blank">
-        <img class="istp-img-style" src="/about/ISTP-A.svg" loading="lazy" />
+      <a class="personality-link" :href="personality.url" target="_blank">
+        <img class="istp-img-style" :src="personality.img" loading="lazy" />
       </a>
     </div>
 
@@ -44,7 +44,8 @@
         <div class="career-title">个人职业生涯记录</div>
         <div class="career-timeline-container">
           <a-timeline class="custom-timeline">
-            <a-timeline-item v-for="item in career" :key="item.step" :dot="nodeChange(item)" class="career-timeline-item">
+            <a-timeline-item v-for="item in career" :key="item.step" :dot="nodeChange(item)"
+              class="career-timeline-item">
               <div class="career-timeline-content">
                 <div class="career-timeline-title">{{ item.title }}</div>
                 <div class="career-timeline-description">{{ item.description }}</div>
@@ -59,20 +60,12 @@
     <div class="background-block">
       <div class="background-title">教育背景</div>
       <div class="background-content">
-        <a-space class="background-item" size="large">
-          <img src="/about/zhkulogo.png" width="120" height="120" loading="lazy" />
+        <a-space class="background-item" size="large" v-for="item in education">
+          <img :src="item.img" width="120" height="120" loading="lazy" />
           <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            <div class="background-item-time">2018.09 ~ 2022.06</div>
-            <div class="background-item-title">仲恺农业工程大学</div>
-            <div class="background-item-desc">种子科学与工程</div>
-          </div>
-        </a-space>
-        <a-space class="background-item" size="large">
-          <img src="/about/gszx.png" width="120" height="120" loading="lazy" />
-          <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            <div class="background-item-time">2015.09 ~ 2018.06</div>
-            <div class="background-item-title">中山市桂山中学</div>
-            <div class="background-item-desc">理科 - 物化生</div>
+            <div class="background-item-time">{{ item.time }}</div>
+            <div class="background-item-title">{{ item.title }}</div>
+            <div class="background-item-desc">{{ item.desc }}</div>
           </div>
         </a-space>
       </div>
@@ -82,20 +75,11 @@
     <div class="contact-block">
       <div style="font-size: 30px; font-weight: bold; margin: 10px 0; color: black">如何找到我？</div>
       <div class="contact-info">
-        <a-button style="border-radius: 10px; min-width: 150px;" color="default" variant="solid" size="large"
-          @click="clickGithub">
-          <GithubOutlined />
-          github
+        <a-button v-for="item in contactMe" :key="item.title" style="border-radius: 10px; min-width: 150px;"
+          :color="item.buttonColor" variant="solid" size="large" @click="openLink(item.url)">
+          <component :is="item.icon" />
+          {{ item.title }}
         </a-button>
-        <a-button style="border-radius: 10px; min-width: 150px;" color="pink" variant="solid" size="large"
-          @click="clickBilibili">
-          <BilibiliOutlined />
-          Bilibili
-        </a-button>
-        <!-- <a-button style="border-radius: 10px; min-width: 150px;" color="orange" variant="solid" size="large">
-          <MailOutlined />
-          email
-        </a-button> -->
       </div>
     </div>
   </a-space>
@@ -103,16 +87,14 @@
 
 <script setup lang="ts">
 import "./index.scss"
-import { skills, career } from "./data";
-import {
-  GithubOutlined,
-  BilibiliOutlined,
-  MailOutlined,
-} from '@antdv-next/icons'
+import { skills, career, education, personality, contactMe } from "./data.ts";
 
 // 节点图标
 import { h } from "vue";
 import { CheckCircleFilled, LoadingOutlined } from "@antdv-next/icons";
+
+// 前端规范格式
+import { CareerSchema, contactMeSchema } from "./schema.ts";
 
 
 defineOptions({
@@ -120,20 +102,19 @@ defineOptions({
 })
 
 // 节点更换
-const nodeChange = (item) => {
+const nodeChange = (item: CareerSchema) => {
   return item.state === 'completed' ?
     () => h(CheckCircleFilled, { style: { fontSize: '20px', color: '#000' } }) :
     () => h(LoadingOutlined, { style: { fontSize: '25px', color: '#e8e8e8' } })
 }
 
-// 联系我-点击事件-github
-const clickGithub = () => {
-  window.open('https://github.com/Rochsen', '_blank')
-}
-
-// 联系我-点击事件-bilibili
-const clickBilibili = () => {
-  window.open('https://space.bilibili.com/361524948', '_blank')
+// 联系我-点击事件-通用
+const openLink = (url: string) => {
+  if (url.startsWith("mailto:")) {
+    window.location.href = url
+  } else {
+    window.open(url, "_blank")
+  }
 }
 
 </script>

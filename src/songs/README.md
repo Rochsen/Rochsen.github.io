@@ -16,6 +16,7 @@ footer: false
 backtotop: true
 toc: false
 article: false
+containerClass: music-page
 ---
 
 <!-- more -->

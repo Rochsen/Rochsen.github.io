@@ -8,7 +8,8 @@ title: 主页
 bgImage: https://file.mo7.cc/api/public/bz
 # bgImageDark: /dark-bgimage-1.png
 # bgImage: /light-bgimage-2.png
-bgImageDark: /dark-bgimage-2.jpg
+# bgImageDark: /dark-bgimage-2.jpg
+bgImageDark: https://pic1.imgdb.cn/i/0345mMGcrNtOVGbO7qu3Tw.jpg
 # heroImage: /wechat-avatar.png
 # heroImageDark: /avatar.png
 heroText: 欢迎来到 Rochsen 的博客

@@ -16,21 +16,30 @@ import elementPlusSvg from "/skills/element-plus.svg";
 import antdSvg from "/skills/antd.svg";
 import pandasSvg from "/skills/pandas.svg";
 import nodejsSvg from "/skills/Node.js.svg";
+import { GithubOutlined, BilibiliOutlined } from "@antdv-next/icons";
 
-export const skills = [
+import {
+  skillSchema,
+  personalitySchema,
+  contactMeSchema,
+  educationSchema,
+  CareerSchema,
+} from "./schema.ts";
+
+// 人格类型 ISTP
+export const personality: personalitySchema = {
+  name: "ISTP",
+  img: "https://pic1.imgdb.cn/i/0345mMFuVE5qWysT0qr39Z.svg",
+  url: "https://www.16personalities.com/ch/istp-%E4%BA%BA%E6%A0%BC",
+};
+
+// 技能图标
+export const skills: skillSchema[] = [
   { name: "Linux", svg: linuxSvg, url: "https://www.linux.org/" },
   { name: "Git", svg: gitSvg, url: "https://git-scm.com/" },
-  {
-    name: "Python",
-    svg: pySvg,
-    url: "https://www.python.org/",
-  },
+  { name: "Python", svg: pySvg, url: "https://www.python.org/" },
   { name: "pandas", svg: pandasSvg, url: "https://pandas.pydata.org/" },
-  {
-    name: "FastApi",
-    svg: fastapiSvg,
-    url: "https://fastapi.tiangolo.com/",
-  },
+  { name: "FastApi", svg: fastapiSvg, url: "https://fastapi.tiangolo.com/" },
   {
     name: "Sqlite3",
     svg: databaseSvg,
@@ -74,12 +83,16 @@ export const skills = [
     svg: elementPlusSvg,
     url: "https://element-plus.org/",
   },
-  { name: "Antd-next", svg: antdSvg, url: "https://www.antdv-next.com/index-cn" },
+  {
+    name: "Antd-next",
+    svg: antdSvg,
+    url: "https://www.antdv-next.com/index-cn",
+  },
   { name: "Markdown", svg: markdownSvg, url: "https://www.markdownguide.org/" },
 ];
 
 // 职业生涯记录 - 数据
-export const career = [
+export const career: CareerSchema[] = [
   {
     step: 1,
     title: "2021.09.13 - 2022.05.17",
@@ -103,5 +116,37 @@ export const career = [
     title: "To Be Continued...",
     description: "",
     state: "inactive",
+  },
+];
+
+// 教育经历 - 数据
+export const education: educationSchema[] = [
+  {
+    title: "仲恺农业工程大学",
+    time: "2018.09 ~ 2022.06",
+    desc: "种子科学与工程",
+    img: "https://pic1.imgdb.cn/i/0345mMGkkw34P2CXa0etow.png",
+  },
+  {
+    title: "中山市桂山中学",
+    time: "2024.09 - 2026.06",
+    desc: "理科 - 物化生",
+    img: "https://pic1.imgdb.cn/i/0345mMH57yBoa1oLvUUwwG.png",
+  },
+];
+
+// 联系我
+export const contactMe: contactMeSchema[] = [
+  {
+    title: "Github",
+    buttonColor: "default",
+    icon: GithubOutlined,
+    url: "https://github.com/Rochsen",
+  },
+  {
+    title: "Bilibili",
+    buttonColor: "pink",
+    icon: BilibiliOutlined,
+    url: "https://space.bilibili.com/361524948",
   },
 ];
