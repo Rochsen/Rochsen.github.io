@@ -94,7 +94,7 @@ import { h } from "vue";
 import { CheckCircleFilled, LoadingOutlined } from "@antdv-next/icons";
 
 // 前端规范格式
-import { CareerSchema, contactMeSchema } from "./schema.ts";
+import { CareerSchema } from "./schema.ts";
 
 
 defineOptions({

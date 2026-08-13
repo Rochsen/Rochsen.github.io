@@ -10,7 +10,6 @@ lastUpdated: true
 prev: false
 next: false
 comment: false
-footer: ""
 # copyright: 自定义版权信息
 sidebar: false
 toc: false
@@ -93,6 +92,18 @@ link: https://fontawesome.com/
 background: rgba(253, 230, 138, 0.15)
 ```
 
+
+## 页脚
+
+```component VPCard
+title: 一言
+desc: 本博客每日一言句子的来源
+logo: https://hitokoto.cn/favicon.ico
+link: https://hitokoto.cn/
+background: rgba(253, 230, 138, 0.15)
+```
+
+
 <!-- 
 ```component VPCard
 title: 可利姆船长
@@ -101,3 +112,5 @@ logo: https://kecream.cn/favicon.svg
 link: https://kecream.cn/
 background: rgba(253, 230, 138, 0.15)
 ``` -->
+
+

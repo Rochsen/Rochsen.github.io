@@ -28,7 +28,7 @@ export default hopeTheme(
 
     // 页脚
     footer: "默认页脚",
-    displayFooter: false,
+    displayFooter: true,
 
     // 博客相关
     blog: {

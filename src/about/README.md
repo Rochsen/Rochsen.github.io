@@ -16,7 +16,6 @@ lastUpdated: false
 prev: false
 next: false
 comment: false
-footer: false
 backtotop: true
 toc: false
 article: false

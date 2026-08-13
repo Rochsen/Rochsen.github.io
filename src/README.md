@@ -3,11 +3,8 @@ home: true
 layout: Blog
 icon: house
 title: 主页
-# bgImage: /20250527-2.jpg
-# bgImage: light-bgimage-1.png
-bgImage: https://file.mo7.cc/api/public/bz
-# bgImageDark: /dark-bgimage-1.png
-# bgImage: /light-bgimage-2.png
+# bgImage: https://file.mo7.cc/api/public/bz
+bgImage: /light-bgimage-2.png
 # bgImageDark: /dark-bgimage-2.jpg
 bgImageDark: https://pic1.imgdb.cn/i/0345mMGcrNtOVGbO7qu3Tw.jpg
 # heroImage: /wechat-avatar.png
@@ -26,13 +23,12 @@ projects:
     name: leetcode主页
     desc: 刷题记录
     link: https://leetcode.cn/u/luosanmu/
-    
+
   - icon: link
     name: 任务清单
     type: link
     desc: by nocode
     link: https://task-manager-hq.nocode.host
-
 
   # - icon: link
   #   name: VVBP
@@ -54,7 +50,9 @@ projects:
   #   desc: 自定义详细介绍
   #   link: https://你的自定义链接
 
-# footer: 自定义你的页脚文字
+footer: 自定义你的页脚文字(writeFooter)
+# copyright: |
+displayFooter: true
 ---
 
 <!-- 这是一个博客主页的案例。
