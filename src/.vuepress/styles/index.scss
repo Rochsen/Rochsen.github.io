@@ -1,9 +1,53 @@
 // place your custom styles here
-.vp-nav-links {
-  column-gap: 0.5rem;
+// .vp-nav-links {
+//   column-gap: 0.5rem;
+// }
+// .vp-nav-item {
+//   font-size: 1rem;
+// }
+
+// 防止页面切换时滚动条出现/消失导致导航栏（position: fixed，宽=视口宽）伸缩。
+// 强制根元素始终保留垂直滚动条占位，保持视口宽度恒定，导航栏不再左右伸缩。
+:root {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
 }
-.vp-nav-item {
-  font-size: 1rem;
+
+// 导航栏使用完全不透明背景、关闭毛玻璃与投影，
+// 避免页面切换时背后内容变化透过导航栏造成的「字体扰动」
+.vp-navbar {
+  background: var(--vp-c-bg-elv);
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+// 关闭导航高亮下划线的滑动动画，消除切换瞬间的视觉抖动
+.vp-nav-item > .auto-link::before {
+  transition: none;
+}
+
+// antd-next 的全局 `a { color: var(--ant-color-link); transition: color }`
+// 会污染导航链接颜色，显式覆盖并禁用颜色过渡，消除切换时的颜色跳变。
+// 使用 !important 彻底隔离 antd 全量引入带来的全局样式污染。
+.vp-navbar .vp-nav-links .auto-link {
+  color: var(--vp-c-text) !important;
+  transition: none !important;
+}
+
+.vp-navbar .vp-nav-links .auto-link.route-link-active {
+  color: var(--vp-c-accent) !important;
+}
+
+// light 模式下主题生成的 accent 色偏暗（#096dd9 的 lightness 35%，即 rgb(7,86,171)），
+// 深蓝色的视觉明度低于灰色，导致激活项看起来"变小/变细"。
+// 调亮为主题色本身，让激活项与其它链接视觉重量一致。
+[data-theme="light"] .vp-navbar .vp-nav-links .auto-link.route-link-active {
+  color: #096dd9 !important;
+}
+
+// 同时锁定导航链接图标颜色，避免 active 切换时图标颜色抖动
+.vp-navbar .vp-nav-links .auto-link .vp-icon {
+  color: inherit !important;
 }
 
 // 隐藏「音乐馆」页面标题下的 hr 分隔线
