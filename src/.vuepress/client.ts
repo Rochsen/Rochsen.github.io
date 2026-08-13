@@ -9,6 +9,8 @@ import "antdv-next/dist/antd.css";
 let hitokotoText = "";
 
 const writeFooter = (text: string, retries = 10): void => {
+  // 服务端渲染阶段没有 document，直接跳过，避免 SSR 构建报错
+  if (typeof document === "undefined") return;
   const footer = document.querySelector(".vp-footer");
   if (footer) footer.innerHTML = text;
   // 若请求返回早于页脚渲染完成，稍后重试
