@@ -129,7 +129,7 @@ export const education: educationSchema[] = [
   },
   {
     title: "中山市桂山中学",
-    time: "2024.09 - 2026.06",
+    time: "2015.09 - 2018.06",
     desc: "理科 - 物化生",
     img: "https://pic1.imgdb.cn/i/0345mMH57yBoa1oLvUUwwG.png",
   },
