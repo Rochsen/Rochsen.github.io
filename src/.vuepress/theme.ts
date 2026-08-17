@@ -14,10 +14,10 @@ export default hopeTheme(
     },
 
     // 浏览器图标
-    favicon: "/avatar.png",
+    favicon: "/logo.svg",
 
     // 博客首页logo
-    logo: "/avatar.png",
+    logo: "/favicon.ico",
 
     repo: "/Rochsen",
 
@@ -145,7 +145,9 @@ export default hopeTheme(
 
     // 在这里配置主题提供的插件
     plugins: {
-      blog: true,
+      blog: {
+        excerptLength: 0,
+      },
 
       components: {
         components: ["Badge", "VPCard"],
@@ -233,5 +235,5 @@ export default hopeTheme(
     },
   },
   // 主题行为选项（可选）
-  { custom: true },
+  { custom: false },
 );

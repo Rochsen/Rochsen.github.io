@@ -4,14 +4,15 @@ layout: Blog
 icon: house
 title: 主页
 # bgImage: https://file.mo7.cc/api/public/bz
-bgImage: /light-bgimage-2.png
-# bgImageDark: /dark-bgimage-2.jpg
-bgImageDark: https://pic1.imgdb.cn/i/0345mMGcrNtOVGbO7qu3Tw.jpg
+bgImage: /light-bgimage.png
+bgImageDark: /dark-bgimage.jpg
+# bgImageDark: https://pic1.imgdb.cn/i/0345mMGcrNtOVGbO7qu3Tw.jpg
 # heroImage: /wechat-avatar.png
 # heroImageDark: /avatar.png
-heroText: 欢迎来到 Rochsen 的博客
+heroText: 𝑊𝑒𝑙𝑐𝑜𝑚𝑒 𝑡𝑜 𝑅𝑜𝑐ℎ𝑠𝑒𝑛'𝑠 𝐵𝑙𝑜𝑔
 heroFullScreen: true
-tagline: 只有风暴才能击倒大树
+# tagline: 𝓞𝓷𝓵𝔂 𝓐 𝓢𝓽𝓸𝓻𝓶 𝓒𝓪𝓷 𝓕𝓮𝓵𝓵 𝓐 𝓖𝓻𝓮𝓪𝓽𝔀𝓸𝓸𝓭.
+tagline: 𝑂𝑛𝑙𝑦 𝑎 𝑠𝑡𝑜𝑟𝑚 𝑐𝑎𝑛 𝑓𝑒𝑙𝑙 𝑎 𝐺𝑟𝑒𝑎𝑡𝑤𝑜𝑜𝑑
 projects:
   - icon: folder-open
     name: 个人博客
