@@ -21,6 +21,9 @@ export default hopeTheme(
 
     repo: "/Rochsen",
 
+    // 是否在导航栏展示仓库链接
+    repoDisplay: false,
+
     docsDir: "src",
 
     // 导航栏
@@ -146,6 +149,18 @@ export default hopeTheme(
 
       components: {
         components: ["Badge", "VPCard"],
+      },
+
+      docsearch: {
+        appId: "92EXITUA7H",
+        apiKey: "33b44aab931cbbd821d1cf25727c68aa",
+        indexName: "mister-hope",
+      },
+
+      feed: {
+        atom: true,
+        json: true,
+        rss: true,
       },
 
       icon: {

@@ -8,20 +8,23 @@ export default navbar([
   // 游戏
   "/games/",
   // 音乐
-  {
-    text: "音乐",
-    link: "/songs/",
-    icon: "music",
-  },
+  // "/songs/",
   // 导航
   "/navigation/",
   // 关于
-  {
-    text: "关于",
-    link: "/about/",
-    icon: "at",
-  },
-  
+  "/about/",
+
+  // {
+  //   text: "音乐",
+  //   link: "/songs/",
+  //   icon: "music",
+  // },
+  // {
+  //   text: "关于",
+  //   link: "/about/",
+  //   icon: "at",
+  // },
+
   // 示例
   // {
   //   text: "攻略",

@@ -1,7 +1,7 @@
 ---
-title: 自我介绍
+title: 关于
 index: false
-# icon: at
+icon: at
 category:
   - 页面
 tag:
