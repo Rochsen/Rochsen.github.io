@@ -13,6 +13,10 @@ heroText: 𝑊𝑒𝑙𝑐𝑜𝑚𝑒 𝑡𝑜 𝑅𝑜𝑐ℎ𝑠𝑒𝑛'𝑠
 heroFullScreen: true
 # tagline: 𝓞𝓷𝓵𝔂 𝓐 𝓢𝓽𝓸𝓻𝓶 𝓒𝓪𝓷 𝓕𝓮𝓵𝓵 𝓐 𝓖𝓻𝓮𝓪𝓽𝔀𝓸𝓸𝓭.
 tagline: 𝑂𝑛𝑙𝑦 𝑎 𝑠𝑡𝑜𝑟𝑚 𝑐𝑎𝑛 𝑓𝑒𝑙𝑙 𝑎 𝐺𝑟𝑒𝑎𝑡𝑤𝑜𝑜𝑑
+head:
+  - - meta
+    - name: algolia-site-verification
+      content: D61755CAE312F955
 projects:
   - icon: folder-open
     name: 个人博客

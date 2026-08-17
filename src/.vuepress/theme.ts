@@ -49,14 +49,14 @@ export default hopeTheme(
     },
 
     // 加密配置
-    encrypt: {
-      config: {
-        "/demo/encrypt.html": {
-          hint: "Password: 1234",
-          password: "1234",
-        },
-      },
-    },
+    // encrypt: {
+    //   config: {
+    //     "/demo/encrypt.html": {
+    //       hint: "Password: 1234",
+    //       password: "1234",
+    //     },
+    //   },
+    // },
 
     // 多语言配置
     metaLocales: {
@@ -154,9 +154,9 @@ export default hopeTheme(
       },
 
       docsearch: {
-        appId: "92EXITUA7H",
-        apiKey: "33b44aab931cbbd821d1cf25727c68aa",
-        indexName: "mister-hope",
+        appId: "TFYC0LM59H",
+        apiKey: "98079842ea4f4565e37eb23d80fb3adf",
+        indexName: "VVBP",
       },
 
       feed: {
