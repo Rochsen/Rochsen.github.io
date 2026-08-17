@@ -4,7 +4,7 @@
   <title>Rochsen&amp;apos;s Blog</title>
   <subtitle>个人博客</subtitle>
   <icon>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/logo.svg</icon>
-  <updated>2026-08-17T12:39:51.295Z</updated>
+  <updated>2026-08-17T14:46:24.832Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/atom.xml"/>
   <link rel="alternate" href="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/"/>
@@ -19,6 +19,13 @@
   <contributor>
     <name>Ms.Hope</name>
   </contributor>
+  <entry>
+    <title type="text">生物信息学笔记</title>
+    <id>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/</id>
+    <link href="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/"/>
+    <updated>2026-08-17T14:44:51.000Z</updated>
+    <published>2026-08-17T14:44:51.000Z</published>
+  </entry>
   <entry>
     <title type="text">个人游戏统计</title>
     <id>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/games/dataStat.html</id>
@@ -156,7 +163,7 @@ Boss弱点
     <title type="text">整理个人使用的 AI 工具</title>
     <id>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/deploy/deployAItools.html</id>
     <link href="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/deploy/deployAItools.html"/>
-    <updated>2026-07-20T03:43:13.000Z</updated>
+    <updated>2026-08-17T14:44:51.000Z</updated>
     <summary type="text">重要
 随着AI模型和工具越来越多，自己也接触使用了部分AI工具，本文档仅用于记录和整理，无任何商业推广
 
@@ -168,10 +175,11 @@ LLM 工具变量对照表
 LLM API
 Deepseek
 
+提示
 官网：https://www.deepseek.com/
 文档：https://api-docs.deepseek.com/zh-cn/
 
-深度求索公司研发...</summary>
+深度求索公...</summary>
     <content type="html"><![CDATA[<!-- more -->
 <div class="hint-container important">
 <p class="hint-container-title">重要</p>
@@ -1061,33 +1069,40 @@ HuggingFace 是一个专注于人工智能的开源社区和平台，被誉为&a
     <title type="text">Agent：从可控性到自主反思</title>
     <id>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/aiApplicationEngineer/3agentfromControl2selfthink.html</id>
     <link href="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/aiApplicationEngineer/3agentfromControl2selfthink.html"/>
-    <updated>2026-07-20T07:25:03.000Z</updated>
-    <summary type="text">Agent（智能体）知识点整理
-目录
-
-什么是 Agent？
-Workflow Agent（工作流智能体）
-ReAct Agent（推理型智能体）
-Agent 平台
-总结
-
-
-什么是 Agent？
+    <updated>2026-08-17T14:44:38.000Z</updated>
+    <summary type="text">什么是 Agent？
 AI 模型 vs AI Agent
-AI 模型 vs AI Agent 对比AI 模型 vs AI Agent 对比
 简单来说：
 
-AI 模型（LLM）：提...</summary>
+AI 模型（LLM）：提供智能，能回答问题、生成内容
+AI Agent：保证结果，能执行任务、调用工具、完成实际工作
+
+
+📌 核心思想：模型提供智能，Agent 保证结果
+
+为什么需要 Agent？
+LLM（大语言模型）存在以下局限性：
+
+LLM 会有幻觉：可能生成不准确或虚构的...</summary>
     <content type="html"><![CDATA[<!-- more -->
-<h1>Agent（智能体）知识点整理</h1>
-<h2>目录</h2>
+<h2>什么是 Agent？</h2>
+<h3>AI 模型 vs AI Agent</h3>
+<p>简单来说：</p>
+<ul>
+<li><strong>AI 模型（LLM）</strong>：提供智能，能回答问题、生成内容</li>
+<li><strong>AI Agent</strong>：保证结果，能执行任务、调用工具、完成实际工作</li>
+</ul>
+<blockquote>
+<p>📌 <strong>核心思想</strong>：模型提供智能，Agent 保证结果</p>
+</blockquote>
+<h3>为什么需要 Agent？</h3>
+<p>LLM（大语言模型）存在以下局限性：</p>
 <ol>
-<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF-agent">什么是 Agent？</a></li>
-<li><a href="#workflow-agent-%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%99%BA%E8%83%BD%E4%BD%93">Workflow Agent（工作流智能体）</a></li>
-<li><a href="#react-agent-%E6%8E%A8%E7%90%86%E5%9E%8B%E6%99%BA%E8%83%BD%E4%BD%93">ReAct Agent（推理型智能体）</a></li>
-<li><a href="#agent-%E5%B9%B3%E5%8F%B0">Agent 平台</a></li>
-<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+<li><strong>LLM 会有幻觉</strong>：可能生成不准确或虚构的内容</li>
+<li><strong>LLM 只会说，不会做</strong>：只能输出文字，无法执行实际操作</li>
+<li><strong>LLM 规划的步骤不靠谱</strong>：自动生成的执行步骤可能不准确</li>
 </ol>
+<p>有些任务需要极高的准确度和可控性，这时就需要 Agent 来弥补 LLM 的不足。</p>
 ]]></content>
     <author>
       <name>罗浩森</name>
@@ -1179,29 +1194,18 @@ AI 模型（LLM）：提...</summary>
     <title type="text">构建大模型的知识与交互基础</title>
     <id>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/aiApplicationEngineer/2promptEngToRag.html</id>
     <link href="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/aiApplicationEngineer/2promptEngToRag.html"/>
-    <updated>2026-07-20T07:25:03.000Z</updated>
-    <summary type="text">目录
-
-前言：为什么需要学习提示词和RAG？
-提示词（Prompt）基础
-RAG（检索增强生成）详解
-RAG高级技巧：双向奔赴
-实践案例
-总结与要点回顾
-
-
-一、前言：为什么需要学习提示词和RAG？
-在当今人工智能快速发展的时代，大语言模型（Large Language Model，简称LLM）已经成为了许多应用的核心技术。从智能客服到知识问答，从内容...</summary>
+    <updated>2026-08-17T14:44:38.000Z</updated>
+    <summary type="text">一、前言：为什么需要学习提示词和RAG？
+在当今人工智能快速发展的时代，大语言模型（Large Language Model，简称LLM）已经成为了许多应用的核心技术。从智能客服到知识问答，从内容创作到代码生成，LLM正在改变我们与技术交互的方式。然而，要让LLM真正发挥价值，我们需要掌握两个关键技术：提示词工程和RAG技术。
+1.1 课程内容概览
+本...</summary>
     <content type="html"><![CDATA[<!-- more -->
-<h2>目录</h2>
-<ol>
-<li><a href="#%E4%B8%80%E5%89%8D%E8%A8%80%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%AD%A6%E4%B9%A0%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%92%8Crag">前言：为什么需要学习提示词和RAG？</a></li>
-<li><a href="#%E4%BA%8C%E6%8F%90%E7%A4%BA%E8%AF%8Dprompt%E5%9F%BA%E7%A1%80">提示词（Prompt）基础</a></li>
-<li><a href="#%E4%B8%89rag%E6%A3%80%E7%B4%A2%E5%A2%9E%E5%BC%BA%E7%94%9F%E6%88%90%E8%AF%A6%E8%A7%A3">RAG（检索增强生成）详解</a></li>
-<li><a href="#%E5%9B%9Brag%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7%E5%8F%8C%E5%90%91%E5%A5%94%E8%B5%B4">RAG高级技巧：双向奔赴</a></li>
-<li><a href="#%E4%BA%94%E5%AE%9E%E8%B7%B5%E6%A1%88%E4%BE%8B">实践案例</a></li>
-<li><a href="#%E5%85%AD%E6%80%BB%E7%BB%93%E4%B8%8E%E8%A6%81%E7%82%B9%E5%9B%9E%E9%A1%BE">总结与要点回顾</a></li>
-</ol>
+<h2>一、前言：为什么需要学习提示词和RAG？</h2>
+<p>在当今人工智能快速发展的时代，大语言模型（Large Language Model，简称LLM）已经成为了许多应用的核心技术。从智能客服到知识问答，从内容创作到代码生成，LLM正在改变我们与技术交互的方式。然而，要让LLM真正发挥价值，我们需要掌握两个关键技术：<strong>提示词工程</strong>和<strong>RAG技术</strong>。</p>
+<h3>1.1 课程内容概览</h3>
+<p>本课程主要涵盖三大核心主题：</p>
+<p>| 序号 | 主题 | 核心要点 |
+|:</p>
 ]]></content>
     <author>
       <name>罗浩森</name>
@@ -1272,7 +1276,7 @@ AGI (通用人工智能)
     <title type="text">AI 大模型应用公开课</title>
     <id>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/aiApplicationEngineer/1techOfBigModel.html</id>
     <link href="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/aiApplicationEngineer/1techOfBigModel.html"/>
-    <updated>2026-08-17T09:01:04.000Z</updated>
+    <updated>2026-08-17T14:44:38.000Z</updated>
     <summary type="text">产品举例
 
 支小助
@@ -1291,7 +1295,8 @@ meitu
 不断学习和做项目实战
 
 需要掌握什么技术？
-image-202601...</summary>
+AI技术介绍
+Agent...</summary>
     <content type="html"><![CDATA[<!-- more -->
 <h2>产品举例</h2>
 <ul>
@@ -1311,30 +1316,26 @@ image-202601...</summary>
 <li>不断学习和做项目实战</li>
 </ol>
 <h2>需要掌握什么技术？</h2>
-<figure><figcaption>image-20260122194737422</figcaption></figure>
 <h2>AI技术介绍</h2>
 <h3>Agent</h3>
-<figure><figcaption>image-20260122195831225</figcaption></figure>
-<figure><figcaption>image-20260122195952669</figcaption></figure>
 <p>从无状态，到特定状态的定义和识别</p>
 <p>状态：（报出的回答结构化）</p>
 <p>巴黎奥运会的金牌回答，可以按照金银铜牌的数量回答给用户</p>
-<figure><figcaption>image-20260122203646532</figcaption></figure>
-<figure><figcaption>image-20260122204106032</figcaption></figure>
 <h3>Prompt</h3>
 <p>提示词工程，用户输入</p>
 <h3>Function Call</h3>
 <p>与外部函数或API交互的能力，通过理解语义来结构化调用信息，询问用户补全信息，然后结构化调用工具，基于返回的结构化信息，整合生成回复</p>
-<figure><figcaption>image-20260122202611346</figcaption></figure>
+<p>１.　理解语义，自主决策使用天气查询工具</p>
+<p>２.　结构化调用，需要结构化信息</p>
+<p>３.　询问用户，补全信息</p>
+<p>４.　结构化调用天气查询工具</p>
+<p>５.　基于返回的结构化天气信息，整合生成回复</p>
 <p>面试题：如果Function Call的成功率比较低，需要怎么解决？</p>
 <p>答案：考虑从LLM基座模型或者选型上去思考</p>
 <h3>RAG</h3>
 <p>通过从外部资源或数据库中纳入相关信息来实现</p>
 <h3>Fine Tuning</h3>
 <p>微调（可能不需要，但是复杂场景需要，可以先考虑模型的选型）</p>
-<figure><figcaption>image-20260122205126838</figcaption></figure>
-<h2>必须要懂的算法原理</h2>
-<figure><figcaption>image-20260122210629661</figcaption></figure>
 ]]></content>
     <category term="教程"/>
     <category term="知乎"/>
