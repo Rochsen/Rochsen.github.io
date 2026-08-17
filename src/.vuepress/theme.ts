@@ -13,7 +13,10 @@ export default hopeTheme(
       url: "https://rochsen.github.io/VVBP/",
     },
 
-    // logo: "/wechat-avatar.png",
+    // 浏览器图标
+    favicon: "/avatar.png",
+
+    // 博客首页logo
     logo: "/avatar.png",
 
     repo: "/Rochsen",
