@@ -1,6 +1,5 @@
 import { arraySidebar } from "vuepress-theme-hope";
 
-
-export const yingDao = arraySidebar([
-  "",
+export const bioInfo = arraySidebar([
+    "", 
 ]);

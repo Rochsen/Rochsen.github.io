@@ -42,6 +42,8 @@ star: true
 
 ### Deepseek
 
+>[!tip]
+>
 > 官网：https://www.deepseek.com/
 >
 > 文档：https://api-docs.deepseek.com/zh-cn/
@@ -58,18 +60,25 @@ star: true
 | **功能**                       |                              |                  |
 | Json Output                    | 支持                         | 支持             |
 | Tool Calls                     | 支持                         | 支持             |
+| Responses API                   | 支持                         | 支持             |
+| Anthropic API                     | 支持                         | 支持             |
 | 对话前缀续写（Beta）           | 支持                         | 支持             |
 | FIM 补全（Beta）               | 仅非思考模式支持             | 仅非思考模式支持 |
 | **价格**                       |                              |                  |
-| 百万 tokens 输入（缓存命中）   | 0.02 元                      | 0.025 元         |
-| 百万 tokens 输入（缓存未命中） | 1 元                         | 3 元             |
-| 百万 tokens 输出               | 2 元                         | 6 元             |
+| 百万 tokens 输入（空闲缓存命中） | 0.05 元                      | 0.15 元         |
+| 百万 tokens 输入（空闲缓存未命中） | 1.5 元                         | 4.5 元             |
+| 百万 tokens 输出（空闲）               | 4.5 元                         | 13.5 元             |
+| 百万 tokens 输入（高峰缓存命中） | 0.1 元                      | 0.3 元         |
+| 百万 tokens 输入（高峰缓存未命中） | 3 元                         | 9 元             |
+| 百万 tokens 输出（高峰）               | 9 元                         | 27 元             |
 | 并发限制⁽²⁾                    | 2500                         | 500              |
 
 
 
 ### MiMO
 
+>[!tip]
+>
 >官网：https://mimo.mi.com/
 >
 >文档：https://mimo.mi.com/docs/zh-CN/quick-start/summary/welcome
@@ -99,9 +108,9 @@ star: true
 
 ### 阿里云百炼
 
-> [!warning]
+> [!tip]
 >
-> 个人订阅没有Lite版本了，只有Pro版本，订阅地址在: https://www.aliyun.com/benefit/scene/codingplan
+> 订阅地址在: https://www.aliyun.com/benefit/scene/codingplan
 
 百炼平台属于阿里云的一个产品，主推它们家的 Qwen系列，产品较多较混乱，如果考虑长期订阅的话建议观望一下。目前能找到的coding plan为Pro版本的，其他情况就需要按量付费
 
