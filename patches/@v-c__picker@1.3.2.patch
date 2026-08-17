@@ -1,0 +1,21 @@
+diff --git a/dist/generate/dayjs.js b/dist/generate/dayjs.js
+index 4a35a6a07742f0ae6413534af20eaf6fddefe684..e6e959d041aa5afdebb17f8e53e034c5cc6c52e8 100644
+--- a/dist/generate/dayjs.js
++++ b/dist/generate/dayjs.js
+@@ -1,10 +1,10 @@
+ import dayjs from "dayjs";
+-import advancedFormat from "dayjs/plugin/advancedFormat";
+-import customParseFormat from "dayjs/plugin/customParseFormat";
+-import localeData from "dayjs/plugin/localeData";
+-import weekday from "dayjs/plugin/weekday";
+-import weekOfYear from "dayjs/plugin/weekOfYear";
+-import weekYear from "dayjs/plugin/weekYear";
++import advancedFormat from "dayjs/plugin/advancedFormat.js";
++import customParseFormat from "dayjs/plugin/customParseFormat.js";
++import localeData from "dayjs/plugin/localeData.js";
++import weekday from "dayjs/plugin/weekday.js";
++import weekOfYear from "dayjs/plugin/weekOfYear.js";
++import weekYear from "dayjs/plugin/weekYear.js";
+ //#region src/generate/dayjs.ts
+ dayjs.extend(customParseFormat);
+ dayjs.extend(advancedFormat);
