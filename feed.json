@@ -4,7 +4,7 @@
   "home_page_url": "https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/",
   "feed_url": "https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/feed.json",
   "description": "个人博客",
-  "favicon": "https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/avatar.png",
+  "favicon": "https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/logo.svg",
   "items": [
     {
       "title": "个人游戏统计",
