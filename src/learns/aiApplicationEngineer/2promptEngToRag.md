@@ -9,17 +9,6 @@ star: true
 
 <!-- more -->
 
-## 目录
-
-1. [前言：为什么需要学习提示词和RAG？](#一前言为什么需要学习提示词和rag)
-2. [提示词（Prompt）基础](#二提示词prompt基础)
-3. [RAG（检索增强生成）详解](#三rag检索增强生成详解)
-4. [RAG高级技巧：双向奔赴](#四rag高级技巧双向奔赴)
-5. [实践案例](#五实践案例)
-6. [总结与要点回顾](#六总结与要点回顾)
-
----
-
 ## 一、前言：为什么需要学习提示词和RAG？
 
 在当今人工智能快速发展的时代，大语言模型（Large Language Model，简称LLM）已经成为了许多应用的核心技术。从智能客服到知识问答，从内容创作到代码生成，LLM正在改变我们与技术交互的方式。然而，要让LLM真正发挥价值，我们需要掌握两个关键技术：**提示词工程**和**RAG技术**。
@@ -50,14 +39,6 @@ star: true
 
 **提示词（Prompt）** 是我们与大型语言模型（LLM）交互的唯一方式。简单来说，提示词就是我们要告诉AI的"指令"或"问题"。就像我们与人类沟通需要语言一样，与AI沟通也需要通过特定的"语言格式"——这就是提示词。
 
-![Prompt与LLM的关系](./2promptEngToRag.assets/diagram_prompt_llm.png)
-
-![提示词示例1](./2promptEngToRag.assets/page5_img1.jpeg)
-
-![提示词示例2](./2promptEngToRag.assets/page6_img1.jpeg)
-
-![提示词示例3](./2promptEngToRag.assets/page7_img1.jpeg)
-
 
 **核心认知**：无论应用层做了多么炫酷的设计——是聊天界面、语音助手，还是智能客服系统——最终都是为了传递合适的Prompt给LLM。可以这样说，**Prompt是连接人类意图与AI能力的桥梁**。
 
@@ -74,7 +55,7 @@ star: true
 | **指令** | 明确要求AI完成的任务 | "请根据用户问题，提供专业建议" |
 | **限制条件** | 对输出的格式、风格等进行约束 | "回复要简洁礼貌，不超过100字" |
 
-### 2.3 Zero-Shot、One-Shot、Few-Shot 详解
+### 2.3 样例数量ot、Few-Shot 详解
 
 根据Prompt中提供的样例数量，可以将提示方式分为三种类型：
 
@@ -188,8 +169,6 @@ AI：Banana
 
 用最通俗的话来解释：**RAG就是让AI在回答问题之前，先去知识库里"查资料"，然后再给出回答**。
 
-![RAG工作原理](./2promptEngToRag.assets/diagram_rag_flow.png)
-
 ### 3.2 为什么需要RAG？
 
 #### 3.2.1 In-Context-Learning的局限性
@@ -235,7 +214,37 @@ RAG系统包含两个核心环节：
 
 以下是RAG架构示意图：
 
-![RAG架构图](./2promptEngToRag.assets/page24_img1.jpeg)
+```mermaid
+flowchart TD
+    U["👤 User"]:::user
+
+    A["📄 Documents<br/>文档源"]:::idx
+    B["✂️ Chunking<br/>分块"]:::idx
+    C[("💾 Vector DB<br/>向量数据库")]:::db
+    D["❓ Query<br/>用户查询"]:::ret
+    E["🔎 Vector Search<br/>向量搜索"]:::ret
+    F["📚 Relevant Contexts<br/>相关上下文"]:::aug
+    G["📝 Augmented Prompt<br/>增强提示词"]:::aug
+    H["🤖 LLM<br/>大语言模型"]:::gen
+    I["💬 Response<br/>回复"]:::gen
+
+    U --> D
+    A --> B --> C
+    D --> E -->|"搜索"| C
+    C -->|"检索"| F
+    D -.->|"注入"| G
+    F --> G
+    G --> H --> I --> U
+
+    classDef user fill:#e1bee7,stroke:#7b1fa2,stroke-width:2px,color:#4a148c
+    classDef idx fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px,color:#1b5e20
+    classDef db fill:#b3e5fc,stroke:#0277bd,stroke-width:3px,color:#01579b
+    classDef ret fill:#bbdefb,stroke:#1565c0,stroke-width:2px,color:#0d47a1
+    classDef aug fill:#ffe0b2,stroke:#e65100,stroke-width:2px,color:#bf360c
+    classDef gen fill:#f8bbd0,stroke:#c62828,stroke-width:2px,color:#b71c1c
+```
+
+
 
 这张图展示了RAG系统的整体架构，包括知识的存储、检索和生成过程。
 
@@ -246,8 +255,6 @@ RAG系统包含两个核心环节：
 ### 4.1 什么是"双向奔赴"？
 
 "双向奔赴"是RAG优化的核心理念，意思是：**既要优化用户端的查询（Query），也要优化知识库端的内容，两者相互配合才能取得最佳效果**。
-
-![RAG双向奔赴](./2promptEngToRag.assets/diagram_rag_bidirectional.png)
 
 ### 4.2 Query改写技巧
 
@@ -264,8 +271,6 @@ RAG系统包含两个核心环节：
 #### 4.2.2 Query改写的核心方法
 
 **核心原则**：汇总上下文所有信息，总结用户核心诉求作为检索Query。
-
-![Query改写技巧](./2promptEngToRag.assets/diagram_query_rewrite.png)
 
 #### 4.2.3 常见的Query类型及改写策略
 

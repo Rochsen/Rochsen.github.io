@@ -8,24 +8,37 @@ tag: [AI, Agent]
 
 <!-- more -->
 
-# Agent（智能体）知识点整理
 
-
-## 目录
-
-1. [什么是 Agent？](#什么是-agent)
-2. [Workflow Agent（工作流智能体）](#workflow-agent-工作流智能体)
-3. [ReAct Agent（推理型智能体）](#react-agent-推理型智能体)
-4. [Agent 平台](#agent-平台)
-5. [总结](#总结)
-
----
 
 ## 什么是 Agent？
 
 ### AI 模型 vs AI Agent
 
-![AI 模型 vs AI Agent 对比](./3agentfromControl2selfthink.assets/diagram_llm_vs_agent.png)
+```	mermaid
+flowchart LR
+    subgraph LLM["🤖 AI 模型（LLM）"]
+        direction TB
+        L0["提供智能"]
+        L1["✅ 能回答问题"]
+        L2["✅ 能生成内容"]
+        L3["❌ 会有幻觉"]
+        L4["❌ 只会说，不会做"]
+    end
+
+    subgraph Agent["🚀 AI Agent"]
+        direction TB
+        A0["保证结果"]
+        A1["✅ 能执行任务"]
+        A2["✅ 能调用工具"]
+        A3["✅ 可控性强"]
+        A4["✅ 完成实际工作"]
+    end
+
+    LLM -->|"➕ 结合"| Agent
+
+    style LLM fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,color:#0d47a1
+    style Agent fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#1b5e20
+```
 
 简单来说：
 - **AI 模型（LLM）**：提供智能，能回答问题、生成内容
@@ -53,7 +66,58 @@ Workflow Agent 是一种**预先定义好执行步骤**的智能体。设计者�
 
 ### Workflow Agent 架构图
 
-![Workflow Agent 架构图](./3agentfromControl2selfthink.assets/diagram_workflow_architecture.png)
+```mermaid
+flowchart TB
+    subgraph UI["🖥️ 用户交互界面"]
+        User["👤 用户"]
+    end
+
+    subgraph External["🌐 外部 API"]
+        direction TB
+        E1["🗺️ 高德地图 API"]
+        E2["📋 谷歌表单 API"]
+        E3["🔍 百度搜索 API"]
+        E4["💻 代码执行 API"]
+        E5["📊 各类数据 API"]
+    end
+
+    subgraph Core["🧠 Agent 核心"]
+        direction TB
+        Prompt["💬 Prompt"]
+        LLM["🤖 LLM"]
+        Workflow["⚙️ 工作流"]
+        DB["🗄️ 数据库"]
+        VDB["🔢 向量库"]
+        Trigger["⏰ 触发器"]
+    end
+
+    subgraph Output["🎨 输出能力"]
+        direction TB
+        O1["👁️ 识别 → 4o 图像识别 API"]
+        O2["🎨 生图 → DALL·E 生图 API"]
+        O3["🎬 生视频 → 海螺视频 API"]
+        O4["🔊 语音合成 → 讯飞 API"]
+        O5["🧊 3D 生成 → SD 3D API"]
+    end
+
+    subgraph Enterprise["🏢 企业资源"]
+        direction LR
+        C1["🗄️ 企业数据库"]
+        C2["🔢 企业向量库"]
+        C3["🔌 企业系统 API"]
+    end
+
+    User --> Core
+    External <--> Core
+    Core <--> Output
+    Core <--> Enterprise
+
+    style UI fill:#fff9c4,stroke:#f9a825,stroke-width:2px
+    style External fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style Core fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style Output fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style Enterprise fill:#e8eaf6,stroke:#3f51b5,stroke-width:2px
+```
 
 ### 核心特点
 
@@ -102,7 +166,36 @@ Workflow Agent 是一种**预先定义好执行步骤**的智能体。设计者�
 
 ### ReAct 工作流程图
 
-![ReAct Agent 工作流程](./3agentfromControl2selfthink.assets/diagram_react_cycle.png)
+```mermaid
+flowchart TD
+    Input["📥 输入：问题 + 可用文件 / 工具"]:::input
+
+    subgraph Round1["🔄 第 1 轮"]
+        direction LR
+        R1T["🧠 推理<br/>分析问题<br/>决定行动"] --> R1A["⚡ 行动<br/>执行工具调用"] --> R1O["📋 反馈<br/>获取结果"]
+    end
+
+    subgraph Round2["🔄 第 2 轮"]
+        direction LR
+        R2T["🧠 推理<br/>根据反馈<br/>决定下一步"] --> R2A["⚡ 行动<br/>执行新工具"] --> R2O["📋 反馈<br/>获取新结果"]
+    end
+
+    Dots["· · · 循环迭代 · · ·"]:::dots
+
+    subgraph Final["🏁 最后一轮"]
+        direction LR
+        FnT["🧠 推理"] --> FnF["🛑 FINISH<br/>所有信息已收集"] --> FnO["📤 输出最终答案"]
+    end
+
+    Input --> Round1 --> Round2 --> Dots --> Final
+    Final -.->|"🔁 未完成则继续"| Round1
+
+    style Input fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,color:#0d47a1
+    style Round1 fill:#fff8e1,stroke:#f9a825,stroke-width:2px
+    style Round2 fill:#fff8e1,stroke:#f9a825,stroke-width:2px
+    style Dots fill:none,stroke:none,color:#888
+    style Final fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+```
 
 ### 实战案例：查找 9 月份销售额不达标的供应商
 
@@ -141,7 +234,53 @@ ReAct 技术的基础是**思维链（CoT）**：
 
 就像人类解决问题时会一步步思考一样，AI 模型也可以通过"自言自语"的方式来组织思路，做出更准确的决策。
 
-![aGENT](./3agentfromControl2selfthink.assets/image-2.png)
+AI模型提供智能，AI agent保证结果
+
+```mermaid
+flowchart TD
+    Agent["🧠 Agent"]:::center
+
+    subgraph Memory["📦 Memory"]
+        direction TB
+        M["Memory"]
+        STM["Short-term memory<br/>短期记忆"]
+        LTM["Long-term memory<br/>长期记忆"]
+        M --> STM
+        M --> LTM
+    end
+
+    subgraph Tools["🔧 Tools"]
+        direction TB
+        T1["📅 Calendar()"]
+        T2["🔢 Calculator()"]
+        T3["💻 CodeInterpreter()"]
+        T4["🔍 Search()"]
+        T5["📦 ...more"]
+    end
+
+    subgraph Planning["📋 Planning"]
+        direction TB
+        P1["🪞 Reflection<br/>反思"]
+        P2["批评 Self-critics"]
+        P3["🔗 Chain of thoughts<br/>思维链"]
+        P4["🎯 Subgoal decomposition<br/>子目标分解"]
+    end
+
+    Action["⚡ Action<br/>执行"]:::action
+
+    Agent --> Memory
+    Agent --> Tools
+    Agent --> Planning
+    Agent --> Action
+    Memory -.->|"虚线关联"| Planning
+    Tools -.->|"虚线关联"| Action
+
+    style Agent fill:#ffcdd2,stroke:#c62828,stroke-width:3px,color:#b71c1c,font-weight:bold
+    style Memory fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style Tools fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style Planning fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style Action fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+```
 
 ---
 
@@ -164,9 +303,7 @@ Agent 平台是**管理、运行、支持一系列 Agent** 的基础设施。
 
 #### 2. 企业知识图谱（Enterprise Knowledge Graph）
 
-构建企业内部所有的关系网络：
-
-![企业知识图谱](./3agentfromControl2selfthink.assets/diagram_knowledge_graph.png)
+构建企业内部所有的关系网络
 
 ### 基于平台构建的 Agent 应用
 
@@ -179,8 +316,6 @@ Agent 平台是**管理、运行、支持一系列 Agent** 的基础设施。
 - 客户记录
 - 等等...
 
-![企业内部搜索框](./3agentfromControl2selfthink.assets/PixPin_2026-03-20_21-08-26.png)
-
 
 #### 2. 问答助手
 
@@ -188,20 +323,14 @@ Agent 平台是**管理、运行、支持一系列 Agent** 的基础设施。
 - 查询业务数据
 - 提供流程指导
 
-![问答助手](./3agentfromControl2selfthink.assets/PixPin_2026-03-20_21-08-50.png)
-
 #### 3. 工作群问答助手
 
 在即时通讯工具中嵌入 AI 助手，随时回答问题。
-
-![工作群问答助手](./3agentfromControl2selfthink.assets/PixPin_2026-03-20_21-09-05.png)
 
 
 #### 4. 自定义 Workflow
 
 让任何人都可以通过可视化界面定制自己的工作流，无需编程。
-
-![自定义 Workflow](./3agentfromControl2selfthink.assets/PixPin_2026-03-20_21-09-13.png)
 
 ---
 
