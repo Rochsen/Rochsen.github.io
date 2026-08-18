@@ -7,8 +7,6 @@ import theme from "./theme.js";
 export default <UserConfig>defineUserConfig({
   base: "/VVBP/",
 
-  dest: "dist",
-
   lang: "zh-CN",
   title: "Rochsen's Blog",
   description: "个人博客",
