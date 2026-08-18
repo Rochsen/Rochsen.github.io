@@ -4,7 +4,7 @@
   <title>Rochsen&amp;apos;s Blog</title>
   <subtitle>个人博客</subtitle>
   <icon>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/logo.svg</icon>
-  <updated>2026-08-17T15:22:29.740Z</updated>
+  <updated>2026-08-18T06:11:49.975Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/atom.xml"/>
   <link rel="alternate" href="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/"/>
@@ -25,24 +25,6 @@
     <link href="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/"/>
     <updated>2026-08-17T14:44:51.000Z</updated>
     <published>2026-08-17T14:44:51.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">个人游戏统计</title>
-    <id>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/games/dataStat.html</id>
-    <link href="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/games/dataStat.html"/>
-    <updated>2026-07-20T03:30:12.000Z</updated>
-    <summary type="html"><![CDATA[<div class="hint-container tip">
-<p class="hint-container-title">提示</p>
-<p>这是我个人对游玩过的游戏的简单统计</p>
-</div>
-]]></summary>
-    <content type="html"><![CDATA[<div class="hint-container tip">
-<p class="hint-container-title">提示</p>
-<p>这是我个人对游玩过的游戏的简单统计</p>
-</div>
-]]></content>
-    <category term="游戏"/>
-    <published>2026-03-15T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">印象游戏库</title>

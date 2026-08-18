@@ -6,8 +6,8 @@
     <link>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/</link>
     <description>个人博客</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 17 Aug 2026 15:22:29 GMT</pubDate>
-    <lastBuildDate>Mon, 17 Aug 2026 15:22:29 GMT</lastBuildDate>
+    <pubDate>Tue, 18 Aug 2026 06:11:49 GMT</pubDate>
+    <lastBuildDate>Tue, 18 Aug 2026 06:11:49 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>游戏</category>
@@ -21,20 +21,6 @@
       <guid>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/</guid>
       <source url="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/rss.xml">生物信息学笔记</source>
       <pubDate>Mon, 17 Aug 2026 14:44:51 GMT</pubDate>
-    </item>
-    <item>
-      <title>个人游戏统计</title>
-      <link>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/games/dataStat.html</link>
-      <guid>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/games/dataStat.html</guid>
-      <source url="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/rss.xml">个人游戏统计</source>
-      <description>提示 这是我个人对游玩过的游戏的简单统计</description>
-      <category>游戏</category>
-      <pubDate>Sun, 15 Mar 2026 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<div class="hint-container tip">
-<p class="hint-container-title">提示</p>
-<p>这是我个人对游玩过的游戏的简单统计</p>
-</div>
-]]></content:encoded>
     </item>
     <item>
       <title>印象游戏库</title>
