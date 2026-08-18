@@ -3,11 +3,11 @@ home: true
 layout: Blog
 icon: house
 title: 主页
-# bgImage: https://file.mo7.cc/api/public/bz
 bgImage: https://www.dmoe.cc/random.php
+# bgImage: https://file.mo7.cc/api/public/bz
 # bgImage: /light-bgimage.png
 # bgImageDark: /dark-bgimage.jpg
-# bgImageDark: https://pic1.imgdb.cn/i/0345mMGcrNtOVGbO7qu3Tw.jpg
+bgImageDark: https://pic1.imgdb.cn/i/0345mMGcrNtOVGbO7qu3Tw.jpg
 # heroImage: /wechat-avatar.png
 # heroImageDark: /avatar.png
 heroText: 𝑊𝑒𝑙𝑐𝑜𝑚𝑒 𝑡𝑜 𝑅𝑜𝑐ℎ𝑠𝑒𝑛'𝑠 𝐵𝑙𝑜𝑔
