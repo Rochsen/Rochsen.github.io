@@ -7,12 +7,43 @@
   "favicon": "https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/logo.svg",
   "items": [
     {
+      "title": "bwa使用笔记",
+      "url": "https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/bwa.html",
+      "id": "https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/bwa.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-08-18T00:00:00.000Z",
+      "date_modified": "2026-08-18T08:32:57.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
+      "title": "samtools使用笔记",
+      "url": "https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/samtools.html",
+      "id": "https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/samtools.html",
+      "content_html": "<!-- more -->",
+      "date_published": "2026-08-18T00:00:00.000Z",
+      "date_modified": "2026-08-18T08:32:57.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
+      "title": "什么是全外显子测序",
+      "url": "https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%A8%E5%A4%96%E6%98%BE%E5%AD%90%E6%B5%8B%E5%BA%8F.html",
+      "id": "https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%A8%E5%A4%96%E6%98%BE%E5%AD%90%E6%B5%8B%E5%BA%8F.html",
+      "content_html": "<!-- more -->",
+      "date_published": "2026-08-18T00:00:00.000Z",
+      "date_modified": "2026-08-18T08:32:57.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
       "title": "生物信息学笔记",
       "url": "https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/",
       "id": "https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/",
-      "content_html": "",
-      "date_published": "2026-08-17T14:44:51.000Z",
-      "date_modified": "2026-08-17T14:44:51.000Z",
+      "summary": "生信分析工具汇总\n\n\n\n\n生物信息必知必会",
+      "content_html": "<!-- more -->\n<h2>生信分析工具汇总</h2>\n<ul>\n<li><a href=\"/VVBP/learns/bioinformatics/samtools.html\" target=\"_blank\">Samtools使用笔记</a></li>\n<li><a href=\"/VVBP/learns/bioinformatics/bwa.html\" target=\"_blank\">BWA使用笔记</a></li>\n</ul>\n<h2>生物信息必知必会</h2>\n<ul>\n<li><a href=\"/VVBP/learns/bioinformatics/%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%A8%E5%A4%96%E6%98%BE%E5%AD%90%E6%B5%8B%E5%BA%8F.html\" target=\"_blank\">什么是全外显子测序</a></li>\n</ul>\n",
+      "date_published": "2026-08-17T00:00:00.000Z",
+      "date_modified": "2026-08-18T08:32:57.000Z",
       "authors": [],
       "tags": []
     },

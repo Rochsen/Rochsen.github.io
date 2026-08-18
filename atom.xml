@@ -4,7 +4,7 @@
   <title>Rochsen&amp;apos;s Blog</title>
   <subtitle>个人博客</subtitle>
   <icon>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/logo.svg</icon>
-  <updated>2026-08-18T08:09:20.661Z</updated>
+  <updated>2026-08-18T08:33:46.560Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/atom.xml"/>
   <link rel="alternate" href="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/"/>
@@ -20,11 +20,53 @@
     <name>Ms.Hope</name>
   </contributor>
   <entry>
+    <title type="text">bwa使用笔记</title>
+    <id>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/bwa.html</id>
+    <link href="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/bwa.html"/>
+    <updated>2026-08-18T08:32:57.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    <published>2026-08-18T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">samtools使用笔记</title>
+    <id>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/samtools.html</id>
+    <link href="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/samtools.html"/>
+    <updated>2026-08-18T08:32:57.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->]]></content>
+    <published>2026-08-18T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">什么是全外显子测序</title>
+    <id>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%A8%E5%A4%96%E6%98%BE%E5%AD%90%E6%B5%8B%E5%BA%8F.html</id>
+    <link href="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%A8%E5%A4%96%E6%98%BE%E5%AD%90%E6%B5%8B%E5%BA%8F.html"/>
+    <updated>2026-08-18T08:32:57.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->]]></content>
+    <published>2026-08-18T00:00:00.000Z</published>
+  </entry>
+  <entry>
     <title type="text">生物信息学笔记</title>
     <id>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/</id>
     <link href="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/"/>
-    <updated>2026-08-17T14:44:51.000Z</updated>
-    <published>2026-08-17T14:44:51.000Z</published>
+    <updated>2026-08-18T08:32:57.000Z</updated>
+    <summary type="text">生信分析工具汇总
+
+
+
+
+生物信息必知必会</summary>
+    <content type="html"><![CDATA[<!-- more -->
+<h2>生信分析工具汇总</h2>
+<ul>
+<li><a href="/VVBP/learns/bioinformatics/samtools.html" target="_blank">Samtools使用笔记</a></li>
+<li><a href="/VVBP/learns/bioinformatics/bwa.html" target="_blank">BWA使用笔记</a></li>
+</ul>
+<h2>生物信息必知必会</h2>
+<ul>
+<li><a href="/VVBP/learns/bioinformatics/%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%A8%E5%A4%96%E6%98%BE%E5%AD%90%E6%B5%8B%E5%BA%8F.html" target="_blank">什么是全外显子测序</a></li>
+</ul>
+]]></content>
+    <published>2026-08-17T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">印象游戏库</title>
