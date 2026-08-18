@@ -6,20 +6,53 @@
     <link>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/</link>
     <description>个人博客</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 18 Aug 2026 08:33:46 GMT</pubDate>
-    <lastBuildDate>Tue, 18 Aug 2026 08:33:46 GMT</lastBuildDate>
+    <pubDate>Tue, 18 Aug 2026 08:58:33 GMT</pubDate>
+    <lastBuildDate>Tue, 18 Aug 2026 08:58:33 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>教程</category>
+    <category>图片</category>
+    <category>软件</category>
+    <category>生物信息学</category>
     <category>游戏</category>
     <category>部署</category>
-    <category>教程</category>
     <category>知乎</category>
     <category>使用指南</category>
+    <item>
+      <title>博客图片API收集</title>
+      <link>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/deploy/imageApi.html</link>
+      <guid>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/deploy/imageApi.html</guid>
+      <source url="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/rss.xml">博客图片API收集</source>
+      <description>樱花二次元图片API-Dmoe
+
+api: https://www.dmoe.cc/random.php
+
+随机二次元图片API文档（by夜轻）
+
+blog: https://blog.yeqing.net/acg-api/
+api：https://api.yppp.net/pc.php</description>
+      <category>教程</category>
+      <category>图片</category>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+<h2>樱花二次元图片API-Dmoe</h2>
+<ul>
+<li>api: <a href="https://www.dmoe.cc/random.php" target="_blank" rel="noopener noreferrer">https://www.dmoe.cc/random.php</a></li>
+</ul>
+<h2>随机二次元图片API文档（by夜轻）</h2>
+<ul>
+<li>blog: <a href="https://blog.yeqing.net/acg-api/" target="_blank" rel="noopener noreferrer">https://blog.yeqing.net/acg-api/</a></li>
+<li>api：<a href="https://api.yppp.net/pc.php" target="_blank" rel="noopener noreferrer">https://api.yppp.net/pc.php</a></li>
+</ul>
+]]></content:encoded>
+    </item>
     <item>
       <title>bwa使用笔记</title>
       <link>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/bwa.html</link>
       <guid>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/bwa.html</guid>
       <source url="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/rss.xml">bwa使用笔记</source>
+      <category>软件</category>
+      <category>生物信息学</category>
       <pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<!-- more -->
 ]]></content:encoded>
@@ -29,6 +62,8 @@
       <link>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/samtools.html</link>
       <guid>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/samtools.html</guid>
       <source url="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/rss.xml">samtools使用笔记</source>
+      <category>软件</category>
+      <category>生物信息学</category>
       <pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<!-- more -->]]></content:encoded>
     </item>
@@ -37,6 +72,7 @@
       <link>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%A8%E5%A4%96%E6%98%BE%E5%AD%90%E6%B5%8B%E5%BA%8F.html</link>
       <guid>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%A8%E5%A4%96%E6%98%BE%E5%AD%90%E6%B5%8B%E5%BA%8F.html</guid>
       <source url="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/rss.xml">什么是全外显子测序</source>
+      <category>生物信息学</category>
       <pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<!-- more -->]]></content:encoded>
     </item>
