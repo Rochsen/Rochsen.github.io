@@ -16,7 +16,7 @@ export default <UserConfig>defineUserConfig({
 
   port: 9080,
 
-  plugins: [cachePlugin({ type: "filesystem" })],
+  // plugins: [cachePlugin({ type: "filesystem" })],
 
   // 和 PWA 一起启用
   shouldPrefetch: false,
