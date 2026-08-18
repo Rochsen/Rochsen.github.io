@@ -4,7 +4,7 @@
   <title>Rochsen&amp;apos;s Blog</title>
   <subtitle>个人博客</subtitle>
   <icon>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/logo.svg</icon>
-  <updated>2026-08-18T13:58:28.731Z</updated>
+  <updated>2026-08-18T14:58:49.040Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/atom.xml"/>
   <link rel="alternate" href="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/"/>
@@ -54,7 +54,7 @@ api：https://api.yppp.net/pc.php</summary>
     <title type="text">bwa使用笔记</title>
     <id>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/bwa.html</id>
     <link href="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/bwa.html"/>
-    <updated>2026-08-18T08:57:40.000Z</updated>
+    <updated>2026-08-18T14:57:54.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
     <category term="软件"/>
@@ -65,7 +65,7 @@ api：https://api.yppp.net/pc.php</summary>
     <title type="text">samtools使用笔记</title>
     <id>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/samtools.html</id>
     <link href="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/bioinformatics/samtools.html"/>
-    <updated>2026-08-18T08:57:40.000Z</updated>
+    <updated>2026-08-18T14:57:54.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->]]></content>
     <category term="软件"/>
     <category term="生物信息学"/>
