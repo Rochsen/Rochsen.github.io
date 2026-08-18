@@ -3,14 +3,15 @@ home: true
 layout: Blog
 icon: house
 title: 主页
-bgImage: https://www.dmoe.cc/random.php
+bgImage: https://api.yppp.net/pc.php
+# bgImage: https://www.dmoe.cc/random.php
 # bgImage: https://file.mo7.cc/api/public/bz
 # bgImage: /light-bgimage.png
 # bgImageDark: /dark-bgimage.jpg
 bgImageDark: https://pic1.imgdb.cn/i/0345mMGcrNtOVGbO7qu3Tw.jpg
 # heroImage: /wechat-avatar.png
 # heroImageDark: /avatar.png
-heroText: 𝑊𝑒𝑙𝑐𝑜𝑚𝑒 𝑡𝑜 𝑅𝑜𝑐ℎ𝑠𝑒𝑛'𝑠 𝐵𝑙𝑜𝑔
+heroText: 欢迎来到我的博客
 heroFullScreen: true
 # tagline: 𝓞𝓷𝓵𝔂 𝓐 𝓢𝓽𝓸𝓻𝓶 𝓒𝓪𝓷 𝓕𝓮𝓵𝓵 𝓐 𝓖𝓻𝓮𝓪𝓽𝔀𝓸𝓸𝓭.
 tagline: 𝑂𝑛𝑙𝑦 𝑎 𝑠𝑡𝑜𝑟𝑚 𝑐𝑎𝑛 𝑓𝑒𝑙𝑙 𝑎 𝐺𝑟𝑒𝑎𝑡𝑤𝑜𝑜𝑑

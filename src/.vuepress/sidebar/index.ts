@@ -6,7 +6,8 @@ import { learnSideBar, deploy, zhihuAi, bioInfo } from "./learn/index.js";
 export const sideBarConfig = sidebar({
   // 学习 - 侧边栏
   "/learns/": learnSideBar,
-  "/learns/deploy/": deploy,
+  // "/learns/deploy/": deploy,
+  "/learns/deploy/": "structure",
   "/learns/aiApplicationEngineer": zhihuAi,
   "/learns/bioinformatics/": "structure",
 
