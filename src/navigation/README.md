@@ -69,8 +69,8 @@ background: rgba(253, 230, 138, 0.15)
 ```component VPCard
 title: 墨七
 desc: 墨染七弦月，笔耕半亩田
-logo: https://mo7.cc/pwa/144.png
-link: https://mo7.cc/
+logo: https://mo7cc.github.io/pwa/144.png
+link: https://mo7cc.github.io/
 background: rgba(253, 230, 138, 0.15)
 ```
 
@@ -82,7 +82,7 @@ link: https://blog.anheyu.com/
 background: rgba(253, 230, 138, 0.15)
 ```
 
-## 图标
+## 装饰
 
 ```component VPCard
 title: Font Awesome
@@ -92,9 +92,6 @@ link: https://fontawesome.com/
 background: rgba(253, 230, 138, 0.15)
 ```
 
-
-## 页脚
-
 ```component VPCard
 title: 一言
 desc: 本博客每日一言句子的来源
@@ -103,14 +100,10 @@ link: https://hitokoto.cn/
 background: rgba(253, 230, 138, 0.15)
 ```
 
-
-<!-- 
 ```component VPCard
-title: 可利姆船长
-desc: 我在做一些有意思的应用
-logo: https://kecream.cn/favicon.svg
-link: https://kecream.cn/
+title: 樱花二次元图片API-Dmoe
+desc: 随机二次元图片API
+logo: https://www.dmoe.cc/favicon.ico
+link: https://www.dmoe.cc/
 background: rgba(253, 230, 138, 0.15)
-``` -->
-
-
+```

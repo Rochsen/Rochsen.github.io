@@ -1,7 +1,7 @@
 import { hopeTheme } from "vuepress-theme-hope";
 
-import navbar from "./navbar.js";
-import { sideBarConfig } from "./sidebar/index.js";
+import { zhNavbarConfig } from "./navbar.ts";
+import { sideBarConfig } from "./sidebar/index.ts";
 
 export default hopeTheme(
   // 主题选项
@@ -16,7 +16,7 @@ export default hopeTheme(
     // 浏览器图标
     favicon: "/logo.svg",
 
-    // 博客首页logo
+    // 博客首页 logo
     logo: "/favicon.ico",
 
     repo: "/Rochsen",
@@ -27,7 +27,7 @@ export default hopeTheme(
     docsDir: "src",
 
     // 导航栏
-    navbar,
+    navbar: zhNavbarConfig,
 
     // 侧边栏
     sidebar: sideBarConfig,
@@ -63,7 +63,7 @@ export default hopeTheme(
       editLink: "编辑此页",
     },
 
-    // 如果想要实时查看任何改变，启用它。注: 这对更新性能有很大负面影响
+    // 如果想要实时查看任何改变，启用它。注：这对更新性能有很大负面影响
     // hotReload: true,
 
     // 此处开启了很多功能用于演示，你应仅保留用到的功能。
@@ -153,11 +153,11 @@ export default hopeTheme(
         components: ["Badge", "VPCard"],
       },
 
-      docsearch: {
-        appId: "TFYC0LM59H",
-        apiKey: "98079842ea4f4565e37eb23d80fb3adf",
-        indexName: "VVBP",
-      },
+      // docsearch: {
+      //   appId: "TFYC0LM59H",
+      //   apiKey: "98079842ea4f4565e37eb23d80fb3adf",
+      //   indexName: "VVBP",
+      // },
 
       feed: {
         atom: true,
@@ -170,7 +170,7 @@ export default hopeTheme(
       },
 
       // 启用之前需安装 @waline/client
-      // 警告: 这是一个仅供演示的测试服务，在生产环境中请自行部署并使用自己的服务！
+      // 警告：这是一个仅供演示的测试服务，在生产环境中请自行部署并使用自己的服务！
       // comment: {
       //   provider: "Waline",
       //   serverURL: "https://waline-comment.vuejs.press",

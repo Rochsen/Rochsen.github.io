@@ -3,7 +3,7 @@ import { watch } from "vue";
 
 // 全量引入Antdv-next
 import AntdvNext from "antdv-next";
-import "antdv-next/dist/antd.css";
+// import "antdv-next/dist/antd.css";
 
 // 每日一言：只请求一次并缓存，SPA 路由切换后页脚会重建，从缓存重新写入
 let hitokotoText = "";

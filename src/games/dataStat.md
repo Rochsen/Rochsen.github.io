@@ -1,7 +1,7 @@
 ---
 title: 个人游戏统计
 breadcrumb: false
-article: true
+article: false
 category: 
   - 游戏
 tag:
