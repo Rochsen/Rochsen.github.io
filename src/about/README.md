@@ -7,7 +7,7 @@ category:
 tag:
   - 自我介绍
 navbar: true
-# sidebar: false
+sidebar: false
 breadcrumb: false
 pageInfo: false
 contributors: false

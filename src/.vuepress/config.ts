@@ -1,7 +1,7 @@
 import { defineUserConfig } from "vuepress";
 import type { UserConfig } from "vuepress";
 import theme from "./theme.js";
-// import { cachePlugin } from "@vuepress/plugin-cache";
+import { cachePlugin } from "@vuepress/plugin-cache";
 
 export default <UserConfig>defineUserConfig({
   base: "/VVBP/",
@@ -31,5 +31,5 @@ export default <UserConfig>defineUserConfig({
 
   // title: "Rochsen's Blog",
   // description: "个人博客",
-  // plugins: [cachePlugin({ type: "filesystem" })],
+  plugins: [cachePlugin({ type: "filesystem" })],
 });
