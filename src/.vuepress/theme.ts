@@ -1,10 +1,21 @@
 import { hopeTheme } from "vuepress-theme-hope";
+import { zhNavbarConfig, enNavbarConfig } from "./navbar.ts";
+import { zhSideBarConfig, enSidebarConfig } from "./sidebar/index.ts";
 
-import { zhNavbarConfig } from "./navbar.ts";
-import { sideBarConfig } from "./sidebar/index.ts";
+// 社交媒体信息
+export const mediasConfig = {
+  BiliBili: "https://space.bilibili.com/361524948",
+  GitHub: "https://github.com/Rochsen",
+  Steam: "https://steamcommunity.com/profiles/76561199143139420/",
+  Gmail: "mailto:rochsen1011@gmail.com",
+  Leetcode: {
+    icon: "https://pic1.imgdb.cn/i/0349bJpROnhWofDHMNdITB.svg",
+    link: "https://leetcode.cn/u/rochsen/",
+  },
+};
 
+// 主题选项
 export default hopeTheme(
-  // 主题选项
   {
     hostname: "https://rochsen.github.io/VuePress-Rochsen-Blog/",
 
@@ -26,45 +37,37 @@ export default hopeTheme(
 
     docsDir: "src",
 
-    // 导航栏
-    navbar: zhNavbarConfig,
-
-    // 侧边栏
-    sidebar: sideBarConfig,
-
+    // 是否展示页脚
+    displayFooter: true,
     // 页脚
     footer: "默认页脚",
-    displayFooter: true,
-
-    // 博客相关
-    blog: {
-      description: "生物信息分析工程师、前后端开发初学者",
-      intro: "/about/",
-      medias: {
-        BiliBili: "https://space.bilibili.com/361524948",
-        GitHub: "https://github.com/Rochsen",
-        Steam: "https://steamcommunity.com/profiles/76561199143139420/",
-        // LeetCode: "https://leetcode.cn/u/rochsen/",
-      },
-    },
-
-    // 加密配置
-    // encrypt: {
-    //   config: {
-    //     "/demo/encrypt.html": {
-    //       hint: "Password: 1234",
-    //       password: "1234",
-    //     },
-    //   },
-    // },
 
     // 多语言配置
     metaLocales: {
       editLink: "编辑此页",
     },
 
-    // 如果想要实时查看任何改变，启用它。注：这对更新性能有很大负面影响
-    // hotReload: true,
+    locales: {
+      "/": {
+        navbar: zhNavbarConfig,
+        sidebar: zhSideBarConfig,
+        blog: {
+          description: "生物信息分析工程师、前后端开发初学者",
+          intro: "/about/",
+          medias: mediasConfig,
+        },
+      },
+      "/en/": {
+        navbar: enNavbarConfig,
+        sidebar: enSidebarConfig,
+        blog: {
+          description:
+            "Bioinformatics analysis engineer, front-end and back-end development beginner",
+          intro: "/about/",
+          medias: mediasConfig,
+        },
+      },
+    },
 
     // 此处开启了很多功能用于演示，你应仅保留用到的功能。
     markdown: {
@@ -153,12 +156,6 @@ export default hopeTheme(
         components: ["Badge", "VPCard"],
       },
 
-      // docsearch: {
-      //   appId: "TFYC0LM59H",
-      //   apiKey: "98079842ea4f4565e37eb23d80fb3adf",
-      //   indexName: "VVBP",
-      // },
-
       feed: {
         atom: true,
         json: true,
@@ -167,12 +164,18 @@ export default hopeTheme(
 
       // 阿里云图标库，参考了作者的博客
       icon: {
-        assets: "//at.alicdn.com/t/c/font_5224531_cpprgn4wwx.css",
+        assets: "//at.alicdn.com/t/c/font_5224531_x6aa0xtpm3g.css",
       },
 
       // 前端导航栏扰动的根本原因
       // icon: {
       //   prefix: "fa6-solid:",
+      // },
+
+      // docsearch: {
+      //   appId: "TFYC0LM59H",
+      //   apiKey: "98079842ea4f4565e37eb23d80fb3adf",
+      //   indexName: "VVBP",
       // },
 
       // 启用之前需安装 @waline/client
@@ -239,6 +242,19 @@ export default hopeTheme(
       //   },
       // },
     },
+
+    // 加密配置
+    // encrypt: {
+    //   config: {
+    //     "/demo/encrypt.html": {
+    //       hint: "Password: 1234",
+    //       password: "1234",
+    //     },
+    //   },
+    // },
+
+    // 如果想要实时查看任何改变，启用它。注：这对更新性能有很大负面影响
+    // hotReload: true,
   },
   // 主题行为选项（可选）
   { custom: false },

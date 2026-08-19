@@ -1,23 +1,35 @@
 import { defineUserConfig } from "vuepress";
-import { cachePlugin } from "@vuepress/plugin-cache";
 import type { UserConfig } from "vuepress";
 import theme from "./theme.js";
+// import { cachePlugin } from "@vuepress/plugin-cache";
 
 export default <UserConfig>defineUserConfig({
   base: "/VVBP/",
 
-  lang: "zh-CN",
-  title: "Rochsen's Blog",
-  description: "个人博客",
+  locales: {
+    "/": {
+      lang: "zh-CN",
+      title: "Rochsen",
+      description: "只有风暴才能击倒大树",
+    },
+
+    "/en/": {
+      lang: "en-US",
+      title: "My name is Rochsen",
+      description: "Only a storm can fell a greatwood.",
+    },
+  },
 
   theme,
 
-  host: "127.0.0.1",
+  // host: "127.0.0.1",
 
-  port: 9080,
-
-  // plugins: [cachePlugin({ type: "filesystem" })],
+  port: 8888,
 
   // 和 PWA 一起启用
   shouldPrefetch: false,
+
+  // title: "Rochsen's Blog",
+  // description: "个人博客",
+  // plugins: [cachePlugin({ type: "filesystem" })],
 });

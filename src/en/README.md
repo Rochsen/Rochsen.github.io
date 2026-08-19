@@ -2,10 +2,10 @@
 home: true
 layout: Blog
 icon: house
-title: 主页
+title: home
 bgImage: https://api.yppp.net/pc.php
 bgImageDark: https://pic1.imgdb.cn/i/0345mMGcrNtOVGbO7qu3Tw.jpg
-heroText: 欢迎来到我的博客
+heroText: welcome to my blog
 heroFullScreen: true
 tagline: 𝑂𝑛𝑙𝑦 𝑎 𝑠𝑡𝑜𝑟𝑚 𝑐𝑎𝑛 𝑓𝑒𝑙𝑙 𝑎 𝐺𝑟𝑒𝑎𝑡𝑤𝑜𝑜𝑑
 footer: 自定义你的页脚文字(writeFooter)
@@ -18,7 +18,7 @@ projects:
   - icon: folderopen
     name: 个人博客
     type: project
-    desc: VVBP-github仓库
+    desc: VVBP-github
     link: https://github.com/Rochsen/VVBP
 
   - icon: book
@@ -74,33 +74,4 @@ projects:
     desc: PGS场景下拷贝数变异注释
     link: https://github.com/Rochsen/pgs-pipeline-cnv-anno
 
-  # - icon: newspaper
-  #   name: 文章名称
-  #   desc: 文章详细描述
-  #   link: https://你的文章链接
-
-  # - icon: user-group
-  #   name: 伙伴名称
-  #   desc: 伙伴详细介绍
-  #   link: https://你的伙伴链接
-
-  # - icon: https://theme-hope-assets.vuejs.press/logo.svg
-  #   name: 自定义项目
-  #   desc: 自定义详细介绍
-  #   link: https://你的自定义链接
-
-# copyright: |
-# bgImage: https://www.dmoe.cc/random.php
-# bgImage: https://file.mo7.cc/api/public/bz
-# bgImage: /light-bgimage.png
-# bgImageDark: /dark-bgimage.jpg
-# heroImage: /wechat-avatar.png
-# heroImageDark: /avatar.png
-# tagline: 𝓞𝓷𝓵𝔂 𝓐 𝓢𝓽𝓸𝓻𝓶 𝓒𝓪𝓷 𝓕𝓮𝓵𝓵 𝓐 𝓖𝓻𝓮𝓪𝓽𝔀𝓸𝓸𝓭.
 ---
-
-<!-- 这是一个博客主页的案例。
-
-要使用此布局，你应该在页面前端设置 `layout: Blog` 和 `home: true`。
-
-相关配置文档请见 [博客主页](https://theme-hope.vuejs.press/zh/guide/blog/home.html)。 -->
