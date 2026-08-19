@@ -1,9 +1,9 @@
 {
   "version": "https://jsonfeed.org/version/1.1",
-  "title": "Rochsen's Blog",
+  "title": "Rochsen",
   "home_page_url": "https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/",
   "feed_url": "https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/feed.json",
-  "description": "个人博客",
+  "description": "只有风暴才能击倒大树",
   "favicon": "https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/logo.svg",
   "items": [
     {
