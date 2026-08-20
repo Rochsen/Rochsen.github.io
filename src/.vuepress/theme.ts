@@ -8,10 +8,7 @@ export const mediasConfig = {
   GitHub: "https://github.com/Rochsen",
   Steam: "https://steamcommunity.com/profiles/76561199143139420/",
   Gmail: "mailto:rochsen1011@gmail.com",
-  Leetcode: {
-    icon: "https://pic1.imgdb.cn/i/0349bJpROnhWofDHMNdITB.svg",
-    link: "https://leetcode.cn/u/rochsen/",
-  },
+  Zhihu: "https://www.zhihu.com/people/fei-sen-fei-yan"
 };
 
 // 主题选项

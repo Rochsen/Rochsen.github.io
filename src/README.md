@@ -22,6 +22,11 @@ projects:
     link: https://github.com/Rochsen/VVBP
 
   - icon: book
+    name: LeetCode
+    desc: 个人LeetCode目录
+    link: https://leetcode.cn/u/rochsen/
+
+  - icon: book
     name: ProjectEuler
     desc: 欧拉项目题解
     link: https://github.com/Rochsen/Record-Project-Euler

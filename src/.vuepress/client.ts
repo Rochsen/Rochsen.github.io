@@ -1,9 +1,19 @@
 import { defineClientConfig, useRoute } from "vuepress/client";
 import { watch } from "vue";
 
-// 全量引入Antdv-next
-import AntdvNext from "antdv-next";
-// import "antdv-next/dist/antd.css";
+// 按需引入 Antdv-next
+import {
+  Button,
+  Card,
+  Col,
+  Input,
+  Row,
+  Space,
+  Table,
+  Tag,
+  Timeline,
+  Tooltip,
+} from "antdv-next";
 
 // 每日一言：只请求一次并缓存，SPA 路由切换后页脚会重建，从缓存重新写入
 let hitokotoText = "";
@@ -35,8 +45,17 @@ const writeHitokoto = (): void => {
 
 export default defineClientConfig({
   enhance({ app }) {
-    // 注册AntdV-next
-    app.use(AntdvNext);
+    // 按需注册 Antdv-next 组件
+    app.use(Button);
+    app.use(Card); // CardMeta 随 Card 一起注册
+    app.use(Col);
+    app.use(Input); // InputSearch 随 Input 一起注册
+    app.use(Row);
+    app.use(Space);
+    app.use(Table);
+    app.use(Tag);
+    app.use(Timeline); // TimelineItem 随 Timeline 一起注册
+    app.use(Tooltip);
   },
   setup() {
     const route = useRoute();
