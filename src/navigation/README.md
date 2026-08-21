@@ -82,6 +82,14 @@ link: https://blog.anheyu.com/
 background: rgba(253, 230, 138, 0.15)
 ```
 
+```component VPCard
+title: 可莉姆船长
+desc: 网页favicon难找的一匹
+logo: https://kecream.cn/favicon.0000.svg
+link: https://kecream.cn/
+background: rgba(253, 230, 138, 0.15)
+```
+
 ## 装饰
 
 ```component VPCard
@@ -105,5 +113,13 @@ title: 樱花二次元图片API-Dmoe
 desc: 随机二次元图片API
 logo: https://www.dmoe.cc/favicon.ico
 link: https://www.dmoe.cc/
+background: rgba(253, 230, 138, 0.15)
+```
+
+```component VPCard
+title: 夜轻图片api文档
+desc: 目前在用的随机图片api
+logo: https://list.yppp.net/d/cos/yeqing.webp
+link: https://blog.yeqing.net/acg-api/
 background: rgba(253, 230, 138, 0.15)
 ```
