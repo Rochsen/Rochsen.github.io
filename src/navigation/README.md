@@ -93,14 +93,6 @@ background: rgba(253, 230, 138, 0.15)
 ## 装饰
 
 ```component VPCard
-title: Font Awesome
-desc: 本博客图标库
-logo: https://fontawesome.com/favicon.ico
-link: https://fontawesome.com/
-background: rgba(253, 230, 138, 0.15)
-```
-
-```component VPCard
 title: 一言
 desc: 本博客每日一言句子的来源
 logo: https://hitokoto.cn/favicon.ico
