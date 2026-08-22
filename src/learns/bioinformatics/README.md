@@ -1,10 +1,8 @@
 ---
 title: 生物信息学笔记
 icon: toolbox
-article: true
-star: true
-date: 2026-08-17
-sort: 0
+article: false
+star: false
 ---
 
 <!-- more -->

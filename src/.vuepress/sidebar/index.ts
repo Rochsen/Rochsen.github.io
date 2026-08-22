@@ -8,6 +8,7 @@ export const zhSideBarConfig = sidebar({
   "/learns/deploy/": "structure",
   "/learns/aiApplicationEngineer": zhihuAi,
   "/learns/bioinformatics/": "structure",
+  "/learns/computerSci/": "structure",
 
   // 游戏 - 侧边栏
   "/games/": gamesSideBarConfig,
