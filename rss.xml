@@ -6,10 +6,11 @@
     <link>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/</link>
     <description>只有风暴才能击倒大树</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 22 Aug 2026 13:10:32 GMT</pubDate>
-    <lastBuildDate>Sat, 22 Aug 2026 13:10:32 GMT</lastBuildDate>
+    <pubDate>Sat, 22 Aug 2026 14:42:14 GMT</pubDate>
+    <lastBuildDate>Sat, 22 Aug 2026 14:42:14 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>编程</category>
     <category>数据结构</category>
     <category>教程</category>
     <category>图片</category>
@@ -19,6 +20,64 @@
     <category>部署</category>
     <category>知乎</category>
     <category>使用指南</category>
+    <item>
+      <title>递归入门</title>
+      <link>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/computerSci/learnRecursion.html</link>
+      <guid>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/computerSci/learnRecursion.html</guid>
+      <source url="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/rss.xml">递归入门</source>
+      <description>1. 核心心法：递归信任（“套娃”思维）
+不要试图在脑子里一层层追踪递归过程（n→n-1→n-2...）。
+你只需要相信：只要“小一号的子问题”能解决，当前问题就一定能解决。
+2. 写递归函数的三步法
+
+步骤1：定义函数（明确输入输出）
+步骤2：找出口（Base Case）- 必须写在最前面，处理最小规模问题
+步骤3：找公式（Recursive Rul...</description>
+      <category>编程</category>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+<h2>1. 核心心法：递归信任（“套娃”思维）</h2>
+<p>不要试图在脑子里一层层追踪递归过程（n→n-1→n-2...）。
+你只需要相信：只要“小一号的子问题”能解决，当前问题就一定能解决。</p>
+<h2>2. 写递归函数的三步法</h2>
+<ol>
+<li>步骤1：定义函数（明确输入输出）</li>
+<li>步骤2：找出口（Base Case）- 必须写在最前面，处理最小规模问题</li>
+<li>步骤3：找公式（Recursive Rule）- 拆解为“一小步”+“剩余子问题”</li>
+</ol>
+<h2>3. 典型代码模板</h2>
+<div class="language-python line-numbers-mode" data-highlighter="shiki" data-ext="python" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-python"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 线性递归（阶乘）</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">def</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> factorial</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic">n</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">):</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    if</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> n </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">==</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:        </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 出口条件：当n=1时，递归结束</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        return</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 1</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    return</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> n </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">*</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF"> factorial</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(n </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)  </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 公式</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 线性递归（列表求和-健壮版）</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">def</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> sum_list</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic">lst</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">):</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    if</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> not</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> lst:       </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 出口条件：当列表为空时，递归结束</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        return</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 0</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    return</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> lst[</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">] </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">+</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF"> sum_list</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(lst[</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:])</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 两端收缩递归（回文判断）</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">def</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> is_palindrome</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic">s</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">):</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    if</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> len</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(s) </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">&#x3C;=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> 1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:   </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 出口条件：当字符串长度为0或1时，满足回文，递归结束</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        return</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> True</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    return</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> s[</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">] </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">==</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> s[</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">] </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">and</span><span style="--shiki-light:#383A42;--shiki-dark:#61AFEF"> is_palindrome</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(s[</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">])</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>4. 必须避开的致命陷阱</h2>
+<ul>
+<li>忘记写出口 -&gt; RecursionError（栈溢出）</li>
+<li>出口逻辑错误（如0!返回0） -&gt; 全盘算错</li>
+<li>忽略边界（如传入空列表/空字符串） -&gt; IndexError</li>
+</ul>
+<h2>5. 底层机制：调用栈（Call Stack）</h2>
+<p>递推：任务暂停压栈 -&gt; 触底 -&gt; 回归：弹栈逐层返回计算结果。</p>
+<h2>6. 已掌握的两种递归模式</h2>
+<ul>
+<li>线性递归：每次解决一个元素（求和、阶乘）</li>
+<li>分治（双向）递归：同时从两端向内推进（回文判断）</li>
+</ul>
+]]></content:encoded>
+    </item>
     <item>
       <title>单向链表</title>
       <link>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/computerSci/singleLinkList.html</link>
