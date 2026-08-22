@@ -4,7 +4,7 @@
   <title>Rochsen</title>
   <subtitle>只有风暴才能击倒大树</subtitle>
   <icon>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/logo.svg</icon>
-  <updated>2026-08-22T10:05:34.282Z</updated>
+  <updated>2026-08-22T13:10:32.165Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/atom.xml"/>
   <link rel="alternate" href="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/"/>
@@ -27,30 +27,64 @@
     <title type="text">单向链表</title>
     <id>https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/computerSci/singleLinkList.html</id>
     <link href="https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/learns/computerSci/singleLinkList.html"/>
-    <updated>2026-08-22T10:04:47.000Z</updated>
-    <summary type="text">术语（Glossary）
+    <updated>2026-08-22T13:09:47.000Z</updated>
+    <summary type="text">基础：单向链表入门
+把链表想成一列火车 —— 看懂写法与逻辑，修好你自己的代码
+一、先建立画面：链表就是一列火车 🚂
+你已经写过 temp-shejilianbiao.py，说明基础语法没问题。现在我们要把「链表」这个数据结构在脑子里画出来——画对了，代码就顺了。
+想象一列火车：
 
-节点模板
-
-三个核心动作
-① 遍历：从头走到尾
-
-② 插入：在 prev 后面挂 new —— 先接后断，顺序不能反！
-
-
-为什么顺序不能反
-如果先写 prev.next = new，prev 后面整列火车就丢了——没人再指向它们，再也找不回来。
-
-③ 删除：跳过被删节点
-
-
-被删的节点呢？
-没有变量再引用它，Python ...</summary>
+每一节车厢装着一件货物（比如数字 5）；
+每节车厢后面有一个挂钩，钩...</summary>
     <content type="html"><![CDATA[<!-- more -->
-<h2>术语（Glossary）</h2>
-<p>| 术语 | 含义 |
-|</p>
-]]></content>
+<h2>基础：单向链表入门</h2>
+<p><em>把链表想成一列火车 —— 看懂写法与逻辑，修好你自己的代码</em></p>
+<h3>一、先建立画面：链表就是一列火车 🚂</h3>
+<p>你已经写过 <code>temp-shejilianbiao.py</code>，说明基础语法没问题。现在我们要把「链表」这个数据结构在脑子里画出来——<strong>画对了，代码就顺了</strong>。</p>
+<p>想象一列火车：</p>
+<ul>
+<li>每一节<strong>车厢</strong>装着一件货物（比如数字 5）；</li>
+<li>每节车厢后面有一个<strong>挂钩</strong>，钩着下一节车厢；</li>
+<li>列车长手里只拿着<strong>车头</strong>，想找第 3 节车厢，必须从车头一节一节往后走；</li>
+<li>最后一节车厢的挂钩空着，什么也没钩——那就是 <code>None</code>。</li>
+</ul>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>车头      车厢1      车厢2      车厢3</span></span>
+<span class="line"><span> │         │         │         │</span></span>
+<span class="line"><span> ▼         ▼         ▼         ▼</span></span>
+<span class="line"><span>[5|●] --> [9|●] --> [2|●] --> [7|∅]</span></span>
+<span class="line"><span> │         │         │         │</span></span>
+<span class="line"><span> value     value     value     value=None</span></span>
+<span class="line"><span> next      next      next      (没有下一节)</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在代码里，「车厢」叫 <strong>节点 Node</strong>，两个属性：</p>
+<div class="language-python line-numbers-mode" data-highlighter="shiki" data-ext="python" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-python"><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">class</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> Node</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    def</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> __init__</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E5C07B;--shiki-dark-font-style:italic">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> value</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">):</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.value </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> value   </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 货物：这个节点存的数据</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.next </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> None</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">     # 挂钩：指向下一节车厢（默认空着）</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>而 <code>head</code> 就是「车头」——链表本身不存任何数据，它只记住第一节课厢是谁：</p>
+<div class="language-python line-numbers-mode" data-highlighter="shiki" data-ext="python" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-python"><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">class</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> MyLinkedList</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    def</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> __init__</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E5C07B;--shiki-dark-font-style:italic">self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">):</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E5C07B">        self</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.head </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> None</span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">     # 空链表：一辆车都没有</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>二、三个核心动作：所有链表操作都是它们的组合</h3>
+<p>链表的所有增删查，最后都归结为三件事：<strong>走、接、跳</strong>。</p>
+<h4>动作 1：走（遍历）—— 从车头走到尾</h4>
+<div class="language-python line-numbers-mode" data-highlighter="shiki" data-ext="python" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-python"><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">cur </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> head</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">while</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> cur:            </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 只要还有车厢</span></span>
+<span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">    print</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(cur.value)</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    cur </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> cur.next    </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 走到下一节</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>循环结束的条件是 <code>cur</code> 变成 <code>None</code>——也就是走过了最后一节车厢。这就是「遍历」。</p>
+<h4>动作 2：接（插入）—— 口诀：先接后断！</h4>
+<p>想在节点 <code>prev</code> 后面挂一节新车厢 <code>new</code>，有两步：</p>
+<div class="language-python line-numbers-mode" data-highlighter="shiki" data-ext="python" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-python"><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">new.next </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> prev.next   </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># ① 先接：新钩子先钩住 prev 后面的车厢</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">prev.next </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> new        </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># ② 再断：把 prev 的钩子改挂到 new</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p><strong>顺序为什么不能反？</strong>
+如果先写 <code>prev.next = new</code>，prev 后面的整列火车就没人指向了——<strong>丢了</strong>。就像先解开挂钩再挂新的，后面的车厢全散架了。所以必须「新节点先接住后面，前面的钩子再断开来挂新节点」。</p>
+</blockquote>
+<h4>动作 3：跳（删除）—— 让前一个直接跳过它</h4>
+<div class="language-python line-numbers-mode" data-highlighter="shiki" data-ext="python" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-python"><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">prev.next </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> prev.next.next   </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># prev 的钩子直接指向「下一个的下一个」</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-"><span class="line"><span>删除前：  [..|●] --> [删|●] --> [..|●]</span></span>
+<span class="line"><span>删除后：  [..|●]</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div>]]></content>
     <category term="数据结构"/>
     <published>2026-08-22T00:00:00.000Z</published>
   </entry>
