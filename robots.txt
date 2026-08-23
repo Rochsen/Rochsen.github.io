@@ -1,4 +1,0 @@
-User-agent:*
-Disallow:
-
-Sitemap: https://rochsen.github.io/VuePress-Rochsen-Blog/VVBP/sitemap.xml
