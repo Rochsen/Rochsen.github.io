@@ -12,7 +12,9 @@ import HitokotoBlogHero from "vuepress-theme-hope/presets/HitokotoBlogHero.js";
     <!-- 一言描述替换tagline -->
     <Blog>
         <template #heroInfo="data">
-            <HitokotoBlogHero v-bind="data" />
+            <HitokotoBlogHero 
+                :text="data.text || ''"
+            />
         </template>
     </Blog>
 </template>
