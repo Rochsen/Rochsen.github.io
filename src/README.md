@@ -5,10 +5,9 @@ icon: house
 title: 主页
 bgImage: https://api.yppp.net/pc.php
 bgImageDark: https://pic1.imgdb.cn/i/0345mMGcrNtOVGbO7qu3Tw.jpg
-heroText: 欢迎来到我的博客
+heroText: ""
 heroFullScreen: true
-tagline: 𝑂𝑛𝑙𝑦 𝑎 𝑠𝑡𝑜𝑟𝑚 𝑐𝑎𝑛 𝑓𝑒𝑙𝑙 𝑎 𝐺𝑟𝑒𝑎𝑡𝑤𝑜𝑜𝑑
-footer: 自定义你的页脚文字(writeFooter)
+footer: 由src\.vuepress\client.ts设置
 displayFooter: true
 head:
   - - meta

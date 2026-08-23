@@ -14,7 +14,8 @@ export const mediasConfig = {
 // 主题选项
 export default hopeTheme(
   {
-    hostname: "https://rochsen.github.io/VuePress-Rochsen-Blog/",
+    // 当前网站部署到的域名。暂时没有公网域名
+    // hostname: "https://rochsen.github.io/VuePress-Rochsen-Blog/",
 
     author: {
       name: "罗浩森",
@@ -27,41 +28,49 @@ export default hopeTheme(
     // 博客首页 logo
     logo: "/favicon.ico",
 
+    // GitHub仓库
     repo: "/Rochsen",
 
     // 是否在导航栏展示仓库链接
-    repoDisplay: false,
+    repoDisplay: true,
 
+    // 是否展示全屏按钮
+    fullscreen: true,
+
+    // 文档所在目录
     docsDir: "src",
 
     // 是否展示页脚
     displayFooter: true,
-    // 页脚
-    footer: "默认页脚",
 
-    // 多语言配置
+    // 默认页脚，这边已在client.ts设置
+    footer: "src\.vuepress\client.ts",
+
+    // 文档右下方的编辑此页
     metaLocales: {
       editLink: "编辑此页",
     },
 
+    // 多语言配置 博客功能
     locales: {
       "/": {
         navbar: zhNavbarConfig,
         sidebar: zhSideBarConfig,
         blog: {
-          description: "生物信息分析工程师、前后端开发初学者",
+          description: "生物信息全栈开发工程师",
           intro: "/about/",
           medias: mediasConfig,
+          timeline: "时光机",
         },
       },
       "/en/": {
         navbar: enNavbarConfig,
         sidebar: enSidebarConfig,
         blog: {
-          description:
-            "Bioinformatics analysis engineer, front-end and back-end development beginner",
+          description: "Bioinformatics full stack development engineer",
           intro: "/about/",
           medias: mediasConfig,
+          timeline: "Time Machine",
         },
       },
     },
@@ -145,10 +154,10 @@ export default hopeTheme(
 
     // 在这里配置主题提供的插件
     plugins: {
-      blog: {
-        excerptLength: 0,
-      },
+      // 启动博客插件
+      blog: true,
 
+      // 框架自带的组件
       components: {
         components: ["Badge", "VPCard"],
       },
@@ -240,19 +249,9 @@ export default hopeTheme(
       // },
     },
 
-    // 加密配置
-    // encrypt: {
-    //   config: {
-    //     "/demo/encrypt.html": {
-    //       hint: "Password: 1234",
-    //       password: "1234",
-    //     },
-    //   },
-    // },
-
     // 如果想要实时查看任何改变，启用它。注：这对更新性能有很大负面影响
     // hotReload: true,
   },
   // 主题行为选项（可选）
-  { custom: false },
+  { custom: true },
 );

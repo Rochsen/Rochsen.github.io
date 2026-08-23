@@ -1,5 +1,8 @@
 import { defineClientConfig, useRoute } from "vuepress/client";
-import { watch } from "vue";
+import { setupTransparentNavbar } from "vuepress-theme-hope/presets/transparentNavbar.js";
+import { setupSnowFall } from "vuepress-theme-hope/presets/snowFall.js";
+import { setupRunningTimeFooter } from "vuepress-theme-hope/presets/footerRunningTime.js";
+import Blog from "./layouts/Blog.vue";
 
 // 按需引入 Antdv-next
 import {
@@ -14,34 +17,6 @@ import {
   Timeline,
   Tooltip,
 } from "antdv-next";
-
-// 每日一言：只请求一次并缓存，SPA 路由切换后页脚会重建，从缓存重新写入
-let hitokotoText = "";
-
-const writeFooter = (text: string, retries = 10): void => {
-  // 服务端渲染阶段没有 document，直接跳过，避免 SSR 构建报错
-  if (typeof document === "undefined") return;
-  const footer = document.querySelector(".vp-footer");
-  if (footer) footer.innerHTML = text;
-  // 若请求返回早于页脚渲染完成，稍后重试
-  else if (retries > 0) setTimeout(() => writeFooter(text, retries - 1), 200);
-};
-
-const writeHitokoto = (): void => {
-  if (hitokotoText) {
-    writeFooter(hitokotoText);
-    return;
-  }
-  fetch("https://v1.hitokoto.cn/?c=d&encode=json")
-    .then((res) => res.json())
-    .then(({ hitokoto, from }: { hitokoto: string; from: string }) => {
-      hitokotoText = `${hitokoto} ——「${from}」`;
-      writeFooter(hitokotoText);
-    })
-    .catch(() => {
-      // 请求失败时保留主题默认页脚文案
-    });
-};
 
 export default defineClientConfig({
   enhance({ app }) {
@@ -58,12 +33,24 @@ export default defineClientConfig({
     app.use(Tooltip);
   },
   setup() {
-    const route = useRoute();
-    // 首次加载与每次路由切换：flush: "post" 保证在 Vue 更新 DOM（重建页脚占位文字）之后再写入一言
-    watch(
-      () => route.path,
-      () => writeHitokoto(),
-      { immediate: true, flush: "post" },
+    // 透明导航栏
+    setupTransparentNavbar({ type: "homepage" });
+    // 下雪
+    setupSnowFall();
+    // 在页脚显示站点运行时间
+    setupRunningTimeFooter(
+      new Date("2026-01-21"),
+      {
+        "/en/": "Running time: :day days :hour hours :minute minutes :second seconds",
+        "/": "已运行 :day 天 :hour 小时 :minute 分钟 :second 秒",
+      },
+      // 是否保留原有页脚内容
+      false,
     );
+  },
+
+  // 布局
+  layouts: {
+    Blog,
   },
 });

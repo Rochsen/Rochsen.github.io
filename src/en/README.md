@@ -5,10 +5,9 @@ icon: house
 title: home
 bgImage: https://api.yppp.net/pc.php
 bgImageDark: https://pic1.imgdb.cn/i/0345mMGcrNtOVGbO7qu3Tw.jpg
-heroText: welcome to my blog
+heroText: ""
 heroFullScreen: true
-tagline: 𝑂𝑛𝑙𝑦 𝑎 𝑠𝑡𝑜𝑟𝑚 𝑐𝑎𝑛 𝑓𝑒𝑙𝑙 𝑎 𝐺𝑟𝑒𝑎𝑡𝑤𝑜𝑜𝑑
-footer: 自定义你的页脚文字(writeFooter)
+footer: 由src\.vuepress\client.ts设置
 displayFooter: true
 head:
   - - meta
@@ -18,8 +17,13 @@ projects:
   - icon: folderopen
     name: 个人博客
     type: project
-    desc: VVBP-github
+    desc: VVBP-github仓库
     link: https://github.com/Rochsen/VVBP
+
+  - icon: book
+    name: LeetCode
+    desc: 个人LeetCode目录
+    link: https://leetcode.cn/u/rochsen/
 
   - icon: book
     name: ProjectEuler

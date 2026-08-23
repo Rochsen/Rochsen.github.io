@@ -9,14 +9,12 @@ export default <UserConfig>defineUserConfig({
   locales: {
     "/": {
       lang: "zh-CN",
-      title: "Rochsen",
-      description: "只有风暴才能击倒大树",
+      // title: "Rochsen",
     },
 
     "/en/": {
       lang: "en-US",
-      title: "My name is Rochsen",
-      description: "Only a storm can fell a greatwood.",
+      // title: "My name is Rochsen",
     },
   },
 
