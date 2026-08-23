@@ -9,12 +9,12 @@ export default <UserConfig>defineUserConfig({
   locales: {
     "/": {
       lang: "zh-CN",
-      // title: "Rochsen",
+      title: "欢迎来到我的博客",
     },
 
     "/en/": {
       lang: "en-US",
-      // title: "My name is Rochsen",
+      title: "Welocome to My Blog",
     },
   },
 
