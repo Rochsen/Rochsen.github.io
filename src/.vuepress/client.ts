@@ -1,4 +1,4 @@
-import { defineClientConfig, useRoute } from "vuepress/client";
+import { defineClientConfig } from "vuepress/client";
 import { setupTransparentNavbar } from "vuepress-theme-hope/presets/transparentNavbar.js";
 import { setupSnowFall } from "vuepress-theme-hope/presets/snowFall.js";
 import { setupRunningTimeFooter } from "vuepress-theme-hope/presets/footerRunningTime.js";
