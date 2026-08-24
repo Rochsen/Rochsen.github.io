@@ -15,7 +15,7 @@ export const mediasConfig = {
 export default hopeTheme(
   {
     // 当前网站部署到的域名。暂时没有公网域名
-    // hostname: "https://rochsen.github.io/VuePress-Rochsen-Blog/",
+    // hostname: "https://rochsen-blog.com/",
 
     author: {
       name: "罗浩森",
@@ -28,8 +28,8 @@ export default hopeTheme(
     // 博客首页 logo
     logo: "/favicon.ico",
 
-    // GitHub仓库
-    repo: "/Rochsen",
+    // 博客的GitHub仓库
+    repo: "Rochsen/Rochsen.github.io",
 
     // 是否在导航栏展示仓库链接
     repoDisplay: true,
