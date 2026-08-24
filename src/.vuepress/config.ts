@@ -4,8 +4,6 @@ import theme from "./theme.js";
 // import { cachePlugin } from "@vuepress/plugin-cache";
 
 export default <UserConfig>defineUserConfig({
-  // github仓库为VVBP
-  // base: "/VVBP/",
   // github仓库重命名为Rochsen.github.io
   base: "/",
 
