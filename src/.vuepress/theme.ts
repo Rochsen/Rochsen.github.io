@@ -8,7 +8,7 @@ export const mediasConfig = {
   GitHub: "https://github.com/Rochsen",
   Steam: "https://steamcommunity.com/profiles/76561199143139420/",
   Gmail: "mailto:rochsen1011@gmail.com",
-  Zhihu: "https://www.zhihu.com/people/fei-sen-fei-yan"
+  Zhihu: "https://www.zhihu.com/people/Rochsen",
 };
 
 // 主题选项
