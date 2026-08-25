@@ -1,0 +1,5 @@
+import{h as e,o as t,s as n}from"./app-BQhSJ46K.js";import{t as r}from"./plugin-vue_export-helper-BDNMzG2s.js";var i=JSON.parse(`{"path":"/about/","title":"关于","lang":"zh-CN","frontmatter":{"title":"关于","index":false,"icon":"at","category":["页面"],"tag":["自我介绍"],"navbar":true,"sidebar":false,"breadcrumb":false,"pageInfo":false,"contributors":false,"editLink":false,"lastUpdated":false,"prev":false,"next":false,"comment":false,"backtotop":true,"toc":false,"article":false},"git":{"createdTime":1768996021000,"updatedTime":1787665311000},"readingTime":{"minutes":0.18,"words":53},"filePathRelative":"about/README.md","excerpt":""}`),a={name:`README.md`};function o(r,i,a,o,s,c){return e(),n(`div`,null,[t(` more `),t(` <Catalog /> `),t(` <AboutPageVue />
+
+<script setup>
+  import AboutPageVue from "@source/.vuepress/components/About/App.vue";
+<\/script> `)])}var s=r(a,[[`render`,o]]);export{i as _pageData,s as default};
