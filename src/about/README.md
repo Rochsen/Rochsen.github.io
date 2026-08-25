@@ -25,8 +25,8 @@ article: false
 
 <!-- <Catalog /> -->
 
-<AboutPageVue />
+<!-- <AboutPageVue />
 
 <script setup>
   import AboutPageVue from "@source/.vuepress/components/About/App.vue";
-</script>
+</script> -->
