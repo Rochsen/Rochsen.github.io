@@ -8,3 +8,8 @@
     }
   }
 }
+
+// 移除导航栏外部链接的箭头图标
+.vp-navbar .external-link::after {
+  content: none !important;
+}
