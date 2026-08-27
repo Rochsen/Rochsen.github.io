@@ -15,7 +15,7 @@ export const mediasConfig = {
 export default hopeTheme(
   {
     // 当前网站部署到的域名。暂时没有公网域名
-    // hostname: "https://rochsen-blog.com/",
+    hostname: "https://rochsen-blog.com/VVBP",
 
     author: {
       name: "罗浩森",

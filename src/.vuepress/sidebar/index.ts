@@ -1,14 +1,14 @@
 import { sidebar } from "vuepress-theme-hope";
 import { gamesSideBarConfig } from "./games/index.js";
-import { learnSideBar, deploy, zhihuAi, bioInfo } from "./learn/index.js";
+import { NoteSideBar, zhihuAi } from "./notes/index.ts";
 
 export const zhSideBarConfig = sidebar({
   // 学习 - 侧边栏
-  "/learns/": learnSideBar,
-  "/learns/deploy/": "structure",
-  "/learns/aiApplicationEngineer": zhihuAi,
-  "/learns/bioinformatics/": "structure",
-  "/learns/computerSci/": "structure",
+  "/notes/": NoteSideBar,
+  "/notes/deploy/": "structure",
+  "/notes/aiApplicationEngineer": zhihuAi,
+  "/notes/bioinformatics/": "structure",
+  "/notes/computerSci/": "structure",
 
   // 游戏 - 侧边栏
   "/games/": gamesSideBarConfig,
@@ -16,15 +16,14 @@ export const zhSideBarConfig = sidebar({
 
 // 英文语言下的侧边栏
 export const enSidebarConfig = sidebar({
-  "/en/learns/": [""],
+  "/en/notes/": [""],
 
   // fallback
-  "/en/": ["", "learns/"],
+  "/en/": ["", "notes/"],
 });
 
-
 // 中文语言下的侧边栏部分示例保留
-// 
+//
 // 示例：左侧折叠
 // "/strategy/": [
 //   "",
