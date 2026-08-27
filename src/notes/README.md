@@ -1,5 +1,5 @@
 ---
-title: 学习
+title: 笔记
 index: false
 icon: pen
 breadcrumb: false
