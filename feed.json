@@ -1,0 +1,799 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "欢迎来到我的博客",
+  "home_page_url": "https://rochsen-blog.com/VVBP/",
+  "feed_url": "https://rochsen-blog.com/VVBP/feed.json",
+  "favicon": "https://rochsen-blog.com/VVBP/logo.svg",
+  "items": [
+    {
+      "title": "递归入门",
+      "url": "https://rochsen-blog.com/VVBP/notes/computerSci/learnRecursion.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/computerSci/learnRecursion.html",
+      "summary": "1. 核心心法：递归信任（“套娃”思维）\n不要试图在脑子里一层层追踪递归过程（n→n-1→n-2...）。\n你只需要相信：只要“小一号的子问题”能解决，当前问题就一定能解决。\n2. 写递归函数的三步法\n\n步骤1：定义函数（明确输入输出）\n步骤2：找出口（Base Case）- 必须写在最前面，处理最小规模问题\n步骤3：找公式（Recursive Rul...",
+      "content_html": "<!-- more -->\n<h2>1. 核心心法：递归信任（“套娃”思维）</h2>\n<p>不要试图在脑子里一层层追踪递归过程（n→n-1→n-2...）。\n你只需要相信：只要“小一号的子问题”能解决，当前问题就一定能解决。</p>\n<h2>2. 写递归函数的三步法</h2>\n<ol>\n<li>步骤1：定义函数（明确输入输出）</li>\n<li>步骤2：找出口（Base Case）- 必须写在最前面，处理最小规模问题</li>\n<li>步骤3：找公式（Recursive Rule）- 拆解为“一小步”+“剩余子问题”</li>\n</ol>\n<h2>3. 典型代码模板</h2>\n<div class=\"language-python line-numbers-mode\" data-highlighter=\"shiki\" data-ext=\"python\" style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code class=\"language-python\"><span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 线性递归（阶乘）</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">def</span><span style=\"--shiki-light:#4078F2;--shiki-dark:#61AFEF\"> factorial</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic\">n</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">):</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">    if</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> n </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">==</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\"> 1</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">:        </span><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 出口条件：当n=1时，递归结束</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">        return</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\"> 1</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">    return</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> n </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">*</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\"> factorial</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(n </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">-</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\"> 1</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">)  </span><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 公式</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 线性递归（列表求和-健壮版）</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">def</span><span style=\"--shiki-light:#4078F2;--shiki-dark:#61AFEF\"> sum_list</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic\">lst</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">):</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">    if</span><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\"> not</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> lst:       </span><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 出口条件：当列表为空时，递归结束</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">        return</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\"> 0</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">    return</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> lst[</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">0</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">] </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">+</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\"> sum_list</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(lst[</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">1</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">:])</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 两端收缩递归（回文判断）</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">def</span><span style=\"--shiki-light:#4078F2;--shiki-dark:#61AFEF\"> is_palindrome</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic\">s</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">):</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">    if</span><span style=\"--shiki-light:#0184BC;--shiki-dark:#56B6C2\"> len</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(s) </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">&#x3C;=</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\"> 1</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">:   </span><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 出口条件：当字符串长度为0或1时，满足回文，递归结束</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">        return</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\"> True</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">    return</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> s[</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">0</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">] </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">==</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> s[</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">-</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">1</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">] </span><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">and</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\"> is_palindrome</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(s[</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">1</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">:</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">-</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">1</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">])</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><h2>4. 必须避开的致命陷阱</h2>\n<ul>\n<li>忘记写出口 -&gt; RecursionError（栈溢出）</li>\n<li>出口逻辑错误（如0!返回0） -&gt; 全盘算错</li>\n<li>忽略边界（如传入空列表/空字符串） -&gt; IndexError</li>\n</ul>\n<h2>5. 底层机制：调用栈（Call Stack）</h2>\n<p>递推：任务暂停压栈 -&gt; 触底 -&gt; 回归：弹栈逐层返回计算结果。</p>\n<h2>6. 已掌握的两种递归模式</h2>\n<ul>\n<li>线性递归：每次解决一个元素（求和、阶乘）</li>\n<li>分治（双向）递归：同时从两端向内推进（回文判断）</li>\n</ul>\n",
+      "date_published": "2026-08-22T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "编程"
+      ]
+    },
+    {
+      "title": "单向链表",
+      "url": "https://rochsen-blog.com/VVBP/notes/computerSci/singleLinkList.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/computerSci/singleLinkList.html",
+      "summary": "基础：单向链表入门\n把链表想成一列火车 —— 看懂写法与逻辑，修好你自己的代码\n一、先建立画面：链表就是一列火车 🚂\n你已经写过 temp-shejilianbiao.py，说明基础语法没问题。现在我们要把「链表」这个数据结构在脑子里画出来——画对了，代码就顺了。\n想象一列火车：\n\n每一节车厢装着一件货物（比如数字 5）；\n每节车厢后面有一个挂钩，钩...",
+      "content_html": "<!-- more -->\n<h2>基础：单向链表入门</h2>\n<p><em>把链表想成一列火车 —— 看懂写法与逻辑，修好你自己的代码</em></p>\n<h3>一、先建立画面：链表就是一列火车 🚂</h3>\n<p>你已经写过 <code>temp-shejilianbiao.py</code>，说明基础语法没问题。现在我们要把「链表」这个数据结构在脑子里画出来——<strong>画对了，代码就顺了</strong>。</p>\n<p>想象一列火车：</p>\n<ul>\n<li>每一节<strong>车厢</strong>装着一件货物（比如数字 5）；</li>\n<li>每节车厢后面有一个<strong>挂钩</strong>，钩着下一节车厢；</li>\n<li>列车长手里只拿着<strong>车头</strong>，想找第 3 节车厢，必须从车头一节一节往后走；</li>\n<li>最后一节车厢的挂钩空着，什么也没钩——那就是 <code>None</code>。</li>\n</ul>\n<div class=\"language- line-numbers-mode\" data-highlighter=\"shiki\" data-ext style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code class=\"language-\"><span class=\"line\"><span>车头      车厢1      车厢2      车厢3</span></span>\n<span class=\"line\"><span> │         │         │         │</span></span>\n<span class=\"line\"><span> ▼         ▼         ▼         ▼</span></span>\n<span class=\"line\"><span>[5|●] --> [9|●] --> [2|●] --> [7|∅]</span></span>\n<span class=\"line\"><span> │         │         │         │</span></span>\n<span class=\"line\"><span> value     value     value     value=None</span></span>\n<span class=\"line\"><span> next      next      next      (没有下一节)</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><p>在代码里，「车厢」叫 <strong>节点 Node</strong>，两个属性：</p>\n<div class=\"language-python line-numbers-mode\" data-highlighter=\"shiki\" data-ext=\"python\" style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code class=\"language-python\"><span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">class</span><span style=\"--shiki-light:#C18401;--shiki-dark:#E5C07B\"> Node</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">:</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">    def</span><span style=\"--shiki-light:#0184BC;--shiki-dark:#56B6C2\"> __init__</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E5C07B;--shiki-dark-font-style:italic\">self</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">,</span><span style=\"--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic\"> value</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">):</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#E45649;--shiki-dark:#E5C07B\">        self</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">.value </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> value   </span><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 货物：这个节点存的数据</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#E45649;--shiki-dark:#E5C07B\">        self</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">.next </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\"> None</span><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\">     # 挂钩：指向下一节车厢（默认空着）</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><p>而 <code>head</code> 就是「车头」——链表本身不存任何数据，它只记住第一节课厢是谁：</p>\n<div class=\"language-python line-numbers-mode\" data-highlighter=\"shiki\" data-ext=\"python\" style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code class=\"language-python\"><span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">class</span><span style=\"--shiki-light:#C18401;--shiki-dark:#E5C07B\"> MyLinkedList</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">:</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">    def</span><span style=\"--shiki-light:#0184BC;--shiki-dark:#56B6C2\"> __init__</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E5C07B;--shiki-dark-font-style:italic\">self</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">):</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#E45649;--shiki-dark:#E5C07B\">        self</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">.head </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\"> None</span><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\">     # 空链表：一辆车都没有</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><h3>二、三个核心动作：所有链表操作都是它们的组合</h3>\n<p>链表的所有增删查，最后都归结为三件事：<strong>走、接、跳</strong>。</p>\n<h4>动作 1：走（遍历）—— 从车头走到尾</h4>\n<div class=\"language-python line-numbers-mode\" data-highlighter=\"shiki\" data-ext=\"python\" style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code class=\"language-python\"><span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">cur </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> head</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">while</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> cur:            </span><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 只要还有车厢</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#0184BC;--shiki-dark:#56B6C2\">    print</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(cur.value)</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">    cur </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> cur.next    </span><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 走到下一节</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><p>循环结束的条件是 <code>cur</code> 变成 <code>None</code>——也就是走过了最后一节车厢。这就是「遍历」。</p>\n<h4>动作 2：接（插入）—— 口诀：先接后断！</h4>\n<p>想在节点 <code>prev</code> 后面挂一节新车厢 <code>new</code>，有两步：</p>\n<div class=\"language-python line-numbers-mode\" data-highlighter=\"shiki\" data-ext=\"python\" style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code class=\"language-python\"><span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">new.next </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> prev.next   </span><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># ① 先接：新钩子先钩住 prev 后面的车厢</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">prev.next </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> new        </span><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># ② 再断：把 prev 的钩子改挂到 new</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><blockquote>\n<p><strong>顺序为什么不能反？</strong>\n如果先写 <code>prev.next = new</code>，prev 后面的整列火车就没人指向了——<strong>丢了</strong>。就像先解开挂钩再挂新的，后面的车厢全散架了。所以必须「新节点先接住后面，前面的钩子再断开来挂新节点」。</p>\n</blockquote>\n<h4>动作 3：跳（删除）—— 让前一个直接跳过它</h4>\n<div class=\"language-python line-numbers-mode\" data-highlighter=\"shiki\" data-ext=\"python\" style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code class=\"language-python\"><span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">prev.next </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> prev.next.next   </span><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># prev 的钩子直接指向「下一个的下一个」</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div></div></div><div class=\"language- line-numbers-mode\" data-highlighter=\"shiki\" data-ext style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code class=\"language-\"><span class=\"line\"><span>删除前：  [..|●] --> [删|●] --> [..|●]</span></span>\n<span class=\"line\"><span>删除后：  [..|●]</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div>",
+      "date_published": "2026-08-22T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "数据结构"
+      ]
+    },
+    {
+      "title": "博客图片API收集",
+      "url": "https://rochsen-blog.com/VVBP/notes/deploy/imageApi.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/deploy/imageApi.html",
+      "summary": "樱花二次元图片API-Dmoe\n\napi: https://www.dmoe.cc/random.php\n\n随机二次元图片API文档（by夜轻）\n\nblog: https://blog.yeqing.net/acg-api/\napi：https://api.yppp.net/pc.php",
+      "content_html": "<!-- more -->\n<h2>樱花二次元图片API-Dmoe</h2>\n<ul>\n<li>api: <a href=\"https://www.dmoe.cc/random.php\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.dmoe.cc/random.php</a></li>\n</ul>\n<h2>随机二次元图片API文档（by夜轻）</h2>\n<ul>\n<li>blog: <a href=\"https://blog.yeqing.net/acg-api/\" target=\"_blank\" rel=\"noopener noreferrer\">https://blog.yeqing.net/acg-api/</a></li>\n<li>api：<a href=\"https://api.yppp.net/pc.php\" target=\"_blank\" rel=\"noopener noreferrer\">https://api.yppp.net/pc.php</a></li>\n</ul>\n",
+      "date_published": "2026-08-18T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "图片"
+      ]
+    },
+    {
+      "title": "bwa使用笔记",
+      "url": "https://rochsen-blog.com/VVBP/notes/bioinformatics/bwa.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/bioinformatics/bwa.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-08-18T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "软件",
+        "生物信息学"
+      ]
+    },
+    {
+      "title": "samtools使用笔记",
+      "url": "https://rochsen-blog.com/VVBP/notes/bioinformatics/samtools.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/bioinformatics/samtools.html",
+      "content_html": "<!-- more -->",
+      "date_published": "2026-08-18T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "软件",
+        "生物信息学"
+      ]
+    },
+    {
+      "title": "什么是全外显子测序",
+      "url": "https://rochsen-blog.com/VVBP/notes/bioinformatics/%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%A8%E5%A4%96%E6%98%BE%E5%AD%90%E6%B5%8B%E5%BA%8F.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/bioinformatics/%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%A8%E5%A4%96%E6%98%BE%E5%AD%90%E6%B5%8B%E5%BA%8F.html",
+      "content_html": "<!-- more -->",
+      "date_published": "2026-08-18T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "生物信息学"
+      ]
+    },
+    {
+      "title": "印象游戏库",
+      "url": "https://rochsen-blog.com/VVBP/games/gameStorage.html",
+      "id": "https://rochsen-blog.com/VVBP/games/gameStorage.html",
+      "summary": "提示 游戏库，仿steam库，以卡片形式展示我游玩过的游戏",
+      "content_html": "<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">提示</p>\n<p>游戏库，仿steam库，以卡片形式展示我游玩过的游戏</p>\n</div>\n<!-- more -->\n",
+      "date_published": "2026-03-17T00:00:00.000Z",
+      "date_modified": "2026-07-20T03:30:12.000Z",
+      "authors": [],
+      "tags": [
+        "游戏"
+      ]
+    },
+    {
+      "title": "艾尔登法环 黑夜君临",
+      "url": "https://rochsen-blog.com/VVBP/games/nightReign.html",
+      "id": "https://rochsen-blog.com/VVBP/games/nightReign.html",
+      "summary": "提示\n这是我心中的的2025年度最佳多人共斗游戏\n收集时间：2026-04-15\n\n恶魔商人让XX变得更强\n\nBoss基本数据\n\nBoss弱点\n\n\n根据守夜Boss推断黑夜王\n\n大空洞水晶位置\n\n个人流派整理\n追踪者\n轻击重置流\n（遗物图）\n执行者\n冰血刃\n(遗物图)\n复仇者\n力量蜗\n（遗物图）\n法蜗\n（遗物图）\n隐士\n纯净法师\n搓招法师\n祷法\n守护者...",
+      "content_html": "<!-- more -->\n<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">提示</p>\n<p>这是我心中的的2025年度最佳多人共斗游戏\n收集时间：2026-04-15</p>\n</div>\n<h2>恶魔商人让XX变得更强</h2>\n<img src=\"/game/nightReign/dealWithEvilSaler.png\" loading=\"lazy\">\n<h2>Boss基本数据</h2>\n<img src=\"/game/nightReign/bossBaseData.png\" loading=\"lazy\">\n<h2>Boss弱点</h2>\n<img src=\"/game/nightReign/bossAntiTable.png\" loading=\"lazy\">\n<img src=\"/game/nightReign/dlcAntiTable.jpeg\" loading=\"lazy\">\n<h2>根据守夜Boss推断黑夜王</h2>\n<img src=\"/game/nightReign/bossRankforEnd.jpeg\" loading=\"lazy\">\n<h2>大空洞水晶位置</h2>\n<img src=\"/game/nightReign/hollowObsidianSite.jpeg\" loading=\"lazy\">\n<h2>个人流派整理</h2>\n<h3>追踪者</h3>\n<p>轻击重置流</p>\n<p>（遗物图）</p>\n<h3>执行者</h3>\n<p>冰血刃</p>\n<p>(遗物图)</p>\n<h3>复仇者</h3>\n<p>力量蜗</p>\n<p>（遗物图）</p>\n<p>法蜗</p>\n<p>（遗物图）</p>\n<h3>隐士</h3>\n<p>纯净法师</p>\n<p>搓招法师</p>\n<p>祷法</p>\n<h3>守护者</h3>\n<p>防反鸟</p>\n<p>祷鸟</p>\n<h3>送葬者</h3>\n<p>力修</p>\n<p>祷修</p>\n<p>双小曲跳劈</p>\n<h3>无赖</h3>\n<p>改特大剑</p>\n<p>改大锤</p>\n<p>蓝泪无赖</p>\n<p>法赖</p>\n<h3>女爵</h3>\n<p>法爵</p>\n<p>短剑折叠爵</p>\n<p>迅剑折叠</p>\n<p>战技爵</p>\n<h3>学者</h3>\n<p>神秘观察男</p>\n<p>吃吃喝喝流</p>\n<p>冰血刃</p>\n<p>刺剑盾戳</p>\n<p>壶人</p>\n",
+      "date_published": "2026-04-15T00:00:00.000Z",
+      "date_modified": "2026-07-20T03:30:12.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
+      "title": "整理个人使用的 AI 工具",
+      "url": "https://rochsen-blog.com/VVBP/notes/deploy/deployAItools.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/deploy/deployAItools.html",
+      "summary": "重要\n随着AI模型和工具越来越多，自己也接触使用了部分AI工具，本文档仅用于记录和整理，无任何商业推广\n\n变量对照表\nAPI Key\n\nLLM 工具变量对照表\n\nLLM API\nDeepseek\n\n提示\n官网：https://www.deepseek.com/\n文档：https://api-docs.deepseek.com/zh-cn/\n\n深度求索公...",
+      "content_html": "<!-- more -->\n<div class=\"hint-container important\">\n<p class=\"hint-container-title\">重要</p>\n<p>随着AI模型和工具越来越多，自己也接触使用了部分AI工具，本文档仅用于记录和整理，无任何商业推广</p>\n</div>\n<h2>变量对照表</h2>\n<h3>API Key</h3>\n<p>| 模型/套餐          | 环境变量               |\n|</p>\n",
+      "date_published": "2026-07-18T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "部署"
+      ]
+    },
+    {
+      "title": "就业服务：开发框架相关简历+面试问题辅导",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/11jobForFrame.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/11jobForFrame.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-07-04T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "Agent调试、运维与系统集成",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/23agentDebug.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/23agentDebug.html",
+      "summary": "1. 概述与学习目标\n本课程聚焦 Agent 进阶与集成，涵盖从低代码到高代码的完整 Agent 开发链路：\n\n批处理：对同类型多任务进行批量并行处理\nCoze 应用：构建带 UI 表单的应用级 Agent\n数据表使用：结构化数据的动态查询与写入\n多 Agents 模式：分诊台 + 专业子 Agent 的协作架构\n多工作流复杂应用：嵌套工作流、跨工作流...",
+      "content_html": "<!-- more -->\n<h2>1. 概述与学习目标</h2>\n<p>本课程聚焦 <strong>Agent 进阶与集成</strong>，涵盖从低代码到高代码的完整 Agent 开发链路：</p>\n<ul>\n<li><strong>批处理</strong>：对同类型多任务进行批量并行处理</li>\n<li><strong>Coze 应用</strong>：构建带 UI 表单的应用级 Agent</li>\n<li><strong>数据表使用</strong>：结构化数据的动态查询与写入</li>\n<li><strong>多 Agents 模式</strong>：分诊台 + 专业子 Agent 的协作架构</li>\n<li><strong>多工作流复杂应用</strong>：嵌套工作流、跨工作流数据传递</li>\n<li><strong>Agent 集成</strong>：通过 API 将 Agent 嵌入现有业务系统</li>\n</ul>\n<h2>2. Agent 核心架构</h2>\n<h3>2.1 Agent 组成公式</h3>\n<div class=\"language- line-numbers-mode\" data-highlighter=\"shiki\" data-ext style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code class=\"language-\"><span class=\"line\"><span>Agent = System Prompt + RAG（知识库） + 数据表 + 工具（插件/工作流）</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div></div></div><h3>2.2 Agent 运行时流程</h3>\n",
+      "date_published": "2026-07-07T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "智能编码革命：AI辅助编程",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/24aiAssistCoding.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/24aiAssistCoding.html",
+      "summary": "1. AI 编程概述\n1.1 什么是 AI 编程\nAI 编程是指利用大语言模型（LLM）辅助软件开发的编程范式。通过 AI 代码编辑器（如 Cursor、Trae、Claude Code 等），开发者可以用自然语言描述需求，AI 自动生成、修改、解释代码，实现从&quot;手写代码&quot;到&quot;指挥 AI 写代码&quot;的转变。\n1.2...",
+      "content_html": "<!-- more -->\n<h2>1. AI 编程概述</h2>\n<h3>1.1 什么是 AI 编程</h3>\n<p>AI 编程是指利用大语言模型（LLM）辅助软件开发的编程范式。通过 AI 代码编辑器（如 Cursor、Trae、Claude Code 等），开发者可以用自然语言描述需求，AI 自动生成、修改、解释代码，实现从&quot;手写代码&quot;到&quot;指挥 AI 写代码&quot;的转变。</p>\n<h3>1.2 AI 编程的核心能力</h3>\n<ul>\n<li><strong>代码生成与补全</strong>：根据上下文自动补全代码，生成完整功能模块</li>\n<li><strong>跨文件编辑</strong>：同时理解和修改多个文件，保持项目一致性</li>\n<li><strong>智能 Debug</strong>：分析报错信息，定位根因并提供修复方案</li>\n<li><strong>代码解释与审查</strong>：解释复杂代码逻辑，进行代码质量审查</li>\n<li><strong>自主任务执行</strong>：Agent 模式可独立执行多步骤任务，自动运行命令并迭代修复</li>\n</ul>\n<h3>1.3 AI 编程能做什么</h3>\n<p>| 场景           | 说明                                                      |\n|</p>\n",
+      "date_published": "2026-07-08T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "AI赋能的智能测试与质量保障",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/25aiforIntelTest.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/25aiforIntelTest.html",
+      "summary": "1. 课程全景\n两条开发路径\n\n2. 核心方法论\n2.1 SDD — 规范驱动开发\nSpecification-Driven Development 的核心思想：规格文档是项目的一等公民，所有实现代码都是规格的可执行表达。\nSpec 模板结构\n\n约束条件 C1-C7\n\n2.2 TDD — 测试驱动开发\nTDD 在 stock-research 项目中的...",
+      "content_html": "<!-- more -->\n<h2>1. 课程全景</h2>\n<h3>两条开发路径</h3>\n",
+      "date_published": "2026-07-12T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "从Text-to-SQL到数据智能",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/26text2SQL-DataIntel.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/26text2SQL-DataIntel.html",
+      "summary": "1. 概述\n1.1 什么是 Text-to-SQL\nText-to-SQL 是指将用户的自然语言问题自动转化为SQL查询语句，并执行查询返回结果的技术。它是数据民主化（Data Democratization）的关键基础设施——让业务人员无需掌握 SQL 语法，即可用自然语言从数据库中获取信息。\n1.2 核心价值\n1.3 三种主流实现路径\n\n\n2. 技...",
+      "content_html": "<!-- more -->\n<h2>1. 概述</h2>\n<h3>1.1 什么是 Text-to-SQL</h3>\n<p>Text-to-SQL 是指将用户的<strong>自然语言问题</strong>自动转化为<strong>SQL查询语句</strong>，并执行查询返回结果的技术。它是数据民主化（Data Democratization）的关键基础设施——让业务人员无需掌握 SQL 语法，即可用自然语言从数据库中获取信息。</p>\n<h3>1.2 核心价值</h3>\n<h3>1.3 三种主流实现路径</h3>\n<p>| 方案                | 核心思路                 | 适用场景               | 代表项目           |\n|</p>\n",
+      "date_published": "2026-07-18T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "项目实战：ChatBI开发实战",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/27ChatBI.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/27ChatBI.html",
+      "summary": "1. 项目概述\nChatBI 是一个基于 qwen-agent 框架构建的智能股票分析助手，实现了从数据获取、SQL 查询、自动可视化到高级技术分析（ARIMA 预测、MACD 信号、布林带检测、Prophet 周期性分析）的完整垂直领域 Agent。\n核心定位\n\n关键技术栈\n\n\n2. 系统架构总览\nAgent = LLM + System Promp...",
+      "content_html": "<!-- more -->\n<h2>1. 项目概述</h2>\n<p>ChatBI 是一个基于 <strong>qwen-agent</strong> 框架构建的<strong>智能股票分析助手</strong>，实现了从数据获取、SQL 查询、自动可视化到高级技术分析（ARIMA 预测、MACD 信号、布林带检测、Prophet 周期性分析）的完整垂直领域 Agent。</p>\n<h3>核心定位</h3>\n<div class=\"language- line-numbers-mode\" data-highlighter=\"shiki\" data-ext style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code class=\"language-\"><span class=\"line\"><span>理解业务需求 → 打造 Skill → POC 快速验证 → 架构迁移迭代</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div></div></div><h3>关键技术栈</h3>\n<p>| 层级       | 技术选型                            |\n|</p>\n",
+      "date_published": "2026-07-19T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "部署及提效相关简历+面试问题辅导",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/28jobForBuild.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/28jobForBuild.html",
+      "summary": "1. Agent 平台：Coze、Dify 与 Agent 进阶集成\n1.1 什么是 LLM Agent？\n定义：LLM Agent = LLM + 工具 + 记忆 + 规划循环。\n\nAgent 的三大核心能力：\nReAct 执行示例：\n\n\n思考题：Agent 与 Function Calling 是一回事吗？\nFunction Calling 是 A...",
+      "content_html": "<!-- more -->\n<h2>1. Agent 平台：Coze、Dify 与 Agent 进阶集成</h2>\n<h3>1.1 什么是 LLM Agent？</h3>\n<p><strong>定义</strong>：LLM Agent = LLM + 工具 + 记忆 + 规划循环。</p>\n<p>| 维度     | 单轮 LLM 调用                      | LLM Agent                                    |\n|</p>\n",
+      "date_published": "2026-07-23T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "Embeddings和向量数据库",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/29Embeddings.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/29Embeddings.html",
+      "summary": "1. 课程概述\n本课围绕 Embedding（向量化） 与 向量数据库 两大主题，核心学习目标：\n\n一句话主线：把万物（文本、商品、人物、图片）变成低维稠密向量，放进向量数据库做相似度检索，喂给 LLM 做 RAG 问答。\n\n2. 什么是 Embedding\n\n定义：Embedding（嵌入/向量化）是一种降维方式，将不同特征转换为维度相同的向量。\n\n...",
+      "content_html": "<!-- more -->\n<h2>1. 课程概述</h2>\n<p>本课围绕 <strong>Embedding（向量化）</strong> 与 <strong>向量数据库</strong> 两大主题，核心学习目标：</p>\n<p>| 模块                 | 内容                                                         |\n|</p>\n",
+      "date_published": "2026-07-04T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "RAG技术与应用",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/30RAGTechApply.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/30RAGTechApply.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-07-04T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "RAG多模态数据处理",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/31RAGmutilProcess.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/31RAGmutilProcess.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-07-04T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "RAG调优",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/32RAGenhance.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/32RAGenhance.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-07-04T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "项目实战：企业知识库",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/33KnowledgeDataBase.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/33KnowledgeDataBase.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-07-04T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "部分场景中可以取代RAG的技术",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/34partofReplaceRAG.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/34partofReplaceRAG.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-07-04T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "LLM Wiki",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/35LLMWiki.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/35LLMWiki.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-07-04T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "RAG相关简历+面试问题辅导",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/36jobForRAG.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/36jobForRAG.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-07-04T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "大厂优秀工程师使用AI Coding的最新方法与经验",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/37aiCodingExp.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/37aiCodingExp.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-07-04T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "大型软件项目的AI开发与AI重构",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/38aiCodingForBigProj.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/38aiCodingForBigProj.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-07-04T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "AI Coding中的团队重新分工与新协作模式",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/39aiTeamMode.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/39aiTeamMode.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-07-04T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "在华为昇腾显卡上部署Deepseek-V4模型并连通本地Claude Code",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/40dsv4inHuawei.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/40dsv4inHuawei.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-07-04T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "Function Calling与MCP",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/41FunctionCallingMCP.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/41FunctionCallingMCP.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-07-04T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "Agent的自主规划与工具开发",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/42AgentRuler.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/42AgentRuler.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-07-04T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "Agent的能力优化与效果评估",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/43AgentEnchance.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/43AgentEnchance.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-07-04T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "OpenManus开发实战",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/44OpenManusProj.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/44OpenManusProj.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-07-04T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "Harness Engineering",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/45HarnessEngineering.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/45HarnessEngineering.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-07-04T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "搭建Hermes Agent中的长期记忆和自进化能力",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/46HermesAgentAbility.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/46HermesAgentAbility.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-07-04T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "实现Hermes中的多Agent协作、主Agent调度",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/47HermesAgentRuler.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/47HermesAgentRuler.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-07-04T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "Agent相关简历+面试问题辅导",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/48jobForAgent.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/48jobForAgent.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-07-04T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "pytorch与视觉检测",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/10cnnPytorch.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/10cnnPytorch.html",
+      "summary": "第一章：PyTorch 核心基础\n1.1 什么是 PyTorch？\nPyTorch = NumPy + GPU，它完美解决了 NumPy 只能使用 CPU 计算、大数据场景下速度过慢的痛点。\nPyTorch 的核心数据结构是张量（Tensor），它的用法和 NumPy 几乎完全一致，唯一的区别是张量可以被轻松迁移到 GPU 上运行，计算速度能提升几十倍...",
+      "content_html": "<!-- more -->\n<h2>第一章：PyTorch 核心基础</h2>\n<h3>1.1 什么是 PyTorch？</h3>\n<p>PyTorch = NumPy + GPU，它完美解决了 NumPy 只能使用 CPU 计算、大数据场景下速度过慢的痛点。</p>\n<p>PyTorch 的核心数据结构是<strong>张量（Tensor）</strong>，它的用法和 NumPy 几乎完全一致，唯一的区别是张量可以被轻松迁移到 GPU 上运行，计算速度能提升几十倍。</p>\n<h3>1.2 张量（Tensor）入门</h3>\n<p>张量是 PyTorch 中最基础的数据结构，我们可以像操作 NumPy 数组一样操作它：</p>\n<div class=\"language-python line-numbers-mode\" data-highlighter=\"shiki\" data-ext=\"python\" style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code class=\"language-python\"><span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">import</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> torch</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">import</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> numpy </span><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">as</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> np</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 1. 创建自定义张量</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">x </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> torch.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">Tensor</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">([[</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">1</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">2</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">3</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">], [</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">4</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">5</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">6</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">], [</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">7</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">8</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">9</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">]])</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#0184BC;--shiki-dark:#56B6C2\">print</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(x)</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 2. 创建全零张量</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">x</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">torch.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">zeros</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">3</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">)</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#0184BC;--shiki-dark:#56B6C2\">print</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(x)</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 3. 从NumPy数组无缝转换为张量</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">a </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> np.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">ones</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">3</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">)</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">x </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> torch.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">from_numpy</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(a)</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#0184BC;--shiki-dark:#56B6C2\">print</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(x)</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><h3>1.3 张量的基本运算</h3>\n<p>PyTorch 提供了丰富的张量运算，所有运算都支持 GPU 加速：</p>\n<div class=\"language-python line-numbers-mode\" data-highlighter=\"shiki\" data-ext=\"python\" style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code class=\"language-python\"><span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">import</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> torch</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">x </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> torch.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">Tensor</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">([[</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">1</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">2</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">3</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">], [</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">4</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">5</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">6</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">], [</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">7</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">8</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">9</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">]])</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 求幂运算</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#0184BC;--shiki-dark:#56B6C2\">print</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(x.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">pow</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">-</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">1.0</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">))  </span><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 倒数</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#0184BC;--shiki-dark:#56B6C2\">print</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(x.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">pow</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">2.0</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">))   </span><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 平方</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 按列求和（dim=0 代表列维度）</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#0184BC;--shiki-dark:#56B6C2\">print</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(x.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">sum</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic\">dim</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\"> =</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\"> 0</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">))</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 按行求和（dim=1 代表行维度）</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#0184BC;--shiki-dark:#56B6C2\">print</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(x.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">sum</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic\">dim</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\"> =</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\"> 1</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">))</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 对角矩阵转换</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">temp </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> x.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">sum</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic\">dim</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\"> =</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\"> 1</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">).</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">pow</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">-</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">1.0</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">)</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#0184BC;--shiki-dark:#56B6C2\">print</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(temp.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">diag_embed</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">())</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><h3>1.4 自动求导机制</h3>\n<p>神经网络训练的核心是反向传播，手动推导导数公式非常复杂，而 PyTorch 的 ** 自动求导（Autograd）** 帮我们解决了这个问题：</p>\n<p>你只需要编写前向传播的计算逻辑，PyTorch 会自动记录所有操作，调用<code>.backward()</code>就能自动算出所有参数的梯度。</p>\n<div class=\"language-python line-numbers-mode\" data-highlighter=\"shiki\" data-ext=\"python\" style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code class=\"language-python\"><span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 定义需要计算梯度的张量</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">x </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> torch.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">tensor</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">2.0</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, </span><span style=\"--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic\">requires_grad</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">True</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">) </span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 前向计算：y = x²</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">y </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> x</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">**</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">2</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> </span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 反向传播，自动计算梯度</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">y.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">backward</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">() </span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 梯度 dy/dx = 2x = 4</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#0184BC;--shiki-dark:#56B6C2\">print</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(x.grad)</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><h3>1.5 动态图与静态图</h3>\n<p>与 TensorFlow 1.x 的静态图不同，PyTorch 使用<strong>动态计算图</strong>：</p>\n<ul>\n<li>\n<p>静态图：先写好完整的网络结构，编译后才能运行，调试困难</p>\n</li>\n<li>\n<p>动态图：每次前向传播都会实时构建计算图，所见即所得，可以随时打印变量、逐行调试，就像写普通 Python 脚本一样方便</p>\n</li>\n</ul>\n<p>这也是为什么 PyTorch 成为了学术界和研究人员的首选框架。</p>\n<h3>1.6 分布式训练进阶</h3>\n<p>PyTorch 支持多种分布式训练方案，帮助你快速利用多 GPU 加速训练：</p>\n<ol>\n<li>\n<p><strong>DataParallel</strong>：最简单的单机多 GPU 方案，一行代码包装模型即可</p>\n</li>\n<li>\n<p><strong>DistributedDataParallel</strong>：更高效的多机多 GPU 方案，负载更均衡</p>\n</li>\n<li>\n<p><strong>PyTorch Lightning</strong>：封装了所有分布式细节，只需指定 GPU 数量即可自动启用</p>\n</li>\n</ol>\n<div class=\"language-python line-numbers-mode\" data-highlighter=\"shiki\" data-ext=\"python\" style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code class=\"language-python\"><span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># PyTorch Lightning 简化多GPU训练</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">trainer </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\"> Trainer</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic\">accelerator</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#50A14F;--shiki-dark:#98C379\">\"gpu\"</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, </span><span style=\"--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic\">devices</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">4</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, </span><span style=\"--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic\">strategy</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#50A14F;--shiki-dark:#98C379\">\"ddp\"</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">) </span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">trainer.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">fit</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(model)</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><h3>1.7 PyTorch 训练完整流程</h3>\n<h3>1.8 实战：你的第一个 PyTorch 神经网络</h3>\n<p>我们用波士顿房价预测来演示一个完整的训练流程：</p>\n<div class=\"language-python line-numbers-mode\" data-highlighter=\"shiki\" data-ext=\"python\" style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code class=\"language-python\"><span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">import</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> torch</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">import</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> torch.nn </span><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">as</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> nn</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">import</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> torch.optim </span><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">as</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> optim</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">import</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> pandas </span><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">as</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> pd</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">from</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> sklearn.model_selection </span><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">import</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> train_test_split</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 1. 加载数据集</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">data </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> pd.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">read_csv</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#50A14F;--shiki-dark:#98C379\">'housing.csv'</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, </span><span style=\"--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic\">header</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">None</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, </span><span style=\"--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic\">sep</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#50A14F;--shiki-dark:#98C379\">'\\s+'</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">)</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">X </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> data.iloc[:, :</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">13</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">].values </span><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 13个房屋特征</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">y </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> data.iloc[:, </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">13</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">].values  </span><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 房价标签</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 2. 划分数据集并转换为张量</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">X_train, X_test, y_train, y_test </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\"> train_test_split</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(X, y, </span><span style=\"--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic\">test_size</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">0.2</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">)</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">X_train </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> torch.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">from_numpy</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(X_train).</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">float</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">()</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">y_train </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> torch.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">from_numpy</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(y_train).</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">float</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">().</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">unsqueeze</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">1</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">)</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">X_test </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> torch.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">from_numpy</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(X_test).</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">float</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">()</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">y_test </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> torch.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">from_numpy</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(y_test).</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">float</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">().</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">unsqueeze</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">1</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">)</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 3. 定义3层全连接神经网络</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">class</span><span style=\"--shiki-light:#C18401;--shiki-dark:#E5C07B\"> Net</span><span style=\"--shiki-light:#C18401;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#C18401;--shiki-dark:#E5C07B\">nn</span><span style=\"--shiki-light:#C18401;--shiki-dark:#ABB2BF\">.</span><span style=\"--shiki-light:#C18401;--shiki-dark:#E5C07B\">Module</span><span style=\"--shiki-light:#C18401;--shiki-dark:#ABB2BF\">)</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">:</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">    def</span><span style=\"--shiki-light:#0184BC;--shiki-dark:#56B6C2\"> __init__</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E5C07B;--shiki-dark-font-style:italic\">self</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">):</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#0184BC;--shiki-dark:#56B6C2\">        super</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(Net, </span><span style=\"--shiki-light:#E45649;--shiki-dark:#E5C07B\">self</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">).</span><span style=\"--shiki-light:#0184BC;--shiki-dark:#56B6C2\">__init__</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">()</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#E45649;--shiki-dark:#E5C07B\">        self</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">.fc1 </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> nn.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">Linear</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">13</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">64</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">)  </span><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 输入层->隐藏层</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#E45649;--shiki-dark:#E5C07B\">        self</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">.fc2 </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> nn.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">Linear</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">64</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">32</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">)  </span><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 隐藏层->隐藏层</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#E45649;--shiki-dark:#E5C07B\">        self</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">.fc3 </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> nn.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">Linear</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">32</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">1</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">)   </span><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 隐藏层->输出层</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">        </span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">    def</span><span style=\"--shiki-light:#4078F2;--shiki-dark:#61AFEF\"> forward</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E5C07B;--shiki-dark-font-style:italic\">self</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">,</span><span style=\"--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic\"> x</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">):</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">        x </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> torch.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">relu</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#E45649;--shiki-dark:#E5C07B\">self</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">fc1</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(x))</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">        x </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> torch.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">relu</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#E45649;--shiki-dark:#E5C07B\">self</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">fc2</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(x))</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">        x </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#E45649;--shiki-dark:#E5C07B\"> self</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">fc3</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(x)</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">        return</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> x</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">model </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\"> Net</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">()</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 4. 定义损失函数和优化器</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">criterion </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> nn.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">MSELoss</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">()</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">optimizer </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> optim.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">Adam</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(model.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">parameters</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(), </span><span style=\"--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic\">lr</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">0.001</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">)</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 5. 训练循环</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">epochs </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\"> 1000</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">for</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> epoch </span><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">in</span><span style=\"--shiki-light:#0184BC;--shiki-dark:#56B6C2\"> range</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(epochs):</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\">    # 前向传播</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">    y_pred </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\"> model</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(X_train)</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">    loss </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">=</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\"> criterion</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(y_pred, y_train)</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">    </span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\">    # 反向传播和优化</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">    optimizer.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">zero_grad</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">()  </span><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 清空梯度</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">    loss.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">backward</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">()        </span><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 计算梯度</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">    optimizer.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">step</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">()       </span><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\"># 更新权重</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">    </span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">    if</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> epoch </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">%</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\"> 100</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\"> ==</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\"> 0</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">:</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#0184BC;--shiki-dark:#56B6C2\">        print</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">(</span><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">f</span><span style=\"--shiki-light:#50A14F;--shiki-dark:#98C379\">'Epoch </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">{</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">epoch</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">}</span><span style=\"--shiki-light:#50A14F;--shiki-dark:#98C379\">, Loss: </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">{</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">loss.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#61AFEF\">item</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">()</span><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">:.4f</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">}</span><span style=\"--shiki-light:#50A14F;--shiki-dark:#98C379\">'</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">)</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div>",
+      "image": "https://p6-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/online_export/27f88fc0140c41b48ab17de5df212b86~tplv-noop.jpeg?rk3s=49177a0b&x-expires=1774755542&x-signature=7QbG795ci8EHsQOCTN31%2FVjs42U%3D&resource_key=d810eeb8-6fad-46d1-bb65-777c3b628167&resource_key=d810eeb8-6fad-46d1-bb65-777c3b628167",
+      "date_published": "2026-03-29T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "LLM微调原理",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/12llmFineTune.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/12llmFineTune.html",
+      "summary": "1. 大模型微调概述\n1.1 什么是模型微调\n微调（Fine-tuning） 是将预训练好的大模型进行二次训练，使其适应特定任务或领域的过程。\n1.2 为什么需要微调\n\n1.3 两类微调场景对比\n关键区别：\n\n基座模型公司：目标是提升通用语言能力\n应用开发者：目标是适配垂直领域和私域知识\n\n\n2. 高效微调方法对比\n2.1 常见高效微调方法一览\n2.2...",
+      "content_html": "<!-- more -->\n<h2>1. 大模型微调概述</h2>\n<h3>1.1 什么是模型微调</h3>\n<p><strong>微调（Fine-tuning）</strong> 是将预训练好的大模型进行二次训练，使其适应特定任务或领域的过程。</p>\n<h3>1.2 为什么需要微调</h3>\n<p>| 问题类型         | 具体表现                 | 解决方案 |\n|</p>\n",
+      "date_published": "2026-04-19T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "高质量微调数据工程与评估",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/13llmFineTuneEval.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/13llmFineTuneEval.html",
+      "summary": "1. 前置知识：什么是 SFT 微调？\n1.1 通俗理解\n想象你已经有一个&quot;博学的大学生&quot;（基座模型，如 Qwen3.5-0.8B），他什么都知道一点，但对医疗领域不够专业。你希望他变成一名&quot;实习医生&quot;，能够用专业的中文回答患者的医疗问题。\nSFT（Supervised Fine-Tuning，监督微调） 就是拿...",
+      "content_html": "<!-- more -->\n<h2>1. 前置知识：什么是 SFT 微调？</h2>\n<h3>1.1 通俗理解</h3>\n<p>想象你已经有一个&quot;博学的大学生&quot;（基座模型，如 Qwen3.5-0.8B），他什么都知道一点，但对<strong>医疗领域</strong>不够专业。你希望他变成一名&quot;实习医生&quot;，能够用专业的中文回答患者的医疗问题。</p>\n<p><strong>SFT（Supervised Fine-Tuning，监督微调）</strong> 就是拿一堆&quot;标准问答对&quot;（患者问题 → 专业回答）去训练这个模型，让它学会特定的领域知识和回答风格。</p>\n<h3>1.2 核心概念速查表</h3>\n<p>| 概念                            | 通俗解释                             | 本文中的实例                                              |\n|</p>\n",
+      "date_published": "2026-06-25T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "LLM模型蒸馏与微调实操",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/14llmFineTunePr.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/14llmFineTunePr.html",
+      "summary": "一、前置知识扫盲\n1.1 什么是大语言模型（LLM）\n类比理解：一个读过海量书籍的&quot;超级学霸&quot;\n想象你有一个朋友，他从小就把整个互联网上的文章、书籍、对话全部读了一遍。当你问他任何问题时，他能根据自己读过的内容，预测出最合理的回答。大语言模型（Large Language Model，简称LLM）就是这样一种AI程序——它通过&qu...",
+      "content_html": "<!-- more -->\n<h2>一、前置知识扫盲</h2>\n<h3>1.1 什么是大语言模型（LLM）</h3>\n<p><strong>类比理解：一个读过海量书籍的&quot;超级学霸&quot;</strong></p>\n<p>想象你有一个朋友，他从小就把整个互联网上的文章、书籍、对话全部读了一遍。当你问他任何问题时，他能根据自己读过的内容，预测出最合理的回答。大语言模型（Large Language Model，简称LLM）就是这样一种AI程序——它通过&quot;阅读&quot;海量文本数据，学会了理解人类语言并生成回复。</p>\n<blockquote>\n<p>🏭 <strong>工业界的叫法</strong>：你可能会听到&quot;GPT&quot;、&quot;Qwen&quot;、&quot;DeepSeek&quot;、&quot;LLaMA&quot;这些名字，它们都是不同公司或团队训练出来的大语言模型，就像不同学校培养出来的学霸，各有特长。</p>\n</blockquote>\n<p><strong>核心概念：</strong></p>\n<p>| 术语                       | 通俗解释                                                     |\n|</p>\n",
+      "date_published": "2026-06-27T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "视觉与多模态模型",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/15cvandMultiModal.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/15cvandMultiModal.html",
+      "summary": "1. 概述\n1.1 用日常比喻理解&quot;视觉大模型&quot;\n想象一下，你有一个既能看到图像、又能读懂文字、还能开口说话的超级助手：\n\n你给它看一张车祸现场的照片，它能告诉你&quot;这辆白色轿车的右前门被撞凹了，保险杠开裂&quot;；\n你让它看一段行车记录仪视频，它能总结&quot;视频中有两个人，一辆白车剐蹭到了墙角&quot;；\n你丢...",
+      "content_html": "<!-- more -->\n<h2>1. 概述</h2>\n<h3>1.1 用日常比喻理解&quot;视觉大模型&quot;</h3>\n<p>想象一下，你有一个<strong>既能看到图像、又能读懂文字、还能开口说话</strong>的超级助手：</p>\n<ul>\n<li>你给它看一张车祸现场的照片，它能告诉你&quot;这辆白色轿车的右前门被撞凹了，保险杠开裂&quot;；</li>\n<li>你让它看一段行车记录仪视频，它能总结&quot;视频中有两个人，一辆白车剐蹭到了墙角&quot;；</li>\n<li>你丢给它一份扫描的日文病历 PDF，它能提取出其中的关键信息并翻译成中文。</li>\n</ul>\n<p>这就是<strong>视觉大模型（Visual Large Model，简称 VLM）</strong>在做的事情：<strong>让计算机同时&quot;看懂&quot;图像和&quot;读懂&quot;文字，并用自然语言回答你的问题</strong>。</p>\n<blockquote>\n<p>📌 <strong>通俗版定义</strong>：<br>\nVLM = 图像识别器 + 文本理解器 + 语言生成器，三者合为一体。</p>\n</blockquote>\n<blockquote>\n<p>📌 <strong>专业版定义</strong>：<br>\n视觉大模型是一种基于 Transformer 架构的多模态神经网络，它通过将图像和文本映射到统一的语义空间（embedding），实现跨模态的对齐与推理，从而支持图像描述、视觉问答、文档理解等任务。</p>\n</blockquote>\n<h3>1.2 &quot;多模态理解&quot;解决了什么问题？</h3>\n<p>在传统 AI 系统中，图像识别和文本理解是<strong>分开的两条线</strong>：</p>\n<div class=\"language- line-numbers-mode\" data-highlighter=\"shiki\" data-ext style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code class=\"language-\"><span class=\"line\"><span>传统方式：</span></span>\n<span class=\"line\"><span>  图像 → CNN/YOLO → \"这是一辆车\"（标签）</span></span>\n<span class=\"line\"><span>  文本 → RNN/BERT → \"车被撞了\"（分类）</span></span>\n<span class=\"line\"><span></span></span>\n<span class=\"line\"><span>VLM方式：</span></span>\n<span class=\"line\"><span>  图像 + 文本 → 一个统一模型 → 这辆白色特斯拉Model 3的右前门严重凹陷，预估维修费用约8000元</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><p><strong>多模态理解</strong>的核心价值在于：</p>\n<p>| 痛点                           | VLM 的解决方案               |\n|</p>\n",
+      "date_published": "2026-06-29T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "项目实战：AI质检",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/16aiChecK.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/16aiChecK.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-03-21T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "企业级AI部署：从硬件选型到框架选择",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/18aiDeployCompany.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/18aiDeployCompany.html",
+      "content_html": "<!-- more -->",
+      "date_published": "2026-03-21T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "AI服务核心：高并发原理与性能监控调优",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/19aiServiceCore.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/19aiServiceCore.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-03-21T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "SQLang深度优化：Radix缓存与复杂任务的极致吞吐",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/20SQLangOpt.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/20SQLangOpt.html",
+      "content_html": "",
+      "date_published": "2026-03-21T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "Coze工作原理与应用实例",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/21aiCozeExample.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/21aiCozeExample.html",
+      "summary": "1. Coze 平台概述\n1.1 什么是 Coze？\nCoze（扣子）是字节跳动推出的 AI Agent（智能体）开发平台，定位为低代码 / 零代码的 AI 应用构建工具。它将大语言模型（LLM）比作&quot;发动机&quot;，而 Coze 则是&quot;汽车工厂&quot;——开发者不需要制造发动机，只需拼装工作流，就能让一个 AI 应用运转起...",
+      "content_html": "<!-- more -->\n<h2>1. Coze 平台概述</h2>\n<h3>1.1 什么是 Coze？</h3>\n<p>Coze（扣子）是<strong>字节跳动</strong>推出的 <strong>AI Agent（智能体）开发平台</strong>，定位为<strong>低代码 / 零代码的 AI 应用构建工具</strong>。它将大语言模型（LLM）比作&quot;发动机&quot;，而 Coze 则是&quot;汽车工厂&quot;——开发者不需要制造发动机，只需拼装工作流，就能让一个 AI 应用运转起来。</p>\n<h3>1.2 Coze 的发展演进</h3>\n<p>| 阶段                      | 内容                                                     |\n|</p>\n",
+      "date_published": "2026-07-04T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "Dify本地化部署和应用",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/22aiDifyDeploy.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/22aiDifyDeploy.html",
+      "summary": "1. Dify 平台概述\n1.1 什么是 Dify？\nDify 是一个开源的大语言模型（LLM）应用开发平台，融合了 Agent、AI Workflow、RAG（检索增强生成） 等核心能力，帮助开发者快速构建和部署 AI 原生应用。它可视化了 LangChain 的核心理念，降低了 AI 应用开发的门槛。\n1.2 Dify vs 其他平台\n\n\n2. D...",
+      "content_html": "<!-- more -->\n<h2>1. Dify 平台概述</h2>\n<h3>1.1 什么是 Dify？</h3>\n<p>Dify 是一个开源的大语言模型（LLM）应用开发平台，融合了 <strong>Agent</strong>、<strong>AI Workflow</strong>、<strong>RAG（检索增强生成）</strong> 等核心能力，帮助开发者快速构建和部署 AI 原生应用。它可视化了 LangChain 的核心理念，降低了 AI 应用开发的门槛。</p>\n<h3>1.2 Dify vs 其他平台</h3>\n<p>| 维度           | Dify                     | Coze                    | LangChain            |\n|</p>\n",
+      "date_published": "2026-07-06T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "Langchain 多任务应用开发",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/6langchainApp.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/6langchainApp.html",
+      "summary": "第一部分：LangChain基础概念\n1.1 LangChain是什么\nLangChain是一个强大的开源框架，专门用于简化大语言模型（LLM）应用程序的开发过程。它提供了一套完整的工具、组件和接口，使开发者能够更加高效地构建基于LLM的应用程序。LangChain的核心价值在于将复杂的LLM应用开发过程模块化、组件化，让开发者可以专注于业务逻辑而非底...",
+      "content_html": "<!-- more -->\n<h2>第一部分：LangChain基础概念</h2>\n<h3>1.1 LangChain是什么</h3>\n<p>LangChain是一个强大的开源框架，专门用于简化大语言模型（LLM）应用程序的开发过程。它提供了一套完整的工具、组件和接口，使开发者能够更加高效地构建基于LLM的应用程序。LangChain的核心价值在于将复杂的LLM应用开发过程模块化、组件化，让开发者可以专注于业务逻辑而非底层实现细节。</p>\n<p>LangChain的设计理念是“组合优于继承”，通过将各种功能组件（如提示词模板、模型接口、工具集、记忆系统等）解耦为独立模块，开发者可以根据实际需求灵活组合这些组件，构建出功能强大的LLM应用。这种设计思想大大降低了LLM应用的开发门槛，同时也为复杂应用场景提供了足够的扩展性。</p>\n<p>LangChain最初于2022年底发布，经过快速发展，于2024年发布了1.0版本，标志着该框架进入了成熟稳定的阶段。1.0版本在架构上进行了重大重构，引入了LCEL（LangChain Expression Language）表达式语言，使得组件的组合和调用更加直观和灵活。</p>\n<h3>1.2 LangChain核心组件架构</h3>\n<p>LangChain框架由六大核心组件构成，每个组件都承担着特定的功能职责，共同支撑起整个框架的能力体系。理解这些组件的作用和相互关系，是掌握LangChain的基础。</p>\n<p><strong>模型层（Models）</strong> 是LangChain与各种大语言模型交互的接口层。该层封装了对GPT-4、Claude、通义千问等主流模型的调用，提供了统一的接口规范。LangChain支持两种模型类型：LLM用于文本补全任务，ChatModel用于对话任务。ChatModel相比LLM具有更好的对话支持，并且支持tool calling功能，能够让模型调用外部工具。</p>\n<p><strong>提示词层（Prompts）</strong> 负责管理和优化提示词。该组件包括提示词模板（PromptTemplate）、提示词优化器以及提示词序列化功能。通过使用提示词模板，开发者可以将用户输入动态插入到预设的提示词框架中，实现提示词的复用和标准化管理。</p>\n<p><strong>记忆层（Memory）</strong> 为LLM应用提供了持久化上下文的能力。在默认情况下，LLM是无状态的，每次交互都是独立的。Memory组件允许应用保存和检索对话历史，使LLM能够记住之前的交互内容，从而实现真正的多轮对话体验。</p>\n<p><strong>索引层（Indexes）</strong> 提供了结构化文档处理的能力，是构建知识库应用的核心组件。该层包含文档加载器、文档转换器、文本分割器、向量计算器、向量存储和检索器等功能模块。如果需要构建基于私有知识的问答系统，索引层是必不可少的基础设施。</p>\n<p><strong>链层（Chains）</strong> 是将多个组件串联起来执行的核心机制。通过Chain，开发者可以定义一系列有序的组件调用，将用户的输入经过多个处理步骤后得到最终输出。Chain是LangChain最核心的执行单元。</p>\n<p><strong>代理层（Agents）</strong> 赋予LLM自主决策的能力。与Chain的固定执行流程不同，Agent能够根据用户的问题自主决定调用哪些工具、如何组织执行顺序，直到得到满意的答案。Agent是构建智能助手和自动化代理系统的关键技术。</p>\n<h3>1.3 LangChain 1.0版本重大变化</h3>\n<p>LangChain从0.3X升级到1.0版本，发生了架构性的重大变化。虽然核心概念保持一致，但包结构和使用方式有了显著改进，开发者需要特别注意这些变化。</p>\n<p><strong>包结构完全重构</strong> 是1.0版本最明显的变化。原有的单一<code>langchain</code>包被拆分为多个独立的子包：<code>langchain-core</code>只包含抽象基类和LCEL表达式语言，所有第三方集成不再直接依赖完整langchain包；<code>langchain-community</code>包含社区维护的几十种loader、retriever和tool实现；合作伙伴包如<code>langchain-openai</code>、<code>langchain-anthropic</code>等独立成库，体积更小、升级更加灵活。这种模块化设计使得依赖管理更加清晰，也减少了不必要的依赖传递。</p>\n<p><strong>新增官方子项目</strong> 进一步完善了LangChain生态系统。LangGraph是用于“图”编排多步、多角色、有状态工作流的新组件，替代了传统多重Chain嵌套的写法，特别适合复杂业务流程的建模；LangServe可以将链或代理一键封装为REST API，自带<code>/invoke</code>、<code>/stream</code>、<code>/batch</code>端点和Swagger页面，大大简化了LLM应用的部署；LangSmith是可视化调试、回归测试和在线监控平台，与1.0版本的回调系统深度集成，提供了专业的LLM应用开发和运维能力。</p>\n<p><strong>API风格全面转向LCEL</strong> 是1.0版本的核心改进。新的API鼓励使用<code>|</code>管道运算符将组件拼装成Runnable对象，而不是继承Chain基类。这种链式表达式的写法更加直观和Pythonic，例如<code>prompt | llm | output_parser</code>这样的代码清晰表达了数据流的整个过程。LCEL还支持并行执行、条件分支、流式输出等高级特性，使得复杂业务流程的实现变得简单。</p>\n",
+      "date_published": "2026-03-22T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "AI框架设计与选型",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/7langchainDesign.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/7langchainDesign.html",
+      "summary": "AI Agent 框架入门指南\n\n学习目标: 让刚入行的程序员能够理解 AI Agent 的核心概念,并能够使用主流框架搭建简单的智能应用。\n\n\n1. 什么是 AI Agent?\n1.1 通俗理解\n想象一个虚拟员工:\n\n🧠 大脑: 大语言模型(LLM),负责思考和决策\n🖐️ 双手: 各种工具(搜索、计算、API调用),负责执行任务\n💾 记忆: 记...",
+      "content_html": "<!-- more -->\n<h1>AI Agent 框架入门指南</h1>\n<blockquote>\n<p><strong>学习目标</strong>: 让刚入行的程序员能够理解 AI Agent 的核心概念,并能够使用主流框架搭建简单的智能应用。</p>\n</blockquote>\n",
+      "date_published": "2026-03-22T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "HuggingFace生态实战：从模型应用到高效微调",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/8langchainOptimize.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/8langchainOptimize.html",
+      "summary": "HuggingFace生态实战：从模型应用到高效微调\n1. HuggingFace简介\n1.1 什么是HuggingFace\nHuggingFace 是一个专注于人工智能的开源社区和平台，被誉为&quot;AI界的GitHub&quot;和&quot;AI界的App Store&quot;。如果说PyTorch是造车的发动机，那HuggingFace就...",
+      "content_html": "<!-- more -->\n<h1>HuggingFace生态实战：从模型应用到高效微调</h1>\n<h2>1. HuggingFace简介</h2>\n<h3>1.1 什么是HuggingFace</h3>\n<p>HuggingFace 是一个专注于人工智能的开源社区和平台，被誉为&quot;AI界的GitHub&quot;和&quot;AI界的App Store&quot;。如果说PyTorch是造车的发动机，那HuggingFace就是直接送了程序员一辆跑车。</p>\n<h3>1.2 HuggingFace的三大核心</h3>\n<p>| 核心组件         | 名称   | 作用                   | 类比       |\n|</p>\n",
+      "date_published": "2026-03-22T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "神经网络基础与Tensorflow",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/9networkbaseTensorflow.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/9networkbaseTensorflow.html",
+      "summary": "第一章：神经网络基础概念\n1.1 从生物神经元到人工神经元\n神经网络的概念源于对生物大脑中神经元工作方式的模拟。在生物大脑中，单个神经细胞只有两种状态：兴奋和抑制。网络中的每个节点（神经元）接收输入信号，如果所有信号的加权总和超过一个“阈值”，它就被“激活”（兴奋），并向下传递信息；否则就保持“抑制”。这种简单的开关机制，构成了整个网络决策和学习的根本...",
+      "content_html": "<!-- more -->\n<h2>第一章：神经网络基础概念</h2>\n<h3>1.1 从生物神经元到人工神经元</h3>\n<p>神经网络的概念源于对生物大脑中神经元工作方式的模拟。在生物大脑中，单个神经细胞只有两种状态：兴奋和抑制。网络中的每个节点（神经元）接收输入信号，如果所有信号的加权总和超过一个“阈值”，它就被“激活”（兴奋），并向下传递信息；否则就保持“抑制”。这种简单的开关机制，构成了整个网络决策和学习的根本。</p>\n<p>人工神经元是生物神经元的数学抽象，它由输入值、权重、偏置和激活函数组成。对于给定的输入 <span v-pre class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo separator=\"true\">,</mo><msub><mi>x</mi><mn>2</mn></msub><mo separator=\"true\">,</mo><mi mathvariant=\"normal\">.</mi><mi mathvariant=\"normal\">.</mi><mi mathvariant=\"normal\">.</mi><mo separator=\"true\">,</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><annotation encoding=\"application/x-tex\">x_1, x_2, ..., x_n</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.625em;vertical-align:-0.1944em;\"></span><span class=\"mord\"><span class=\"mord mathnormal\">x</span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.3011em;\"><span style=\"top:-2.55em;margin-left:0em;margin-right:0.05em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\">1</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.15em;\"><span></span></span></span></span></span></span><span class=\"mpunct\">,</span><span class=\"mspace\" style=\"margin-right:0.1667em;\"></span><span class=\"mord\"><span class=\"mord mathnormal\">x</span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.3011em;\"><span style=\"top:-2.55em;margin-left:0em;margin-right:0.05em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\">2</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.15em;\"><span></span></span></span></span></span></span><span class=\"mpunct\">,</span><span class=\"mspace\" style=\"margin-right:0.1667em;\"></span><span class=\"mord\">...</span><span class=\"mpunct\">,</span><span class=\"mspace\" style=\"margin-right:0.1667em;\"></span><span class=\"mord\"><span class=\"mord mathnormal\">x</span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.1514em;\"><span style=\"top:-2.55em;margin-left:0em;margin-right:0.05em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mathnormal mtight\">n</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.15em;\"><span></span></span></span></span></span></span></span></span></span>，神经元首先计算加权和：</p>\n<p v-pre class=\"katex-block\"><span class=\"katex-display\"><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><semantics><mrow><mi>z</mi><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>w</mi><mi>i</mi></msub><mo>⋅</mo><msub><mi>x</mi><mi>i</mi></msub><mo>+</mo><mi>b</mi></mrow><annotation encoding=\"application/x-tex\">z = \\sum_{i=1}^{n} w_i \\cdot x_i + b\n</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.4306em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.044em;\">z</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:2.9291em;vertical-align:-1.2777em;\"></span><span class=\"mop op-limits\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:1.6514em;\"><span style=\"top:-1.8723em;margin-left:0em;\"><span class=\"pstrut\" style=\"height:3.05em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\"><span class=\"mord mathnormal mtight\">i</span><span class=\"mrel mtight\">=</span><span class=\"mord mtight\">1</span></span></span></span><span style=\"top:-3.05em;\"><span class=\"pstrut\" style=\"height:3.05em;\"></span><span><span class=\"mop op-symbol large-op\">∑</span></span></span><span style=\"top:-4.3em;margin-left:0em;\"><span class=\"pstrut\" style=\"height:3.05em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\"><span class=\"mord mathnormal mtight\">n</span></span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:1.2777em;\"><span></span></span></span></span></span><span class=\"mspace\" style=\"margin-right:0.1667em;\"></span><span class=\"mord\"><span class=\"mord mathnormal\" style=\"margin-right:0.0269em;\">w</span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.3117em;\"><span style=\"top:-2.55em;margin-left:-0.0269em;margin-right:0.05em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mathnormal mtight\">i</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.15em;\"><span></span></span></span></span></span></span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">⋅</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.7333em;vertical-align:-0.15em;\"></span><span class=\"mord\"><span class=\"mord mathnormal\">x</span><span class=\"msupsub\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.3117em;\"><span style=\"top:-2.55em;margin-left:0em;margin-right:0.05em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mathnormal mtight\">i</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.15em;\"><span></span></span></span></span></span></span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span><span class=\"mbin\">+</span><span class=\"mspace\" style=\"margin-right:0.2222em;\"></span></span><span class=\"base\"><span class=\"strut\" style=\"height:0.6944em;\"></span><span class=\"mord mathnormal\">b</span></span></span></span></span></p>\n",
+      "date_published": "2026-03-23T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "Agent：从可控性到自主反思",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/3agentfromControl2selfthink.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/3agentfromControl2selfthink.html",
+      "summary": "什么是 Agent？\nAI 模型 vs AI Agent\n简单来说：\n\nAI 模型（LLM）：提供智能，能回答问题、生成内容\nAI Agent：保证结果，能执行任务、调用工具、完成实际工作\n\n\n📌 核心思想：模型提供智能，Agent 保证结果\n\n为什么需要 Agent？\nLLM（大语言模型）存在以下局限性：\n\nLLM 会有幻觉：可能生成不准确或虚构的...",
+      "content_html": "<!-- more -->\n<h2>什么是 Agent？</h2>\n<h3>AI 模型 vs AI Agent</h3>\n<p>简单来说：</p>\n<ul>\n<li><strong>AI 模型（LLM）</strong>：提供智能，能回答问题、生成内容</li>\n<li><strong>AI Agent</strong>：保证结果，能执行任务、调用工具、完成实际工作</li>\n</ul>\n<blockquote>\n<p>📌 <strong>核心思想</strong>：模型提供智能，Agent 保证结果</p>\n</blockquote>\n<h3>为什么需要 Agent？</h3>\n<p>LLM（大语言模型）存在以下局限性：</p>\n<ol>\n<li><strong>LLM 会有幻觉</strong>：可能生成不准确或虚构的内容</li>\n<li><strong>LLM 只会说，不会做</strong>：只能输出文字，无法执行实际操作</li>\n<li><strong>LLM 规划的步骤不靠谱</strong>：自动生成的执行步骤可能不准确</li>\n</ol>\n<p>有些任务需要极高的准确度和可控性，这时就需要 Agent 来弥补 LLM 的不足。</p>\n",
+      "date_published": "2026-03-20T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [
+        {
+          "name": "罗浩森"
+        }
+      ],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "多模态AI入门指南",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/4multimodalAI.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/4multimodalAI.html",
+      "summary": "一、核心能力概览：多模态AI能做什么？\n多模态AI的核心能力在于打破信息形式的壁垒，让机器像人一样同时“看”图像、“听”声音、“读”文字，并将这些信息融合理解、综合输出。它不再局限于单一类型的数据处理，而是实现了跨模态的认知与创造。\n这种能力带来了三大关键突破：\n\n\n视觉转译：将图像内容自动转化为文字描述\n\n示例：上传一张街景照片，AI能告诉你“这是一...",
+      "content_html": "<!-- more -->\n<h2>一、核心能力概览：多模态AI能做什么？</h2>\n<p>多模态AI的核心能力在于<strong>打破信息形式的壁垒</strong>，让机器像人一样同时“看”图像、“听”声音、“读”文字，并将这些信息融合理解、综合输出。它不再局限于单一类型的数据处理，而是实现了跨模态的认知与创造。</p>\n<p>这种能力带来了三大关键突破：</p>\n<ul>\n<li>\n<p><strong>视觉转译</strong>：将图像内容自动转化为文字描述</p>\n<blockquote>\n<p>示例：上传一张街景照片，AI能告诉你“这是一条雨后的城市街道，路边有咖啡馆和行人撑伞走过”。</p>\n</blockquote>\n</li>\n<li>\n<p><strong>融合推理</strong>：结合图文信息进行逻辑判断与决策</p>\n<blockquote>\n<p>示例：看到厨房起火的视频并听到“快报警”的语音指令，AI可自动触发紧急响应流程。</p>\n</blockquote>\n</li>\n<li>\n<p><strong>视觉编辑</strong>：根据语言指令直接修改或生成图像</p>\n<blockquote>\n<p>示例：对一张风景照说“把天空换成晚霞”，AI即可实时完成画面调整。</p>\n</blockquote>\n</li>\n</ul>\n<figure><img src=\"https://agent.qianwen.com/mos/b35b6381b81a41a0b0a29b3d27210a1c/a7175c657b6c978b5f0eaa830728ee80\" alt=\"多模态AI输入示意图\" tabindex=\"0\" loading=\"lazy\"><figcaption>多模态AI输入示意图</figcaption></figure>\n<p>这一能力的本质是构建一个统一的理解中枢，能够接收多种输入（文本、图像、音频等），提取各自特征后在深层进行融合分析，最终实现灵活的内容生成与交互。相比传统AI模型只能处理单一任务，多模态系统更像一把“万能瑞士军刀”，具备更强的通用性与适应力。</p>\n<h2>二、基本原理：视觉与语言如何被AI同时理解？</h2>\n<p>多模态AI之所以能“看懂”图像、“读懂”文字，并将两者联系起来，关键在于它并非简单地并列处理信息，而是通过一套精密的机制，让视觉与语言在模型内部实现<strong>语义对齐</strong>和<strong>深度融合</strong>。这个过程可以分为三个核心步骤：</p>\n<h3>1. 特征提取：从原始数据中提炼“意义”</h3>\n<p>就像人眼看到一张图片时不会只记住像素点，而是识别出“猫”“桌子”“窗户”等物体一样，AI也需要先将图像和文字转换为可计算的数学表示。</p>\n<ul>\n<li><strong>图像特征提取</strong>：使用卷积神经网络（CNN）或视觉Transformer等技术，把一张图片分解成一系列数字向量，这些向量代表了图中的物体、颜色、布局等关键信息。</li>\n<li><strong>文本特征提取</strong>：将一句话拆分成词或子词单元，再通过语言模型转化为对应的语义向量，捕捉词语之间的关系和句子的整体含义。</li>\n</ul>\n<blockquote>\n<p>✅ 简单类比：这就像给每张图片和每段文字都生成一个独特的“身份证编码”，后续所有操作都基于这个编码进行。</p>\n</blockquote>\n<h3>2. 特征对齐：让不同模态的语言“互通”</h3>\n<p>图像和文字原本是两种完全不同的“语言”。为了让它们能被统一理解，模型需要在一个共享的空间中建立对应关系。</p>\n<ul>\n<li>模型会学习将“狗”的文字编码与包含狗的图像编码尽可能靠近</li>\n<li>同样，“红色汽车”的文本描述也会与相应画面的特征向量对齐</li>\n</ul>\n<blockquote>\n<p>🔍 这一过程通常依赖大量图文配对数据（如带标题的图片）进行训练，使模型学会哪些视觉内容对应哪些语言表达。</p>\n</blockquote>\n<h3>3. 融合推理：跨模态信息协同决策</h3>\n<p>当图像和文本特征完成对齐后，模型就能进行真正的“融合思考”。</p>\n<p>| 推理类型            | 输入示例                                                 | AI行为                                           |\n|</p>\n",
+      "image": "https://agent.qianwen.com/mos/b35b6381b81a41a0b0a29b3d27210a1c/a7175c657b6c978b5f0eaa830728ee80",
+      "date_published": "2026-03-20T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [
+        {
+          "name": "罗浩森"
+        }
+      ],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "构建大模型的知识与交互基础",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/2promptEngToRag.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/2promptEngToRag.html",
+      "summary": "一、前言：为什么需要学习提示词和RAG？\n在当今人工智能快速发展的时代，大语言模型（Large Language Model，简称LLM）已经成为了许多应用的核心技术。从智能客服到知识问答，从内容创作到代码生成，LLM正在改变我们与技术交互的方式。然而，要让LLM真正发挥价值，我们需要掌握两个关键技术：提示词工程和RAG技术。\n1.1 课程内容概览\n本...",
+      "content_html": "<!-- more -->\n<h2>一、前言：为什么需要学习提示词和RAG？</h2>\n<p>在当今人工智能快速发展的时代，大语言模型（Large Language Model，简称LLM）已经成为了许多应用的核心技术。从智能客服到知识问答，从内容创作到代码生成，LLM正在改变我们与技术交互的方式。然而，要让LLM真正发挥价值，我们需要掌握两个关键技术：<strong>提示词工程</strong>和<strong>RAG技术</strong>。</p>\n<h3>1.1 课程内容概览</h3>\n<p>本课程主要涵盖三大核心主题：</p>\n<p>| 序号 | 主题 | 核心要点 |\n|:</p>\n",
+      "date_published": "2026-03-20T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [
+        {
+          "name": "罗浩森"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "title": "AI 概念通俗解释大全",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/5aiNameProduce.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/5aiNameProduce.html",
+      "summary": "第一部分：AI的层次与类型\nAI (人工智能)\n“会学习的机器”\n\n就像给机器一个大脑，让它能学习下棋、识图、翻译。我们的“超级学徒厨师”就属于AI。\n\nAGI (通用人工智能)\n“像人一样全能的AI”\n\n现在这个学徒只会做菜。但AGI就像一个真正的“人”，他不仅能做菜，还能写诗、做科研、和你谈人生哲学，在不同领域都能达到或超越人类水平。\n目前还没有实...",
+      "content_html": "<!-- more -->\n<h2>第一部分：AI的层次与类型</h2>\n<h3><strong>AI (人工智能)</strong></h3>\n<p><strong>“会学习的机器”</strong></p>\n<ul>\n<li>就像给机器一个大脑，让它能学习下棋、识图、翻译。我们的“超级学徒厨师”就属于AI。</li>\n</ul>\n<h3><strong>AGI (通用人工智能)</strong></h3>\n<p><strong>“像人一样全能的AI”</strong></p>\n<ul>\n<li>现在这个学徒只会做菜。但AGI就像一个真正的“人”，他不仅能做菜，还能写诗、做科研、和你谈人生哲学，在不同领域都能达到或超越人类水平。</li>\n<li><strong>目前还没有实现</strong>，是很多科学家的终极目标。</li>\n</ul>\n<h3><strong>ASI (超级人工智能)</strong></h3>\n<p><strong>“在一切领域都远超全人类的超级存在”</strong></p>\n<ul>\n<li>科幻片里的概念。比AGI更强大，它的智慧人类无法理解。就像厨房里突然来了一个能瞬间创造新宇宙法则的“厨神”。</li>\n</ul>\n<h3><strong>AIGC (AI生成内容)</strong></h3>\n<p><strong>“用AI来搞创作”</strong></p>\n<ul>\n<li>让我们的学徒厨师不单做菜，还让他<strong>生成</strong>新的菜谱、画菜单的插图、给美食视频配音。所有AI生成的文本、图片、视频、音乐都叫AIGC。</li>\n</ul>\n<h3><strong>Gen AI (生成式AI)</strong></h3>\n<p><strong>“会创造的AI”</strong></p>\n<ul>\n<li>这是实现AIGC的<strong>核心技术</strong>。以前的AI主要做“分类”和“识别”（比如判断这是猫还是狗）。而生成式AI学会了“创造”（比如根据描述画出一只从没见过的猫）。</li>\n<li>我们的学徒厨师就是一个<strong>生成式AI</strong>，因为他能“生成”新的菜。</li>\n</ul>\n<h3><strong>AI Native (AI原生)</strong></h3>\n<p><strong>“为AI而生，靠AI而活”</strong></p>\n<ul>\n<li>不是把一个老式厨房（传统软件）改造成智能厨房，而是<strong>从零开始设计一个全新的智能厨房</strong>，它的每个灶台、每把刀都专为那个AI学徒设计，能最大化发挥他的能力。</li>\n<li>很多新的AI应用就是AI原生的。</li>\n</ul>\n",
+      "date_published": "2026-01-29T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "AI 大模型应用公开课",
+      "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/1techOfBigModel.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/1techOfBigModel.html",
+      "summary": "产品举例\n\n支小助\nAiPPT\nHeyGen数字人\n美团-小美AI Agent\n星野-AI陪聊智能体\nmeitu\n\n入行需要的步骤\n\n首先要了解AI的模型和技术应用知识（作用：从基座模型二开）\n熟练使用AI开发工具\n要构建AI驱动的原型，需要将概念转化为实际应用\n保持AI最新技能同步\n不断学习和做项目实战\n\n需要掌握什么技术？\nAI技术介绍\nAgent...",
+      "content_html": "<!-- more -->\n<h2>产品举例</h2>\n<ul>\n<li>支小助</li>\n<li>AiPPT</li>\n<li>HeyGen数字人</li>\n<li>美团-小美AI Agent</li>\n<li>星野-AI陪聊智能体</li>\n<li>meitu</li>\n</ul>\n<h2>入行需要的步骤</h2>\n<ol>\n<li>首先要了解AI的模型和技术应用知识（作用：从基座模型二开）</li>\n<li>熟练使用AI开发工具</li>\n<li>要构建AI驱动的原型，需要将概念转化为实际应用</li>\n<li>保持AI最新技能同步</li>\n<li>不断学习和做项目实战</li>\n</ol>\n<h2>需要掌握什么技术？</h2>\n<h2>AI技术介绍</h2>\n<h3>Agent</h3>\n<p>从无状态，到特定状态的定义和识别</p>\n<p>状态：（报出的回答结构化）</p>\n<p>巴黎奥运会的金牌回答，可以按照金银铜牌的数量回答给用户</p>\n<h3>Prompt</h3>\n<p>提示词工程，用户输入</p>\n<h3>Function Call</h3>\n<p>与外部函数或API交互的能力，通过理解语义来结构化调用信息，询问用户补全信息，然后结构化调用工具，基于返回的结构化信息，整合生成回复</p>\n<p>１.　理解语义，自主决策使用天气查询工具</p>\n<p>２.　结构化调用，需要结构化信息</p>\n<p>３.　询问用户，补全信息</p>\n<p>４.　结构化调用天气查询工具</p>\n<p>５.　基于返回的结构化天气信息，整合生成回复</p>\n<p>面试题：如果Function Call的成功率比较低，需要怎么解决？</p>\n<p>答案：考虑从LLM基座模型或者选型上去思考</p>\n<h3>RAG</h3>\n<p>通过从外部资源或数据库中纳入相关信息来实现</p>\n<h3>Fine Tuning</h3>\n<p>微调（可能不需要，但是复杂场景需要，可以先考虑模型的选型）</p>\n",
+      "date_published": "2026-01-22T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "教程",
+        "知乎"
+      ]
+    },
+    {
+      "title": "将静态博客部署到Github",
+      "url": "https://rochsen-blog.com/VVBP/notes/deploy/deployGithub.html",
+      "id": "https://rochsen-blog.com/VVBP/notes/deploy/deployGithub.html",
+      "summary": "第一步：本地创建项目\n\n第二步：github新建仓库\n\n输入名称\n输入描述（可选）\n设置公开\n添加README\n\n第三步：github仓库创建新的分支\n\n作用：用于存储静态html编译好的代码\n方法：在github点击分支创建，分支名称为blog_pages\n\n第四步：需要让github支持对外访问\n\n点击仓库的Setting\n选择左侧侧边栏的Gith...",
+      "content_html": "<!-- more -->\n<h2>第一步：本地创建项目</h2>\n<div class=\"language-powershell line-numbers-mode\" data-highlighter=\"shiki\" data-ext=\"powershell\" style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code class=\"language-powershell\"><span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">PS D:\\project> pnpm create vuepress</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">-</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">theme</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">-</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">hope .</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">/</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">Vuepress</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">-</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">Version</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">-</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">Blog</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">-</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">Pnpm</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">✔ Select a language to display </span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">/</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> 选择显示语言 简体中文</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">✔ 选择包管理器 pnpm</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">✔ 你想要使用哪个打包器？ vite</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">生成 package.json...</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">✔ 设置应用名称 hello</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">-</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">vuepress</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">✔ 设置应用描述 no</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">✔ 设置应用版本号 </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">2.0</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">.</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">0</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">✔ 设置协议 MIT</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">生成 tsconfig.json...</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">✔ 你想要创建什么类型的项目？ blog</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">✔ 项目需要用到多语言么? No</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">生成模板...</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">✔ 是否初始化 Git 仓库? Yes</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">✔ 是否需要一个自动部署文档到 GitHub Pages 的工作流？ Yes</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">安装依赖...</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">这可能需要数分钟，请耐心等待.</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">我们无法正确输出子进程的进度条，所以进程可能会看似未响应</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">   ╭───────────────────────────────────────────────────────────────────╮</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">   │                                                                   │</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">   │                Update available! </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">10.6</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">.</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">1</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> → </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">10.28</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">.</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">1</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">.                │</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">   │   Changelog: https:</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">//</span><span style=\"--shiki-light:#0184BC;--shiki-dark:#56B6C2\">github.com</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">/</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">pnpm</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">/</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">pnpm</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">/</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">releases</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">/</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">tag</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">/</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">v10.</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">28.1</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">   │</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">   │                 Run </span><span style=\"--shiki-light:#50A14F;--shiki-dark:#98C379\">\"pnpm add -g pnpm\"</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> to update.                 │</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">   │                                                                   │</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">   ╰───────────────────────────────────────────────────────────────────╯</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">Packages: </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">+353</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">Progress: resolved </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">438</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, reused </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">340</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, downloaded </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">20</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, added </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">353</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, done</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">devDependencies:</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">+</span><span style=\"--shiki-light:#E45649;--shiki-dark:#E06C75\"> @vuepress</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">/</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">bundler</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">-</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">vite </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">2.0</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">.</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">0</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">-</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">rc.</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">26</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">+</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> sass</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">-</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">embedded </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">1.97</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">.</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">2</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">+</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> vue </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">3.5</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">.</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">27</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">+</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> vuepress </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">2.0</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">.</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">0</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">-</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">rc.</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">26</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">+</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> vuepress</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">-</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">theme</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">-</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">hope </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">2.0</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">.</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">0</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">-</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">rc.</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">102</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">Done </span><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">in</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\"> 5.</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">2s using pnpm v10.</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">6.1</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">模板已成功生成!</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">✔ 是否想要现在启动 Demo 查看? Yes</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">启动开发服务器...</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">启动成功后，请在浏览器输入给出的开发服务器地址(默认为 </span><span style=\"--shiki-light:#50A14F;--shiki-dark:#98C379\">'localhost:8080'</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">)</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">> hello</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">-</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">vuepress</span><span style=\"--shiki-light:#E45649;--shiki-dark:#E06C75\">@2.0.0</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> docs:dev D:\\project\\Vuepress</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">-</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">Version</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">-</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">Blog</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">-</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">Pnpm</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">> vuepress</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">-</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">vite dev src</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">✔ Initializing and preparing </span><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">data</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\"> -</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> done </span><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">in</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> 321ms</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">Port </span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">8080</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> is </span><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">in</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> use, trying another one...</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">  vite v7.</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">1.12</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\"> dev server running at:</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">  ➜  Local:   http:</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">//</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">localhost:</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">8081</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">/</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">  ➜  Network: http:</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">//</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">192.168</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">.</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">125.4</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">:</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\">8081</span><span style=\"--shiki-light:#383A42;--shiki-dark:#56B6C2\">/</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><h2>第二步：github新建仓库</h2>\n<ul>\n<li>输入名称</li>\n<li>输入描述（可选）</li>\n<li>设置公开</li>\n<li>添加README</li>\n</ul>\n<h2>第三步：github仓库创建新的分支</h2>\n<ul>\n<li>作用：用于存储静态html编译好的代码</li>\n<li>方法：在github点击分支创建，分支名称为blog_pages</li>\n</ul>\n<h2>第四步：需要让github支持对外访问</h2>\n<ol>\n<li>点击仓库的Setting</li>\n<li>选择左侧侧边栏的<code>Github Pages </code></li>\n<li>选择将什么分支映射为可访问的静态站点，选择刚才创建的新分支<code>blog_pages</code></li>\n<li>点击save保存</li>\n</ol>\n<h2>第五步：去github生成一个Access Token</h2>\n<ol>\n<li>点击你的头像</li>\n<li>选择下方的设置Settings</li>\n<li>选择左侧侧边栏的开发者设置<code>developer Settings</code></li>\n<li>选择个人访问令牌（经典）</li>\n<li>点击生成新令牌，选择经典</li>\n<li>备注可以说明令牌的作用，令牌有效期选择无有效期</li>\n<li>勾选设置权限为repo，使得令牌可以支持修改发布你的仓库</li>\n<li>令牌复制，比如：XXXXXXXX</li>\n</ol>\n<h2>第六步：将令牌设置到博客仓库</h2>\n<ol>\n<li>在左侧侧边栏，选择安全-机密和变量（secrets and variables）- 代码空间</li>\n<li>点击新建机密</li>\n<li>标题为ACCESS_TOKEN，将密钥复制到密钥处</li>\n<li>点击添加机密</li>\n</ol>\n<h2>第七步：vscode修改仓库.github/workflows下方的yml文件</h2>\n<ol>\n<li>修改部署文档的分支</li>\n</ol>\n<div class=\"language-yaml line-numbers-mode\" data-highlighter=\"shiki\" data-ext=\"yaml\" style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code class=\"language-yaml\"><span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">- </span><span style=\"--shiki-light:#E45649;--shiki-dark:#E06C75\">name</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">: </span><span style=\"--shiki-light:#50A14F;--shiki-dark:#98C379\">部署文档</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#E45649;--shiki-dark:#E06C75\">  uses</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">: </span><span style=\"--shiki-light:#50A14F;--shiki-dark:#98C379\">JamesIves/github-pages-deploy-action@v4</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#E45649;--shiki-dark:#E06C75\">  env</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">:</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#E45649;--shiki-dark:#E06C75\">\t  GITHUB_TOKEN</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">: </span><span style=\"--shiki-light:#50A14F;--shiki-dark:#98C379\">${{ secrets.ACCESS_TOKEN }}</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#E45649;--shiki-dark:#E06C75\">  with</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">:</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\">\t  # 部署文档</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#E45649;--shiki-dark:#E06C75\">\t  branch</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">: </span><span style=\"--shiki-light:#50A14F;--shiki-dark:#98C379\">blog_pages</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#E45649;--shiki-dark:#E06C75\">\t  folder</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">: </span><span style=\"--shiki-light:#50A14F;--shiki-dark:#98C379\">src\\.vuepress\\dist</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><h2>第八步：绑定远程仓库</h2>\n<ul>\n<li>将远程仓库的git地址添加到远程仓库</li>\n<li>将本地代码和远程的main分支进行合并</li>\n<li>发布到远程</li>\n</ul>\n<h2>第九步：修改部署的bug</h2>\n<ul>\n<li>指定pnpm版本，如下</li>\n</ul>\n<div class=\"language-shell line-numbers-mode\" data-highlighter=\"shiki\" data-ext=\"shell\" style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code class=\"language-shell\"><span class=\"line\"><span style=\"--shiki-light:#4078F2;--shiki-dark:#61AFEF\">  -</span><span style=\"--shiki-light:#50A14F;--shiki-dark:#98C379\"> name:</span><span style=\"--shiki-light:#50A14F;--shiki-dark:#98C379\"> 设置</span><span style=\"--shiki-light:#50A14F;--shiki-dark:#98C379\"> pnpm</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#4078F2;--shiki-dark:#61AFEF\">\tuses:</span><span style=\"--shiki-light:#50A14F;--shiki-dark:#98C379\"> pnpm/action-setup@v4</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#4078F2;--shiki-dark:#61AFEF\">\twith:</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#4078F2;--shiki-dark:#61AFEF\">\t  version:</span><span style=\"--shiki-light:#986801;--shiki-dark:#D19A66\"> 10</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><ul>\n<li>将下斜杠windows的路径修改为上斜杠linux路径</li>\n</ul>\n<h2>第十步：修改src下的config.ts</h2>\n<ul>\n<li>已经可以访问，但是样式不对，所以需要修改</li>\n<li>修改base键值，根据访问的github提供的名称</li>\n</ul>\n<div class=\"language-ts line-numbers-mode\" data-highlighter=\"shiki\" data-ext=\"ts\" style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code class=\"language-ts\"><span class=\"line\"><span style=\"--shiki-light:#A626A4;--shiki-dark:#C678DD\">export</span><span style=\"--shiki-light:#E45649;--shiki-dark:#C678DD\"> default</span><span style=\"--shiki-light:#4078F2;--shiki-dark:#61AFEF\"> defineUserConfig</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">({</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#E45649;--shiki-dark:#E06C75\">  base</span><span style=\"--shiki-light:#0184BC;--shiki-dark:#ABB2BF\">:</span><span style=\"--shiki-light:#50A14F;--shiki-dark:#98C379\"> \"/Vuepress-Version-Blog-Pnpm/\"</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">,</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#E45649;--shiki-dark:#E06C75\">  lang</span><span style=\"--shiki-light:#0184BC;--shiki-dark:#ABB2BF\">:</span><span style=\"--shiki-light:#50A14F;--shiki-dark:#98C379\"> \"zh-CN\"</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">,</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#E45649;--shiki-dark:#E06C75\">  title</span><span style=\"--shiki-light:#0184BC;--shiki-dark:#ABB2BF\">:</span><span style=\"--shiki-light:#50A14F;--shiki-dark:#98C379\"> \"博客演示\"</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">,</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#E45649;--shiki-dark:#E06C75\">  description</span><span style=\"--shiki-light:#0184BC;--shiki-dark:#ABB2BF\">:</span><span style=\"--shiki-light:#50A14F;--shiki-dark:#98C379\"> \"vuepress-theme-hope 的博客演示\"</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">, </span></span>\n<span class=\"line\"><span style=\"--shiki-light:#E45649;--shiki-dark:#E06C75\">  theme</span><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">,</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\">  // 和 PWA 一起启用</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic\">  // shouldPrefetch: false,</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#383A42;--shiki-dark:#ABB2BF\">});</span></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><ul>\n<li>重新上传</li>\n</ul>\n",
+      "date_published": "2026-01-21T00:00:00.000Z",
+      "date_modified": "2026-08-27T08:33:31.000Z",
+      "authors": [],
+      "tags": [
+        "部署"
+      ]
+    },
+    {
+      "title": "页面配置教程",
+      "url": "https://rochsen-blog.com/VVBP/demo/page.html",
+      "id": "https://rochsen-blog.com/VVBP/demo/page.html",
+      "summary": "more 注释之前的内容被视为文章摘要。",
+      "content_html": "<p><code>more</code> 注释之前的内容被视为文章摘要。</p>\n<!-- more -->\n<h2>页面标题</h2>\n<p>The first H1 title in Markdown will be regarded as page title.</p>\n<p>Markdown 中的第一个 H1 标题会被视为页面标题。</p>\n<p>你可以在 Markdown 的 Frontmatter 中设置页面标题。</p>\n<div class=\"language-md line-numbers-mode\" data-highlighter=\"shiki\" data-ext=\"md\" style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code class=\"language-md\"><span class=\"line\"></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div></div></div>",
+      "date_published": "2020-01-01T00:00:00.000Z",
+      "date_modified": "2026-03-14T02:46:27.000Z",
+      "authors": [
+        {
+          "name": "Ms.Hope"
+        }
+      ],
+      "tags": [
+        "使用指南"
+      ]
+    }
+  ]
+}

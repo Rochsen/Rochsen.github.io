@@ -1,0 +1,4 @@
+User-agent:*
+Disallow:
+
+Sitemap: https://rochsen-blog.com/VVBP/sitemap.xml

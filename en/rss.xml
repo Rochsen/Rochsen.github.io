@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://rochsen-blog.com/VVBP/en/rss.xsl"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <atom:link href="https://rochsen-blog.com/VVBP/en/rss.xml" rel="self" type="application/rss+xml"/>
+    <title>Welocome to My Blog</title>
+    <link>https://rochsen-blog.com/VVBP/en/</link>
+    <description></description>
+    <language>en-US</language>
+    <pubDate>Thu, 27 Aug 2026 08:34:18 GMT</pubDate>
+    <lastBuildDate>Thu, 27 Aug 2026 08:34:18 GMT</lastBuildDate>
+    <generator>@vuepress/plugin-feed</generator>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+  </channel>
+</rss>

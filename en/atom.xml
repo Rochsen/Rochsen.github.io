@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://rochsen-blog.com/VVBP/en/atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
+  <id>https://rochsen-blog.com/VVBP/en/</id>
+  <title>Welocome to My Blog</title>
+  <icon>https://rochsen-blog.com/VVBP/logo.svg</icon>
+  <updated>2026-08-27T08:34:18.502Z</updated>
+  <generator>@vuepress/plugin-feed</generator>
+  <link rel="self" href="https://rochsen-blog.com/VVBP/en/atom.xml"/>
+  <link rel="alternate" href="https://rochsen-blog.com/VVBP/en/"/>
+</feed>
