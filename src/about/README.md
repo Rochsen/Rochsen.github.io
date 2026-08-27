@@ -1,5 +1,5 @@
 ---
-title: 关于
+title: 关于旧版
 index: false
 icon: at
 category:
@@ -25,8 +25,8 @@ article: false
 
 <!-- <Catalog /> -->
 
-<!-- <AboutPageVue />
+<AboutPageVue />
 
 <script setup>
   import AboutPageVue from "@source/.vuepress/components/About/App.vue";
-</script> -->
+</script>

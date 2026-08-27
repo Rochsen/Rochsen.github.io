@@ -12,10 +12,10 @@ export const zhNavbarConfig = navbar([
   //   "/about/",
 ]);
 export const enNavbarConfig = navbar([
-    "/en/", 
-    "/en/learns/",
-    {
-        text: "About",
-        link: "https://rochsen.github.io/Intro/",
-    }, 
+  "/en/",
+  "/en/learns/",
+  {
+    text: "About",
+    link: "https://rochsen.github.io/Intro/",
+  },
 ]);
