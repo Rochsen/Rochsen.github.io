@@ -68,12 +68,12 @@ const getCategoryColor = (category: string) => {
 
 // 图片路径拼接
 const combinePicName = (name: string) => {
-  return `/VVBP/game/600900/${name}.jpg`
+  return `/game/600900/${name}.jpg`
 }
 
 // 点击查看详情，跳转到页面
 const handleClick = (item: any) => {
-  window.open(`/VVBP/strategy/games/${item.gameNameEn}`, '_parent')
+  window.open(`/strategy/games/${item.gameNameEn}`, '_parent')
 }
 
 

@@ -17,8 +17,8 @@ projects:
   - icon: folderopen
     name: 个人博客
     type: project
-    desc: VVBP-github仓库
-    link: https://github.com/Rochsen/VVBP
+    desc: 博客仓库
+    link: https://github.com/Rochsen/Rochsen.github.io
 
   - icon: book
     name: LeetCode
