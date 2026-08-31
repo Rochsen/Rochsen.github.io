@@ -6,7 +6,7 @@ export const zhNavbarConfig = navbar([
   "/games/",
   "/navigation/",
   {
-    text: "关于",
+    text: "自我介绍",
     link: "https://rochsen.github.io/Intro/",
   },
   //   "/about/",
@@ -15,7 +15,7 @@ export const enNavbarConfig = navbar([
   "/en/",
   "/en/notes/",
   {
-    text: "About",
+    text: "Intro",
     link: "https://rochsen.github.io/Intro/",
   },
 ]);
