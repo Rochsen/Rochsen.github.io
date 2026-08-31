@@ -4,18 +4,18 @@ export const zhNavbarConfig = navbar([
   "/",
   "/notes/",
   "/games/",
-  "/navigation/",
-  {
-    text: "关于",
-    link: "https://rochsen.github.io/Intro/",
-  },
+  // "/navigation/",
+  // {
+  //   text: "关于",
+  //   link: "https://rochsen.github.io/Intro/",
+  // },
   //   "/about/",
 ]);
 export const enNavbarConfig = navbar([
   "/en/",
   "/en/notes/",
-  {
-    text: "About",
-    link: "https://rochsen.github.io/Intro/",
-  },
+  // {
+  //   text: "About",
+  //   link: "https://rochsen.github.io/Intro/",
+  // },
 ]);
