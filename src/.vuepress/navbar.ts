@@ -4,6 +4,7 @@ export const zhNavbarConfig = navbar([
   "/",
   "/notes/",
   "/games/",
+  "/friendLinks/"
   // "/navigation/",
   // {
   //   text: "关于",
