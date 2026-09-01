@@ -35,7 +35,14 @@ export default hopeTheme(
     repoDisplay: true,
 
     // 是否展示全屏按钮
-    fullscreen: true,
+    fullscreen: false,
+
+    // 导航栏布局
+    navbarLayout: {
+      start: ["Brand"],
+      center: ["Links"],
+      end: ["Language", "Repo", "Outlook"],
+    },
 
     // 文档所在目录
     docsDir: "src",
@@ -58,7 +65,7 @@ export default hopeTheme(
         sidebar: zhSideBarConfig,
         blog: {
           description: "生物信息全栈开发工程师",
-          intro: "/about/",
+          intro: "https://rochsen.github.io/Intro/",
           medias: mediasConfig,
           timeline: "时光机",
         },
@@ -68,7 +75,7 @@ export default hopeTheme(
         sidebar: enSidebarConfig,
         blog: {
           description: "Bioinformatics full stack development engineer",
-          intro: "/about/",
+          intro: "https://rochsen.github.io/Intro/en/",
           medias: mediasConfig,
           timeline: "Time Machine",
         },
