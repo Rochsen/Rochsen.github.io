@@ -1,0 +1,8 @@
+/* Custom CSS to make hitokoto text theme-aware */
+.hitokoto {
+  color: var(--vp-c-text) !important;
+}
+
+.hitokoto-author {
+  color: var(--vp-c-text) !important;
+}

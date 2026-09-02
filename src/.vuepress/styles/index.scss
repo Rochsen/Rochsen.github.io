@@ -14,3 +14,12 @@
   font-size: 1rem;
   gap: 0.3rem;
 }
+
+// 一言描述跟随深浅色主题变化
+.hitokoto {
+  color: var(--vp-c-text) !important;
+}
+
+.hitokoto-author {
+  color: var(--vp-c-text) !important;
+}
