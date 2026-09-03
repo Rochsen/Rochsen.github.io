@@ -73,7 +73,7 @@ const combinePicName = (name: string) => {
 
 // 点击查看详情，跳转到页面
 const handleClick = (item: any) => {
-  window.open(`/strategy/games/${item.gameNameEn}`, '_parent')
+  window.open(`/games/${item.gameNameEn}`, '_parent')
 }
 
 
