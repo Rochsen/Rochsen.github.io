@@ -23,10 +23,10 @@ export default hopeTheme(
     },
 
     // 浏览器图标
-    favicon: "/logo.svg",
+    favicon: "/q-avatar.png",
 
     // 博客首页 logo
-    logo: "/favicon.ico",
+    // logo: "/q-avatar.png",
 
     // 博客的GitHub仓库
     repo: "Rochsen/Rochsen.github.io",
@@ -68,6 +68,7 @@ export default hopeTheme(
           intro: "https://rochsen.github.io/Intro/",
           medias: mediasConfig,
           timeline: "时光机",
+          avatar: "/q-avatar.png",
         },
       },
       "/en/": {
@@ -78,6 +79,7 @@ export default hopeTheme(
           intro: "https://rochsen.github.io/Intro/en/",
           medias: mediasConfig,
           timeline: "Time Machine",
+          avatar: "/q-avatar.png",
         },
       },
     },
