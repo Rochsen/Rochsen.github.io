@@ -3,7 +3,7 @@
   <id>https://rochsen-blog.com/VVBP/</id>
   <title>欢迎来到我的博客</title>
   <icon>https://rochsen-blog.com/VVBP/q-avatar.png</icon>
-  <updated>2026-09-06T03:36:42.612Z</updated>
+  <updated>2026-09-06T04:00:11.799Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://rochsen-blog.com/VVBP/atom.xml"/>
   <link rel="alternate" href="https://rochsen-blog.com/VVBP/"/>
@@ -1380,7 +1380,7 @@ LLM 会有幻觉：可能生成不准确或虚构的...</summary>
     <title type="text">AI 概念通俗解释大全</title>
     <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/5aiNameProduce.html</id>
     <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/5aiNameProduce.html"/>
-    <updated>2026-08-27T08:33:31.000Z</updated>
+    <updated>2026-09-06T03:59:28.000Z</updated>
     <summary type="text">第一部分：AI的层次与类型
 AI (人工智能)
 “会学习的机器”
@@ -1436,7 +1436,7 @@ AGI (通用人工智能)
     <title type="text">AI 大模型应用公开课</title>
     <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/1techOfBigModel.html</id>
     <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/1techOfBigModel.html"/>
-    <updated>2026-08-27T08:33:31.000Z</updated>
+    <updated>2026-09-06T03:59:28.000Z</updated>
     <summary type="text">产品举例
 
 支小助
