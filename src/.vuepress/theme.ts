@@ -2,6 +2,9 @@ import { hopeTheme } from "vuepress-theme-hope";
 import { zhNavbarConfig, enNavbarConfig } from "./navbar.ts";
 import { zhSideBarConfig, enSidebarConfig } from "./sidebar/index.ts";
 
+// 博客个人头像
+export const avatar = "/q-avatar.png";
+
 // 社交媒体信息
 export const mediasConfig = {
   BiliBili: "https://space.bilibili.com/361524948",
@@ -23,10 +26,7 @@ export default hopeTheme(
     },
 
     // 浏览器图标
-    favicon: "/q-avatar.png",
-
-    // 博客首页 logo
-    // logo: "/q-avatar.png",
+    favicon: avatar,
 
     // 博客的GitHub仓库
     repo: "Rochsen/Rochsen.github.io",
@@ -68,7 +68,7 @@ export default hopeTheme(
           intro: "https://rochsen.github.io/Intro/",
           medias: mediasConfig,
           timeline: "时光机",
-          avatar: "/q-avatar.png",
+          avatar: avatar,
         },
       },
       "/en/": {
@@ -79,7 +79,7 @@ export default hopeTheme(
           intro: "https://rochsen.github.io/Intro/en/",
           medias: mediasConfig,
           timeline: "Time Machine",
-          avatar: "/q-avatar.png",
+          avatar: avatar,
         },
       },
     },
