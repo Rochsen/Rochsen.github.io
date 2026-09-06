@@ -2,8 +2,8 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
   <id>https://rochsen-blog.com/VVBP/en/</id>
   <title>Welocome to My Blog</title>
-  <icon>https://rochsen-blog.com/VVBP/logo.svg</icon>
-  <updated>2026-09-03T10:08:03.848Z</updated>
+  <icon>https://rochsen-blog.com/VVBP/q-avatar.png</icon>
+  <updated>2026-09-06T03:14:35.465Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://rochsen-blog.com/VVBP/en/atom.xml"/>
   <link rel="alternate" href="https://rochsen-blog.com/VVBP/en/"/>
