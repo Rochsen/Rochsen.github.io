@@ -4,7 +4,7 @@ layout: Blog
 icon: house
 title: 主页
 bgImage: https://api.yppp.net/pc.php
-bgImageDark: https://pic1.imgdb.cn/i/0345mMGcrNtOVGbO7qu3Tw.jpg
+# bgImageDark: https://pic1.imgdb.cn/i/0345mMGcrNtOVGbO7qu3Tw.jpg
 heroText: ""
 heroFullScreen: true
 footer: 由src\.vuepress\client.ts设置
