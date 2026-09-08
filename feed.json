@@ -224,7 +224,7 @@
       "summary": "1. 课程概述\n本课围绕 Embedding（向量化） 与 向量数据库 两大主题，核心学习目标：\n\n一句话主线：把万物（文本、商品、人物、图片）变成低维稠密向量，放进向量数据库做相似度检索，喂给 LLM 做 RAG 问答。\n\n2. 什么是 Embedding\n\n定义：Embedding（嵌入/向量化）是一种降维方式，将不同特征转换为维度相同的向量。\n\n...",
       "content_html": "<!-- more -->\n<h2>1. 课程概述</h2>\n<p>本课围绕 <strong>Embedding（向量化）</strong> 与 <strong>向量数据库</strong> 两大主题，核心学习目标：</p>\n<p>| 模块                 | 内容                                                         |\n|</p>\n",
       "date_published": "2026-07-04T00:00:00.000Z",
-      "date_modified": "2026-08-27T08:33:31.000Z",
+      "date_modified": "2026-09-08T07:56:38.000Z",
       "authors": [],
       "tags": [
         "教程",

@@ -3,7 +3,7 @@
   <id>https://rochsen-blog.com/VVBP/</id>
   <title>欢迎来到我的博客</title>
   <icon>https://rochsen-blog.com/VVBP/q-avatar.png</icon>
-  <updated>2026-09-07T01:10:26.171Z</updated>
+  <updated>2026-09-08T07:57:48.767Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://rochsen-blog.com/VVBP/atom.xml"/>
   <link rel="alternate" href="https://rochsen-blog.com/VVBP/"/>
@@ -534,7 +534,7 @@ Function Calling 是 A...</summary>
     <title type="text">Embeddings和向量数据库</title>
     <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/29Embeddings.html</id>
     <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/29Embeddings.html"/>
-    <updated>2026-08-27T08:33:31.000Z</updated>
+    <updated>2026-09-08T07:56:38.000Z</updated>
     <summary type="text">1. 课程概述
 本课围绕 Embedding（向量化） 与 向量数据库 两大主题，核心学习目标：
 
