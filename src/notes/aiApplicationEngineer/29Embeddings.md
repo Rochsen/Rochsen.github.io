@@ -93,20 +93,20 @@ king - man + woman = queen
 - **假设**：第 n 个词的出现只与前 n-1 个词相关，与其他词无关
 - N=1 → unigram；N=2 → bigram；N=3 → trigram
 - 文本 `A B C D E` 的 Bi-Gram：`A B, B C, C D, D E`
-- **作用**：一阶特征不够用时，用 N-Gram 生成相邻关键词的组合特征
+- **作用**：一阶特征不够用时，用 N-Gram 生成相邻关键词的组合特征，可以对字符的顺序粗筛
 
 ### 3.2 TF-IDF
 
 | 概念                | 公式                                 | 含义                                          |
 | ------------------- | ------------------------------------ | --------------------------------------------- |
 | TF（词频）          | 单词次数 / 文档总单词数              | 词在文档中出现的频繁程度                      |
-| IDF（逆向文档频率） | log(文档总数 / 单词出现的文档数) + 1 | 词在文档集合中的区分度，出现文档越少 IDF 越大 |
+| IDF（逆向文档频率） | log(文档总数 / 单词出现的文档数) + 1 | 词在文档集合中的稀缺性 |
 
 ### 3.3 特征工程 → 相似度计算的瓶颈
 
 > 课堂笔记关键点：某案例特征数量 `3329 = 1000（1元特征）+ 1000（2元特征）+ 1329（3元特征）`
 >
-> ⚠️ 问题：**特征维度太大，且很多特征值为 0 → 存储空间浪费、计算量大**。这就是引出 Word Embedding 的动机（Thinking：有没有更适合的方式？）。
+> ⚠️ 问题：**特征维度太大，且很多特征值为 0 → 存储空间浪费、计算量大**。这就是引出 Word Embedding。
 
 ---
 
@@ -274,6 +274,76 @@ print(model2.wv.most_similar(positive=['孙悟空', '唐僧'], negative=['孙行
 - 使用 Gensim 的 Word2Vec 对 `three_kingdoms.txt`（三国演义）做 Embedding
 - 分析**和曹操最相近的词**有哪些
 - 向量运算：`曹操 + 刘备 - 张飞 = ?`
+- 交作业：
+
+```python
+import jieba
+import os
+from utils import files_processing
+from word_seg import segment_lines
+
+# 将Word转换成Vec，然后计算相似度
+from gensim.models import word2vec
+
+source_folder = "./three_kingdoms/source"
+segment_folder = "./three_kingdoms/segment"
+
+if not os.path.exists(segment_folder):
+    os.mkdir(segment_folder)
+
+# 获取文件列表
+file_list = files_processing.get_files_list(source_folder, postfix="*.txt")
+
+# 分词, 输出到segment目录中
+segment_lines(file_list, segment_folder, ["朕", "吾", "卿", "臣", "你"])
+
+# 切分之后的句子合集
+sentences = word2vec.PathLineSentences(segment_folder)
+
+# 设置模型参数，进行训练
+model = word2vec.Word2Vec(sentences, vector_size=512, window=2, min_count=5)
+
+# print(model.wv['曹操'])
+# print(model.wv['刘备'])
+# print(model.wv["张飞"])
+print(model.wv.most_similar(positive=["曹操", "刘备"], negative=["张飞"]))
+
+# [('主公', 0.9864012598991394), ('此', 0.9823013544082642), ('谁', 0.9807001352310181), ('此人', 0.9797426462173462), ('丞相', 0.9793077111244202), ('今日', 0.9786542654037476), ('先生', 0.978636622428894), ('既', 0.9773306250572205), ('敢', 0.9764348864555359), ('今', 0.9755046963691711)]
+
+
+# ====== 词向量可视化（热力图） ======
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+import numpy as np
+
+plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei']
+plt.rcParams['axes.unicode_minus'] = False
+
+# 曹操 + 刘备 - 张飞 的向量
+vec_combined = model.wv['曹操'] + model.wv['刘备'] - model.wv['张飞']
+
+characters = ["曹操", "刘备", "张飞", "曹操+刘备-张飞", "丞相"]
+vec_matrix = np.array([
+    model.wv['曹操'],
+    model.wv['刘备'],
+    model.wv['张飞'],
+    vec_combined,
+    model.wv['丞相'],
+])
+
+df = pd.DataFrame(vec_matrix, index=characters,
+                  columns=[f"d{i}" for i in range(vec_matrix.shape[1])])
+
+plt.figure(figsize=(18, 5))
+sns.heatmap(df, cmap="RdBu_r", center=0, xticklabels=5, yticklabels=1)
+plt.title("词向量热力图")
+plt.xlabel("维度")
+plt.ylabel("")
+plt.tight_layout()
+plt.savefig("vector_heatmap.png", dpi=150)
+plt.show()
+```
 
 ### 5.5 万物皆可 Embedding（商品2Vec / 人物2Vec）
 
