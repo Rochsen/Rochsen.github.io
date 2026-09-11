@@ -1,6 +1,6 @@
 ---
 title: 友链
-icon: link
+icon: link1
 pageInfo: false
 editLink: false
 article: false
@@ -11,6 +11,7 @@ index: false
 lastUpdated: true
 prev: false
 next: false
+timeline: false
 ---
 
 <!-- more -->

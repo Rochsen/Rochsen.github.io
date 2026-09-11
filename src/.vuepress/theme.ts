@@ -177,9 +177,8 @@ export default hopeTheme(
         rss: true,
       },
 
-      // 阿里云图标库，参考了作者的博客
       icon: {
-        assets: "//at.alicdn.com/t/c/font_5224531_dnv00kxx81w.css",
+        assets: "//at.alicdn.com/t/c/font_5224531_mxyb6gwjk7.css", // 阿里云图标库
       },
 
       // 前端导航栏扰动的根本原因

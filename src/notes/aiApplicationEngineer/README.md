@@ -3,6 +3,7 @@ title: 大模型应用开发学习笔记
 icon: code
 article: false
 star: false
+timeline: false
 ---
 
 > [!tip]

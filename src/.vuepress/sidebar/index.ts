@@ -1,6 +1,8 @@
 import { sidebar } from "vuepress-theme-hope";
 import { gamesSideBarConfig } from "./games/index.js";
 import { NoteSideBar, zhihuAi } from "./notes/index.ts";
+import { InvestmentSideBar } from "./investment/investment.ts";
+
 
 export const zhSideBarConfig = sidebar({
   // 学习 - 侧边栏
@@ -12,6 +14,14 @@ export const zhSideBarConfig = sidebar({
 
   // 游戏 - 侧边栏
   "/games/": gamesSideBarConfig,
+
+  // 投资 - 侧边栏
+  "/investment/": InvestmentSideBar,
+  "/investment/stock/": "structure",
+  "/investment/fund/": "structure",
+  "/investment/bond/": "structure",
+  "/investment/insurance/": "structure",
+  "/investment/assets/": "structure",
 });
 
 // 英文语言下的侧边栏

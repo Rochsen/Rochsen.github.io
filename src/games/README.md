@@ -4,6 +4,7 @@ index: false
 icon: gamepad
 breadcrumb: false
 article: false
+timeline: false
 ---
 
 <!-- more -->

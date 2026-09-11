@@ -3,6 +3,7 @@ title: 生物信息学笔记
 icon: toolbox
 article: false
 star: false
+timeline: false
 ---
 
 <!-- more -->

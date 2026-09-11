@@ -4,6 +4,7 @@ index: false
 icon: pen
 breadcrumb: false
 article: false
+timeline: false
 # category:
 #   - 使用指南
 # pageInfo: false
