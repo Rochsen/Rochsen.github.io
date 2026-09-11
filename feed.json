@@ -235,9 +235,10 @@
       "title": "RAG技术与应用",
       "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/30RAGTechApply.html",
       "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/30RAGTechApply.html",
-      "content_html": "<!-- more -->\n",
+      "summary": "1. 大模型应用开发的三种模式\n在AI大模型应用开发中，有三种主要的技术路线：提示工程、RAG 和 微调。\n\n\n2. RAG 核心原理与流程\n2.1 什么是 RAG？\nRAG（Retrieval-Augmented Generation） = 检索增强生成\n\n一种结合信息检索（Retrieval）和文本生成（Generation）的技术\n通过实时检索相...",
+      "content_html": "<!-- more -->\n<h2>1. 大模型应用开发的三种模式</h2>\n<p>在AI大模型应用开发中，有三种主要的技术路线：<strong>提示工程</strong>、<strong>RAG</strong> 和 <strong>微调</strong>。</p>\n<p>| 模式         | 适用场景           | 核心思想                           |\n|</p>\n",
       "date_published": "2026-07-04T00:00:00.000Z",
-      "date_modified": "2026-08-27T08:33:31.000Z",
+      "date_modified": "2026-09-11T03:44:36.000Z",
       "authors": [],
       "tags": [
         "教程",

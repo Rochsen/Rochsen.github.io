@@ -3,7 +3,7 @@
   <id>https://rochsen-blog.com/VVBP/</id>
   <title>欢迎来到我的博客</title>
   <icon>https://rochsen-blog.com/VVBP/q-avatar.png</icon>
-  <updated>2026-09-08T07:57:48.767Z</updated>
+  <updated>2026-09-11T03:45:34.237Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://rochsen-blog.com/VVBP/atom.xml"/>
   <link rel="alternate" href="https://rochsen-blog.com/VVBP/"/>
@@ -559,8 +559,22 @@ Function Calling 是 A...</summary>
     <title type="text">RAG技术与应用</title>
     <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/30RAGTechApply.html</id>
     <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/30RAGTechApply.html"/>
-    <updated>2026-08-27T08:33:31.000Z</updated>
+    <updated>2026-09-11T03:44:36.000Z</updated>
+    <summary type="text">1. 大模型应用开发的三种模式
+在AI大模型应用开发中，有三种主要的技术路线：提示工程、RAG 和 微调。
+
+
+2. RAG 核心原理与流程
+2.1 什么是 RAG？
+RAG（Retrieval-Augmented Generation） = 检索增强生成
+
+一种结合信息检索（Retrieval）和文本生成（Generation）的技术
+通过实时检索相...</summary>
     <content type="html"><![CDATA[<!-- more -->
+<h2>1. 大模型应用开发的三种模式</h2>
+<p>在AI大模型应用开发中，有三种主要的技术路线：<strong>提示工程</strong>、<strong>RAG</strong> 和 <strong>微调</strong>。</p>
+<p>| 模式         | 适用场景           | 核心思想                           |
+|</p>
 ]]></content>
     <category term="教程"/>
     <category term="知乎"/>
