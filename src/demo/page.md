@@ -55,6 +55,31 @@ title: 页面标题
 - 分类为 “使用指南”
 - 标签为 “页面配置” 和 “使用指南”
 
+页面信息主要有：
+
+---
+title: 页面标题
+shorttitle: 当前页面的短标题，会在导航栏、侧边栏和路径导航中作为首选
+description: 当前页面内容描述
+timeline: 是否将该文章添加至时间线中, 默认true
+sticky: 是否在列表中置顶。当填入数字时，数字越大，排名越靠前, 默认false
+cover: 页面的预览图
+isOriginal: 是否原创，默认false
+date: 2020-01-01 （写作时间，格式: YYYY-MM-DD 或 YYYY-MM-DD hh:mm:ss）
+icon: gamepad
+breadcrumb: false（是否开启路径导航）
+article: false（是否将该文章添加至文章列表中）
+tag: ["页面配置"]
+category: ["使用指南"]
+star: 99 (是否标为星标文章。当填入数字时，数字越大，排名越靠前)
+
+sidebar: 填入 false 会禁用侧边栏，设置为空数组 [] 会只渲染侧边栏的插槽内容
+index: false（是否在侧边栏或目录中索引当前页面，默认true）
+editLink: 是否显示编辑链接
+lastUpdated: false（是否显示最后更新时间）
+layout: 自定义页面布局名称
+---
+
 ## 页面内容
 
 你可以自由在这里书写你的 Markdown。
