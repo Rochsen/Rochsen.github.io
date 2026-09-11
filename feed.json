@@ -238,7 +238,7 @@
       "summary": "1. 大模型应用开发的三种模式\n在AI大模型应用开发中，有三种主要的技术路线：提示工程、RAG 和 微调。\n\n\n2. RAG 核心原理与流程\n2.1 什么是 RAG？\nRAG（Retrieval-Augmented Generation） = 检索增强生成\n\n一种结合信息检索（Retrieval）和文本生成（Generation）的技术\n通过实时检索相...",
       "content_html": "<!-- more -->\n<h2>1. 大模型应用开发的三种模式</h2>\n<p>在AI大模型应用开发中，有三种主要的技术路线：<strong>提示工程</strong>、<strong>RAG</strong> 和 <strong>微调</strong>。</p>\n<p>| 模式         | 适用场景           | 核心思想                           |\n|</p>\n",
       "date_published": "2026-07-04T00:00:00.000Z",
-      "date_modified": "2026-09-11T03:44:36.000Z",
+      "date_modified": "2026-09-11T03:58:14.000Z",
       "authors": [],
       "tags": [
         "教程",
@@ -786,7 +786,7 @@
       "summary": "more 注释之前的内容被视为文章摘要。",
       "content_html": "<p><code>more</code> 注释之前的内容被视为文章摘要。</p>\n<!-- more -->\n<h2>页面标题</h2>\n<p>The first H1 title in Markdown will be regarded as page title.</p>\n<p>Markdown 中的第一个 H1 标题会被视为页面标题。</p>\n<p>你可以在 Markdown 的 Frontmatter 中设置页面标题。</p>\n<div class=\"language-md line-numbers-mode\" data-highlighter=\"shiki\" data-ext=\"md\" style=\"--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34\"><pre class=\"shiki shiki-themes one-light one-dark-pro vp-code\"><code class=\"language-md\"><span class=\"line\"></span></code></pre>\n<div class=\"line-numbers\" aria-hidden=\"true\" style=\"counter-reset:line-number 0\"><div class=\"line-number\"></div></div></div>",
       "date_published": "2020-01-01T00:00:00.000Z",
-      "date_modified": "2026-03-14T02:46:27.000Z",
+      "date_modified": "2026-09-11T04:31:46.000Z",
       "authors": [
         {
           "name": "Ms.Hope"
