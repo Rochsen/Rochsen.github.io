@@ -1,6 +1,6 @@
 ---
 title: 单向链表
-icon: link
+icon: lianbiao
 date: 2026-08-22
 category: [数据结构]
 tag: [链表]
