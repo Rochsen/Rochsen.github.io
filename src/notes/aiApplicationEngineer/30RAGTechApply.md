@@ -246,10 +246,12 @@ torch==2.7.0
 ### 6.1 方式一：SentenceTransformer 封装调用
 
 ```python
-from sentence_transformers import SentenceTransformer
+# 模型下载
+from modelscope import snapshot_download
+model_dir = snapshot_download('iic/gte_Qwen2-1.5B-instruct', cache_dir='/root/autodl-tmp/models')
 
-model_dir = "/root/autodl-tmp/models/iic/gte_Qwen2-1___5B-instruct"
-model = SentenceTransformer(model_dir, trust_remote_code=True)
+from sentence_transformers import SentenceTransformer
+model = SentenceTransformer("/root/autodl-tmp/models/iic/gte_Qwen2-1___5B-instruct", trust_remote_code=True)
 model.max_seq_length = 8192
 
 queries = [
