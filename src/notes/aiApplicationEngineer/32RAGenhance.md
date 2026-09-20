@@ -1,6 +1,6 @@
 ---
 title: RAG高级技术与调优
-date: 2026-07-04
+date: 2026-09-20
 categories: [教程, 知乎]
 tags: [AI, RAG]
 ---
