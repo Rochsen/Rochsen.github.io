@@ -3,7 +3,7 @@
   <id>https://rochsen-blog.com/VVBP/</id>
   <title>欢迎来到我的博客</title>
   <icon>https://rochsen-blog.com/VVBP/q-avatar.png</icon>
-  <updated>2026-09-20T00:59:02.682Z</updated>
+  <updated>2026-09-20T02:28:06.622Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://rochsen-blog.com/VVBP/atom.xml"/>
   <link rel="alternate" href="https://rochsen-blog.com/VVBP/"/>
@@ -534,7 +534,7 @@ Function Calling 是 A...</summary>
     <title type="text">Embeddings和向量数据库</title>
     <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/29Embeddings.html</id>
     <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/29Embeddings.html"/>
-    <updated>2026-09-08T07:56:38.000Z</updated>
+    <updated>2026-09-20T02:27:27.000Z</updated>
     <summary type="text">1. 课程概述
 本课围绕 Embedding（向量化） 与 向量数据库 两大主题，核心学习目标：
 
@@ -553,13 +553,13 @@ Function Calling 是 A...</summary>
 ]]></content>
     <category term="教程"/>
     <category term="知乎"/>
-    <published>2026-07-04T00:00:00.000Z</published>
+    <published>2026-09-08T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">RAG技术与应用</title>
     <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/30RAGTechApply.html</id>
     <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/30RAGTechApply.html"/>
-    <updated>2026-09-11T03:58:14.000Z</updated>
+    <updated>2026-09-20T02:27:27.000Z</updated>
     <summary type="text">1. 大模型应用开发的三种模式
 在AI大模型应用开发中，有三种主要的技术路线：提示工程、RAG 和 微调。
 
@@ -578,13 +578,13 @@ RAG（Retrieval-Augmented Generation） = 检索增强生成
 ]]></content>
     <category term="教程"/>
     <category term="知乎"/>
-    <published>2026-07-04T00:00:00.000Z</published>
+    <published>2026-09-11T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">RAG多模态数据处理</title>
     <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/31RAGmutilProcess.html</id>
     <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/31RAGmutilProcess.html"/>
-    <updated>2026-09-14T14:24:31.000Z</updated>
+    <updated>2026-09-20T02:27:27.000Z</updated>
     <summary type="text">RAG 多模态数据处理实战指南
 传统 RAG 系统大多围绕纯文本构建：把文档切成片段、编码成向量、检索后拼进 Prompt。但真实业务里的知识往往是混合形态的——官方规定是 PDF，内部 FAQ 是 Word，活动介绍里有大量海报图片和表格，培训资料是视频。如果只处理文字，这些信息在入库的那一刻就被丢掉了，检索自然也就回答不了&amp;quot;最近万圣节的活...</summary>
     <content type="html"><![CDATA[<!-- more -->
@@ -610,13 +610,13 @@ RAG（Retrieval-Augmented Generation） = 检索增强生成
 ]]></content>
     <category term="教程"/>
     <category term="知乎"/>
-    <published>2026-07-04T00:00:00.000Z</published>
+    <published>2026-09-14T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">RAG高级技术与调优</title>
     <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/32RAGenhance.html</id>
     <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/32RAGenhance.html"/>
-    <updated>2026-09-20T00:58:08.000Z</updated>
+    <updated>2026-09-20T02:27:27.000Z</updated>
     <summary type="text">朴素 RAG 的流程可以用三个动作概括：Indexing、Retrieval、Generation。真正把 RAG 应用从 Demo 推到落地，难点几乎全部集中在&amp;quot;如何把知识存得更好&amp;quot;和&amp;quot;如何把有用的那一小撮知识找出来&amp;quot;这两件事上。本文将课件脉络与工作区中的四组可运行代码结合起来，梳理一条完整的调优路径。
 工作区...</summary>
     <content type="html"><![CDATA[<!-- more -->
@@ -627,7 +627,7 @@ RAG（Retrieval-Augmented Generation） = 检索增强生成
 ]]></content>
     <category term="教程"/>
     <category term="知乎"/>
-    <published>2026-07-04T00:00:00.000Z</published>
+    <published>2026-09-20T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">项目实战：企业知识库</title>

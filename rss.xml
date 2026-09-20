@@ -6,8 +6,8 @@
     <link>https://rochsen-blog.com/VVBP/</link>
     <description></description>
     <language>zh-CN</language>
-    <pubDate>Sun, 20 Sep 2026 00:59:02 GMT</pubDate>
-    <lastBuildDate>Sun, 20 Sep 2026 00:59:02 GMT</lastBuildDate>
+    <pubDate>Sun, 20 Sep 2026 02:28:06 GMT</pubDate>
+    <lastBuildDate>Sun, 20 Sep 2026 02:28:06 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -540,7 +540,7 @@ Function Calling 是 A...</description>
 ...</description>
       <category>教程</category>
       <category>知乎</category>
-      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<!-- more -->
 <h2>1. 课程概述</h2>
 <p>本课围绕 <strong>Embedding（向量化）</strong> 与 <strong>向量数据库</strong> 两大主题，核心学习目标：</p>
@@ -565,7 +565,7 @@ RAG（Retrieval-Augmented Generation） = 检索增强生成
 通过实时检索相...</description>
       <category>教程</category>
       <category>知乎</category>
-      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<!-- more -->
 <h2>1. 大模型应用开发的三种模式</h2>
 <p>在AI大模型应用开发中，有三种主要的技术路线：<strong>提示工程</strong>、<strong>RAG</strong> 和 <strong>微调</strong>。</p>
@@ -582,7 +582,7 @@ RAG（Retrieval-Augmented Generation） = 检索增强生成
 传统 RAG 系统大多围绕纯文本构建：把文档切成片段、编码成向量、检索后拼进 Prompt。但真实业务里的知识往往是混合形态的——官方规定是 PDF，内部 FAQ 是 Word，活动介绍里有大量海报图片和表格，培训资料是视频。如果只处理文字，这些信息在入库的那一刻就被丢掉了，检索自然也就回答不了&amp;quot;最近万圣节的活...</description>
       <category>教程</category>
       <category>知乎</category>
-      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<!-- more -->
 <h2>RAG 多模态数据处理实战指南</h2>
 <p>传统 RAG 系统大多围绕纯文本构建：把文档切成片段、编码成向量、检索后拼进 Prompt。但真实业务里的知识往往是混合形态的——官方规定是 PDF，内部 FAQ 是 Word，活动介绍里有大量海报图片和表格，培训资料是视频。如果只处理文字，这些信息在入库的那一刻就被丢掉了，检索自然也就回答不了&quot;最近万圣节的活动海报长什么样&quot;或者&quot;我的车被剐蹭了，你能看到视频吗&quot;这类问题。</p>
@@ -614,7 +614,7 @@ RAG（Retrieval-Augmented Generation） = 检索增强生成
 工作区...</description>
       <category>教程</category>
       <category>知乎</category>
-      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<!-- more -->
 <p>朴素 RAG 的流程可以用三个动作概括：Indexing、Retrieval、Generation。真正把 RAG 应用从 Demo 推到落地，难点几乎全部集中在&quot;如何把知识存得更好&quot;和&quot;如何把有用的那一小撮知识找出来&quot;这两件事上。本文将课件脉络与工作区中的四组可运行代码结合起来，梳理一条完整的调优路径。</p>
 <p>工作区中的代码按主题分为三个目录：</p>
