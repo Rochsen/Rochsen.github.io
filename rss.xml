@@ -6,8 +6,8 @@
     <link>https://rochsen-blog.com/VVBP/</link>
     <description></description>
     <language>zh-CN</language>
-    <pubDate>Mon, 14 Sep 2026 14:25:34 GMT</pubDate>
-    <lastBuildDate>Mon, 14 Sep 2026 14:25:34 GMT</lastBuildDate>
+    <pubDate>Sun, 20 Sep 2026 00:59:02 GMT</pubDate>
+    <lastBuildDate>Sun, 20 Sep 2026 00:59:02 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -606,14 +606,20 @@ RAG（Retrieval-Augmented Generation） = 检索增强生成
 ]]></content:encoded>
     </item>
     <item>
-      <title>RAG调优</title>
+      <title>RAG高级技术与调优</title>
       <link>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/32RAGenhance.html</link>
       <guid>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/32RAGenhance.html</guid>
-      <source url="https://rochsen-blog.com/VVBP/rss.xml">RAG调优</source>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">RAG高级技术与调优</source>
+      <description>朴素 RAG 的流程可以用三个动作概括：Indexing、Retrieval、Generation。真正把 RAG 应用从 Demo 推到落地，难点几乎全部集中在&amp;quot;如何把知识存得更好&amp;quot;和&amp;quot;如何把有用的那一小撮知识找出来&amp;quot;这两件事上。本文将课件脉络与工作区中的四组可运行代码结合起来，梳理一条完整的调优路径。
+工作区...</description>
       <category>教程</category>
       <category>知乎</category>
       <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<!-- more -->
+<p>朴素 RAG 的流程可以用三个动作概括：Indexing、Retrieval、Generation。真正把 RAG 应用从 Demo 推到落地，难点几乎全部集中在&quot;如何把知识存得更好&quot;和&quot;如何把有用的那一小撮知识找出来&quot;这两件事上。本文将课件脉络与工作区中的四组可运行代码结合起来，梳理一条完整的调优路径。</p>
+<p>工作区中的代码按主题分为三个目录：</p>
+<p>| 目录              | 主题                                                     | 关键文件                                                     |
+|</p>
 ]]></content:encoded>
     </item>
     <item>
