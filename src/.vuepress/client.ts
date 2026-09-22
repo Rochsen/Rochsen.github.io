@@ -6,7 +6,7 @@ import Blog from "./layouts/Blog.vue";
 
 // 按需引入 Antdv-next
 import {
-  Button,
+  // Button,
   Card,
   Col,
   Input,
@@ -21,7 +21,7 @@ import {
 export default defineClientConfig({
   enhance({ app }) {
     // 按需注册 Antdv-next 组件
-    app.use(Button);
+    // app.use(Button);
     app.use(Card); // CardMeta 随 Card 一起注册
     app.use(Col);
     app.use(Input); // InputSearch 随 Input 一起注册
