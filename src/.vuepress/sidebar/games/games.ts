@@ -1,6 +1,6 @@
 import { arraySidebar } from "vuepress-theme-hope";
 
-export const gamesSideBarConfig = arraySidebar([
+export const gamesSideBar = arraySidebar([
   // 印象游戏库
   "gameStorage",
   // 艾尔登法环 黑夜君临

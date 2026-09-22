@@ -1,6 +1,6 @@
 import { arraySidebar } from "vuepress-theme-hope";
 
-export const zhihuAi = arraySidebar([
+export const zhihuAiSideBar = arraySidebar([
   "",
   {
     text: "现在的AI是什么",
