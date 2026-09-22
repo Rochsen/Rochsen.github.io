@@ -3,14 +3,14 @@
   <id>https://rochsen-blog.com/VVBP/</id>
   <title>欢迎来到我的博客</title>
   <icon>https://rochsen-blog.com/VVBP/q-avatar.png</icon>
-  <updated>2026-09-22T12:10:52.521Z</updated>
+  <updated>2026-09-22T12:59:33.667Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://rochsen-blog.com/VVBP/atom.xml"/>
   <link rel="alternate" href="https://rochsen-blog.com/VVBP/"/>
   <category term="ai-harness"/>
   <category term="IDE"/>
-  <category term="网络"/>
   <category term="markdown"/>
+  <category term="网络"/>
   <category term="阅读器"/>
   <category term="远程控制"/>
   <category term="搜索"/>
@@ -52,16 +52,6 @@
     <published>2026-09-22T00:00:00.000Z</published>
   </entry>
   <entry>
-    <title type="text">Clash Verge</title>
-    <id>https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html</id>
-    <link href="https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html"/>
-    <updated>2026-09-22T08:53:41.000Z</updated>
-    <content type="html"><![CDATA[<!-- more -->
-]]></content>
-    <category term="网络"/>
-    <published>2026-09-22T00:00:00.000Z</published>
-  </entry>
-  <entry>
     <title type="text">Obsidian</title>
     <id>https://rochsen-blog.com/VVBP/softwares/markdown/obsidian.html</id>
     <link href="https://rochsen-blog.com/VVBP/softwares/markdown/obsidian.html"/>
@@ -79,6 +69,16 @@
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
     <category term="markdown"/>
+    <published>2026-09-22T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">Clash Verge</title>
+    <id>https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html</id>
+    <link href="https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html"/>
+    <updated>2026-09-22T08:53:41.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    <category term="网络"/>
     <published>2026-09-22T00:00:00.000Z</published>
   </entry>
   <entry>
