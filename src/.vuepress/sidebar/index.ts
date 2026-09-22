@@ -1,19 +1,20 @@
 import { sidebar } from "vuepress-theme-hope";
-import { gamesSideBarConfig } from "./games/index.js";
-import { NoteSideBar, zhihuAi } from "./notes/index.ts";
+import { gamesSideBar } from "./games/index.js";
+import { NoteSideBar, zhihuAiSideBar } from "./notes/index.ts";
 import { InvestmentSideBar } from "./investment/investment.ts";
+import { SoftwaresSideBar } from "./softwares/softwares.ts";
 
 
 export const zhSideBarConfig = sidebar({
   // 学习 - 侧边栏
   "/notes/": NoteSideBar,
   "/notes/deploy/": "structure",
-  "/notes/aiApplicationEngineer": zhihuAi,
+  "/notes/aiApplicationEngineer": zhihuAiSideBar,
   "/notes/bioinformatics/": "structure",
   "/notes/computerSci/": "structure",
 
   // 游戏 - 侧边栏
-  "/games/": gamesSideBarConfig,
+  "/games/": gamesSideBar,
 
   // 投资 - 侧边栏
   "/investment/": InvestmentSideBar,
@@ -22,6 +23,11 @@ export const zhSideBarConfig = sidebar({
   "/investment/bond/": "structure",
   "/investment/insurance/": "structure",
   "/investment/assets/": "structure",
+
+  // 软件 - 侧边栏
+  "/softwares/": SoftwaresSideBar,
+  "/softwares/cursor/": "structure",
+  "/softwares/dsh/": "structure",
 });
 
 // 英文语言下的侧边栏
@@ -41,7 +47,7 @@ export const enSidebarConfig = sidebar({
 //     text: "游戏",
 //     icon: "gamepad",
 //     prefix: "games/",
-//     children: gamesSideBarConfig,
+//     children: gamesSideBar,
 //     collapsible: true,
 //   },
 // ],
