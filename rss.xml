@@ -6,14 +6,14 @@
     <link>https://rochsen-blog.com/VVBP/</link>
     <description></description>
     <language>zh-CN</language>
-    <pubDate>Tue, 22 Sep 2026 08:54:36 GMT</pubDate>
-    <lastBuildDate>Tue, 22 Sep 2026 08:54:36 GMT</lastBuildDate>
+    <pubDate>Tue, 22 Sep 2026 12:10:52 GMT</pubDate>
+    <lastBuildDate>Tue, 22 Sep 2026 12:10:52 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>ai-harness</category>
     <category>IDE</category>
-    <category>markdown</category>
     <category>网络</category>
+    <category>markdown</category>
     <category>阅读器</category>
     <category>远程控制</category>
     <category>搜索</category>
@@ -49,6 +49,16 @@
 ]]></content:encoded>
     </item>
     <item>
+      <title>Clash Verge</title>
+      <link>https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html</link>
+      <guid>https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html</guid>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">Clash Verge</source>
+      <category>网络</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
       <title>Obsidian</title>
       <link>https://rochsen-blog.com/VVBP/softwares/markdown/obsidian.html</link>
       <guid>https://rochsen-blog.com/VVBP/softwares/markdown/obsidian.html</guid>
@@ -64,16 +74,6 @@
       <guid>https://rochsen-blog.com/VVBP/softwares/markdown/typora.html</guid>
       <source url="https://rochsen-blog.com/VVBP/rss.xml">Typora</source>
       <category>markdown</category>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<!-- more -->
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Clash Verge</title>
-      <link>https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html</link>
-      <guid>https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html</guid>
-      <source url="https://rochsen-blog.com/VVBP/rss.xml">Clash Verge</source>
-      <category>网络</category>
       <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<!-- more -->
 ]]></content:encoded>
