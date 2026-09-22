@@ -51,7 +51,7 @@
 
 <script setup lang='ts'>
 import { gameEvalList, categoryColors } from './data.ts'
-import { HeartFilled, SmallDashOutlined, RightOutlined, EyeFilled, EyeTwoTone } from '@antdv-next/icons'
+import { HeartFilled, EyeFilled } from '@antdv-next/icons'
 import { ref } from 'vue'
 
 defineOptions({
