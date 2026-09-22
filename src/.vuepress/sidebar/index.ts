@@ -25,9 +25,7 @@ export const zhSideBarConfig = sidebar({
   "/investment/assets/": "structure",
 
   // 软件 - 侧边栏
-  "/softwares/": SoftwaresSideBar,
-  "/softwares/cursor/": "structure",
-  "/softwares/dsh/": "structure",
+  "/softwares/": "structure",
 });
 
 // 英文语言下的侧边栏
