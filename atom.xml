@@ -3,10 +3,18 @@
   <id>https://rochsen-blog.com/VVBP/</id>
   <title>欢迎来到我的博客</title>
   <icon>https://rochsen-blog.com/VVBP/q-avatar.png</icon>
-  <updated>2026-09-22T07:16:16.128Z</updated>
+  <updated>2026-09-22T08:54:36.660Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://rochsen-blog.com/VVBP/atom.xml"/>
   <link rel="alternate" href="https://rochsen-blog.com/VVBP/"/>
+  <category term="ai-harness"/>
+  <category term="IDE"/>
+  <category term="markdown"/>
+  <category term="网络"/>
+  <category term="阅读器"/>
+  <category term="远程控制"/>
+  <category term="搜索"/>
+  <category term="工具箱"/>
   <category term="编程"/>
   <category term="数据结构"/>
   <category term="教程"/>
@@ -23,6 +31,136 @@
   <contributor>
     <name>Ms.Hope</name>
   </contributor>
+  <entry>
+    <title type="text">Deepseek Harness</title>
+    <id>https://rochsen-blog.com/VVBP/softwares/ai-harness/dsh.html</id>
+    <link href="https://rochsen-blog.com/VVBP/softwares/ai-harness/dsh.html"/>
+    <updated>2026-09-22T08:53:41.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    <category term="ai-harness"/>
+    <published>2026-09-22T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">Cursor</title>
+    <id>https://rochsen-blog.com/VVBP/softwares/ide/cursor.html</id>
+    <link href="https://rochsen-blog.com/VVBP/softwares/ide/cursor.html"/>
+    <updated>2026-09-22T08:53:41.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    <category term="IDE"/>
+    <published>2026-09-22T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">Obsidian</title>
+    <id>https://rochsen-blog.com/VVBP/softwares/markdown/obsidian.html</id>
+    <link href="https://rochsen-blog.com/VVBP/softwares/markdown/obsidian.html"/>
+    <updated>2026-09-22T08:53:41.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    <category term="markdown"/>
+    <published>2026-09-22T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">Typora</title>
+    <id>https://rochsen-blog.com/VVBP/softwares/markdown/typora.html</id>
+    <link href="https://rochsen-blog.com/VVBP/softwares/markdown/typora.html"/>
+    <updated>2026-09-22T08:53:41.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    <category term="markdown"/>
+    <published>2026-09-22T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">Clash Verge</title>
+    <id>https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html</id>
+    <link href="https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html"/>
+    <updated>2026-09-22T08:53:41.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    <category term="网络"/>
+    <published>2026-09-22T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">PotPlayer</title>
+    <id>https://rochsen-blog.com/VVBP/softwares/reader/potplayer.html</id>
+    <link href="https://rochsen-blog.com/VVBP/softwares/reader/potplayer.html"/>
+    <updated>2026-09-22T08:53:41.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    <category term="阅读器"/>
+    <published>2026-09-22T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">Void Image Viewer</title>
+    <id>https://rochsen-blog.com/VVBP/softwares/reader/voidImageViewer.html</id>
+    <link href="https://rochsen-blog.com/VVBP/softwares/reader/voidImageViewer.html"/>
+    <updated>2026-09-22T08:53:41.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    <category term="阅读器"/>
+    <published>2026-09-22T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">MobaXterm</title>
+    <id>https://rochsen-blog.com/VVBP/softwares/remote/mobaXterm.html</id>
+    <link href="https://rochsen-blog.com/VVBP/softwares/remote/mobaXterm.html"/>
+    <updated>2026-09-22T08:53:41.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    <category term="远程控制"/>
+    <published>2026-09-22T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">WinSCP</title>
+    <id>https://rochsen-blog.com/VVBP/softwares/remote/winscp.html</id>
+    <link href="https://rochsen-blog.com/VVBP/softwares/remote/winscp.html"/>
+    <updated>2026-09-22T08:53:41.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    <category term="远程控制"/>
+    <published>2026-09-22T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">Everything</title>
+    <id>https://rochsen-blog.com/VVBP/softwares/search/everything.html</id>
+    <link href="https://rochsen-blog.com/VVBP/softwares/search/everything.html"/>
+    <updated>2026-09-22T08:53:41.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    <category term="搜索"/>
+    <published>2026-09-22T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">Geek</title>
+    <id>https://rochsen-blog.com/VVBP/softwares/search/geek.html</id>
+    <link href="https://rochsen-blog.com/VVBP/softwares/search/geek.html"/>
+    <updated>2026-09-22T08:53:41.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    <category term="搜索"/>
+    <published>2026-09-22T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">Utools</title>
+    <id>https://rochsen-blog.com/VVBP/softwares/toolkit/utools.html</id>
+    <link href="https://rochsen-blog.com/VVBP/softwares/toolkit/utools.html"/>
+    <updated>2026-09-22T08:53:41.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    <category term="工具箱"/>
+    <published>2026-09-22T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">Watt Toolkit</title>
+    <id>https://rochsen-blog.com/VVBP/softwares/toolkit/wattToolkit.html</id>
+    <link href="https://rochsen-blog.com/VVBP/softwares/toolkit/wattToolkit.html"/>
+    <updated>2026-09-22T08:53:41.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    <category term="工具箱"/>
+    <published>2026-09-22T00:00:00.000Z</published>
+  </entry>
   <entry>
     <title type="text">递归入门</title>
     <id>https://rochsen-blog.com/VVBP/notes/computerSci/learnRecursion.html</id>

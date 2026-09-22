@@ -6,10 +6,18 @@
     <link>https://rochsen-blog.com/VVBP/</link>
     <description></description>
     <language>zh-CN</language>
-    <pubDate>Tue, 22 Sep 2026 07:16:16 GMT</pubDate>
-    <lastBuildDate>Tue, 22 Sep 2026 07:16:16 GMT</lastBuildDate>
+    <pubDate>Tue, 22 Sep 2026 08:54:36 GMT</pubDate>
+    <lastBuildDate>Tue, 22 Sep 2026 08:54:36 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>ai-harness</category>
+    <category>IDE</category>
+    <category>markdown</category>
+    <category>网络</category>
+    <category>阅读器</category>
+    <category>远程控制</category>
+    <category>搜索</category>
+    <category>工具箱</category>
     <category>编程</category>
     <category>数据结构</category>
     <category>教程</category>
@@ -20,6 +28,136 @@
     <category>部署</category>
     <category>知乎</category>
     <category>使用指南</category>
+    <item>
+      <title>Deepseek Harness</title>
+      <link>https://rochsen-blog.com/VVBP/softwares/ai-harness/dsh.html</link>
+      <guid>https://rochsen-blog.com/VVBP/softwares/ai-harness/dsh.html</guid>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">Deepseek Harness</source>
+      <category>ai-harness</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Cursor</title>
+      <link>https://rochsen-blog.com/VVBP/softwares/ide/cursor.html</link>
+      <guid>https://rochsen-blog.com/VVBP/softwares/ide/cursor.html</guid>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">Cursor</source>
+      <category>IDE</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Obsidian</title>
+      <link>https://rochsen-blog.com/VVBP/softwares/markdown/obsidian.html</link>
+      <guid>https://rochsen-blog.com/VVBP/softwares/markdown/obsidian.html</guid>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">Obsidian</source>
+      <category>markdown</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Typora</title>
+      <link>https://rochsen-blog.com/VVBP/softwares/markdown/typora.html</link>
+      <guid>https://rochsen-blog.com/VVBP/softwares/markdown/typora.html</guid>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">Typora</source>
+      <category>markdown</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Clash Verge</title>
+      <link>https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html</link>
+      <guid>https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html</guid>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">Clash Verge</source>
+      <category>网络</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
+      <title>PotPlayer</title>
+      <link>https://rochsen-blog.com/VVBP/softwares/reader/potplayer.html</link>
+      <guid>https://rochsen-blog.com/VVBP/softwares/reader/potplayer.html</guid>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">PotPlayer</source>
+      <category>阅读器</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Void Image Viewer</title>
+      <link>https://rochsen-blog.com/VVBP/softwares/reader/voidImageViewer.html</link>
+      <guid>https://rochsen-blog.com/VVBP/softwares/reader/voidImageViewer.html</guid>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">Void Image Viewer</source>
+      <category>阅读器</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
+      <title>MobaXterm</title>
+      <link>https://rochsen-blog.com/VVBP/softwares/remote/mobaXterm.html</link>
+      <guid>https://rochsen-blog.com/VVBP/softwares/remote/mobaXterm.html</guid>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">MobaXterm</source>
+      <category>远程控制</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
+      <title>WinSCP</title>
+      <link>https://rochsen-blog.com/VVBP/softwares/remote/winscp.html</link>
+      <guid>https://rochsen-blog.com/VVBP/softwares/remote/winscp.html</guid>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">WinSCP</source>
+      <category>远程控制</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Everything</title>
+      <link>https://rochsen-blog.com/VVBP/softwares/search/everything.html</link>
+      <guid>https://rochsen-blog.com/VVBP/softwares/search/everything.html</guid>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">Everything</source>
+      <category>搜索</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Geek</title>
+      <link>https://rochsen-blog.com/VVBP/softwares/search/geek.html</link>
+      <guid>https://rochsen-blog.com/VVBP/softwares/search/geek.html</guid>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">Geek</source>
+      <category>搜索</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Utools</title>
+      <link>https://rochsen-blog.com/VVBP/softwares/toolkit/utools.html</link>
+      <guid>https://rochsen-blog.com/VVBP/softwares/toolkit/utools.html</guid>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">Utools</source>
+      <category>工具箱</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Watt Toolkit</title>
+      <link>https://rochsen-blog.com/VVBP/softwares/toolkit/wattToolkit.html</link>
+      <guid>https://rochsen-blog.com/VVBP/softwares/toolkit/wattToolkit.html</guid>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">Watt Toolkit</source>
+      <category>工具箱</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+]]></content:encoded>
+    </item>
     <item>
       <title>递归入门</title>
       <link>https://rochsen-blog.com/VVBP/notes/computerSci/learnRecursion.html</link>

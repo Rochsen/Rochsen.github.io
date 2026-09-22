@@ -6,6 +6,162 @@
   "favicon": "https://rochsen-blog.com/VVBP/q-avatar.png",
   "items": [
     {
+      "title": "Deepseek Harness",
+      "url": "https://rochsen-blog.com/VVBP/softwares/ai-harness/dsh.html",
+      "id": "https://rochsen-blog.com/VVBP/softwares/ai-harness/dsh.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-09-22T00:00:00.000Z",
+      "date_modified": "2026-09-22T08:53:41.000Z",
+      "authors": [],
+      "tags": [
+        "ai-harness"
+      ]
+    },
+    {
+      "title": "Cursor",
+      "url": "https://rochsen-blog.com/VVBP/softwares/ide/cursor.html",
+      "id": "https://rochsen-blog.com/VVBP/softwares/ide/cursor.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-09-22T00:00:00.000Z",
+      "date_modified": "2026-09-22T08:53:41.000Z",
+      "authors": [],
+      "tags": [
+        "IDE"
+      ]
+    },
+    {
+      "title": "Obsidian",
+      "url": "https://rochsen-blog.com/VVBP/softwares/markdown/obsidian.html",
+      "id": "https://rochsen-blog.com/VVBP/softwares/markdown/obsidian.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-09-22T00:00:00.000Z",
+      "date_modified": "2026-09-22T08:53:41.000Z",
+      "authors": [],
+      "tags": [
+        "markdown"
+      ]
+    },
+    {
+      "title": "Typora",
+      "url": "https://rochsen-blog.com/VVBP/softwares/markdown/typora.html",
+      "id": "https://rochsen-blog.com/VVBP/softwares/markdown/typora.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-09-22T00:00:00.000Z",
+      "date_modified": "2026-09-22T08:53:41.000Z",
+      "authors": [],
+      "tags": [
+        "markdown"
+      ]
+    },
+    {
+      "title": "Clash Verge",
+      "url": "https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html",
+      "id": "https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-09-22T00:00:00.000Z",
+      "date_modified": "2026-09-22T08:53:41.000Z",
+      "authors": [],
+      "tags": [
+        "网络"
+      ]
+    },
+    {
+      "title": "PotPlayer",
+      "url": "https://rochsen-blog.com/VVBP/softwares/reader/potplayer.html",
+      "id": "https://rochsen-blog.com/VVBP/softwares/reader/potplayer.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-09-22T00:00:00.000Z",
+      "date_modified": "2026-09-22T08:53:41.000Z",
+      "authors": [],
+      "tags": [
+        "阅读器"
+      ]
+    },
+    {
+      "title": "Void Image Viewer",
+      "url": "https://rochsen-blog.com/VVBP/softwares/reader/voidImageViewer.html",
+      "id": "https://rochsen-blog.com/VVBP/softwares/reader/voidImageViewer.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-09-22T00:00:00.000Z",
+      "date_modified": "2026-09-22T08:53:41.000Z",
+      "authors": [],
+      "tags": [
+        "阅读器"
+      ]
+    },
+    {
+      "title": "MobaXterm",
+      "url": "https://rochsen-blog.com/VVBP/softwares/remote/mobaXterm.html",
+      "id": "https://rochsen-blog.com/VVBP/softwares/remote/mobaXterm.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-09-22T00:00:00.000Z",
+      "date_modified": "2026-09-22T08:53:41.000Z",
+      "authors": [],
+      "tags": [
+        "远程控制"
+      ]
+    },
+    {
+      "title": "WinSCP",
+      "url": "https://rochsen-blog.com/VVBP/softwares/remote/winscp.html",
+      "id": "https://rochsen-blog.com/VVBP/softwares/remote/winscp.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-09-22T00:00:00.000Z",
+      "date_modified": "2026-09-22T08:53:41.000Z",
+      "authors": [],
+      "tags": [
+        "远程控制"
+      ]
+    },
+    {
+      "title": "Everything",
+      "url": "https://rochsen-blog.com/VVBP/softwares/search/everything.html",
+      "id": "https://rochsen-blog.com/VVBP/softwares/search/everything.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-09-22T00:00:00.000Z",
+      "date_modified": "2026-09-22T08:53:41.000Z",
+      "authors": [],
+      "tags": [
+        "搜索"
+      ]
+    },
+    {
+      "title": "Geek",
+      "url": "https://rochsen-blog.com/VVBP/softwares/search/geek.html",
+      "id": "https://rochsen-blog.com/VVBP/softwares/search/geek.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-09-22T00:00:00.000Z",
+      "date_modified": "2026-09-22T08:53:41.000Z",
+      "authors": [],
+      "tags": [
+        "搜索"
+      ]
+    },
+    {
+      "title": "Utools",
+      "url": "https://rochsen-blog.com/VVBP/softwares/toolkit/utools.html",
+      "id": "https://rochsen-blog.com/VVBP/softwares/toolkit/utools.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-09-22T00:00:00.000Z",
+      "date_modified": "2026-09-22T08:53:41.000Z",
+      "authors": [],
+      "tags": [
+        "工具箱"
+      ]
+    },
+    {
+      "title": "Watt Toolkit",
+      "url": "https://rochsen-blog.com/VVBP/softwares/toolkit/wattToolkit.html",
+      "id": "https://rochsen-blog.com/VVBP/softwares/toolkit/wattToolkit.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-09-22T00:00:00.000Z",
+      "date_modified": "2026-09-22T08:53:41.000Z",
+      "authors": [],
+      "tags": [
+        "工具箱"
+      ]
+    },
+    {
       "title": "递归入门",
       "url": "https://rochsen-blog.com/VVBP/notes/computerSci/learnRecursion.html",
       "id": "https://rochsen-blog.com/VVBP/notes/computerSci/learnRecursion.html",
