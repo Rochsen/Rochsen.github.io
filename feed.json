@@ -433,9 +433,10 @@
       "title": "项目实战：企业知识库",
       "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/33KnowledgeDataBase.html",
       "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/33KnowledgeDataBase.html",
-      "content_html": "<!-- more -->\n",
+      "summary": "1. 项目背景与比赛任务\n1.1 企业RAG挑战赛\n比赛仓库：https://github.com/trustbit/enterprise-rag-challenge\n比赛任务是基于公司年度报告构建一个问答系统，比赛当天的流程如下：\n\n收到随机挑选公司的 100 份年度报告，需在 2.5 小时内解析这些报告并构建数据库；报告为 PDF 格式，每份最长可...",
+      "content_html": "<!-- more -->\n<h3>1. 项目背景与比赛任务</h3>\n<h4>1.1 企业RAG挑战赛</h4>\n<p>比赛仓库：https://github.com/trustbit/enterprise-rag-challenge</p>\n<p>比赛任务是基于公司年度报告构建一个问答系统，比赛当天的流程如下：</p>\n<ul>\n<li>收到随机挑选公司的 100 份年度报告，需在 2.5 小时内解析这些报告并构建数据库；报告为 PDF 格式，每份最长可达 1000 页</li>\n<li>系统随后生成 100 个随机问题（基于预设模板），RAG 系统必须尽快作答</li>\n<li>所有问题都有确定的答案，例如：是/否、公司名称（某些情况下是多个公司名）、领导职位头衔、推出的产品名称、数值指标（营收、商店数量等）</li>\n<li>每个答案都必须注明引用的页码，确保系统从原文得出答案，而不是输出虚假信息（hallucinate）</li>\n</ul>\n<h4>1.2 冠军方案 RAG-Challenge-2</h4>\n<p>参考项目：https://github.com/IlyaRice/RAG-Challenge-2</p>\n<p>RAG-Challenge 系统在比赛中赢得了所有类别的奖项，在处理公司年度报告问答上表现突出。这是竞赛代码，功能完善但存在一些临时方案，比如 IBM Watson 集成部分是竞赛特定的，脱离比赛环境无法正常工作。</p>\n<p>系统特点：</p>\n<ul>\n<li>定制 PDF 解析：使用 Docling 解析 PDF 文档</li>\n<li>向量搜索与父文档检索：通过向量搜索实现文档检索</li>\n<li>LLM 重排序：利用 LLM 对检索结果重新排序，提高上下文相关性</li>\n<li>结构化输出提示：采用链式推理（chain-of-thought reasoning）进行结构化输出</li>\n<li>查询路由：支持多公司比较的查询路由功能</li>\n</ul>\n<p>获胜方案在 native RAG 的基础上，加入了两个路由器（router）和 LLM 重排序模块（LLM reranking），在 retrieval、generation 以及总分上都取得了不错的成绩，采用 o3-mini 进行推理。</p>\n<h4>1.3 工作区中的两个项目</h4>\n<p>| 维度       | RAG-Challenge-2-main（原版）                                 | RAG-cy（改造版）                                           |\n|</p>\n",
       "date_published": "2026-07-04T00:00:00.000Z",
-      "date_modified": "2026-08-27T08:33:31.000Z",
+      "date_modified": "2026-09-23T10:05:58.000Z",
       "authors": [],
       "tags": [
         "教程",
