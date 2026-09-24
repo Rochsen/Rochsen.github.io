@@ -2,9 +2,10 @@ import { defineUserConfig } from "vuepress";
 import type { UserConfig } from "vuepress";
 import theme from "./theme.js";
 // import { cachePlugin } from "@vuepress/plugin-cache";
+import { searchPlugin } from "@vuepress/plugin-search";
 
 export default <UserConfig>defineUserConfig({
-  // github仓库重命名为Rochsen.github.io
+  // github仓库重命名为 Rochsen.github.io
   base: "/",
 
   locales: {
@@ -25,10 +26,24 @@ export default <UserConfig>defineUserConfig({
 
   port: 8888,
 
+  plugins: [
+    // 轻量化搜索
+    searchPlugin({
+      // 配置项
+      locales: {
+        "/": {
+          placeholder: "搜索",
+        },
+        "/en/": {
+          placeholder: "Search",
+        },
+      },
+    }),
+  ],
+
   // 和 PWA 一起启用
-  shouldPrefetch: false,
+  // shouldPrefetch: false,
 
   // title: "Rochsen's Blog",
   // description: "个人博客",
-  // plugins: [cachePlugin({ type: "filesystem" })],
 });

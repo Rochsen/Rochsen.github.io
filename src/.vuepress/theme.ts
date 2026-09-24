@@ -41,7 +41,7 @@ export default hopeTheme(
     navbarLayout: {
       start: ["Brand"],
       center: ["Links"],
-      end: ["Language", "Repo", "Outlook"],
+      end: ["Language", "Repo", "Outlook", "Search"],
     },
 
     // 文档所在目录
@@ -131,11 +131,6 @@ export default hopeTheme(
       //   type: "mathjax",
       // },
 
-      // 如果你需要幻灯片，安装 @vuepress/plugin-revealjs 并取消下方注释
-      // revealjs: {
-      //   plugins: ["highlight", "math", "search", "notes", "zoom"],
-      // },
-
       // 在启用之前安装 chart.js
       // chartjs: true,
 
@@ -177,83 +172,16 @@ export default hopeTheme(
         rss: true,
       },
 
+      // 调用 阿里云 图标库可以防止导航栏扰动
       icon: {
         assets: "//at.alicdn.com/t/c/font_5224531_44ei2cj6zzw.css", // 阿里云图标库
       },
 
-      // 前端导航栏扰动的根本原因
-      // icon: {
-      //   prefix: "fa6-solid:",
-      // },
-
+      // 被 algolia 拒绝，暂不使用
       // docsearch: {
       //   appId: "TFYC0LM59H",
       //   apiKey: "98079842ea4f4565e37eb23d80fb3adf",
       //   indexName: "VVBP",
-      // },
-
-      // 启用之前需安装 @waline/client
-      // 警告：这是一个仅供演示的测试服务，在生产环境中请自行部署并使用自己的服务！
-      // comment: {
-      //   provider: "Waline",
-      //   serverURL: "https://waline-comment.vuejs.press",
-      // },
-
-      // 如果你需要 PWA。安装 @vuepress/plugin-pwa 并取消下方注释
-      // pwa: {
-      //   favicon: "/favicon.ico",
-      //   cacheHTML: true,
-      //   cacheImage: true,
-      //   appendBase: true,
-      //   apple: {
-      //     icon: "/assets/icon/apple-icon-152.png",
-      //     statusBarColor: "black",
-      //   },
-      //   msTile: {
-      //     image: "/assets/icon/ms-icon-144.png",
-      //     color: "#ffffff",
-      //   },
-      //   manifest: {
-      //     icons: [
-      //       {
-      //         src: "/assets/icon/chrome-mask-512.png",
-      //         sizes: "512x512",
-      //         purpose: "maskable",
-      //         type: "image/png",
-      //       },
-      //       {
-      //         src: "/assets/icon/chrome-mask-192.png",
-      //         sizes: "192x192",
-      //         purpose: "maskable",
-      //         type: "image/png",
-      //       },
-      //       {
-      //         src: "/assets/icon/chrome-512.png",
-      //         sizes: "512x512",
-      //         type: "image/png",
-      //       },
-      //       {
-      //         src: "/assets/icon/chrome-192.png",
-      //         sizes: "192x192",
-      //         type: "image/png",
-      //       },
-      //     ],
-      //     shortcuts: [
-      //       {
-      //         name: "Demo",
-      //         short_name: "Demo",
-      //         url: "/demo/",
-      //         icons: [
-      //           {
-      //             src: "/assets/icon/guide-maskable.png",
-      //             sizes: "192x192",
-      //             purpose: "maskable",
-      //             type: "image/png",
-      //           },
-      //         ],
-      //       },
-      //     ],
-      //   },
       // },
     },
 
