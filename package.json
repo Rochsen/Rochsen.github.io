@@ -37,7 +37,7 @@
     "vuepress-theme-hope": "2.0.0-rc.107"
   },
   "devDependencies": {
-    "@vuepress/plugin-search": "2.0.0-rc.135",
+    "@vuepress/plugin-search": "2.0.0-rc.130",
     "cross-env": "10.1.0",
     "markdownlint-cli2": "0.23.2",
     "oxc-config-hope": "0.3.13",
