@@ -3,11 +3,11 @@
   <id>https://rochsen-blog.com/VVBP/</id>
   <title>欢迎来到我的博客</title>
   <icon>https://rochsen-blog.com/VVBP/q-avatar.png</icon>
-  <updated>2026-09-24T12:48:47.914Z</updated>
+  <updated>2026-09-27T16:49:29.967Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://rochsen-blog.com/VVBP/atom.xml"/>
   <link rel="alternate" href="https://rochsen-blog.com/VVBP/"/>
-  <category term="ai-harness"/>
+  <category term="ai"/>
   <category term="IDE"/>
   <category term="markdown"/>
   <category term="网络"/>
@@ -32,13 +32,29 @@
     <name>Ms.Hope</name>
   </contributor>
   <entry>
-    <title type="text">Deepseek Harness</title>
-    <id>https://rochsen-blog.com/VVBP/softwares/ai-harness/dsh.html</id>
-    <link href="https://rochsen-blog.com/VVBP/softwares/ai-harness/dsh.html"/>
-    <updated>2026-09-22T08:53:41.000Z</updated>
-    <content type="html"><![CDATA[<!-- more -->
+    <title type="text">Deepseek Terminal</title>
+    <id>https://rochsen-blog.com/VVBP/softwares/ai/dst.html</id>
+    <link href="https://rochsen-blog.com/VVBP/softwares/ai/dst.html"/>
+    <updated>2026-09-27T16:48:26.000Z</updated>
+    <summary type="html"><![CDATA[<p>随dsh一起更新的终端</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>随dsh一起更新的终端</p>
+<!-- more -->
 ]]></content>
-    <category term="ai-harness"/>
+    <category term="ai"/>
+    <published>2026-09-28T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">Deepseek Harness</title>
+    <id>https://rochsen-blog.com/VVBP/softwares/ai/dsh.html</id>
+    <link href="https://rochsen-blog.com/VVBP/softwares/ai/dsh.html"/>
+    <updated>2026-09-27T16:48:26.000Z</updated>
+    <summary type="html"><![CDATA[<p>分为桌面版和cli启动</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>分为桌面版和cli启动</p>
+<!-- more -->
+]]></content>
+    <category term="ai"/>
     <published>2026-09-22T00:00:00.000Z</published>
   </entry>
   <entry>

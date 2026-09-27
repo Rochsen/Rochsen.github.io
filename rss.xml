@@ -6,11 +6,11 @@
     <link>https://rochsen-blog.com/VVBP/</link>
     <description></description>
     <language>zh-CN</language>
-    <pubDate>Thu, 24 Sep 2026 12:48:47 GMT</pubDate>
-    <lastBuildDate>Thu, 24 Sep 2026 12:48:47 GMT</lastBuildDate>
+    <pubDate>Sun, 27 Sep 2026 16:49:29 GMT</pubDate>
+    <lastBuildDate>Sun, 27 Sep 2026 16:49:29 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <category>ai-harness</category>
+    <category>ai</category>
     <category>IDE</category>
     <category>markdown</category>
     <category>网络</category>
@@ -29,13 +29,27 @@
     <category>知乎</category>
     <category>使用指南</category>
     <item>
+      <title>Deepseek Terminal</title>
+      <link>https://rochsen-blog.com/VVBP/softwares/ai/dst.html</link>
+      <guid>https://rochsen-blog.com/VVBP/softwares/ai/dst.html</guid>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">Deepseek Terminal</source>
+      <description>随dsh一起更新的终端</description>
+      <category>ai</category>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>随dsh一起更新的终端</p>
+<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
       <title>Deepseek Harness</title>
-      <link>https://rochsen-blog.com/VVBP/softwares/ai-harness/dsh.html</link>
-      <guid>https://rochsen-blog.com/VVBP/softwares/ai-harness/dsh.html</guid>
+      <link>https://rochsen-blog.com/VVBP/softwares/ai/dsh.html</link>
+      <guid>https://rochsen-blog.com/VVBP/softwares/ai/dsh.html</guid>
       <source url="https://rochsen-blog.com/VVBP/rss.xml">Deepseek Harness</source>
-      <category>ai-harness</category>
+      <description>分为桌面版和cli启动</description>
+      <category>ai</category>
       <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<!-- more -->
+      <content:encoded><![CDATA[<p>分为桌面版和cli启动</p>
+<!-- more -->
 ]]></content:encoded>
     </item>
     <item>

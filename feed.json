@@ -6,15 +6,29 @@
   "favicon": "https://rochsen-blog.com/VVBP/q-avatar.png",
   "items": [
     {
-      "title": "Deepseek Harness",
-      "url": "https://rochsen-blog.com/VVBP/softwares/ai-harness/dsh.html",
-      "id": "https://rochsen-blog.com/VVBP/softwares/ai-harness/dsh.html",
-      "content_html": "<!-- more -->\n",
-      "date_published": "2026-09-22T00:00:00.000Z",
-      "date_modified": "2026-09-22T08:53:41.000Z",
+      "title": "Deepseek Terminal",
+      "url": "https://rochsen-blog.com/VVBP/softwares/ai/dst.html",
+      "id": "https://rochsen-blog.com/VVBP/softwares/ai/dst.html",
+      "summary": "随dsh一起更新的终端",
+      "content_html": "<p>随dsh一起更新的终端</p>\n<!-- more -->\n",
+      "date_published": "2026-09-28T00:00:00.000Z",
+      "date_modified": "2026-09-27T16:48:26.000Z",
       "authors": [],
       "tags": [
-        "ai-harness"
+        "ai"
+      ]
+    },
+    {
+      "title": "Deepseek Harness",
+      "url": "https://rochsen-blog.com/VVBP/softwares/ai/dsh.html",
+      "id": "https://rochsen-blog.com/VVBP/softwares/ai/dsh.html",
+      "summary": "分为桌面版和cli启动",
+      "content_html": "<p>分为桌面版和cli启动</p>\n<!-- more -->\n",
+      "date_published": "2026-09-22T00:00:00.000Z",
+      "date_modified": "2026-09-27T16:48:26.000Z",
+      "authors": [],
+      "tags": [
+        "ai"
       ]
     },
     {
