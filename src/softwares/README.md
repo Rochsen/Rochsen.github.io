@@ -15,7 +15,8 @@ timeline: false
 
 ## 调用LLM接口的harness工具
 
-- [Deepseek Harness](./ai-harness/dsh.md)
+- [Deepseek Harness](./ai/dsh.md)
+- [Deepseek Terminal](./ai/dst.md)
 
 ## 代码编辑器
 
