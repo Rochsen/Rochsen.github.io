@@ -3,7 +3,7 @@
   <id>https://rochsen-blog.com/VVBP/</id>
   <title>欢迎来到我的博客</title>
   <icon>https://rochsen-blog.com/VVBP/q-avatar.png</icon>
-  <updated>2026-09-27T16:49:29.967Z</updated>
+  <updated>2026-09-28T04:19:01.388Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://rochsen-blog.com/VVBP/atom.xml"/>
   <link rel="alternate" href="https://rochsen-blog.com/VVBP/"/>
@@ -829,8 +829,27 @@ RAG（Retrieval-Augmented Generation） = 检索增强生成
     <title type="text">部分场景中可以取代RAG的技术</title>
     <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/34partofReplaceRAG.html</id>
     <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/34partofReplaceRAG.html"/>
-    <updated>2026-08-27T08:33:31.000Z</updated>
+    <updated>2026-09-28T04:18:01.000Z</updated>
+    <summary type="text">第 0 章 导读与工程速览
+0.1 问题的起点
+RAG（Retrieval-Augmented Generation，检索增强生成）在过去两年几乎成了&amp;quot;让大模型接入私有知识&amp;quot;的默认答案。但工程实践中，它反复暴露出三类问题：
+
+切碎了就拼不回来——文档被切成固定大小的 Chunk，主题边界被破坏，跨页引用、表格、代码逻辑全部断裂。
+检...</summary>
     <content type="html"><![CDATA[<!-- more -->
+<h2>第 0 章 导读与工程速览</h2>
+<h3>0.1 问题的起点</h3>
+<p>RAG（Retrieval-Augmented Generation，检索增强生成）在过去两年几乎成了&quot;让大模型接入私有知识&quot;的默认答案。但工程实践中，它反复暴露出三类问题：</p>
+<ol>
+<li><strong>切碎了就拼不回来</strong>——文档被切成固定大小的 Chunk，主题边界被破坏，跨页引用、表格、代码逻辑全部断裂。</li>
+<li><strong>检索是&quot;系统行为&quot;，不是&quot;模型行为&quot;</strong>——搜索策略、召回数量在系统上线前就写死了，LLM 只能被动接收 Top-k，不参与任何检索决策。</li>
+<li><strong>知识是静态的</strong>——新增文档只是&quot;多了一份搜索素材&quot;，知识之间的关联、摘要、实体关系不会随之更新。</li>
+</ol>
+<p>而&quot;超长上下文&quot;&quot;Agentic Retrieval&quot;&quot;LLM Wiki&quot;这三条路线，恰好分别瞄准了这三点。</p>
+<h3>0.2 配套工程速览：Agentic Search</h3>
+<p>本文的工程样本是工作区中的 <strong>Agentic Search</strong>——一个基于 Qwen 模型推理决策的多源企业搜索系统。它的技术栈与规模如下：</p>
+<p>| 层次     | 文件                 | 规模     | 职责                                             |
+|</p>
 ]]></content>
     <category term="教程"/>
     <category term="知乎"/>
