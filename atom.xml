@@ -3,10 +3,12 @@
   <id>https://rochsen-blog.com/VVBP/</id>
   <title>欢迎来到我的博客</title>
   <icon>https://rochsen-blog.com/VVBP/q-avatar.png</icon>
-  <updated>2026-09-28T04:50:13.700Z</updated>
+  <updated>2026-09-28T08:29:23.214Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://rochsen-blog.com/VVBP/atom.xml"/>
   <link rel="alternate" href="https://rochsen-blog.com/VVBP/"/>
+  <category term="教程"/>
+  <category term="python库"/>
   <category term="ai"/>
   <category term="IDE"/>
   <category term="markdown"/>
@@ -17,7 +19,6 @@
   <category term="工具箱"/>
   <category term="编程"/>
   <category term="数据结构"/>
-  <category term="教程"/>
   <category term="图片"/>
   <category term="软件"/>
   <category term="生物信息学"/>
@@ -32,17 +33,34 @@
     <name>Ms.Hope</name>
   </contributor>
   <entry>
+    <title type="text">jieba库的使用</title>
+    <id>https://rochsen-blog.com/VVBP/notes/py/jieba.html</id>
+    <link href="https://rochsen-blog.com/VVBP/notes/py/jieba.html"/>
+    <updated>2026-09-28T08:28:09.000Z</updated>
+    <summary type="html"><![CDATA[<p>用于为句子里的词语，完成分词的操作</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>用于为句子里的词语，完成分词的操作</p>
+<!-- more -->
+<blockquote>
+<p>sad</p>
+</blockquote>
+]]></content>
+    <category term="教程"/>
+    <category term="python库"/>
+    <published>2026-09-28T00:00:00.000Z</published>
+  </entry>
+  <entry>
     <title type="text">Deepseek Terminal</title>
     <id>https://rochsen-blog.com/VVBP/softwares/ai/dst.html</id>
     <link href="https://rochsen-blog.com/VVBP/softwares/ai/dst.html"/>
-    <updated>2026-09-27T16:48:26.000Z</updated>
+    <updated>2026-09-28T08:28:32.000Z</updated>
     <summary type="html"><![CDATA[<p>随dsh一起更新的终端</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>随dsh一起更新的终端</p>
 <!-- more -->
 ]]></content>
     <category term="ai"/>
-    <published>2026-09-28T00:00:00.000Z</published>
+    <published>2026-09-27T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">Deepseek Harness</title>
@@ -829,7 +847,7 @@ RAG（Retrieval-Augmented Generation） = 检索增强生成
     <title type="text">部分场景中可以取代RAG的技术</title>
     <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/34partofReplaceRAG.html</id>
     <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/34partofReplaceRAG.html"/>
-    <updated>2026-09-28T04:18:01.000Z</updated>
+    <updated>2026-09-28T08:28:20.000Z</updated>
     <summary type="text">第 0 章 导读与工程速览
 0.1 问题的起点
 RAG（Retrieval-Augmented Generation，检索增强生成）在过去两年几乎成了&amp;quot;让大模型接入私有知识&amp;quot;的默认答案。但工程实践中，它反复暴露出三类问题：

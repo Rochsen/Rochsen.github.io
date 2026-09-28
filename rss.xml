@@ -6,10 +6,12 @@
     <link>https://rochsen-blog.com/VVBP/</link>
     <description></description>
     <language>zh-CN</language>
-    <pubDate>Mon, 28 Sep 2026 04:50:13 GMT</pubDate>
-    <lastBuildDate>Mon, 28 Sep 2026 04:50:13 GMT</lastBuildDate>
+    <pubDate>Mon, 28 Sep 2026 08:29:23 GMT</pubDate>
+    <lastBuildDate>Mon, 28 Sep 2026 08:29:23 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>教程</category>
+    <category>python库</category>
     <category>ai</category>
     <category>IDE</category>
     <category>markdown</category>
@@ -20,7 +22,6 @@
     <category>工具箱</category>
     <category>编程</category>
     <category>数据结构</category>
-    <category>教程</category>
     <category>图片</category>
     <category>软件</category>
     <category>生物信息学</category>
@@ -29,13 +30,29 @@
     <category>知乎</category>
     <category>使用指南</category>
     <item>
+      <title>jieba库的使用</title>
+      <link>https://rochsen-blog.com/VVBP/notes/py/jieba.html</link>
+      <guid>https://rochsen-blog.com/VVBP/notes/py/jieba.html</guid>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">jieba库的使用</source>
+      <description>用于为句子里的词语，完成分词的操作</description>
+      <category>教程</category>
+      <category>python库</category>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>用于为句子里的词语，完成分词的操作</p>
+<!-- more -->
+<blockquote>
+<p>sad</p>
+</blockquote>
+]]></content:encoded>
+    </item>
+    <item>
       <title>Deepseek Terminal</title>
       <link>https://rochsen-blog.com/VVBP/softwares/ai/dst.html</link>
       <guid>https://rochsen-blog.com/VVBP/softwares/ai/dst.html</guid>
       <source url="https://rochsen-blog.com/VVBP/rss.xml">Deepseek Terminal</source>
       <description>随dsh一起更新的终端</description>
       <category>ai</category>
-      <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
+      <pubDate>Sun, 27 Sep 2026 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>随dsh一起更新的终端</p>
 <!-- more -->
 ]]></content:encoded>
