@@ -13,7 +13,7 @@ timeline: false
 > 本人目前在使用的工具，仅作为个人纪录，没有完美的工具，只有适合的工具
 >
 
-## 调用LLM接口的harness工具
+## AI工具盘点
 
 - [Deepseek Harness](./ai/dsh.md)
 - [Deepseek Terminal](./ai/dst.md)
