@@ -2,7 +2,7 @@ import { sidebar } from "vuepress-theme-hope";
 import { gamesSideBar } from "./games/index.js";
 import { NoteSideBar, zhihuAiSideBar } from "./notes/index.ts";
 import { InvestmentSideBar } from "./investment/investment.ts";
-import { SoftwaresSideBar } from "./softwares/softwares.ts";
+// import { SoftwaresSideBar } from "./softwares/softwares.ts";
 
 
 export const zhSideBarConfig = sidebar({
@@ -12,6 +12,7 @@ export const zhSideBarConfig = sidebar({
   "/notes/aiApplicationEngineer": zhihuAiSideBar,
   "/notes/bioinformatics/": "structure",
   "/notes/computerSci/": "structure",
+  "/notes/py/": "structure",
 
   // 游戏 - 侧边栏
   "/games/": gamesSideBar,
