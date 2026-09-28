@@ -1,6 +1,6 @@
 ---
 title: Deepseek Terminal
-date: 2026-09-28
+date: 2026-09-27
 tag: [cli]
 category: [ai]
 ---

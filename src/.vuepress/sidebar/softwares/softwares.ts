@@ -3,7 +3,7 @@ import { arraySidebar } from "vuepress-theme-hope";
 
 export const SoftwaresSideBar = arraySidebar([
     // "",
-    "ai-harness/",
+    "ai/",
     "ide/",
     "markdown/",
     "network/",
