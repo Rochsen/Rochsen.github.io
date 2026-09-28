@@ -1,0 +1,24 @@
+---
+description: Git 提交信息必须使用中文，并遵循 Conventional Commits
+alwaysApply: true
+---
+
+# Git 提交信息
+
+生成或修改 Git commit message 时必须遵守：
+
+1. **描述必须使用中文**（type 仍用英文）。
+2. 遵循 [Conventional Commits](https://www.conventionalcommits.org/)：`type: 中文描述`。
+3. 描述简洁明确，**不超过 50 个字**，写清「为什么」而不是堆砌文件名。
+
+常用 type：`feat`、`fix`、`docs`、`style`、`refactor`、`perf`、`chore`。
+
+```text
+# 错误
+feat: add search plugin config
+
+# 正确
+feat: 接入站点本地搜索插件
+```
+
+不要用英文句子当提交说明；不要省略 type。
