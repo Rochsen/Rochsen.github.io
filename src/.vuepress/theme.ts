@@ -41,7 +41,7 @@ export default hopeTheme(
     navbarLayout: {
       start: ["Brand"],
       center: ["Links"],
-      end: ["Language", "Repo", "Outlook", "Search"],
+      end: ["Language", "Repo", "Outlook"],
     },
 
     // 文档所在目录
@@ -174,7 +174,7 @@ export default hopeTheme(
 
       // 调用 阿里云 图标库可以防止导航栏扰动
       icon: {
-        assets: "//at.alicdn.com/t/c/font_5224531_44ei2cj6zzw.css", // 阿里云图标库
+        assets: "//at.alicdn.com/t/c/font_5224531_ae0oz2ruois.css", // 阿里云图标库
       },
 
       // 被 algolia 拒绝，暂不使用

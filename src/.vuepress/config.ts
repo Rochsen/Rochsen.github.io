@@ -2,7 +2,7 @@ import { defineUserConfig } from "vuepress";
 import type { UserConfig } from "vuepress";
 import theme from "./theme.js";
 // import { cachePlugin } from "@vuepress/plugin-cache";
-import { searchPlugin } from "@vuepress/plugin-search";
+// import { searchPlugin } from "@vuepress/plugin-search";
 
 export default <UserConfig>defineUserConfig({
   // github仓库重命名为 Rochsen.github.io
@@ -28,17 +28,17 @@ export default <UserConfig>defineUserConfig({
 
   plugins: [
     // 轻量化搜索
-    searchPlugin({
-      // 配置项
-      locales: {
-        "/": {
-          placeholder: "搜索",
-        },
-        "/en/": {
-          placeholder: "Search",
-        },
-      },
-    }),
+    // searchPlugin({
+    //   // 配置项
+    //   locales: {
+    //     "/": {
+    //       placeholder: "搜索",
+    //     },
+    //     "/en/": {
+    //       placeholder: "Search",
+    //     },
+    //   },
+    // }),
   ],
 
   // 和 PWA 一起启用
