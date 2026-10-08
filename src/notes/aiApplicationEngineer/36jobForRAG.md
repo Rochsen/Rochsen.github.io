@@ -1,5 +1,5 @@
 ---
-title: RAG相关简历+面试问题辅导
+title: RAG相关辅导
 date: 2026-10-08
 categories: [教程, 知乎]
 tags: [AI, RAG]
