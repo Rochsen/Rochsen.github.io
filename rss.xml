@@ -6,8 +6,8 @@
     <link>https://rochsen-blog.com/VVBP/</link>
     <description></description>
     <language>zh-CN</language>
-    <pubDate>Thu, 08 Oct 2026 13:23:19 GMT</pubDate>
-    <lastBuildDate>Thu, 08 Oct 2026 13:23:19 GMT</lastBuildDate>
+    <pubDate>Thu, 08 Oct 2026 13:24:15 GMT</pubDate>
+    <lastBuildDate>Thu, 08 Oct 2026 13:24:15 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -15,11 +15,11 @@
     <category>ai</category>
     <category>IDE</category>
     <category>markdown</category>
-    <category>网络</category>
     <category>阅读器</category>
     <category>远程控制</category>
     <category>搜索</category>
     <category>工具箱</category>
+    <category>网络</category>
     <category>编程</category>
     <category>数据结构</category>
     <category>图片</category>
@@ -109,18 +109,6 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>Deepseek Harness</title>
-      <link>https://rochsen-blog.com/VVBP/softwares/ai/dsh.html</link>
-      <guid>https://rochsen-blog.com/VVBP/softwares/ai/dsh.html</guid>
-      <source url="https://rochsen-blog.com/VVBP/rss.xml">Deepseek Harness</source>
-      <description>分为桌面版和cli启动</description>
-      <category>ai</category>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>分为桌面版和cli启动</p>
-<!-- more -->
-]]></content:encoded>
-    </item>
-    <item>
       <title>Cursor</title>
       <link>https://rochsen-blog.com/VVBP/softwares/ide/cursor.html</link>
       <guid>https://rochsen-blog.com/VVBP/softwares/ide/cursor.html</guid>
@@ -146,16 +134,6 @@
       <guid>https://rochsen-blog.com/VVBP/softwares/markdown/typora.html</guid>
       <source url="https://rochsen-blog.com/VVBP/rss.xml">Typora</source>
       <category>markdown</category>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<!-- more -->
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Clash Verge</title>
-      <link>https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html</link>
-      <guid>https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html</guid>
-      <source url="https://rochsen-blog.com/VVBP/rss.xml">Clash Verge</source>
-      <category>网络</category>
       <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<!-- more -->
 ]]></content:encoded>
@@ -236,6 +214,28 @@
       <guid>https://rochsen-blog.com/VVBP/softwares/toolkit/wattToolkit.html</guid>
       <source url="https://rochsen-blog.com/VVBP/rss.xml">Watt Toolkit</source>
       <category>工具箱</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Deepseek Harness</title>
+      <link>https://rochsen-blog.com/VVBP/softwares/ai/dsh.html</link>
+      <guid>https://rochsen-blog.com/VVBP/softwares/ai/dsh.html</guid>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">Deepseek Harness</source>
+      <description>分为桌面版和cli启动</description>
+      <category>ai</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>分为桌面版和cli启动</p>
+<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Clash Verge</title>
+      <link>https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html</link>
+      <guid>https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html</guid>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">Clash Verge</source>
+      <category>网络</category>
       <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<!-- more -->
 ]]></content:encoded>
@@ -567,10 +567,10 @@ Deepseek
 ]]></content:encoded>
     </item>
     <item>
-      <title>开发框架相关简历+面试问题辅导</title>
+      <title>开发框架相关辅导</title>
       <link>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/11jobForFrame.html</link>
       <guid>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/11jobForFrame.html</guid>
-      <source url="https://rochsen-blog.com/VVBP/rss.xml">开发框架相关简历+面试问题辅导</source>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">开发框架相关辅导</source>
       <category>教程</category>
       <category>知乎</category>
       <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
@@ -926,10 +926,10 @@ RAG（Retrieval-Augmented Generation，检索增强生成）在过去两年几�
 ]]></content:encoded>
     </item>
     <item>
-      <title>RAG相关简历+面试问题辅导</title>
+      <title>RAG相关辅导</title>
       <link>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/36jobForRAG.html</link>
       <guid>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/36jobForRAG.html</guid>
-      <source url="https://rochsen-blog.com/VVBP/rss.xml">RAG相关简历+面试问题辅导</source>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">RAG相关辅导</source>
       <description>RAG 是大模型应用开发岗位面试的必考项。面试官的问题看上去零散，其实都挂在同一条主线上：怎么把知识存进去（Indexing）→ 怎么把真正有用的那一小部分找出来（Retrieval）→ 怎么让模型结合提问和检索结果生成答案（Generation）。
 这三个步骤看似简单，但从构建到落地，中间塞满了分块、Embedding、改写、重排、评估、维护这些细活...</description>
       <category>教程</category>
@@ -1062,10 +1062,10 @@ RAG（Retrieval-Augmented Generation，检索增强生成）在过去两年几�
 ]]></content:encoded>
     </item>
     <item>
-      <title>Agent相关简历+面试问题辅导</title>
+      <title>Agent相关辅导</title>
       <link>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/48jobForAgent.html</link>
       <guid>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/48jobForAgent.html</guid>
-      <source url="https://rochsen-blog.com/VVBP/rss.xml">Agent相关简历+面试问题辅导</source>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">Agent相关辅导</source>
       <category>教程</category>
       <category>知乎</category>
       <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>

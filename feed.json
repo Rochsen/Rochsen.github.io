@@ -33,19 +33,6 @@
       ]
     },
     {
-      "title": "Deepseek Harness",
-      "url": "https://rochsen-blog.com/VVBP/softwares/ai/dsh.html",
-      "id": "https://rochsen-blog.com/VVBP/softwares/ai/dsh.html",
-      "summary": "分为桌面版和cli启动",
-      "content_html": "<p>分为桌面版和cli启动</p>\n<!-- more -->\n",
-      "date_published": "2026-09-22T00:00:00.000Z",
-      "date_modified": "2026-09-27T16:48:26.000Z",
-      "authors": [],
-      "tags": [
-        "ai"
-      ]
-    },
-    {
       "title": "Cursor",
       "url": "https://rochsen-blog.com/VVBP/softwares/ide/cursor.html",
       "id": "https://rochsen-blog.com/VVBP/softwares/ide/cursor.html",
@@ -79,18 +66,6 @@
       "authors": [],
       "tags": [
         "markdown"
-      ]
-    },
-    {
-      "title": "Clash Verge",
-      "url": "https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html",
-      "id": "https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html",
-      "content_html": "<!-- more -->\n",
-      "date_published": "2026-09-22T00:00:00.000Z",
-      "date_modified": "2026-09-22T08:53:41.000Z",
-      "authors": [],
-      "tags": [
-        "网络"
       ]
     },
     {
@@ -187,6 +162,31 @@
       "authors": [],
       "tags": [
         "工具箱"
+      ]
+    },
+    {
+      "title": "Deepseek Harness",
+      "url": "https://rochsen-blog.com/VVBP/softwares/ai/dsh.html",
+      "id": "https://rochsen-blog.com/VVBP/softwares/ai/dsh.html",
+      "summary": "分为桌面版和cli启动",
+      "content_html": "<p>分为桌面版和cli启动</p>\n<!-- more -->\n",
+      "date_published": "2026-09-22T00:00:00.000Z",
+      "date_modified": "2026-09-27T16:48:26.000Z",
+      "authors": [],
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "title": "Clash Verge",
+      "url": "https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html",
+      "id": "https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-09-22T00:00:00.000Z",
+      "date_modified": "2026-09-22T08:53:41.000Z",
+      "authors": [],
+      "tags": [
+        "网络"
       ]
     },
     {
@@ -305,12 +305,12 @@
       ]
     },
     {
-      "title": "开发框架相关简历+面试问题辅导",
+      "title": "开发框架相关辅导",
       "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/11jobForFrame.html",
       "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/11jobForFrame.html",
       "content_html": "<!-- more -->\n",
       "date_published": "2026-07-04T00:00:00.000Z",
-      "date_modified": "2026-10-08T13:22:27.000Z",
+      "date_modified": "2026-10-08T13:23:10.000Z",
       "authors": [],
       "tags": [
         "教程",
@@ -499,13 +499,13 @@
       ]
     },
     {
-      "title": "RAG相关简历+面试问题辅导",
+      "title": "RAG相关辅导",
       "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/36jobForRAG.html",
       "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/36jobForRAG.html",
       "summary": "RAG 是大模型应用开发岗位面试的必考项。面试官的问题看上去零散，其实都挂在同一条主线上：怎么把知识存进去（Indexing）→ 怎么把真正有用的那一小部分找出来（Retrieval）→ 怎么让模型结合提问和检索结果生成答案（Generation）。\n这三个步骤看似简单，但从构建到落地，中间塞满了分块、Embedding、改写、重排、评估、维护这些细活...",
       "content_html": "<!-- more -->\n<p>RAG 是大模型应用开发岗位面试的必考项。面试官的问题看上去零散，其实都挂在同一条主线上：<strong>怎么把知识存进去（Indexing）→ 怎么把真正有用的那一小部分找出来（Retrieval）→ 怎么让模型结合提问和检索结果生成答案（Generation）</strong>。</p>\n<p>这三个步骤看似简单，但从构建到落地，中间塞满了分块、Embedding、改写、重排、评估、维护这些细活。本文按这条主线把高频面试题、对应的技术方案和可落地的代码整理在一起，面试前逐条过一遍即可。</p>\n",
       "date_published": "2026-10-08T00:00:00.000Z",
-      "date_modified": "2026-10-08T13:20:56.000Z",
+      "date_modified": "2026-10-08T13:23:10.000Z",
       "authors": [],
       "tags": [
         "教程",
@@ -656,12 +656,12 @@
       ]
     },
     {
-      "title": "Agent相关简历+面试问题辅导",
+      "title": "Agent相关辅导",
       "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/48jobForAgent.html",
       "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/48jobForAgent.html",
       "content_html": "<!-- more -->\n",
       "date_published": "2026-07-04T00:00:00.000Z",
-      "date_modified": "2026-08-27T08:33:31.000Z",
+      "date_modified": "2026-10-08T13:23:10.000Z",
       "authors": [],
       "tags": [
         "教程",
