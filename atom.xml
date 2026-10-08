@@ -3,7 +3,7 @@
   <id>https://rochsen-blog.com/VVBP/</id>
   <title>欢迎来到我的博客</title>
   <icon>https://rochsen-blog.com/VVBP/q-avatar.png</icon>
-  <updated>2026-10-08T13:21:47.274Z</updated>
+  <updated>2026-10-08T13:23:19.205Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://rochsen-blog.com/VVBP/atom.xml"/>
   <link rel="alternate" href="https://rochsen-blog.com/VVBP/"/>
@@ -13,8 +13,8 @@
   <category term="IDE"/>
   <category term="markdown"/>
   <category term="网络"/>
-  <category term="远程控制"/>
   <category term="阅读器"/>
+  <category term="远程控制"/>
   <category term="搜索"/>
   <category term="工具箱"/>
   <category term="编程"/>
@@ -114,16 +114,6 @@
     <published>2026-09-27T00:00:00.000Z</published>
   </entry>
   <entry>
-    <title type="text">Cursor</title>
-    <id>https://rochsen-blog.com/VVBP/softwares/ide/cursor.html</id>
-    <link href="https://rochsen-blog.com/VVBP/softwares/ide/cursor.html"/>
-    <updated>2026-09-22T08:53:41.000Z</updated>
-    <content type="html"><![CDATA[<!-- more -->
-]]></content>
-    <category term="IDE"/>
-    <published>2026-09-22T00:00:00.000Z</published>
-  </entry>
-  <entry>
     <title type="text">Deepseek Harness</title>
     <id>https://rochsen-blog.com/VVBP/softwares/ai/dsh.html</id>
     <link href="https://rochsen-blog.com/VVBP/softwares/ai/dsh.html"/>
@@ -134,6 +124,16 @@
 <!-- more -->
 ]]></content>
     <category term="ai"/>
+    <published>2026-09-22T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">Cursor</title>
+    <id>https://rochsen-blog.com/VVBP/softwares/ide/cursor.html</id>
+    <link href="https://rochsen-blog.com/VVBP/softwares/ide/cursor.html"/>
+    <updated>2026-09-22T08:53:41.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    <category term="IDE"/>
     <published>2026-09-22T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -167,26 +167,6 @@
     <published>2026-09-22T00:00:00.000Z</published>
   </entry>
   <entry>
-    <title type="text">MobaXterm</title>
-    <id>https://rochsen-blog.com/VVBP/softwares/remote/mobaXterm.html</id>
-    <link href="https://rochsen-blog.com/VVBP/softwares/remote/mobaXterm.html"/>
-    <updated>2026-09-22T08:53:41.000Z</updated>
-    <content type="html"><![CDATA[<!-- more -->
-]]></content>
-    <category term="远程控制"/>
-    <published>2026-09-22T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">WinSCP</title>
-    <id>https://rochsen-blog.com/VVBP/softwares/remote/winscp.html</id>
-    <link href="https://rochsen-blog.com/VVBP/softwares/remote/winscp.html"/>
-    <updated>2026-09-22T08:53:41.000Z</updated>
-    <content type="html"><![CDATA[<!-- more -->
-]]></content>
-    <category term="远程控制"/>
-    <published>2026-09-22T00:00:00.000Z</published>
-  </entry>
-  <entry>
     <title type="text">PotPlayer</title>
     <id>https://rochsen-blog.com/VVBP/softwares/reader/potplayer.html</id>
     <link href="https://rochsen-blog.com/VVBP/softwares/reader/potplayer.html"/>
@@ -204,6 +184,26 @@
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
     <category term="阅读器"/>
+    <published>2026-09-22T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">MobaXterm</title>
+    <id>https://rochsen-blog.com/VVBP/softwares/remote/mobaXterm.html</id>
+    <link href="https://rochsen-blog.com/VVBP/softwares/remote/mobaXterm.html"/>
+    <updated>2026-09-22T08:53:41.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    <category term="远程控制"/>
+    <published>2026-09-22T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">WinSCP</title>
+    <id>https://rochsen-blog.com/VVBP/softwares/remote/winscp.html</id>
+    <link href="https://rochsen-blog.com/VVBP/softwares/remote/winscp.html"/>
+    <updated>2026-09-22T08:53:41.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    <category term="远程控制"/>
     <published>2026-09-22T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -577,10 +577,10 @@ Deepseek
     <published>2026-07-18T00:00:00.000Z</published>
   </entry>
   <entry>
-    <title type="text">就业服务：开发框架相关简历+面试问题辅导</title>
+    <title type="text">开发框架相关简历+面试问题辅导</title>
     <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/11jobForFrame.html</id>
     <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/11jobForFrame.html"/>
-    <updated>2026-08-27T08:33:31.000Z</updated>
+    <updated>2026-10-08T13:22:27.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
     <category term="教程"/>

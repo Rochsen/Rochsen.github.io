@@ -33,18 +33,6 @@
       ]
     },
     {
-      "title": "Cursor",
-      "url": "https://rochsen-blog.com/VVBP/softwares/ide/cursor.html",
-      "id": "https://rochsen-blog.com/VVBP/softwares/ide/cursor.html",
-      "content_html": "<!-- more -->\n",
-      "date_published": "2026-09-22T00:00:00.000Z",
-      "date_modified": "2026-09-22T08:53:41.000Z",
-      "authors": [],
-      "tags": [
-        "IDE"
-      ]
-    },
-    {
       "title": "Deepseek Harness",
       "url": "https://rochsen-blog.com/VVBP/softwares/ai/dsh.html",
       "id": "https://rochsen-blog.com/VVBP/softwares/ai/dsh.html",
@@ -55,6 +43,18 @@
       "authors": [],
       "tags": [
         "ai"
+      ]
+    },
+    {
+      "title": "Cursor",
+      "url": "https://rochsen-blog.com/VVBP/softwares/ide/cursor.html",
+      "id": "https://rochsen-blog.com/VVBP/softwares/ide/cursor.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-09-22T00:00:00.000Z",
+      "date_modified": "2026-09-22T08:53:41.000Z",
+      "authors": [],
+      "tags": [
+        "IDE"
       ]
     },
     {
@@ -94,30 +94,6 @@
       ]
     },
     {
-      "title": "MobaXterm",
-      "url": "https://rochsen-blog.com/VVBP/softwares/remote/mobaXterm.html",
-      "id": "https://rochsen-blog.com/VVBP/softwares/remote/mobaXterm.html",
-      "content_html": "<!-- more -->\n",
-      "date_published": "2026-09-22T00:00:00.000Z",
-      "date_modified": "2026-09-22T08:53:41.000Z",
-      "authors": [],
-      "tags": [
-        "远程控制"
-      ]
-    },
-    {
-      "title": "WinSCP",
-      "url": "https://rochsen-blog.com/VVBP/softwares/remote/winscp.html",
-      "id": "https://rochsen-blog.com/VVBP/softwares/remote/winscp.html",
-      "content_html": "<!-- more -->\n",
-      "date_published": "2026-09-22T00:00:00.000Z",
-      "date_modified": "2026-09-22T08:53:41.000Z",
-      "authors": [],
-      "tags": [
-        "远程控制"
-      ]
-    },
-    {
       "title": "PotPlayer",
       "url": "https://rochsen-blog.com/VVBP/softwares/reader/potplayer.html",
       "id": "https://rochsen-blog.com/VVBP/softwares/reader/potplayer.html",
@@ -139,6 +115,30 @@
       "authors": [],
       "tags": [
         "阅读器"
+      ]
+    },
+    {
+      "title": "MobaXterm",
+      "url": "https://rochsen-blog.com/VVBP/softwares/remote/mobaXterm.html",
+      "id": "https://rochsen-blog.com/VVBP/softwares/remote/mobaXterm.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-09-22T00:00:00.000Z",
+      "date_modified": "2026-09-22T08:53:41.000Z",
+      "authors": [],
+      "tags": [
+        "远程控制"
+      ]
+    },
+    {
+      "title": "WinSCP",
+      "url": "https://rochsen-blog.com/VVBP/softwares/remote/winscp.html",
+      "id": "https://rochsen-blog.com/VVBP/softwares/remote/winscp.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-09-22T00:00:00.000Z",
+      "date_modified": "2026-09-22T08:53:41.000Z",
+      "authors": [],
+      "tags": [
+        "远程控制"
       ]
     },
     {
@@ -305,12 +305,12 @@
       ]
     },
     {
-      "title": "就业服务：开发框架相关简历+面试问题辅导",
+      "title": "开发框架相关简历+面试问题辅导",
       "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/11jobForFrame.html",
       "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/11jobForFrame.html",
       "content_html": "<!-- more -->\n",
       "date_published": "2026-07-04T00:00:00.000Z",
-      "date_modified": "2026-08-27T08:33:31.000Z",
+      "date_modified": "2026-10-08T13:22:27.000Z",
       "authors": [],
       "tags": [
         "教程",

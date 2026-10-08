@@ -6,8 +6,8 @@
     <link>https://rochsen-blog.com/VVBP/</link>
     <description></description>
     <language>zh-CN</language>
-    <pubDate>Thu, 08 Oct 2026 13:21:47 GMT</pubDate>
-    <lastBuildDate>Thu, 08 Oct 2026 13:21:47 GMT</lastBuildDate>
+    <pubDate>Thu, 08 Oct 2026 13:23:19 GMT</pubDate>
+    <lastBuildDate>Thu, 08 Oct 2026 13:23:19 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -16,8 +16,8 @@
     <category>IDE</category>
     <category>markdown</category>
     <category>网络</category>
-    <category>远程控制</category>
     <category>阅读器</category>
+    <category>远程控制</category>
     <category>搜索</category>
     <category>工具箱</category>
     <category>编程</category>
@@ -109,16 +109,6 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>Cursor</title>
-      <link>https://rochsen-blog.com/VVBP/softwares/ide/cursor.html</link>
-      <guid>https://rochsen-blog.com/VVBP/softwares/ide/cursor.html</guid>
-      <source url="https://rochsen-blog.com/VVBP/rss.xml">Cursor</source>
-      <category>IDE</category>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<!-- more -->
-]]></content:encoded>
-    </item>
-    <item>
       <title>Deepseek Harness</title>
       <link>https://rochsen-blog.com/VVBP/softwares/ai/dsh.html</link>
       <guid>https://rochsen-blog.com/VVBP/softwares/ai/dsh.html</guid>
@@ -128,6 +118,16 @@
       <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>分为桌面版和cli启动</p>
 <!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Cursor</title>
+      <link>https://rochsen-blog.com/VVBP/softwares/ide/cursor.html</link>
+      <guid>https://rochsen-blog.com/VVBP/softwares/ide/cursor.html</guid>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">Cursor</source>
+      <category>IDE</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
 ]]></content:encoded>
     </item>
     <item>
@@ -161,26 +161,6 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>MobaXterm</title>
-      <link>https://rochsen-blog.com/VVBP/softwares/remote/mobaXterm.html</link>
-      <guid>https://rochsen-blog.com/VVBP/softwares/remote/mobaXterm.html</guid>
-      <source url="https://rochsen-blog.com/VVBP/rss.xml">MobaXterm</source>
-      <category>远程控制</category>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<!-- more -->
-]]></content:encoded>
-    </item>
-    <item>
-      <title>WinSCP</title>
-      <link>https://rochsen-blog.com/VVBP/softwares/remote/winscp.html</link>
-      <guid>https://rochsen-blog.com/VVBP/softwares/remote/winscp.html</guid>
-      <source url="https://rochsen-blog.com/VVBP/rss.xml">WinSCP</source>
-      <category>远程控制</category>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<!-- more -->
-]]></content:encoded>
-    </item>
-    <item>
       <title>PotPlayer</title>
       <link>https://rochsen-blog.com/VVBP/softwares/reader/potplayer.html</link>
       <guid>https://rochsen-blog.com/VVBP/softwares/reader/potplayer.html</guid>
@@ -196,6 +176,26 @@
       <guid>https://rochsen-blog.com/VVBP/softwares/reader/voidImageViewer.html</guid>
       <source url="https://rochsen-blog.com/VVBP/rss.xml">Void Image Viewer</source>
       <category>阅读器</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
+      <title>MobaXterm</title>
+      <link>https://rochsen-blog.com/VVBP/softwares/remote/mobaXterm.html</link>
+      <guid>https://rochsen-blog.com/VVBP/softwares/remote/mobaXterm.html</guid>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">MobaXterm</source>
+      <category>远程控制</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
+      <title>WinSCP</title>
+      <link>https://rochsen-blog.com/VVBP/softwares/remote/winscp.html</link>
+      <guid>https://rochsen-blog.com/VVBP/softwares/remote/winscp.html</guid>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">WinSCP</source>
+      <category>远程控制</category>
       <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<!-- more -->
 ]]></content:encoded>
@@ -567,10 +567,10 @@ Deepseek
 ]]></content:encoded>
     </item>
     <item>
-      <title>就业服务：开发框架相关简历+面试问题辅导</title>
+      <title>开发框架相关简历+面试问题辅导</title>
       <link>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/11jobForFrame.html</link>
       <guid>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/11jobForFrame.html</guid>
-      <source url="https://rochsen-blog.com/VVBP/rss.xml">就业服务：开发框架相关简历+面试问题辅导</source>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">开发框架相关简历+面试问题辅导</source>
       <category>教程</category>
       <category>知乎</category>
       <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
