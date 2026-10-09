@@ -3,7 +3,7 @@
   <id>https://rochsen-blog.com/VVBP/</id>
   <title>欢迎来到我的博客</title>
   <icon>https://rochsen-blog.com/VVBP/q-avatar.png</icon>
-  <updated>2026-10-08T13:24:15.993Z</updated>
+  <updated>2026-10-09T08:15:28.796Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://rochsen-blog.com/VVBP/atom.xml"/>
   <link rel="alternate" href="https://rochsen-blog.com/VVBP/"/>
@@ -12,11 +12,11 @@
   <category term="ai"/>
   <category term="IDE"/>
   <category term="markdown"/>
+  <category term="网络"/>
   <category term="阅读器"/>
   <category term="远程控制"/>
   <category term="搜索"/>
   <category term="工具箱"/>
-  <category term="网络"/>
   <category term="编程"/>
   <category term="数据结构"/>
   <category term="图片"/>
@@ -114,6 +114,19 @@
     <published>2026-09-27T00:00:00.000Z</published>
   </entry>
   <entry>
+    <title type="text">Deepseek Harness</title>
+    <id>https://rochsen-blog.com/VVBP/softwares/ai/dsh.html</id>
+    <link href="https://rochsen-blog.com/VVBP/softwares/ai/dsh.html"/>
+    <updated>2026-09-27T16:48:26.000Z</updated>
+    <summary type="html"><![CDATA[<p>分为桌面版和cli启动</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>分为桌面版和cli启动</p>
+<!-- more -->
+]]></content>
+    <category term="ai"/>
+    <published>2026-09-22T00:00:00.000Z</published>
+  </entry>
+  <entry>
     <title type="text">Cursor</title>
     <id>https://rochsen-blog.com/VVBP/softwares/ide/cursor.html</id>
     <link href="https://rochsen-blog.com/VVBP/softwares/ide/cursor.html"/>
@@ -141,6 +154,16 @@
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
     <category term="markdown"/>
+    <published>2026-09-22T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">Clash Verge</title>
+    <id>https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html</id>
+    <link href="https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html"/>
+    <updated>2026-09-22T08:53:41.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    <category term="网络"/>
     <published>2026-09-22T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -221,29 +244,6 @@
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
     <category term="工具箱"/>
-    <published>2026-09-22T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">Deepseek Harness</title>
-    <id>https://rochsen-blog.com/VVBP/softwares/ai/dsh.html</id>
-    <link href="https://rochsen-blog.com/VVBP/softwares/ai/dsh.html"/>
-    <updated>2026-09-27T16:48:26.000Z</updated>
-    <summary type="html"><![CDATA[<p>分为桌面版和cli启动</p>
-]]></summary>
-    <content type="html"><![CDATA[<p>分为桌面版和cli启动</p>
-<!-- more -->
-]]></content>
-    <category term="ai"/>
-    <published>2026-09-22T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">Clash Verge</title>
-    <id>https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html</id>
-    <link href="https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html"/>
-    <updated>2026-09-22T08:53:41.000Z</updated>
-    <content type="html"><![CDATA[<!-- more -->
-]]></content>
-    <category term="网络"/>
     <published>2026-09-22T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -728,10 +728,10 @@ Agent = LLM + System Promp...</summary>
     <published>2026-07-19T00:00:00.000Z</published>
   </entry>
   <entry>
-    <title type="text">部署及提效相关简历+面试问题辅导</title>
+    <title type="text">部署及提效辅导</title>
     <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/28jobForBuild.html</id>
     <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/28jobForBuild.html"/>
-    <updated>2026-08-27T08:33:31.000Z</updated>
+    <updated>2026-10-09T08:14:40.000Z</updated>
     <summary type="text">1. Agent 平台：Coze、Dify 与 Agent 进阶集成
 1.1 什么是 LLM Agent？
 定义：LLM Agent = LLM + 工具 + 记忆 + 规划循环。

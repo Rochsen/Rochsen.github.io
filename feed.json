@@ -33,6 +33,19 @@
       ]
     },
     {
+      "title": "Deepseek Harness",
+      "url": "https://rochsen-blog.com/VVBP/softwares/ai/dsh.html",
+      "id": "https://rochsen-blog.com/VVBP/softwares/ai/dsh.html",
+      "summary": "分为桌面版和cli启动",
+      "content_html": "<p>分为桌面版和cli启动</p>\n<!-- more -->\n",
+      "date_published": "2026-09-22T00:00:00.000Z",
+      "date_modified": "2026-09-27T16:48:26.000Z",
+      "authors": [],
+      "tags": [
+        "ai"
+      ]
+    },
+    {
       "title": "Cursor",
       "url": "https://rochsen-blog.com/VVBP/softwares/ide/cursor.html",
       "id": "https://rochsen-blog.com/VVBP/softwares/ide/cursor.html",
@@ -66,6 +79,18 @@
       "authors": [],
       "tags": [
         "markdown"
+      ]
+    },
+    {
+      "title": "Clash Verge",
+      "url": "https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html",
+      "id": "https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html",
+      "content_html": "<!-- more -->\n",
+      "date_published": "2026-09-22T00:00:00.000Z",
+      "date_modified": "2026-09-22T08:53:41.000Z",
+      "authors": [],
+      "tags": [
+        "网络"
       ]
     },
     {
@@ -162,31 +187,6 @@
       "authors": [],
       "tags": [
         "工具箱"
-      ]
-    },
-    {
-      "title": "Deepseek Harness",
-      "url": "https://rochsen-blog.com/VVBP/softwares/ai/dsh.html",
-      "id": "https://rochsen-blog.com/VVBP/softwares/ai/dsh.html",
-      "summary": "分为桌面版和cli启动",
-      "content_html": "<p>分为桌面版和cli启动</p>\n<!-- more -->\n",
-      "date_published": "2026-09-22T00:00:00.000Z",
-      "date_modified": "2026-09-27T16:48:26.000Z",
-      "authors": [],
-      "tags": [
-        "ai"
-      ]
-    },
-    {
-      "title": "Clash Verge",
-      "url": "https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html",
-      "id": "https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html",
-      "content_html": "<!-- more -->\n",
-      "date_published": "2026-09-22T00:00:00.000Z",
-      "date_modified": "2026-09-22T08:53:41.000Z",
-      "authors": [],
-      "tags": [
-        "网络"
       ]
     },
     {
@@ -388,13 +388,13 @@
       ]
     },
     {
-      "title": "部署及提效相关简历+面试问题辅导",
+      "title": "部署及提效辅导",
       "url": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/28jobForBuild.html",
       "id": "https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/28jobForBuild.html",
       "summary": "1. Agent 平台：Coze、Dify 与 Agent 进阶集成\n1.1 什么是 LLM Agent？\n定义：LLM Agent = LLM + 工具 + 记忆 + 规划循环。\n\nAgent 的三大核心能力：\nReAct 执行示例：\n\n\n思考题：Agent 与 Function Calling 是一回事吗？\nFunction Calling 是 A...",
       "content_html": "<!-- more -->\n<h2>1. Agent 平台：Coze、Dify 与 Agent 进阶集成</h2>\n<h3>1.1 什么是 LLM Agent？</h3>\n<p><strong>定义</strong>：LLM Agent = LLM + 工具 + 记忆 + 规划循环。</p>\n<p>| 维度     | 单轮 LLM 调用                      | LLM Agent                                    |\n|</p>\n",
       "date_published": "2026-07-23T00:00:00.000Z",
-      "date_modified": "2026-08-27T08:33:31.000Z",
+      "date_modified": "2026-10-09T08:14:40.000Z",
       "authors": [],
       "tags": [
         "教程",
