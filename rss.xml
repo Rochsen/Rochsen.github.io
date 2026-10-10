@@ -6,20 +6,20 @@
     <link>https://rochsen-blog.com/VVBP/</link>
     <description></description>
     <language>zh-CN</language>
-    <pubDate>Fri, 09 Oct 2026 08:15:28 GMT</pubDate>
-    <lastBuildDate>Fri, 09 Oct 2026 08:15:28 GMT</lastBuildDate>
+    <pubDate>Sat, 10 Oct 2026 04:47:13 GMT</pubDate>
+    <lastBuildDate>Sat, 10 Oct 2026 04:47:13 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
     <category>python库</category>
     <category>ai</category>
     <category>IDE</category>
-    <category>markdown</category>
     <category>网络</category>
+    <category>markdown</category>
     <category>阅读器</category>
     <category>远程控制</category>
-    <category>搜索</category>
     <category>工具箱</category>
+    <category>搜索</category>
     <category>编程</category>
     <category>数据结构</category>
     <category>图片</category>
@@ -131,6 +131,16 @@
 ]]></content:encoded>
     </item>
     <item>
+      <title>Clash Verge</title>
+      <link>https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html</link>
+      <guid>https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html</guid>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">Clash Verge</source>
+      <category>网络</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
       <title>Obsidian</title>
       <link>https://rochsen-blog.com/VVBP/softwares/markdown/obsidian.html</link>
       <guid>https://rochsen-blog.com/VVBP/softwares/markdown/obsidian.html</guid>
@@ -146,16 +156,6 @@
       <guid>https://rochsen-blog.com/VVBP/softwares/markdown/typora.html</guid>
       <source url="https://rochsen-blog.com/VVBP/rss.xml">Typora</source>
       <category>markdown</category>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<!-- more -->
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Clash Verge</title>
-      <link>https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html</link>
-      <guid>https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html</guid>
-      <source url="https://rochsen-blog.com/VVBP/rss.xml">Clash Verge</source>
-      <category>网络</category>
       <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<!-- more -->
 ]]></content:encoded>
@@ -201,26 +201,6 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>Everything</title>
-      <link>https://rochsen-blog.com/VVBP/softwares/search/everything.html</link>
-      <guid>https://rochsen-blog.com/VVBP/softwares/search/everything.html</guid>
-      <source url="https://rochsen-blog.com/VVBP/rss.xml">Everything</source>
-      <category>搜索</category>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<!-- more -->
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Geek</title>
-      <link>https://rochsen-blog.com/VVBP/softwares/search/geek.html</link>
-      <guid>https://rochsen-blog.com/VVBP/softwares/search/geek.html</guid>
-      <source url="https://rochsen-blog.com/VVBP/rss.xml">Geek</source>
-      <category>搜索</category>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<!-- more -->
-]]></content:encoded>
-    </item>
-    <item>
       <title>Utools</title>
       <link>https://rochsen-blog.com/VVBP/softwares/toolkit/utools.html</link>
       <guid>https://rochsen-blog.com/VVBP/softwares/toolkit/utools.html</guid>
@@ -236,6 +216,26 @@
       <guid>https://rochsen-blog.com/VVBP/softwares/toolkit/wattToolkit.html</guid>
       <source url="https://rochsen-blog.com/VVBP/rss.xml">Watt Toolkit</source>
       <category>工具箱</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Everything</title>
+      <link>https://rochsen-blog.com/VVBP/softwares/search/everything.html</link>
+      <guid>https://rochsen-blog.com/VVBP/softwares/search/everything.html</guid>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">Everything</source>
+      <category>搜索</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Geek</title>
+      <link>https://rochsen-blog.com/VVBP/softwares/search/geek.html</link>
+      <guid>https://rochsen-blog.com/VVBP/softwares/search/geek.html</guid>
+      <source url="https://rochsen-blog.com/VVBP/rss.xml">Geek</source>
+      <category>搜索</category>
       <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<!-- more -->
 ]]></content:encoded>

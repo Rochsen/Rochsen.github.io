@@ -3,7 +3,7 @@
   <id>https://rochsen-blog.com/VVBP/</id>
   <title>欢迎来到我的博客</title>
   <icon>https://rochsen-blog.com/VVBP/q-avatar.png</icon>
-  <updated>2026-10-09T08:15:28.796Z</updated>
+  <updated>2026-10-10T04:47:13.581Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://rochsen-blog.com/VVBP/atom.xml"/>
   <link rel="alternate" href="https://rochsen-blog.com/VVBP/"/>
@@ -11,12 +11,12 @@
   <category term="python库"/>
   <category term="ai"/>
   <category term="IDE"/>
-  <category term="markdown"/>
   <category term="网络"/>
+  <category term="markdown"/>
   <category term="阅读器"/>
   <category term="远程控制"/>
-  <category term="搜索"/>
   <category term="工具箱"/>
+  <category term="搜索"/>
   <category term="编程"/>
   <category term="数据结构"/>
   <category term="图片"/>
@@ -137,6 +137,16 @@
     <published>2026-09-22T00:00:00.000Z</published>
   </entry>
   <entry>
+    <title type="text">Clash Verge</title>
+    <id>https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html</id>
+    <link href="https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html"/>
+    <updated>2026-09-22T08:53:41.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    <category term="网络"/>
+    <published>2026-09-22T00:00:00.000Z</published>
+  </entry>
+  <entry>
     <title type="text">Obsidian</title>
     <id>https://rochsen-blog.com/VVBP/softwares/markdown/obsidian.html</id>
     <link href="https://rochsen-blog.com/VVBP/softwares/markdown/obsidian.html"/>
@@ -154,16 +164,6 @@
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
     <category term="markdown"/>
-    <published>2026-09-22T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">Clash Verge</title>
-    <id>https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html</id>
-    <link href="https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html"/>
-    <updated>2026-09-22T08:53:41.000Z</updated>
-    <content type="html"><![CDATA[<!-- more -->
-]]></content>
-    <category term="网络"/>
     <published>2026-09-22T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -207,26 +207,6 @@
     <published>2026-09-22T00:00:00.000Z</published>
   </entry>
   <entry>
-    <title type="text">Everything</title>
-    <id>https://rochsen-blog.com/VVBP/softwares/search/everything.html</id>
-    <link href="https://rochsen-blog.com/VVBP/softwares/search/everything.html"/>
-    <updated>2026-09-22T08:53:41.000Z</updated>
-    <content type="html"><![CDATA[<!-- more -->
-]]></content>
-    <category term="搜索"/>
-    <published>2026-09-22T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">Geek</title>
-    <id>https://rochsen-blog.com/VVBP/softwares/search/geek.html</id>
-    <link href="https://rochsen-blog.com/VVBP/softwares/search/geek.html"/>
-    <updated>2026-09-22T08:53:41.000Z</updated>
-    <content type="html"><![CDATA[<!-- more -->
-]]></content>
-    <category term="搜索"/>
-    <published>2026-09-22T00:00:00.000Z</published>
-  </entry>
-  <entry>
     <title type="text">Utools</title>
     <id>https://rochsen-blog.com/VVBP/softwares/toolkit/utools.html</id>
     <link href="https://rochsen-blog.com/VVBP/softwares/toolkit/utools.html"/>
@@ -244,6 +224,26 @@
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
     <category term="工具箱"/>
+    <published>2026-09-22T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">Everything</title>
+    <id>https://rochsen-blog.com/VVBP/softwares/search/everything.html</id>
+    <link href="https://rochsen-blog.com/VVBP/softwares/search/everything.html"/>
+    <updated>2026-09-22T08:53:41.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    <category term="搜索"/>
+    <published>2026-09-22T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">Geek</title>
+    <id>https://rochsen-blog.com/VVBP/softwares/search/geek.html</id>
+    <link href="https://rochsen-blog.com/VVBP/softwares/search/geek.html"/>
+    <updated>2026-09-22T08:53:41.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    <category term="搜索"/>
     <published>2026-09-22T00:00:00.000Z</published>
   </entry>
   <entry>
