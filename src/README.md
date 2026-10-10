@@ -19,27 +19,17 @@ projects:
     type: project
     desc: 博客仓库
     link: https://github.com/Rochsen/Rochsen.github.io
-
-  - icon: book
-    name: LeetCode
-    desc: 个人LeetCode目录
-    link: https://leetcode.cn/u/rochsen/
-
-  - icon: book
-    name: ProjectEuler
-    desc: 欧拉项目题解
-    link: https://github.com/Rochsen/Record-Project-Euler
-
+  
   - icon: code
-    name: 密码图包解压
+    name: 提示词生成和改进系统
     type: project
-    desc: 带密码图包解压以及图片分类器
-    link: https://github.com/Rochsen/ImageUncompressor
+    desc: 用于练习提示词编写的自建系统
+    link: https://github.com/Rochsen/prompt-learn
 
   - icon: link
     name: 任务清单
     type: link
-    desc: by nocode
+    desc: vibe coding
     link: https://task-manager-hq.nocode.host
 
   - icon: code
@@ -77,6 +67,22 @@ projects:
     type: project
     desc: PGS场景下拷贝数变异注释
     link: https://github.com/Rochsen/pgs-pipeline-cnv-anno
+
+  - icon: code
+    name: 密码图包解压
+    type: project
+    desc: 带密码图包解压以及图片分类器
+    link: https://github.com/Rochsen/ImageUncompressor
+
+  - icon: book
+    name: LeetCode
+    desc: 个人LeetCode目录
+    link: https://leetcode.cn/u/rochsen/
+
+  - icon: book
+    name: ProjectEuler
+    desc: 欧拉项目题解
+    link: https://github.com/Rochsen/Record-Project-Euler
 
   # - icon: newspaper
   #   name: 文章名称
