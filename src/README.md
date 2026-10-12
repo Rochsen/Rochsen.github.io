@@ -21,10 +21,16 @@ projects:
     link: https://github.com/Rochsen/Rochsen.github.io
   
   - icon: code
-    name: 提示词生成和改进系统
+    name: 提示词生成和改进
     type: project
     desc: 用于练习提示词编写的自建系统
     link: https://github.com/Rochsen/prompt-learn
+  
+  - icon: code
+    name: 网页总结工具
+    type: project
+    desc: 输入url可调用deepseek对网页内容总结
+    link: https://github.com/Rochsen/web_summarizer
 
   - icon: link
     name: 任务清单
