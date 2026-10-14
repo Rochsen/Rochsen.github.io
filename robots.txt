@@ -1,4 +1,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://rochsen-blog.com/VVBP/sitemap.xml
+Sitemap: https://blog.rochsen.cn/sitemap.xml

@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://rochsen-blog.com/VVBP/atom.xsl"?>
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://blog.rochsen.cn/atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
-  <id>https://rochsen-blog.com/VVBP/</id>
+  <id>https://blog.rochsen.cn/</id>
   <title>欢迎来到我的博客</title>
-  <icon>https://rochsen-blog.com/VVBP/q-avatar.png</icon>
-  <updated>2026-10-14T02:50:34.060Z</updated>
+  <icon>https://blog.rochsen.cn/q-avatar.png</icon>
+  <updated>2026-10-14T14:58:07.851Z</updated>
   <generator>@vuepress/plugin-feed</generator>
-  <link rel="self" href="https://rochsen-blog.com/VVBP/atom.xml"/>
-  <link rel="alternate" href="https://rochsen-blog.com/VVBP/"/>
+  <link rel="self" href="https://blog.rochsen.cn/atom.xml"/>
+  <link rel="alternate" href="https://blog.rochsen.cn/"/>
   <category term="教程"/>
   <category term="python库"/>
   <category term="ai"/>
@@ -34,8 +34,8 @@
   </contributor>
   <entry>
     <title type="text">jieba库的使用</title>
-    <id>https://rochsen-blog.com/VVBP/notes/py/jieba.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/py/jieba.html"/>
+    <id>https://blog.rochsen.cn/notes/py/jieba.html</id>
+    <link href="https://blog.rochsen.cn/notes/py/jieba.html"/>
     <updated>2026-09-29T02:32:14.000Z</updated>
     <summary type="html"><![CDATA[<p>用于为句子里的词语，完成分词的操作</p>
 ]]></summary>
@@ -102,8 +102,8 @@
   </entry>
   <entry>
     <title type="text">Deepseek Terminal</title>
-    <id>https://rochsen-blog.com/VVBP/softwares/ai/dst.html</id>
-    <link href="https://rochsen-blog.com/VVBP/softwares/ai/dst.html"/>
+    <id>https://blog.rochsen.cn/softwares/ai/dst.html</id>
+    <link href="https://blog.rochsen.cn/softwares/ai/dst.html"/>
     <updated>2026-09-28T08:28:32.000Z</updated>
     <summary type="html"><![CDATA[<p>随dsh一起更新的终端</p>
 ]]></summary>
@@ -115,8 +115,8 @@
   </entry>
   <entry>
     <title type="text">Deepseek Harness</title>
-    <id>https://rochsen-blog.com/VVBP/softwares/ai/dsh.html</id>
-    <link href="https://rochsen-blog.com/VVBP/softwares/ai/dsh.html"/>
+    <id>https://blog.rochsen.cn/softwares/ai/dsh.html</id>
+    <link href="https://blog.rochsen.cn/softwares/ai/dsh.html"/>
     <updated>2026-09-27T16:48:26.000Z</updated>
     <summary type="html"><![CDATA[<p>分为桌面版和cli启动</p>
 ]]></summary>
@@ -128,8 +128,8 @@
   </entry>
   <entry>
     <title type="text">Cursor</title>
-    <id>https://rochsen-blog.com/VVBP/softwares/ide/cursor.html</id>
-    <link href="https://rochsen-blog.com/VVBP/softwares/ide/cursor.html"/>
+    <id>https://blog.rochsen.cn/softwares/ide/cursor.html</id>
+    <link href="https://blog.rochsen.cn/softwares/ide/cursor.html"/>
     <updated>2026-09-22T08:53:41.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -138,8 +138,8 @@
   </entry>
   <entry>
     <title type="text">Obsidian</title>
-    <id>https://rochsen-blog.com/VVBP/softwares/markdown/obsidian.html</id>
-    <link href="https://rochsen-blog.com/VVBP/softwares/markdown/obsidian.html"/>
+    <id>https://blog.rochsen.cn/softwares/markdown/obsidian.html</id>
+    <link href="https://blog.rochsen.cn/softwares/markdown/obsidian.html"/>
     <updated>2026-09-22T08:53:41.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -148,8 +148,8 @@
   </entry>
   <entry>
     <title type="text">Typora</title>
-    <id>https://rochsen-blog.com/VVBP/softwares/markdown/typora.html</id>
-    <link href="https://rochsen-blog.com/VVBP/softwares/markdown/typora.html"/>
+    <id>https://blog.rochsen.cn/softwares/markdown/typora.html</id>
+    <link href="https://blog.rochsen.cn/softwares/markdown/typora.html"/>
     <updated>2026-09-22T08:53:41.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -158,8 +158,8 @@
   </entry>
   <entry>
     <title type="text">Clash Verge</title>
-    <id>https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html</id>
-    <link href="https://rochsen-blog.com/VVBP/softwares/network/clashVerge.html"/>
+    <id>https://blog.rochsen.cn/softwares/network/clashVerge.html</id>
+    <link href="https://blog.rochsen.cn/softwares/network/clashVerge.html"/>
     <updated>2026-09-22T08:53:41.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -168,8 +168,8 @@
   </entry>
   <entry>
     <title type="text">PotPlayer</title>
-    <id>https://rochsen-blog.com/VVBP/softwares/reader/potplayer.html</id>
-    <link href="https://rochsen-blog.com/VVBP/softwares/reader/potplayer.html"/>
+    <id>https://blog.rochsen.cn/softwares/reader/potplayer.html</id>
+    <link href="https://blog.rochsen.cn/softwares/reader/potplayer.html"/>
     <updated>2026-09-22T08:53:41.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -178,8 +178,8 @@
   </entry>
   <entry>
     <title type="text">Void Image Viewer</title>
-    <id>https://rochsen-blog.com/VVBP/softwares/reader/voidImageViewer.html</id>
-    <link href="https://rochsen-blog.com/VVBP/softwares/reader/voidImageViewer.html"/>
+    <id>https://blog.rochsen.cn/softwares/reader/voidImageViewer.html</id>
+    <link href="https://blog.rochsen.cn/softwares/reader/voidImageViewer.html"/>
     <updated>2026-09-22T08:53:41.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -188,8 +188,8 @@
   </entry>
   <entry>
     <title type="text">MobaXterm</title>
-    <id>https://rochsen-blog.com/VVBP/softwares/remote/mobaXterm.html</id>
-    <link href="https://rochsen-blog.com/VVBP/softwares/remote/mobaXterm.html"/>
+    <id>https://blog.rochsen.cn/softwares/remote/mobaXterm.html</id>
+    <link href="https://blog.rochsen.cn/softwares/remote/mobaXterm.html"/>
     <updated>2026-09-22T08:53:41.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -198,8 +198,8 @@
   </entry>
   <entry>
     <title type="text">WinSCP</title>
-    <id>https://rochsen-blog.com/VVBP/softwares/remote/winscp.html</id>
-    <link href="https://rochsen-blog.com/VVBP/softwares/remote/winscp.html"/>
+    <id>https://blog.rochsen.cn/softwares/remote/winscp.html</id>
+    <link href="https://blog.rochsen.cn/softwares/remote/winscp.html"/>
     <updated>2026-09-22T08:53:41.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -208,8 +208,8 @@
   </entry>
   <entry>
     <title type="text">Everything</title>
-    <id>https://rochsen-blog.com/VVBP/softwares/search/everything.html</id>
-    <link href="https://rochsen-blog.com/VVBP/softwares/search/everything.html"/>
+    <id>https://blog.rochsen.cn/softwares/search/everything.html</id>
+    <link href="https://blog.rochsen.cn/softwares/search/everything.html"/>
     <updated>2026-09-22T08:53:41.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -218,8 +218,8 @@
   </entry>
   <entry>
     <title type="text">Geek</title>
-    <id>https://rochsen-blog.com/VVBP/softwares/search/geek.html</id>
-    <link href="https://rochsen-blog.com/VVBP/softwares/search/geek.html"/>
+    <id>https://blog.rochsen.cn/softwares/search/geek.html</id>
+    <link href="https://blog.rochsen.cn/softwares/search/geek.html"/>
     <updated>2026-09-22T08:53:41.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -228,8 +228,8 @@
   </entry>
   <entry>
     <title type="text">Utools</title>
-    <id>https://rochsen-blog.com/VVBP/softwares/toolkit/utools.html</id>
-    <link href="https://rochsen-blog.com/VVBP/softwares/toolkit/utools.html"/>
+    <id>https://blog.rochsen.cn/softwares/toolkit/utools.html</id>
+    <link href="https://blog.rochsen.cn/softwares/toolkit/utools.html"/>
     <updated>2026-09-22T08:53:41.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -238,8 +238,8 @@
   </entry>
   <entry>
     <title type="text">Watt Toolkit</title>
-    <id>https://rochsen-blog.com/VVBP/softwares/toolkit/wattToolkit.html</id>
-    <link href="https://rochsen-blog.com/VVBP/softwares/toolkit/wattToolkit.html"/>
+    <id>https://blog.rochsen.cn/softwares/toolkit/wattToolkit.html</id>
+    <link href="https://blog.rochsen.cn/softwares/toolkit/wattToolkit.html"/>
     <updated>2026-09-22T08:53:41.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -248,8 +248,8 @@
   </entry>
   <entry>
     <title type="text">递归入门</title>
-    <id>https://rochsen-blog.com/VVBP/notes/computerSci/learnRecursion.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/computerSci/learnRecursion.html"/>
+    <id>https://blog.rochsen.cn/notes/computerSci/learnRecursion.html</id>
+    <link href="https://blog.rochsen.cn/notes/computerSci/learnRecursion.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <summary type="text">1. 核心心法：递归信任（“套娃”思维）
 不要试图在脑子里一层层追踪递归过程（n→n-1→n-2...）。
@@ -306,8 +306,8 @@
   </entry>
   <entry>
     <title type="text">单向链表</title>
-    <id>https://rochsen-blog.com/VVBP/notes/computerSci/singleLinkList.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/computerSci/singleLinkList.html"/>
+    <id>https://blog.rochsen.cn/notes/computerSci/singleLinkList.html</id>
+    <link href="https://blog.rochsen.cn/notes/computerSci/singleLinkList.html"/>
     <updated>2026-09-11T06:55:25.000Z</updated>
     <summary type="text">基础：单向链表入门
 把链表想成一列火车 —— 看懂写法与逻辑，修好你自己的代码
@@ -371,8 +371,8 @@
   </entry>
   <entry>
     <title type="text">博客图片API收集</title>
-    <id>https://rochsen-blog.com/VVBP/notes/deploy/imageApi.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/deploy/imageApi.html"/>
+    <id>https://blog.rochsen.cn/notes/deploy/imageApi.html</id>
+    <link href="https://blog.rochsen.cn/notes/deploy/imageApi.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <summary type="text">樱花二次元图片API-Dmoe
 
@@ -399,8 +399,8 @@ api：https://api.yppp.net/pc.php</summary>
   </entry>
   <entry>
     <title type="text">bwa使用笔记</title>
-    <id>https://rochsen-blog.com/VVBP/notes/bioinformatics/bwa.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/bioinformatics/bwa.html"/>
+    <id>https://blog.rochsen.cn/notes/bioinformatics/bwa.html</id>
+    <link href="https://blog.rochsen.cn/notes/bioinformatics/bwa.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -410,8 +410,8 @@ api：https://api.yppp.net/pc.php</summary>
   </entry>
   <entry>
     <title type="text">samtools使用笔记</title>
-    <id>https://rochsen-blog.com/VVBP/notes/bioinformatics/samtools.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/bioinformatics/samtools.html"/>
+    <id>https://blog.rochsen.cn/notes/bioinformatics/samtools.html</id>
+    <link href="https://blog.rochsen.cn/notes/bioinformatics/samtools.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->]]></content>
     <category term="软件"/>
@@ -420,8 +420,8 @@ api：https://api.yppp.net/pc.php</summary>
   </entry>
   <entry>
     <title type="text">什么是全外显子测序</title>
-    <id>https://rochsen-blog.com/VVBP/notes/bioinformatics/%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%A8%E5%A4%96%E6%98%BE%E5%AD%90%E6%B5%8B%E5%BA%8F.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/bioinformatics/%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%A8%E5%A4%96%E6%98%BE%E5%AD%90%E6%B5%8B%E5%BA%8F.html"/>
+    <id>https://blog.rochsen.cn/notes/bioinformatics/%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%A8%E5%A4%96%E6%98%BE%E5%AD%90%E6%B5%8B%E5%BA%8F.html</id>
+    <link href="https://blog.rochsen.cn/notes/bioinformatics/%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%A8%E5%A4%96%E6%98%BE%E5%AD%90%E6%B5%8B%E5%BA%8F.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->]]></content>
     <category term="生物信息学"/>
@@ -429,8 +429,8 @@ api：https://api.yppp.net/pc.php</summary>
   </entry>
   <entry>
     <title type="text">印象游戏库</title>
-    <id>https://rochsen-blog.com/VVBP/games/gameStorage.html</id>
-    <link href="https://rochsen-blog.com/VVBP/games/gameStorage.html"/>
+    <id>https://blog.rochsen.cn/games/gameStorage.html</id>
+    <link href="https://blog.rochsen.cn/games/gameStorage.html"/>
     <updated>2026-07-20T03:30:12.000Z</updated>
     <summary type="html"><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">提示</p>
@@ -448,8 +448,8 @@ api：https://api.yppp.net/pc.php</summary>
   </entry>
   <entry>
     <title type="text">艾尔登法环 黑夜君临</title>
-    <id>https://rochsen-blog.com/VVBP/games/nightReign.html</id>
-    <link href="https://rochsen-blog.com/VVBP/games/nightReign.html"/>
+    <id>https://blog.rochsen.cn/games/nightReign.html</id>
+    <link href="https://blog.rochsen.cn/games/nightReign.html"/>
     <updated>2026-07-20T03:30:12.000Z</updated>
     <summary type="text">提示
 这是我心中的的2025年度最佳多人共斗游戏
@@ -544,8 +544,8 @@ Boss弱点
   </entry>
   <entry>
     <title type="text">整理个人使用的 AI 工具</title>
-    <id>https://rochsen-blog.com/VVBP/notes/deploy/deployAItools.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/deploy/deployAItools.html"/>
+    <id>https://blog.rochsen.cn/notes/deploy/deployAItools.html</id>
+    <link href="https://blog.rochsen.cn/notes/deploy/deployAItools.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <summary type="text">重要
 随着AI模型和工具越来越多，自己也接触使用了部分AI工具，本文档仅用于记录和整理，无任何商业推广
@@ -578,8 +578,8 @@ Deepseek
   </entry>
   <entry>
     <title type="text">开发框架相关辅导</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/11jobForFrame.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/11jobForFrame.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/11jobForFrame.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/11jobForFrame.html"/>
     <updated>2026-10-08T13:23:10.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -589,8 +589,8 @@ Deepseek
   </entry>
   <entry>
     <title type="text">Agent调试、运维与系统集成</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/23agentDebug.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/23agentDebug.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/23agentDebug.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/23agentDebug.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <summary type="text">1. 概述与学习目标
 本课程聚焦 Agent 进阶与集成，涵盖从低代码到高代码的完整 Agent 开发链路：
@@ -622,8 +622,8 @@ Coze 应用：构建带 UI 表单的应用级 Agent
   </entry>
   <entry>
     <title type="text">智能编码革命：AI辅助编程</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/24aiAssistCoding.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/24aiAssistCoding.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/24aiAssistCoding.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/24aiAssistCoding.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <summary type="text">1. AI 编程概述
 1.1 什么是 AI 编程
@@ -651,8 +651,8 @@ AI 编程是指利用大语言模型（LLM）辅助软件开发的编程范式�
   </entry>
   <entry>
     <title type="text">AI赋能的智能测试与质量保障</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/25aiforIntelTest.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/25aiforIntelTest.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/25aiforIntelTest.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/25aiforIntelTest.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <summary type="text">1. 课程全景
 两条开发路径
@@ -676,8 +676,8 @@ TDD 在 stock-research 项目中的...</summary>
   </entry>
   <entry>
     <title type="text">从Text-to-SQL到数据智能</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/26text2SQL-DataIntel.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/26text2SQL-DataIntel.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/26text2SQL-DataIntel.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/26text2SQL-DataIntel.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <summary type="text">1. 概述
 1.1 什么是 Text-to-SQL
@@ -702,8 +702,8 @@ Text-to-SQL 是指将用户的自然语言问题自动转化为SQL查询语句�
   </entry>
   <entry>
     <title type="text">项目实战：ChatBI开发实战</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/27ChatBI.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/27ChatBI.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/27ChatBI.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/27ChatBI.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <summary type="text">1. 项目概述
 ChatBI 是一个基于 qwen-agent 框架构建的智能股票分析助手，实现了从数据获取、SQL 查询、自动可视化到高级技术分析（ARIMA 预测、MACD 信号、布林带检测、Prophet 周期性分析）的完整垂直领域 Agent。
@@ -729,8 +729,8 @@ Agent = LLM + System Promp...</summary>
   </entry>
   <entry>
     <title type="text">部署及提效辅导</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/28jobForBuild.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/28jobForBuild.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/28jobForBuild.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/28jobForBuild.html"/>
     <updated>2026-10-09T08:14:40.000Z</updated>
     <summary type="text">1. Agent 平台：Coze、Dify 与 Agent 进阶集成
 1.1 什么是 LLM Agent？
@@ -755,8 +755,8 @@ Function Calling 是 A...</summary>
   </entry>
   <entry>
     <title type="text">Embeddings和向量数据库</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/29Embeddings.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/29Embeddings.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/29Embeddings.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/29Embeddings.html"/>
     <updated>2026-09-20T02:27:27.000Z</updated>
     <summary type="text">1. 课程概述
 本课围绕 Embedding（向量化） 与 向量数据库 两大主题，核心学习目标：
@@ -780,8 +780,8 @@ Function Calling 是 A...</summary>
   </entry>
   <entry>
     <title type="text">RAG技术与应用</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/30RAGTechApply.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/30RAGTechApply.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/30RAGTechApply.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/30RAGTechApply.html"/>
     <updated>2026-09-20T02:27:27.000Z</updated>
     <summary type="text">1. 大模型应用开发的三种模式
 在AI大模型应用开发中，有三种主要的技术路线：提示工程、RAG 和 微调。
@@ -805,8 +805,8 @@ RAG（Retrieval-Augmented Generation） = 检索增强生成
   </entry>
   <entry>
     <title type="text">RAG多模态数据处理</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/31RAGmutilProcess.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/31RAGmutilProcess.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/31RAGmutilProcess.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/31RAGmutilProcess.html"/>
     <updated>2026-09-20T02:27:27.000Z</updated>
     <summary type="text">RAG 多模态数据处理实战指南
 传统 RAG 系统大多围绕纯文本构建：把文档切成片段、编码成向量、检索后拼进 Prompt。但真实业务里的知识往往是混合形态的——官方规定是 PDF，内部 FAQ 是 Word，活动介绍里有大量海报图片和表格，培训资料是视频。如果只处理文字，这些信息在入库的那一刻就被丢掉了，检索自然也就回答不了&amp;quot;最近万圣节的活...</summary>
@@ -837,8 +837,8 @@ RAG（Retrieval-Augmented Generation） = 检索增强生成
   </entry>
   <entry>
     <title type="text">RAG高级技术与调优</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/32RAGenhance.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/32RAGenhance.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/32RAGenhance.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/32RAGenhance.html"/>
     <updated>2026-09-20T02:27:27.000Z</updated>
     <summary type="text">朴素 RAG 的流程可以用三个动作概括：Indexing、Retrieval、Generation。真正把 RAG 应用从 Demo 推到落地，难点几乎全部集中在&amp;quot;如何把知识存得更好&amp;quot;和&amp;quot;如何把有用的那一小撮知识找出来&amp;quot;这两件事上。本文将课件脉络与工作区中的四组可运行代码结合起来，梳理一条完整的调优路径。
 工作区...</summary>
@@ -854,8 +854,8 @@ RAG（Retrieval-Augmented Generation） = 检索增强生成
   </entry>
   <entry>
     <title type="text">项目实战：企业知识库</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/33KnowledgeDataBase.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/33KnowledgeDataBase.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/33KnowledgeDataBase.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/33KnowledgeDataBase.html"/>
     <updated>2026-09-23T10:05:58.000Z</updated>
     <summary type="text">1. 项目背景与比赛任务
 1.1 企业RAG挑战赛
@@ -896,8 +896,8 @@ RAG（Retrieval-Augmented Generation） = 检索增强生成
   </entry>
   <entry>
     <title type="text">部分场景中可以取代RAG的技术</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/34partofReplaceRAG.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/34partofReplaceRAG.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/34partofReplaceRAG.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/34partofReplaceRAG.html"/>
     <updated>2026-09-28T08:28:20.000Z</updated>
     <summary type="text">第 0 章 导读与工程速览
 0.1 问题的起点
@@ -926,8 +926,8 @@ RAG（Retrieval-Augmented Generation，检索增强生成）在过去两年几�
   </entry>
   <entry>
     <title type="text">LLM Wiki</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/35LLMWiki.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/35LLMWiki.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/35LLMWiki.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/35LLMWiki.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -937,8 +937,8 @@ RAG（Retrieval-Augmented Generation，检索增强生成）在过去两年几�
   </entry>
   <entry>
     <title type="text">RAG相关辅导</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/36jobForRAG.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/36jobForRAG.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/36jobForRAG.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/36jobForRAG.html"/>
     <updated>2026-10-08T13:23:10.000Z</updated>
     <summary type="text">RAG 是大模型应用开发岗位面试的必考项。面试官的问题看上去零散，其实都挂在同一条主线上：怎么把知识存进去（Indexing）→ 怎么把真正有用的那一小部分找出来（Retrieval）→ 怎么让模型结合提问和检索结果生成答案（Generation）。
 这三个步骤看似简单，但从构建到落地，中间塞满了分块、Embedding、改写、重排、评估、维护这些细活...</summary>
@@ -952,8 +952,8 @@ RAG（Retrieval-Augmented Generation，检索增强生成）在过去两年几�
   </entry>
   <entry>
     <title type="text">大厂优秀工程师使用AI Coding的最新方法与经验</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/37aiCodingExp.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/37aiCodingExp.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/37aiCodingExp.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/37aiCodingExp.html"/>
     <updated>2026-10-14T02:49:44.000Z</updated>
     <summary type="text">Coding Agent 已经可以根据一句话需求完成开发了，为什么我们还要学习方法？
 在一些常见的小型项目中，一句话需求已经能够生成一个可以运行的初版。但这句话里通常还留着很多没有说清楚的内容：给谁用、在什么情况下用、需要哪些功能、做到什么程度才算符合预期。Agent 生成代码时会根据自己的理解补上这些，而这些补出来的内容是否符合实际需要，需要我们判断...</summary>
@@ -976,8 +976,8 @@ RAG（Retrieval-Augmented Generation，检索增强生成）在过去两年几�
   </entry>
   <entry>
     <title type="text">大型软件项目的AI开发与AI重构</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/38aiCodingForBigProj.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/38aiCodingForBigProj.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/38aiCodingForBigProj.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/38aiCodingForBigProj.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -987,8 +987,8 @@ RAG（Retrieval-Augmented Generation，检索增强生成）在过去两年几�
   </entry>
   <entry>
     <title type="text">AI Coding中的团队重新分工与新协作模式</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/39aiTeamMode.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/39aiTeamMode.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/39aiTeamMode.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/39aiTeamMode.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -998,8 +998,8 @@ RAG（Retrieval-Augmented Generation，检索增强生成）在过去两年几�
   </entry>
   <entry>
     <title type="text">在华为昇腾显卡上部署Deepseek-V4模型并连通本地Claude Code</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/40dsv4inHuawei.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/40dsv4inHuawei.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/40dsv4inHuawei.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/40dsv4inHuawei.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -1009,8 +1009,8 @@ RAG（Retrieval-Augmented Generation，检索增强生成）在过去两年几�
   </entry>
   <entry>
     <title type="text">Function Calling与MCP</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/41FunctionCallingMCP.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/41FunctionCallingMCP.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/41FunctionCallingMCP.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/41FunctionCallingMCP.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -1020,8 +1020,8 @@ RAG（Retrieval-Augmented Generation，检索增强生成）在过去两年几�
   </entry>
   <entry>
     <title type="text">Agent的自主规划与工具开发</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/42AgentRuler.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/42AgentRuler.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/42AgentRuler.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/42AgentRuler.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -1031,8 +1031,8 @@ RAG（Retrieval-Augmented Generation，检索增强生成）在过去两年几�
   </entry>
   <entry>
     <title type="text">Agent的能力优化与效果评估</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/43AgentEnchance.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/43AgentEnchance.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/43AgentEnchance.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/43AgentEnchance.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -1042,8 +1042,8 @@ RAG（Retrieval-Augmented Generation，检索增强生成）在过去两年几�
   </entry>
   <entry>
     <title type="text">OpenManus开发实战</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/44OpenManusProj.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/44OpenManusProj.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/44OpenManusProj.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/44OpenManusProj.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -1053,8 +1053,8 @@ RAG（Retrieval-Augmented Generation，检索增强生成）在过去两年几�
   </entry>
   <entry>
     <title type="text">Harness Engineering</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/45HarnessEngineering.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/45HarnessEngineering.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/45HarnessEngineering.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/45HarnessEngineering.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -1064,8 +1064,8 @@ RAG（Retrieval-Augmented Generation，检索增强生成）在过去两年几�
   </entry>
   <entry>
     <title type="text">搭建Hermes Agent中的长期记忆和自进化能力</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/46HermesAgentAbility.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/46HermesAgentAbility.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/46HermesAgentAbility.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/46HermesAgentAbility.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -1075,8 +1075,8 @@ RAG（Retrieval-Augmented Generation，检索增强生成）在过去两年几�
   </entry>
   <entry>
     <title type="text">实现Hermes中的多Agent协作、主Agent调度</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/47HermesAgentRuler.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/47HermesAgentRuler.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/47HermesAgentRuler.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/47HermesAgentRuler.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -1086,8 +1086,8 @@ RAG（Retrieval-Augmented Generation，检索增强生成）在过去两年几�
   </entry>
   <entry>
     <title type="text">Agent相关辅导</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/48jobForAgent.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/48jobForAgent.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/48jobForAgent.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/48jobForAgent.html"/>
     <updated>2026-10-08T13:23:10.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -1097,8 +1097,8 @@ RAG（Retrieval-Augmented Generation，检索增强生成）在过去两年几�
   </entry>
   <entry>
     <title type="text">pytorch与视觉检测</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/10cnnPytorch.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/10cnnPytorch.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/10cnnPytorch.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/10cnnPytorch.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <summary type="text">第一章：PyTorch 核心基础
 1.1 什么是 PyTorch？
@@ -1247,8 +1247,8 @@ PyTorch 的核心数据结构是张量（Tensor），它的用法和 NumPy 几�
   </entry>
   <entry>
     <title type="text">LLM微调原理</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/12llmFineTune.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/12llmFineTune.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/12llmFineTune.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/12llmFineTune.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <summary type="text">1. 大模型微调概述
 1.1 什么是模型微调
@@ -1279,8 +1279,8 @@ PyTorch 的核心数据结构是张量（Tensor），它的用法和 NumPy 几�
   </entry>
   <entry>
     <title type="text">高质量微调数据工程与评估</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/13llmFineTuneEval.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/13llmFineTuneEval.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/13llmFineTuneEval.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/13llmFineTuneEval.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <summary type="text">1. 前置知识：什么是 SFT 微调？
 1.1 通俗理解
@@ -1301,8 +1301,8 @@ SFT（Supervised Fine-Tuning，监督微调） 就是拿...</summary>
   </entry>
   <entry>
     <title type="text">LLM模型蒸馏与微调实操</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/14llmFineTunePr.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/14llmFineTunePr.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/14llmFineTunePr.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/14llmFineTunePr.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <summary type="text">一、前置知识扫盲
 1.1 什么是大语言模型（LLM）
@@ -1326,8 +1326,8 @@ SFT（Supervised Fine-Tuning，监督微调） 就是拿...</summary>
   </entry>
   <entry>
     <title type="text">视觉与多模态模型</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/15cvandMultiModal.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/15cvandMultiModal.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/15cvandMultiModal.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/15cvandMultiModal.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <summary type="text">1. 概述
 1.1 用日常比喻理解&amp;quot;视觉大模型&amp;quot;
@@ -1372,8 +1372,8 @@ VLM = 图像识别器 + 文本理解器 + 语言生成器，三者合为一体�
   </entry>
   <entry>
     <title type="text">项目实战：AI质检</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/16aiChecK.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/16aiChecK.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/16aiChecK.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/16aiChecK.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -1383,8 +1383,8 @@ VLM = 图像识别器 + 文本理解器 + 语言生成器，三者合为一体�
   </entry>
   <entry>
     <title type="text">企业级AI部署：从硬件选型到框架选择</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/18aiDeployCompany.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/18aiDeployCompany.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/18aiDeployCompany.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/18aiDeployCompany.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->]]></content>
     <category term="教程"/>
@@ -1393,8 +1393,8 @@ VLM = 图像识别器 + 文本理解器 + 语言生成器，三者合为一体�
   </entry>
   <entry>
     <title type="text">AI服务核心：高并发原理与性能监控调优</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/19aiServiceCore.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/19aiServiceCore.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/19aiServiceCore.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/19aiServiceCore.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
@@ -1404,8 +1404,8 @@ VLM = 图像识别器 + 文本理解器 + 语言生成器，三者合为一体�
   </entry>
   <entry>
     <title type="text">SQLang深度优化：Radix缓存与复杂任务的极致吞吐</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/20SQLangOpt.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/20SQLangOpt.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/20SQLangOpt.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/20SQLangOpt.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <category term="教程"/>
     <category term="知乎"/>
@@ -1413,8 +1413,8 @@ VLM = 图像识别器 + 文本理解器 + 语言生成器，三者合为一体�
   </entry>
   <entry>
     <title type="text">Coze工作原理与应用实例</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/21aiCozeExample.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/21aiCozeExample.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/21aiCozeExample.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/21aiCozeExample.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <summary type="text">1. Coze 平台概述
 1.1 什么是 Coze？
@@ -1433,8 +1433,8 @@ Coze（扣子）是字节跳动推出的 AI Agent（智能体）开发平台，�
   </entry>
   <entry>
     <title type="text">Dify本地化部署和应用</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/22aiDifyDeploy.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/22aiDifyDeploy.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/22aiDifyDeploy.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/22aiDifyDeploy.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <summary type="text">1. Dify 平台概述
 1.1 什么是 Dify？
@@ -1457,8 +1457,8 @@ Dify 是一个开源的大语言模型（LLM）应用开发平台，融合了 Ag
   </entry>
   <entry>
     <title type="text">Langchain 多任务应用开发</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/6langchainApp.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/6langchainApp.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/6langchainApp.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/6langchainApp.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <summary type="text">第一部分：LangChain基础概念
 1.1 LangChain是什么
@@ -1489,8 +1489,8 @@ LangChain是一个强大的开源框架，专门用于简化大语言模型（LL
   </entry>
   <entry>
     <title type="text">AI框架设计与选型</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/7langchainDesign.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/7langchainDesign.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/7langchainDesign.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/7langchainDesign.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <summary type="text">AI Agent 框架入门指南
 
@@ -1516,8 +1516,8 @@ LangChain是一个强大的开源框架，专门用于简化大语言模型（LL
   </entry>
   <entry>
     <title type="text">HuggingFace生态实战：从模型应用到高效微调</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/8langchainOptimize.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/8langchainOptimize.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/8langchainOptimize.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/8langchainOptimize.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <summary type="text">HuggingFace生态实战：从模型应用到高效微调
 1. HuggingFace简介
@@ -1538,8 +1538,8 @@ HuggingFace 是一个专注于人工智能的开源社区和平台，被誉为&a
   </entry>
   <entry>
     <title type="text">神经网络基础与Tensorflow</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/9networkbaseTensorflow.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/9networkbaseTensorflow.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/9networkbaseTensorflow.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/9networkbaseTensorflow.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <summary type="text">第一章：神经网络基础概念
 1.1 从生物神经元到人工神经元
@@ -1558,8 +1558,8 @@ HuggingFace 是一个专注于人工智能的开源社区和平台，被誉为&a
   </entry>
   <entry>
     <title type="text">Agent：从可控性到自主反思</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/3agentfromControl2selfthink.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/3agentfromControl2selfthink.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/3agentfromControl2selfthink.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/3agentfromControl2selfthink.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <summary type="text">什么是 Agent？
 AI 模型 vs AI Agent
@@ -1608,8 +1608,8 @@ LLM 会有幻觉：可能生成不准确或虚构的...</summary>
   </entry>
   <entry>
     <title type="text">多模态AI入门指南</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/4multimodalAI.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/4multimodalAI.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/4multimodalAI.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/4multimodalAI.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <summary type="text">一、核心能力概览：多模态AI能做什么？
 多模态AI的核心能力在于打破信息形式的壁垒，让机器像人一样同时“看”图像、“听”声音、“读”文字，并将这些信息融合理解、综合输出。它不再局限于单一类型的数据处理，而是实现了跨模态的认知与创造。
@@ -1683,8 +1683,8 @@ LLM 会有幻觉：可能生成不准确或虚构的...</summary>
   </entry>
   <entry>
     <title type="text">构建大模型的知识与交互基础</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/2promptEngToRag.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/2promptEngToRag.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/2promptEngToRag.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/2promptEngToRag.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <summary type="text">一、前言：为什么需要学习提示词和RAG？
 在当今人工智能快速发展的时代，大语言模型（Large Language Model，简称LLM）已经成为了许多应用的核心技术。从智能客服到知识问答，从内容创作到代码生成，LLM正在改变我们与技术交互的方式。然而，要让LLM真正发挥价值，我们需要掌握两个关键技术：提示词工程和RAG技术。
@@ -1709,8 +1709,8 @@ LLM 会有幻觉：可能生成不准确或虚构的...</summary>
   </entry>
   <entry>
     <title type="text">AI 概念通俗解释大全</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/5aiNameProduce.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/5aiNameProduce.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/5aiNameProduce.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/5aiNameProduce.html"/>
     <updated>2026-09-06T03:59:28.000Z</updated>
     <summary type="text">第一部分：AI的层次与类型
 AI (人工智能)
@@ -1765,8 +1765,8 @@ AGI (通用人工智能)
   </entry>
   <entry>
     <title type="text">AI 大模型应用公开课</title>
-    <id>https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/1techOfBigModel.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/aiApplicationEngineer/1techOfBigModel.html"/>
+    <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/1techOfBigModel.html</id>
+    <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/1techOfBigModel.html"/>
     <updated>2026-09-06T03:59:28.000Z</updated>
     <summary type="text">产品举例
 
@@ -1834,8 +1834,8 @@ Agent...</summary>
   </entry>
   <entry>
     <title type="text">将静态博客部署到Github</title>
-    <id>https://rochsen-blog.com/VVBP/notes/deploy/deployGithub.html</id>
-    <link href="https://rochsen-blog.com/VVBP/notes/deploy/deployGithub.html"/>
+    <id>https://blog.rochsen.cn/notes/deploy/deployGithub.html</id>
+    <link href="https://blog.rochsen.cn/notes/deploy/deployGithub.html"/>
     <updated>2026-08-27T08:33:31.000Z</updated>
     <summary type="text">第一步：本地创建项目
 
@@ -2001,8 +2001,8 @@ Agent...</summary>
   </entry>
   <entry>
     <title type="text">页面配置教程</title>
-    <id>https://rochsen-blog.com/VVBP/demo/page.html</id>
-    <link href="https://rochsen-blog.com/VVBP/demo/page.html"/>
+    <id>https://blog.rochsen.cn/demo/page.html</id>
+    <link href="https://blog.rochsen.cn/demo/page.html"/>
     <updated>2026-09-11T04:31:46.000Z</updated>
     <summary type="html"><![CDATA[<p><code>more</code> 注释之前的内容被视为文章摘要。</p>
 ]]></summary>

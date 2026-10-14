@@ -1,8 +1,8 @@
 {
   "version": "https://jsonfeed.org/version/1.1",
   "title": "Welocome to My Blog",
-  "home_page_url": "https://rochsen-blog.com/VVBP/en/",
-  "feed_url": "https://rochsen-blog.com/VVBP/en/feed.json",
-  "favicon": "https://rochsen-blog.com/VVBP/q-avatar.png",
+  "home_page_url": "https://blog.rochsen.cn/en/",
+  "feed_url": "https://blog.rochsen.cn/en/feed.json",
+  "favicon": "https://blog.rochsen.cn/q-avatar.png",
   "items": []
 }
