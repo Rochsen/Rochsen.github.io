@@ -18,11 +18,11 @@ export const mediasConfig = {
 export default hopeTheme(
   {
     // 当前网站部署到的域名。暂时没有公网域名
-    hostname: "https://rochsen-blog.com/VVBP",
+    hostname: "https://blog.rochsen.cn/",
 
     author: {
       name: "罗浩森",
-      url: "https://rochsen.github.io/VVBP/",
+      url: "https://github.com/Rochsen",
     },
 
     // 浏览器图标
@@ -65,7 +65,7 @@ export default hopeTheme(
         sidebar: zhSideBarConfig,
         blog: {
           description: "生物信息全栈开发工程师",
-          intro: "https://rochsen.github.io/Intro/",
+          intro: "https://intro.rochsen.cn/",
           medias: mediasConfig,
           timeline: "时光机",
           avatar: avatar,
@@ -76,7 +76,7 @@ export default hopeTheme(
         sidebar: enSidebarConfig,
         blog: {
           description: "Bioinformatics full stack development engineer",
-          intro: "https://rochsen.github.io/Intro/en/",
+          intro: "https://intro.rochsen.cn/en/",
           medias: mediasConfig,
           timeline: "Time Machine",
           avatar: avatar,
