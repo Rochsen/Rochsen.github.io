@@ -6,8 +6,8 @@
     <link>https://blog.rochsen.cn/</link>
     <description></description>
     <language>zh-CN</language>
-    <pubDate>Wed, 14 Oct 2026 14:58:07 GMT</pubDate>
-    <lastBuildDate>Wed, 14 Oct 2026 14:58:07 GMT</lastBuildDate>
+    <pubDate>Thu, 15 Oct 2026 03:20:50 GMT</pubDate>
+    <lastBuildDate>Thu, 15 Oct 2026 03:20:50 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -16,8 +16,8 @@
     <category>IDE</category>
     <category>markdown</category>
     <category>网络</category>
-    <category>阅读器</category>
     <category>远程控制</category>
+    <category>阅读器</category>
     <category>搜索</category>
     <category>工具箱</category>
     <category>编程</category>
@@ -161,26 +161,6 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>PotPlayer</title>
-      <link>https://blog.rochsen.cn/softwares/reader/potplayer.html</link>
-      <guid>https://blog.rochsen.cn/softwares/reader/potplayer.html</guid>
-      <source url="https://blog.rochsen.cn/rss.xml">PotPlayer</source>
-      <category>阅读器</category>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<!-- more -->
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Void Image Viewer</title>
-      <link>https://blog.rochsen.cn/softwares/reader/voidImageViewer.html</link>
-      <guid>https://blog.rochsen.cn/softwares/reader/voidImageViewer.html</guid>
-      <source url="https://blog.rochsen.cn/rss.xml">Void Image Viewer</source>
-      <category>阅读器</category>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<!-- more -->
-]]></content:encoded>
-    </item>
-    <item>
       <title>MobaXterm</title>
       <link>https://blog.rochsen.cn/softwares/remote/mobaXterm.html</link>
       <guid>https://blog.rochsen.cn/softwares/remote/mobaXterm.html</guid>
@@ -196,6 +176,26 @@
       <guid>https://blog.rochsen.cn/softwares/remote/winscp.html</guid>
       <source url="https://blog.rochsen.cn/rss.xml">WinSCP</source>
       <category>远程控制</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
+      <title>PotPlayer</title>
+      <link>https://blog.rochsen.cn/softwares/reader/potplayer.html</link>
+      <guid>https://blog.rochsen.cn/softwares/reader/potplayer.html</guid>
+      <source url="https://blog.rochsen.cn/rss.xml">PotPlayer</source>
+      <category>阅读器</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Void Image Viewer</title>
+      <link>https://blog.rochsen.cn/softwares/reader/voidImageViewer.html</link>
+      <guid>https://blog.rochsen.cn/softwares/reader/voidImageViewer.html</guid>
+      <source url="https://blog.rochsen.cn/rss.xml">Void Image Viewer</source>
+      <category>阅读器</category>
       <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<!-- more -->
 ]]></content:encoded>
@@ -955,9 +955,9 @@ RAG（Retrieval-Augmented Generation，检索增强生成）在过去两年几�
 <p>在一些常见的小型项目中，一句话需求已经能够生成一个可以运行的初版。但这句话里通常还留着很多没有说清楚的内容：给谁用、在什么情况下用、需要哪些功能、做到什么程度才算符合预期。Agent 生成代码时会根据自己的理解补上这些，而这些补出来的内容是否符合实际需要，需要我们判断。</p>
 <p>本文围绕四个问题展开：<strong>要做什么、怎样才算做对、用什么验证、根据什么继续修改。</strong> 前半部分讲 Spec 与 SpecDD，后半部分讲 Test Case 与 TDD，最后看两者怎样围绕同一条行为要求配合，并把这套方法整理成 Agent 可以读取的工作指引。</p>
 <p>贯穿全文的案例是一个直播聊天分析应用：在本机监听一个直播间，在自己的界面显示采集到的评论；积累一段时间后，选择分析范围，向自己的 Agent 提问，例如&quot;这段时间大家最关心的问题是什么&quot;，在同一界面得到基于这批评论的回答。</p>
-<h2>2. 一句话能生成软件，为什么还要学习使用方法</h2>
+<h2>1. 一句话能生成软件，为什么还要学习使用方法</h2>
 <p>在一句话需求的背后，通常还留着没有说清楚的部分。Agent 在生成代码时，会根据自己的理解补上这些内容。我们需要判断，它补出来的内容是否符合实际需要。</p>
-<h3>2.1 从一句话需求到具体的业务场景</h3>
+<h3>1.1 从一句话需求到具体的业务场景</h3>
 <p>比如&quot;帮我做一个直播间聊天分析工具&quot;。Agent 可以做一张词频图，也可以做自动回复机器人，或者做一个能针对评论提问的分析页面。这些方案解决的问题并不相同。</p>
 <p>我们希望监听一个直播间，在自己的界面显示采集到的评论。积累一段时间后，选择分析范围，向自己的 Agent 提问，例如&quot;这段时间大家最关心的问题是什么&quot;，让它根据这批评论给出回答。</p>
 <p>| 需要明确的内容 | 直播聊天分析应用 |
