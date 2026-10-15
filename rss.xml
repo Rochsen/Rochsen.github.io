@@ -6,8 +6,8 @@
     <link>https://blog.rochsen.cn/</link>
     <description></description>
     <language>zh-CN</language>
-    <pubDate>Thu, 15 Oct 2026 03:20:50 GMT</pubDate>
-    <lastBuildDate>Thu, 15 Oct 2026 03:20:50 GMT</lastBuildDate>
+    <pubDate>Thu, 15 Oct 2026 04:18:41 GMT</pubDate>
+    <lastBuildDate>Thu, 15 Oct 2026 04:18:41 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -16,8 +16,8 @@
     <category>IDE</category>
     <category>markdown</category>
     <category>网络</category>
-    <category>远程控制</category>
     <category>阅读器</category>
+    <category>远程控制</category>
     <category>搜索</category>
     <category>工具箱</category>
     <category>编程</category>
@@ -161,26 +161,6 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>MobaXterm</title>
-      <link>https://blog.rochsen.cn/softwares/remote/mobaXterm.html</link>
-      <guid>https://blog.rochsen.cn/softwares/remote/mobaXterm.html</guid>
-      <source url="https://blog.rochsen.cn/rss.xml">MobaXterm</source>
-      <category>远程控制</category>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<!-- more -->
-]]></content:encoded>
-    </item>
-    <item>
-      <title>WinSCP</title>
-      <link>https://blog.rochsen.cn/softwares/remote/winscp.html</link>
-      <guid>https://blog.rochsen.cn/softwares/remote/winscp.html</guid>
-      <source url="https://blog.rochsen.cn/rss.xml">WinSCP</source>
-      <category>远程控制</category>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<!-- more -->
-]]></content:encoded>
-    </item>
-    <item>
       <title>PotPlayer</title>
       <link>https://blog.rochsen.cn/softwares/reader/potplayer.html</link>
       <guid>https://blog.rochsen.cn/softwares/reader/potplayer.html</guid>
@@ -196,6 +176,26 @@
       <guid>https://blog.rochsen.cn/softwares/reader/voidImageViewer.html</guid>
       <source url="https://blog.rochsen.cn/rss.xml">Void Image Viewer</source>
       <category>阅读器</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
+      <title>MobaXterm</title>
+      <link>https://blog.rochsen.cn/softwares/remote/mobaXterm.html</link>
+      <guid>https://blog.rochsen.cn/softwares/remote/mobaXterm.html</guid>
+      <source url="https://blog.rochsen.cn/rss.xml">MobaXterm</source>
+      <category>远程控制</category>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
+      <title>WinSCP</title>
+      <link>https://blog.rochsen.cn/softwares/remote/winscp.html</link>
+      <guid>https://blog.rochsen.cn/softwares/remote/winscp.html</guid>
+      <source url="https://blog.rochsen.cn/rss.xml">WinSCP</source>
+      <category>远程控制</category>
       <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<!-- more -->
 ]]></content:encoded>

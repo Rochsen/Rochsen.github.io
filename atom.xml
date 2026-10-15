@@ -3,7 +3,7 @@
   <id>https://blog.rochsen.cn/</id>
   <title>欢迎来到我的博客</title>
   <icon>https://blog.rochsen.cn/q-avatar.png</icon>
-  <updated>2026-10-15T03:20:50.267Z</updated>
+  <updated>2026-10-15T04:18:41.387Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://blog.rochsen.cn/atom.xml"/>
   <link rel="alternate" href="https://blog.rochsen.cn/"/>
@@ -13,8 +13,8 @@
   <category term="IDE"/>
   <category term="markdown"/>
   <category term="网络"/>
-  <category term="远程控制"/>
   <category term="阅读器"/>
+  <category term="远程控制"/>
   <category term="搜索"/>
   <category term="工具箱"/>
   <category term="编程"/>
@@ -167,26 +167,6 @@
     <published>2026-09-22T00:00:00.000Z</published>
   </entry>
   <entry>
-    <title type="text">MobaXterm</title>
-    <id>https://blog.rochsen.cn/softwares/remote/mobaXterm.html</id>
-    <link href="https://blog.rochsen.cn/softwares/remote/mobaXterm.html"/>
-    <updated>2026-09-22T08:53:41.000Z</updated>
-    <content type="html"><![CDATA[<!-- more -->
-]]></content>
-    <category term="远程控制"/>
-    <published>2026-09-22T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">WinSCP</title>
-    <id>https://blog.rochsen.cn/softwares/remote/winscp.html</id>
-    <link href="https://blog.rochsen.cn/softwares/remote/winscp.html"/>
-    <updated>2026-09-22T08:53:41.000Z</updated>
-    <content type="html"><![CDATA[<!-- more -->
-]]></content>
-    <category term="远程控制"/>
-    <published>2026-09-22T00:00:00.000Z</published>
-  </entry>
-  <entry>
     <title type="text">PotPlayer</title>
     <id>https://blog.rochsen.cn/softwares/reader/potplayer.html</id>
     <link href="https://blog.rochsen.cn/softwares/reader/potplayer.html"/>
@@ -204,6 +184,26 @@
     <content type="html"><![CDATA[<!-- more -->
 ]]></content>
     <category term="阅读器"/>
+    <published>2026-09-22T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">MobaXterm</title>
+    <id>https://blog.rochsen.cn/softwares/remote/mobaXterm.html</id>
+    <link href="https://blog.rochsen.cn/softwares/remote/mobaXterm.html"/>
+    <updated>2026-09-22T08:53:41.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    <category term="远程控制"/>
+    <published>2026-09-22T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">WinSCP</title>
+    <id>https://blog.rochsen.cn/softwares/remote/winscp.html</id>
+    <link href="https://blog.rochsen.cn/softwares/remote/winscp.html"/>
+    <updated>2026-09-22T08:53:41.000Z</updated>
+    <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    <category term="远程控制"/>
     <published>2026-09-22T00:00:00.000Z</published>
   </entry>
   <entry>
