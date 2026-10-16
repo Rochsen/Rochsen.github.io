@@ -3,7 +3,7 @@
   <id>https://blog.rochsen.cn/</id>
   <title>欢迎来到我的博客</title>
   <icon>https://blog.rochsen.cn/q-avatar.png</icon>
-  <updated>2026-10-15T04:18:41.387Z</updated>
+  <updated>2026-10-16T12:09:58.485Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://blog.rochsen.cn/atom.xml"/>
   <link rel="alternate" href="https://blog.rochsen.cn/"/>
@@ -978,12 +978,32 @@ RAG（Retrieval-Augmented Generation，检索增强生成）在过去两年几�
     <title type="text">大型软件项目的AI开发与AI重构</title>
     <id>https://blog.rochsen.cn/notes/aiApplicationEngineer/38aiCodingForBigProj.html</id>
     <link href="https://blog.rochsen.cn/notes/aiApplicationEngineer/38aiCodingForBigProj.html"/>
-    <updated>2026-08-27T08:33:31.000Z</updated>
+    <updated>2026-10-16T12:09:08.000Z</updated>
+    <summary type="text">第一课用 Spec 把场景、功能和关键效果说清楚，再从这些约定形成 Test Case，用测试反馈推进实现。第一版做出来以后，新的问题也会出现：界面能用，但对话区太小；AI 能回答，却答不出哪段时间评论最多；功能继续增加，代码也越来越难读。
+这些工作都可以交给 Coding Agent 参与。我们需要把握的是：这次要改变什么，哪些行为继续保留，怎样判断...</summary>
     <content type="html"><![CDATA[<!-- more -->
+<p>第一课用 Spec 把场景、功能和关键效果说清楚，再从这些约定形成 Test Case，用测试反馈推进实现。第一版做出来以后，新的问题也会出现：界面能用，但对话区太小；AI 能回答，却答不出哪段时间评论最多；功能继续增加，代码也越来越难读。</p>
+<p>这些工作都可以交给 Coding Agent 参与。我们需要把握的是：这次要改变什么，哪些行为继续保留，怎样判断改动有效，以及怎样让下一次开发顺利接着做。本文沿用第一课的直播评论助手，把三类工作依次做完：<strong>调整产品行为、改善 AI 效果、整理内部结构</strong>。</p>
+<h2>1. 持续维护从什么状态开始</h2>
+<p>接着开发已有项目时，很容易遇到一种情况：讨论过的功能、文档写下的行为和代码实际完成的能力，并不完全一致。</p>
+<p>第一课的直播评论助手供用户查看观众评论，再在自己的界面里向 AI 提问、整理大家关心的问题。它已经可以保存评论、在页面回填，并基于记录生成流式回答；目前还没有时间范围选择器，回答也没有结构化引用字段。</p>
+<p>在开发过程中，开发者理解用户的使用目标，明确变更与验收条件，再让 CodeBuddy 辅助维护应用；在产品使用过程中，用户通过界面查看评论、向业务模型提问。同一个人可以兼任两种角色，描述时仍按当前任务区分。</p>
+<p>当前程序采用 FastAPI、原生网页和 OpenAI 兼容 SDK 调用 DeepSeek，接着维护时沿用这份实际实现。</p>
+<blockquote>
+<p><strong>先确认当前实现，再讨论本轮变化，能够减少接手时的理解偏差。</strong> 尚未完成的想法可以保留为后续需求，与已经实现的能力分别记录。</p>
+</blockquote>
+<h3>1.1 从第一课成果继续</h3>
+<p>随包项目位于 <code>examples/douyin_assistant/</code>，环境、Skills 与数据准备集中在 <code>examples/README.md</code>。</p>
+<p>本课以第一课完成的项目为起点，依次改善界面和 AI 分析。进入重构练习时，再从已经完成这些改进的项目创建独立副本。</p>
+<p>练习副本承接刚完成的改进；原项目与检查点保留，方便对照和继续开发。</p>
+<p>项目快照保存修改前的状态，后续出现差异时，可以回看原来的规格、测试与实现。练习副本承接刚完成的改进；原项目与检查点保留，方便对照和继续开发。</p>
+<h3>1.2 接手时需要的四类信息</h3>
+<p>| 信息 | 帮助我们回答什么 | 项目中的例子 |
+|</p>
 ]]></content>
     <category term="教程"/>
     <category term="知乎"/>
-    <published>2026-07-04T00:00:00.000Z</published>
+    <published>2026-10-16T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">AI Coding中的团队重新分工与新协作模式</title>
