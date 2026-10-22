@@ -72,7 +72,7 @@ timeline: false
 - [第三十七节：大厂优秀工程师使用AI Coding的最新方法与经验](./37aiCodingExp.md)
 - [第三十八节：大型软件项目的AI开发与AI重构](./38aiCodingForBigProj.md)
 - [第三十九节：AI Coding中的团队重新分工与新协作模式](./39aiTeamMode.md)
-- [第四十节：在华为昇腾显卡上部署Deepseek-V4模型并连通本地Claude Code](./40dsv4inHuawei.md)
+- [第四十节：封装Gateway模块，让你的Agent和IM连通](./40gatewayAgentIM.md)
 - [第四十五节：Harness Engineering](./45HarnessEngineering.md)
 - [第四十六节：搭建Hermes Agent中的长期记忆和自进化能力](./46HermesAgentAbility.md)
 - [第四十七节：实现Hermes中的多Agent协作、主Agent调度](./47HermesAgentRuler.md)
