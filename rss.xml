@@ -6,11 +6,12 @@
     <link>https://blog.rochsen.cn/</link>
     <description></description>
     <language>zh-CN</language>
-    <pubDate>Thu, 22 Oct 2026 12:10:43 GMT</pubDate>
-    <lastBuildDate>Thu, 22 Oct 2026 12:10:43 GMT</lastBuildDate>
+    <pubDate>Thu, 22 Oct 2026 15:50:02 GMT</pubDate>
+    <lastBuildDate>Thu, 22 Oct 2026 15:50:02 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
+    <category>知乎</category>
     <category>python库</category>
     <category>ai</category>
     <category>IDE</category>
@@ -27,8 +28,27 @@
     <category>生物信息学</category>
     <category>游戏</category>
     <category>部署</category>
-    <category>知乎</category>
     <category>使用指南</category>
+    <item>
+      <title>封装Gateway模块，让你的Agent和IM连通</title>
+      <link>https://blog.rochsen.cn/notes/aiApplicationEngineer/40gatewayAgentIM.html</link>
+      <guid>https://blog.rochsen.cn/notes/aiApplicationEngineer/40gatewayAgentIM.html</guid>
+      <source url="https://blog.rochsen.cn/rss.xml">封装Gateway模块，让你的Agent和IM连通</source>
+      <description>一个能回答问题的助手，和一个人人可用的助手，中间隔着的往往不是模型能力，而是使用路径。同事不想为了问一句「评论里大家在抱怨什么」，先打开一个网页，再请人帮忙启动脚本。把助手接进飞书、企业微信或钉钉这类 IM 之后，请求从聊天窗口进来，结果回到同一个会话。
+接入带来三个变化：程序要持续在线，消息要送回正确的会话，增加入口时要能复用已有能力。这三件事分别对...</description>
+      <category>教程</category>
+      <category>知乎</category>
+      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<!-- more -->
+<p>一个能回答问题的助手，和一个人人可用的助手，中间隔着的往往不是模型能力，而是使用路径。同事不想为了问一句「评论里大家在抱怨什么」，先打开一个网页，再请人帮忙启动脚本。把助手接进飞书、企业微信或钉钉这类 IM 之后，请求从聊天窗口进来，结果回到同一个会话。</p>
+<p>接入带来三个变化：程序要持续在线，消息要送回正确的会话，增加入口时要能复用已有能力。这三件事分别对应进程、寻址与边界，也是本文的主线：先把已有能力封装成服务，再选一个 IM 打通第一条消息，然后把平台差异收进可插拔的 Gateway，最后用运行记录和验收矩阵确认它真的能用。</p>
+<h2>1. 服务化：从「跑一次」到「一直在」</h2>
+<p>原来的程序可能只完成一次任务：开发者手动运行，得到一次结果。服务化封装让程序启动后保持运行，别人通过约定的入口发来请求，就能继续使用已有能力。需要安排的不只是接口，还有启动、配置、出错提示和运行记录；调用方只按约定提交材料、取得结果，服务内部负责调用模型和执行业务流程。</p>
+<h3>1.1 接入 IM 改变了什么</h3>
+<p>| 使用场景 | 接入后更方便在哪里 | 系统需要做好什么 |
+|</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>jieba库的使用</title>
       <link>https://blog.rochsen.cn/notes/py/jieba.html</link>
@@ -1040,17 +1060,6 @@ RAG（Retrieval-Augmented Generation，检索增强生成）在过去两年几�
 <p>新的职责不再按&quot;功能模块&quot;划分，而是围绕完整结果组织工作：人提供上下文、作取舍与判断，Agent 承担可委托的执行。四类职责各自关注的重点、需要的能力和可观察的产物如下。</p>
 <p>| 关键职责 | 关注重点 | 关键能力 | 可观察的产物 |
 |</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>在华为昇腾显卡上部署Deepseek-V4模型并连通本地Claude Code</title>
-      <link>https://blog.rochsen.cn/notes/aiApplicationEngineer/40dsv4inHuawei.html</link>
-      <guid>https://blog.rochsen.cn/notes/aiApplicationEngineer/40dsv4inHuawei.html</guid>
-      <source url="https://blog.rochsen.cn/rss.xml">在华为昇腾显卡上部署Deepseek-V4模型并连通本地Claude Code</source>
-      <category>教程</category>
-      <category>知乎</category>
-      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<!-- more -->
 ]]></content:encoded>
     </item>
     <item>
