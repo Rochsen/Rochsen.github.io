@@ -58,8 +58,8 @@ export const zhihuAiSideBar = arraySidebar([
       "37aiCodingExp",
       "38aiCodingForBigProj",
       "39aiTeamMode",
-      "40dsv4inHuawei",
-      "41FunctionCallingMCP"
+      "40gatewayAgentIM",
+      "41FunctionCallingMCP",
     ],
   },
   {
@@ -70,8 +70,8 @@ export const zhihuAiSideBar = arraySidebar([
       "44OpenManusProj",
       "45HarnessEngineering",
       "46HermesAgentAbility",
-      "47HermesAgentRuler"
-    ]
+      "47HermesAgentRuler",
+    ],
   },
   {
     text: "面试辅导",
@@ -79,7 +79,7 @@ export const zhihuAiSideBar = arraySidebar([
       "11jobForFrame",
       "28jobForBuild",
       "36jobForRAG",
-      "48jobForAgent"
-    ]
-  }
+      "48jobForAgent",
+    ],
+  },
 ]);
