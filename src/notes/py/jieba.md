@@ -3,7 +3,7 @@ title: jieba库的使用
 date: 2026-09-28
 order: 1
 category: [教程, python库]
-tag: [jieba, python]
+tag: [python]
 article: true
 star: true
 ---
@@ -20,6 +20,14 @@ star: true
 text = "春天的早晨，我沿着河边慢慢走，看见柳枝轻摆，几只小鸟飞过水面，心情忽然变得很好。阳光照在草地，孩子笑着奔跑，真开心。"
 biz = "他在中国科学院计算所研究机器学习算法，并负责华为鸿蒙系统在南京市长江大桥项目中的落地。如果放到post中将出错。"
 ```
+
+
+## 安装命令
+
+```shell
+pip install jieba
+```
+
 
 ## 1. 启动时预热词典
 
