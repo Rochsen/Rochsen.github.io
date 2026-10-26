@@ -103,44 +103,7 @@ load_dotenv(override=True)
 # False
 ```
 
-## 2. dotenv_values
-
-`dotenv_values` 只返回字典，不改 `os.environ`。没有等号的键对应 `None`。`${NAME:-default}` 在 `interpolate=True`（默认）时替换。环境里已有的同名变量会参与替换。
-
-工作目录在 `demo`。先去掉上一节留下的 `USER_NAME` 和禁用开关。
-
-```python
-import os
-
-from dotenv import dotenv_values
-
-os.environ.pop("USER_NAME", None)
-os.environ.pop("PYTHON_DOTENV_DISABLED", None)
-dotenv_values("app/.env")
-# OrderedDict([('API_KEY', 'sk-demo'), ('BASE_URL', 'https://api.example.com/v1'), ('EMPTY', ''), ('TOKEN', None), ('GREETING', 'hello guest')])
-```
-
-```python
-os.environ["USER_NAME"] = "ada"
-dotenv_values("app/.env")["GREETING"]
-# 'hello ada'
-dotenv_values("app/.env", interpolate=False)["GREETING"]
-# 'hello ${USER_NAME:-guest}'
-```
-
-> [!tip]
->
-> 单引号、双引号和裸值都会做 `${}` 插值。引号去掉之后才替换，单引号不能挡住变量。
-
-```python
-from io import StringIO
-
-os.environ.pop("USER_NAME", None)
-dotenv_values(stream=StringIO("GREETING='${USER_NAME:-guest}'\n"))["GREETING"]
-# 'guest'
-```
-
-## 3. find_dotenv
+## 2. find_dotenv
 
 `find_dotenv` 从起点目录向上找指定文件名，默认是 `.env`。找到就返回路径，找不到返回空字符串。
 
@@ -199,6 +162,43 @@ load_dotenv(Path(__file__).resolve().parents[2] / "app" / ".env")
 ```python
 find_dotenv(raise_error_if_not_found=True, usecwd=True)
 # 工作目录在 demo 时：OSError: File not found
+```
+
+## 3. dotenv_values
+
+`dotenv_values` 只返回字典，不改 `os.environ`。没有等号的键对应 `None`。`${NAME:-default}` 在 `interpolate=True`（默认）时替换。环境里已有的同名变量会参与替换。
+
+工作目录在 `demo`。先去掉上一节留下的 `USER_NAME` 和禁用开关。
+
+```python
+import os
+
+from dotenv import dotenv_values
+
+os.environ.pop("USER_NAME", None)
+os.environ.pop("PYTHON_DOTENV_DISABLED", None)
+dotenv_values("app/.env")
+# OrderedDict([('API_KEY', 'sk-demo'), ('BASE_URL', 'https://api.example.com/v1'), ('EMPTY', ''), ('TOKEN', None), ('GREETING', 'hello guest')])
+```
+
+```python
+os.environ["USER_NAME"] = "ada"
+dotenv_values("app/.env")["GREETING"]
+# 'hello ada'
+dotenv_values("app/.env", interpolate=False)["GREETING"]
+# 'hello ${USER_NAME:-guest}'
+```
+
+> [!tip]
+>
+> 单引号、双引号和裸值都会做 `${}` 插值。引号去掉之后才替换，单引号不能挡住变量。
+
+```python
+from io import StringIO
+
+os.environ.pop("USER_NAME", None)
+dotenv_values(stream=StringIO("GREETING='${USER_NAME:-guest}'\n"))["GREETING"]
+# 'guest'
 ```
 
 ## 4. get_key、set_key、unset_key
