@@ -32,10 +32,6 @@ demo/
         └── loader.py
 ```
 
-```shell
-pip install python-dotenv
-```
-
 ```text
 # .env 内容 
 API_KEY=sk-demo
@@ -43,6 +39,12 @@ BASE_URL=https://api.example.com/v1
 EMPTY=
 TOKEN
 GREETING=hello ${USER_NAME:-guest}
+```
+
+## 安装命令
+
+```shell
+pip install python-dotenv
 ```
 
 ## 1. load_dotenv
