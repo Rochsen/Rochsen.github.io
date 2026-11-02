@@ -9,6 +9,8 @@ heroText: ""
 heroFullScreen: true
 footer: 由src\.vuepress\client.ts设置
 displayFooter: true
+# 公安联网备案号位置：拿到编号后，补上 code 参数和链接文字里的备案号
+copyright: 'Copyright © 2026 | <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">粤ICP备2026159315号</a> | <a href="https://beian.mps.gov.cn/#/query/webSearch?code=none" target="_blank" rel="noopener">粤公网安备 none</a>'
 head:
   - - meta
     - name: algolia-site-verification
@@ -19,13 +21,13 @@ projects:
     type: project
     desc: 博客仓库
     link: https://github.com/Rochsen/Rochsen.github.io
-  
+
   - icon: code
     name: 提示词生成和改进
     type: project
     desc: 用于练习提示词编写的自建系统
     link: https://github.com/Rochsen/prompt-learn
-  
+
   - icon: code
     name: 网页总结工具
     type: project
@@ -95,17 +97,11 @@ projects:
   #   desc: 文章详细描述
   #   link: https://你的文章链接
 
-  # - icon: user-group
-  #   name: 伙伴名称
-  #   desc: 伙伴详细介绍
-  #   link: https://你的伙伴链接
-
   # - icon: https://theme-hope-assets.vuejs.press/logo.svg
   #   name: 自定义项目
   #   desc: 自定义详细介绍
   #   link: https://你的自定义链接
 
-# copyright: |
 # bgImage: https://www.dmoe.cc/random.php
 # bgImage: https://file.mo7.cc/api/public/bz
 # bgImage: /light-bgimage.png
