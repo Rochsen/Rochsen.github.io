@@ -3,7 +3,7 @@ import { zhNavbarConfig, enNavbarConfig } from "./navbar.ts";
 import { zhSideBarConfig, enSidebarConfig } from "./sidebar/index.ts";
 
 // 博客个人头像
-export const avatar = "/q-avatar.png";
+export const avatar = "/q-avatar.webp";
 
 // 社交媒体信息
 export const mediasConfig = {

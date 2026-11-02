@@ -13,25 +13,25 @@ date: 2026-04-15
 
 ## 恶魔商人让XX变得更强
 
-<img src="/game/nightReign/dealWithEvilSaler.png" loading="lazy" />
+<img src="/game/nightReign/dealWithEvilSaler.webp" loading="lazy" />
 
 ## Boss基本数据
 
-<img src="/game/nightReign/bossBaseData.png" loading="lazy" />
+<img src="/game/nightReign/bossBaseData.webp" loading="lazy" />
 
 ## Boss弱点
 
-<img src="/game/nightReign/bossAntiTable.png" loading="lazy" />
+<img src="/game/nightReign/bossAntiTable.webp" loading="lazy" />
 
-<img src="/game/nightReign/dlcAntiTable.jpeg" loading="lazy" />
+<img src="/game/nightReign/dlcAntiTable.webp" loading="lazy" />
 
 ## 根据守夜Boss推断黑夜王
 
-<img src="/game/nightReign/bossRankforEnd.jpeg" loading="lazy" />
+<img src="/game/nightReign/bossRankforEnd.webp" loading="lazy" />
 
 ## 大空洞水晶位置
 
-<img src="/game/nightReign/hollowObsidianSite.jpeg" loading="lazy" />
+<img src="/game/nightReign/hollowObsidianSite.webp" loading="lazy" />
 
 
 ## 个人流派整理

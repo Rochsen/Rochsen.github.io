@@ -68,7 +68,7 @@ const getCategoryColor = (category: string) => {
 
 // 图片路径拼接
 const combinePicName = (name: string) => {
-  return `/game/600900/${name}.jpg`
+  return `/game/600900/${name}.webp`
 }
 
 // 点击查看详情，跳转到页面
