@@ -28,7 +28,7 @@ date: 2026-04-15
 
 ## 根据守夜Boss推断黑夜王
 
-<img src="/game/nightReign/bossRankforEnd.webp" width="414" height="1098" style="max-width:100%;height:auto" />
+<img src="/game/nightReign/bossRankforEnd.webp" width="1098" height="414" style="max-width:100%;height:auto" />
 
 ## 大空洞水晶位置
 
