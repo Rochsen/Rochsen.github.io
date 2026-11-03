@@ -13,25 +13,25 @@ date: 2026-04-15
 
 ## 恶魔商人让XX变得更强
 
-<img src="/game/nightReign/dealWithEvilSaler.webp" loading="lazy" />
+<img src="/game/nightReign/dealWithEvilSaler.webp" width="1188" height="775" style="height: auto" loading="lazy" />
 
 ## Boss基本数据
 
-<img src="/game/nightReign/bossBaseData.webp" loading="lazy" />
+<img src="/game/nightReign/bossBaseData.webp" width="1265" height="909" style="height: auto" loading="lazy" />
 
 ## Boss弱点
 
-<img src="/game/nightReign/bossAntiTable.webp" loading="lazy" />
+<img src="/game/nightReign/bossAntiTable.webp" width="3037" height="3962" style="height: auto" loading="lazy" />
 
-<img src="/game/nightReign/dlcAntiTable.webp" loading="lazy" />
+<img src="/game/nightReign/dlcAntiTable.webp" width="1080" height="1053" style="height: auto" loading="lazy" />
 
 ## 根据守夜Boss推断黑夜王
 
-<img src="/game/nightReign/bossRankforEnd.webp" loading="lazy" />
+<img src="/game/nightReign/bossRankforEnd.webp" width="414" height="1098" style="height: auto" loading="lazy" />
 
 ## 大空洞水晶位置
 
-<img src="/game/nightReign/hollowObsidianSite.webp" loading="lazy" />
+<img src="/game/nightReign/hollowObsidianSite.webp" width="850" height="850" style="height: auto" loading="lazy" />
 
 
 ## 个人流派整理
