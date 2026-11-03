@@ -27,10 +27,6 @@ timeline: false
 - [Obsidian](./markdown/obsidian.md)
 - [Typora](./markdown/typora.md)
 
-## 网络切换工具
-
-- [Clash Verge](./network/clashVerge.md)
-
 ## 文件阅读器
 
 - [PotPlayer](./reader/potplayer.md)
