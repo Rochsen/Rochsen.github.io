@@ -1,52 +1,52 @@
 <template>
-  <div class="gameEvalplanB">
-    <!-- 搜索组件 -->
-    <a-input-search placeholder="搜索游戏..." style="margin-bottom: 16px;" allowClear @search="handleSearch" />
+<div class="gameEvalplanB">
+  <!-- 搜索组件 -->
+  <a-input-search placeholder="搜索游戏..." style="margin-bottom: 16px;" allowClear @search="handleSearch" />
 
-    <!-- 游戏卡片栅格 -->
-    <a-row :gutter="[16, 16]">
-      <a-col :span="6" v-for="(item, index) in filteredList">
-        <a-card hoverable style="width: 180px">
-          <!-- 封面 -->
-          <template #cover>
-            <img draggable="false" alt="noPic" :src="combinePicName(item.key)" loading="lazy" />
-          </template>
-          <!-- body -->
-          <a-card-meta>
-            <template #title>
-              <a-tooltip :title="item.gameName">
-                <span>{{ item.gameName }}</span>
-              </a-tooltip>
-            </template>
-            <template #description>
-              <a-tag v-for="(category, index) in item.gameCategory" :key="index" :color="getCategoryColor(category)">{{
-                category }}</a-tag>
-            </template>
-          </a-card-meta>
-          <!-- 操作按钮区 -->
-          <template #actions>
-            <!-- 游玩时间 -->
-            <a-tooltip title="游玩时间（单位: 小时）">
-              <span style="color: #000;">{{ item.gameTime }}</span>
+  <!-- 游戏卡片栅格 -->
+  <a-row :gutter="[16, 16]">
+    <a-col :span="6" v-for="(item, index) in filteredList">
+      <a-card hoverable style="width: 180px">
+        <!-- 封面 -->
+        <template #cover>
+          <img draggable="false" alt="noPic" :src="combinePicName(item.key)" loading="lazy" />
+        </template>
+        <!-- body -->
+        <a-card-meta>
+          <template #title>
+            <a-tooltip :title="item.gameName">
+              <span>{{ item.gameName }}</span>
             </a-tooltip>
-
-            <!-- 查看详情，跳转到页面 -->
-            <a-tooltip title="查看详情">
-              <EyeFilled style="color: #000; font-size: 16px" @click="handleClick(item)" />
-            </a-tooltip>
-
-            <!-- 心动值 -->
-            <a-space :gutter="[16, 16]">
-              <HeartFilled style="color: red;" />
-              <a-tooltip title="喜爱度">
-                <span style="color: red;">{{ item.myScore }}</span>
-              </a-tooltip>
-            </a-space>
           </template>
-        </a-card>
-      </a-col>
-    </a-row>
-  </div>
+          <template #description>
+            <a-tag v-for="(category, index) in item.gameCategory" :key="index" :color="getCategoryColor(category)">{{
+              category }}</a-tag>
+          </template>
+        </a-card-meta>
+        <!-- 操作按钮区 -->
+        <template #actions>
+          <!-- 游玩时间 -->
+          <a-tooltip title="游玩时间（单位: 小时）">
+            <span style="color: #000;">{{ item.gameTime }}</span>
+          </a-tooltip>
+
+          <!-- 查看详情，跳转到页面 -->
+          <a-tooltip title="查看详情">
+            <EyeFilled style="color: #000; font-size: 16px" @click="handleClick(item)" />
+          </a-tooltip>
+
+          <!-- 心动值 -->
+          <a-space :gutter="[16, 16]">
+            <HeartFilled style="color: red;" />
+            <a-tooltip title="喜爱度">
+              <span style="color: red;">{{ item.myScore }}</span>
+            </a-tooltip>
+          </a-space>
+        </template>
+      </a-card>
+    </a-col>
+  </a-row>
+</div>
 </template>
 
 <script setup lang='ts'>
@@ -73,7 +73,8 @@ const combinePicName = (name: string) => {
 
 // 打开对应文章。静态站只有 .html 文件，不带后缀会先载入 404 再由前端改地址，文档不会重新加载
 const handleClick = (item: any) => {
-  window.location.assign(`/games/${item.gameNameEn}.html`)
+  // window.location.assign(`/games/${item.gameNameEn}.html`)
+  window.open(`/games/${item.gameNameEn}.html`, '_parent')
 }
 
 
