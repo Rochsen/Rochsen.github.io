@@ -10,7 +10,7 @@ heroFullScreen: true
 footer: 由src\.vuepress\client.ts设置
 displayFooter: true
 # 公安联网备案号位置：拿到编号后，补上 code 参数和链接文字里的备案号
-# copyright: 'Copyright © 2026 | <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">粤ICP备2026159315号</a> | <a href="https://beian.mps.gov.cn/#/query/webSearch?code=none" target="_blank" rel="noopener">粤公网安备 none</a>'
+copyright: 'Copyright © 2026 | <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">粤ICP备2026169315号</a>'
 head:
   - - meta
     - name: algolia-site-verification
