@@ -11,27 +11,29 @@ date: 2026-04-15
 > 收集时间：2026-04-15
 >
 
+
 ## 恶魔商人让XX变得更强
 
-<img src="/game/nightReign/dealWithEvilSaler.webp" width="1188" height="775" style="height: auto" loading="lazy" />
+<img src="/game/nightReign/dealWithEvilSaler.webp" width="1188" height="775" style="max-width:100%;height:auto" />
 
 ## Boss基本数据
 
-<img src="/game/nightReign/bossBaseData.webp" width="1265" height="909" style="height: auto" loading="lazy" />
+<img src="/game/nightReign/bossBaseData.webp" width="1265" height="909" style="max-width:100%;height:auto" />
 
 ## Boss弱点
 
-<img src="/game/nightReign/bossAntiTable.webp" width="3037" height="3962" style="height: auto" loading="lazy" />
+<img src="/game/nightReign/bossAntiTable.webp" width="1200" height="1565" style="max-width:100%;height:auto" />
 
-<img src="/game/nightReign/dlcAntiTable.webp" width="1080" height="1053" style="height: auto" loading="lazy" />
+<img src="/game/nightReign/dlcAntiTable.webp" width="1080" height="1053" style="max-width:100%;height:auto" />
 
 ## 根据守夜Boss推断黑夜王
 
-<img src="/game/nightReign/bossRankforEnd.webp" width="414" height="1098" style="height: auto" loading="lazy" />
+<img src="/game/nightReign/bossRankforEnd.webp" width="414" height="1098" style="max-width:100%;height:auto" />
 
 ## 大空洞水晶位置
 
-<img src="/game/nightReign/hollowObsidianSite.webp" width="850" height="850" style="height: auto" loading="lazy" />
+<img src="/game/nightReign/hollowObsidianSite.webp" width="850" height="850" style="max-width:100%;height:auto" />
+
 
 
 ## 个人流派整理

@@ -71,9 +71,9 @@ const combinePicName = (name: string) => {
   return `/game/600900/${name}.webp`
 }
 
-// 点击查看详情，跳转到页面
+// 打开对应文章。静态站只有 .html 文件，不带后缀会先载入 404 再由前端改地址，文档不会重新加载
 const handleClick = (item: any) => {
-  window.open(`/games/${item.gameNameEn}`, '_parent')
+  window.location.assign(`/games/${item.gameNameEn}.html`)
 }
 
 
