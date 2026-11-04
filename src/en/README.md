@@ -9,7 +9,6 @@ heroText: ""
 heroFullScreen: true
 footer: 由src\.vuepress\client.ts设置
 displayFooter: true
-copyright: '<span style="display:inline-flex;align-items:flex-end;vertical-align:bottom;"><span style="display:inline-block;width:16px;flex-shrink:0;margin-right:0.25rem;line-height:0;"><img src="/registration.png" alt="" style="display:block;width:100%;height:auto;border:0;" /></span><a href="https://beian.mps.gov.cn/#/query/webSearch?code=44200102446526" rel="noreferrer" target="_blank">粤公网安备 44200102446526号</a><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener" style="margin-left:20px;">粤ICP备2026169315号</a></span>'
 head:
   - - meta
     - name: algolia-site-verification

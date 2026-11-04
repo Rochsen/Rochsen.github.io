@@ -37,7 +37,7 @@ export default defineClientConfig({
     setupTransparentNavbar({ type: "homepage" });
     // 下雪
     setupSnowFall();
-    // 在页脚显示站点运行时间
+    // 在页脚 footer 显示站点运行时间
     setupRunningTimeFooter(
       new Date("2026-01-21"),
       {
