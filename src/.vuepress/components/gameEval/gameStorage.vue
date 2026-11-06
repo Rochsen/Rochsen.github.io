@@ -49,6 +49,33 @@
 </div>
 </template>
 
+<script lang="ts">
+import {
+  Card,
+  CardMeta,
+  Col,
+  InputSearch,
+  Row,
+  Space,
+  Tag,
+  Tooltip,
+} from "antdv-next";
+
+// 只在本组件注册，避免 antdv-next 进入全站入口
+export default {
+  components: {
+    AInputSearch: InputSearch,
+    ARow: Row,
+    ACol: Col,
+    ACard: Card,
+    ACardMeta: CardMeta,
+    ATooltip: Tooltip,
+    ATag: Tag,
+    ASpace: Space,
+  },
+};
+</script>
+
 <script setup lang='ts'>
 import { gameEvalList, categoryColors } from './data.ts'
 import { HeartFilled, EyeFilled } from '@antdv-next/icons'
