@@ -11,7 +11,7 @@ timeline: false
 >
 > 目前文档用到的Agent举例：Kimi、千问、Minimax、GLM等
 
-## 现在的AI是什么
+## AI通识
 
 - [AI 概念通俗解释大全](./0aiNameProduce.md)
 - [构建大模型的知识与交互基础](./1promptEngToRag.md)
@@ -25,12 +25,12 @@ timeline: false
 - [AI框架设计与选型](./7langchainDesign.md)
 - [HuggingFace生态实战：从模型应用到高效微调](./8langchainOptimize.md)
 
-## 深度学习基础
+## 深度学习
 
 - [神经网络基础与Tensorflow实战](./9networkbaseTensorflow.md)
 - [pytorch与视觉检测](./10cnnPytorch.md)
 
-## LLM模型微调与企业化部署
+## LLM模型微调
 
 - [LLM微调原理](./12llmFineTune.md)
 - [高质量微调数据工程与评估](./13llmFineTuneEval.md)
@@ -48,7 +48,7 @@ timeline: false
 - [部分场景中可以取代RAG的技术](./23partofReplaceRAG.md)
 - [LLM Wiki](./24LLMWiki.md)
 
-## Ai Coding
+## Ai Coding协作
 
 - [大厂优秀工程师使用AI Coding的最新方法与经验](./26aiCodingExp.md)
 - [大型软件项目的AI开发与AI重构](./27aiCodingForBigProj.md)

@@ -3,7 +3,7 @@ import { arraySidebar } from "vuepress-theme-hope";
 export const zhihuAiSideBar = arraySidebar([
   "",
   {
-    text: "现在的AI是什么",
+    text: "AI通识",
     children: [
       "0aiNameProduce",
       "1promptEngToRag",
@@ -21,11 +21,11 @@ export const zhihuAiSideBar = arraySidebar([
     ],
   },
   {
-    text: "深度学习基础",
+    text: "深度学习",
     children: ["9networkbaseTensorflow", "10cnnPytorch"],
   },
   {
-    text: "LLM模型微调与企业化部署",
+    text: "LLM模型微调",
     children: [
       "12llmFineTune",
       "13llmFineTuneEval",
@@ -47,7 +47,7 @@ export const zhihuAiSideBar = arraySidebar([
     ],
   },
   {
-    text: "Ai Coding",
+    text: "Ai Coding协作",
     children: [
       "26aiCodingExp",
       "27aiCodingForBigProj",
