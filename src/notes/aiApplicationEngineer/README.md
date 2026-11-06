@@ -8,90 +8,86 @@ timeline: false
 
 > [!tip]
 > 所有内容为AI Agent编写，仅供个人学习和研究，请勿用于商业用途
-> 
+>
 > 目前文档用到的Agent举例：Kimi、千问、Minimax、GLM等
 
+## 现在的AI是什么
 
+- [AI 概念通俗解释大全](./0aiNameProduce.md)
+- [构建大模型的知识与交互基础](./1promptEngToRag.md)
+- [Agent：从可控性到自主反思](./2agentfromControl2selfthink.md)
+- [多模态AI入门指南](./3multimodalAI.md)
 
-## 第一部分: 现在的AI是什么
+## LangChain基础
 
-- [第一节：AI 大模型应用公开课](./1techOfBigModel.md)
-- [第二节：构建大模型的知识与交互基础](./2promptEngToRag.md)
-- [第三节：Agent：从可控性到自主反思](./3agentfromControl2selfthink.md)
-- [第四节：多模态AI入门指南](./4multimodalAI.md)
-- [第五节：AI 概念通俗解释大全](./5aiNameProduce.md)
+- [智能编码革命：AI辅助编程](./5aiAssistCoding.md)
+- [langchain 多任务应用开发](./6langchainApp.md)
+- [AI框架设计与选型](./7langchainDesign.md)
+- [HuggingFace生态实战：从模型应用到高效微调](./8langchainOptimize.md)
 
+## 深度学习基础
 
-## 第二部分: langchain 开发基础
+- [神经网络基础与Tensorflow实战](./9networkbaseTensorflow.md)
+- [pytorch与视觉检测](./10cnnPytorch.md)
 
-- [第六节：langchain 多任务应用开发](./6langchainApp.md)
-- [第七节：AI框架设计与选型](./7langchainDesign.md)
-- [第八节：HuggingFace生态实战：从模型应用到高效微调](./8langchainOptimize.md)
+## LLM模型微调与企业化部署
 
-## 第三部分: 深度学习
+- [LLM微调原理](./12llmFineTune.md)
+- [高质量微调数据工程与评估](./13llmFineTuneEval.md)
+- [LLM模型蒸馏与微调实操](./14llmFineTunePr.md)
+- [视觉与多模态模型](./15cvandMultiModal.md)
+- [项目实战：AI质检](./16aiChecK.md)
 
-- [第九节：神经网络基础与Tensorflow实战](./9networkbaseTensorflow.md)
-- [第十节：pytorch与视觉检测](./10cnnPytorch.md)
+## RAG
 
-## 第四部分: LLM模型微调
+- [Embeddings和向量数据库](./18Embeddings.md)
+- [RAG技术与应用](./19RAGTechApply.md)
+- [RAG多模态数据处理](./20RAGmutilProcess.md)
+- [RAG调优](./21RAGenhance.md)
+- [项目实战：企业知识库](./22KnowledgeDataBase.md)
+- [部分场景中可以取代RAG的技术](./23partofReplaceRAG.md)
+- [LLM Wiki](./24LLMWiki.md)
 
-- [第十二节：LLM微调原理](./12llmFineTune.md)
-- [第十三节：高质量微调数据工程与评估](./13llmFineTuneEval.md)
-- [第十四节：LLM模型蒸馏与微调实操](./14llmFineTunePr.md)
-- [第十五节：视觉与多模态模型](./15cvandMultiModal.md)
-- [第十六节：项目实战：AI质检](./16aiChecK.md)
+## Ai Coding
 
-## 第五部分: AI部署以及低代码平台使用
+- [大厂优秀工程师使用AI Coding的最新方法与经验](./26aiCodingExp.md)
+- [大型软件项目的AI开发与AI重构](./27aiCodingForBigProj.md)
+- [AI Coding中的团队重新分工与新协作模式](./28aiTeamMode.md)
+- [封装Gateway模块，让你的Agent和IM连通](./30gatewayAgentIM.md)
 
-- [第十八节：企业级AI部署：从硬件选型到框架选择](./18aiDeployCompany.md)
-- [第十九节：AI服务核心：高并发原理与性能监控调优](./19aiServiceCore.md)
-- [第二十节：SQLang深度优化：Radix缓存与复杂任务的极致吞吐](./20SQLangOpt.md)
-- [第二十一节：Coze工作原理与应用实例](./21aiCozeExample.md)
-- [第二十二节：Dify本地化部署和应用](./22aiDifyDeploy.md)
+## Agent
 
-## 第六部分: AI应用
+- [Function Calling与MCP](./31FunctionCallingMCP.md)
+- [Agent的自主规划与工具开发](./32AgentRuler.md)
+- [Agent的能力优化与效果评估](./33AgentEnchance.md)
+- [OpenManus开发实战](./34OpenManusProj.md)
+- [Harness Engineering](./35HarnessEngineering.md)
+- [搭建Hermes Agent中的长期记忆和自进化能力](./36HermesAgentAbility.md)
+- [实现Hermes中的多Agent协作、主Agent调度](./37HermesAgentRuler.md)
 
-- [第二十三节：Agent调试、运维与系统集成](./23agentDebug.md)
-- [第二十四节：智能编码革命：AI辅助编程](./24aiAssistCoding.md)
-- [第二十五节：AI赋能的智能测试与质量保障](./25aiforIntelTest.md)
-- [第二十六节：从Text-to-SQL到数据智能](./26text2SQL-DataIntel.md)
-- [第二十七节：项目实战：ChatBI开发实战](./27ChatBI.md)
+## 面试辅导
 
-## 第七部分: 模型优化
+- [开发框架相关简历+面试问题辅导](./11jobForFrame.md)
+- [部署及提效相关简历+面试问题辅导](./28jobForBuild.md)
+- [RAG相关简历+面试问题辅导](./25jobForRAG.md)
+- [Agent相关简历+面试问题辅导](./38jobForAgent.md)
 
-- [第二十九节：Embeddings和向量数据库](./29Embeddings.md)
-- [第三十节：RAG技术与应用](./30RAGTechApply.md)
-- [第三十一节：RAG多模态数据处理](./31RAGmutilProcess.md)
-- [第三十二节：RAG调优](./32RAGenhance.md)
-- [第三十三节：项目实战：企业知识库](./33KnowledgeDataBase.md)
-- [第三十四节：部分场景中可以取代RAG的技术](./34partofReplaceRAG.md)
+## 企业化部署
 
-## 第八部分: AI Coding与工程实践
+- [企业级AI部署：从硬件选型到框架选择](./39aiDeployCompany.md)
+- [AI服务核心：高并发原理与性能监控调优](./40aiServiceCore.md)
+- [SQLang深度优化：Radix缓存与复杂任务的极致吞吐](./41SQLangOpt.md)
 
-- [第三十五节：LLM Wiki](./35LLMWiki.md)
-- [第三十七节：大厂优秀工程师使用AI Coding的最新方法与经验](./37aiCodingExp.md)
-- [第三十八节：大型软件项目的AI开发与AI重构](./38aiCodingForBigProj.md)
-- [第三十九节：AI Coding中的团队重新分工与新协作模式](./39aiTeamMode.md)
-- [第四十节：封装Gateway模块，让你的Agent和IM连通](./40gatewayAgentIM.md)
-- [第四十五节：Harness Engineering](./45HarnessEngineering.md)
-- [第四十六节：搭建Hermes Agent中的长期记忆和自进化能力](./46HermesAgentAbility.md)
-- [第四十七节：实现Hermes中的多Agent协作、主Agent调度](./47HermesAgentRuler.md)
+## 时代的眼泪
 
-## 第九部分: Agent与MCP
+- [Coze工作原理与应用实例](./91aiCozeExample.md)
+- [Dify本地化部署和应用](./92aiDifyDeploy.md)
+- [Agent调试、运维与系统集成](./93agentDebug.md)
+- [AI赋能的智能测试与质量保障](./94aiforIntelTest.md)
+- [从Text-to-SQL到数据智能](./95text2SQL-DataIntel.md)
+- [项目实战：ChatBI开发实战](./96ChatBI.md)
 
-- [第四十一节：Function Calling与MCP](./41FunctionCallingMCP.md)
-- [第四十二节：Agent的自主规划与工具开发](./42AgentRuler.md)
-- [第四十三节：Agent的能力优化与效果评估](./43AgentEnchance.md)
-- [第四十四节：OpenManus开发实战](./44OpenManusProj.md)
-
-## 就业培训系列
-
-- [第十一节：开发框架相关简历+面试问题辅导](./11jobForFrame.md)
-- [第二十八节：部署及提效相关简历+面试问题辅导](./28jobForBuild.md)
-- [第三十六节：RAG相关简历+面试问题辅导](./36jobForRAG.md)
-- [第四十八节：Agent相关简历+面试问题辅导](./48jobForAgent.md)
-
-<!-- 
+<!--
 ## 第九部分: 模型预训练
 
 - [第四十一节：预训练+微调的训练凡是 开原生态OpenAI的差异详解](./41pretrainBase.md)
