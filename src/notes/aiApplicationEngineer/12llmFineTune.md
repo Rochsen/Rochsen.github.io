@@ -1,12 +1,11 @@
 ---
 title: LLM微调原理
 date: 2026-04-19
-categories: [教程, 知乎]
+categories: [教程]
 tags: [AI, LLM]
 ---
 
 <!-- more -->
-
 
 ## 1. 大模型微调概述
 
@@ -791,4 +790,3 @@ flowchart TD
 | **SVD分解**      | $A = P\Sigma Q^T$                            | 任意矩阵分解      |
 | **降维重构**     | $A_k = P_k \Sigma_k Q_k^T$                   | 保留前k个奇异值   |
 | **RMSE**         | $\sqrt{\frac{1}{n}\sum(\hat{y}-y)^2}$        | 评估预测精度      |
-

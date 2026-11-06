@@ -1,7 +1,7 @@
 ---
 title: RAG多模态数据处理
 date: 2026-09-14
-categories: [教程, 知乎]
+categories: [教程]
 tags: [AI, RAG]
 ---
 
@@ -719,7 +719,7 @@ prompt = f"""
 """
 ```
 
-配套代码还做了两层容错：用正则剥离模型可能带上的 ``` 代码块标记，以及解析失败时用 `re.search(r'\{.*\}', ...)` 抢救 JSON。
+配套代码还做了两层容错：用正则剥离模型可能带上的 ```代码块标记，以及解析失败时用`re.search(r'\{.\*\}', ...)` 抢救 JSON。
 
 实测把文本切成了 6 个语义块，长度分布为 57、56、71、50、54、30 字符——每个块都是一个完整的语义单元。它是效果最好的方案，但依赖模型调用，成本和延迟都更高，适合高质量要求和复杂语义结构的场景。
 
@@ -854,7 +854,7 @@ graph LR
 
 #### 案例：肺癌分期助手
 
-这是课件里最有说服力的一个案例，来自论文 *Application of NotebookLM, a Large Language Model with Retrieval-Augmented Generation, for Lung Cancer Staging*（2024，arXiv:2410.10869）。
+这是课件里最有说服力的一个案例，来自论文 _Application of NotebookLM, a Large Language Model with Retrieval-Augmented Generation, for Lung Cancer Staging_（2024，arXiv:2410.10869）。
 
 研究思路是：把日本当前的肺癌分期指南总结成可靠外部知识（Reliable External Knowledge，REK）提供给 NotebookLM，再用 100 个虚构肺癌病例测试分期准确性，并与 GPT-4o 在有/无 REK 两种条件下做对比。判定标准是 T、N、M 三个因素全部正确才算分期正确；对 NotebookLM 还额外计算了检索准确性。
 

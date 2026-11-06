@@ -1,7 +1,7 @@
 ---
 title: 智能编码革命：AI辅助编程
 date: 2026-07-08
-categories: [教程, 知乎]
+categories: [教程]
 tags: [AI]
 ---
 
@@ -349,27 +349,31 @@ def prepare_daily_data(df):
 
 ```javascript
 // 加载 GeoJSON 并注册地图
-fetch('/static/js/hongkong.json')
-    .then(response => response.json())
-    .then(hongkongJson => {
-        echarts.registerMap('hongkong', hongkongJson);
-        // 配置地图选项
-        const option = {
-            visualMap: {
-                min: 0, max: maxValue,
-                inRange: { color: ['#2ecc71', '#e67e22', '#c23531'] }
-            },
-            series: [{
-                type: 'map', map: 'hongkong',
-                roam: true,  // 允许缩放和平移
-                nameMap: {
-                    'Central and Western': '中西区',
-                    'Yuen Long': '元朗区',
-                    // ... 英文名到中文名的映射
-                }
-            }]
-        };
-    });
+fetch("/static/js/hongkong.json")
+  .then((response) => response.json())
+  .then((hongkongJson) => {
+    echarts.registerMap("hongkong", hongkongJson);
+    // 配置地图选项
+    const option = {
+      visualMap: {
+        min: 0,
+        max: maxValue,
+        inRange: { color: ["#2ecc71", "#e67e22", "#c23531"] },
+      },
+      series: [
+        {
+          type: "map",
+          map: "hongkong",
+          roam: true, // 允许缩放和平移
+          nameMap: {
+            "Central and Western": "中西区",
+            "Yuen Long": "元朗区",
+            // ... 英文名到中文名的映射
+          },
+        },
+      ],
+    };
+  });
 ```
 
 ### 5.6 大屏布局设计
@@ -494,15 +498,15 @@ best_lr = grid_search.best_estimator_
 
 #### 逻辑回归系数解读（正系数 -> 倾向续保；负系数 -> 倾向不续保）
 
-| 特征                     | 系数   | 解读                       |
-| ------------------------ | ------ | -------------------------- |
-| cat__income_level_中     | +3.396 | 中等收入者更倾向续保       |
-| cat__marital_status_已婚 | +2.363 | 已婚客户续保意愿强         |
-| cat__marital_status_离异 | -2.266 | 离异客户续保意愿弱         |
-| cat__income_level_低     | -5.152 | 低收入者极不倾向续保       |
-| cat__policy_type_平安福  | +1.688 | 平安福产品续保率高         |
-| num__age                 | -1.588 | 年龄越大续保意愿越低       |
-| cat__claim_history_是    | +1.189 | 有理赔历史的客户更倾向续保 |
+| 特征                      | 系数   | 解读                       |
+| ------------------------- | ------ | -------------------------- |
+| cat\_*income_level*中     | +3.396 | 中等收入者更倾向续保       |
+| cat\_*marital_status*已婚 | +2.363 | 已婚客户续保意愿强         |
+| cat\_*marital_status*离异 | -2.266 | 离异客户续保意愿弱         |
+| cat\_*income_level*低     | -5.152 | 低收入者极不倾向续保       |
+| cat\_*policy_type*平安福  | +1.688 | 平安福产品续保率高         |
+| num\_\_age                | -1.588 | 年龄越大续保意愿越低       |
+| cat\_*claim_history*是    | +1.189 | 有理赔历史的客户更倾向续保 |
 
 #### 决策树关键规则
 
@@ -607,20 +611,22 @@ flowchart TD
 ```javascript
 // 不显示加载遮罩，直接显示空图表
 function loadAllChartData() {
-    $.getJSON('/api/hospital_usage', function(data) {
-        if (data.hospital && data.hospital.length > 0) {
-            updateHospitalChart(data);  // 有数据才更新
-        }
-        // 无数据时保持空图表状态，等待下次轮询
-    });
+  $.getJSON("/api/hospital_usage", function (data) {
+    if (data.hospital && data.hospital.length > 0) {
+      updateHospitalChart(data); // 有数据才更新
+    }
+    // 无数据时保持空图表状态，等待下次轮询
+  });
 }
 
 // 每 2 秒检查一次数据状态
 function checkDataStatus() {
-    $.getJSON('/api/compute_status', function(data) {
-        if (data.ready) { /* 数据已就绪 */ }
-        setTimeout(checkDataStatus, 2000);
-    });
+  $.getJSON("/api/compute_status", function (data) {
+    if (data.ready) {
+      /* 数据已就绪 */
+    }
+    setTimeout(checkDataStatus, 2000);
+  });
 }
 ```
 
@@ -744,14 +750,14 @@ flowchart TD
 
 ### 9.2 常见问题与解决方案
 
-| 问题               | 原因               | 解决方案                                                     |
-| ------------------ | ------------------ | ------------------------------------------------------------ |
+| 问题               | 原因               | 解决方案                                                             |
+| ------------------ | ------------------ | -------------------------------------------------------------------- |
 | 中文乱码           | 编码问题           | 设置 `plt.rcParams['font.sans-serif'] = ['SimHei']`，使用 UTF-8 编码 |
-| Token 爆炸         | LLM 直接读大数据表 | 让 LLM 写 Python 处理，不直接读取数据                        |
-| 地图显示异常       | 缺少真实 GeoJSON   | 从网上下载真实地理数据文件                                   |
-| 图表重叠           | 布局不合理         | 使用 Chat 模式描述问题，逐步调整                             |
-| 包未导入           | AI 遗漏 import     | 运行报错后，选中错误让 AI 补充                               |
-| 缓存导致数据不更新 | 浏览器缓存         | 添加 `@no_cache` 装饰器，设置 Cache-Control 头               |
+| Token 爆炸         | LLM 直接读大数据表 | 让 LLM 写 Python 处理，不直接读取数据                                |
+| 地图显示异常       | 缺少真实 GeoJSON   | 从网上下载真实地理数据文件                                           |
+| 图表重叠           | 布局不合理         | 使用 Chat 模式描述问题，逐步调整                                     |
+| 包未导入           | AI 遗漏 import     | 运行报错后，选中错误让 AI 补充                                       |
+| 缓存导致数据不更新 | 浏览器缓存         | 添加 `@no_cache` 装饰器，设置 Cache-Control 头                       |
 
 ### 9.3 数据安全与合规
 

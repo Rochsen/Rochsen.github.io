@@ -1,7 +1,7 @@
 ---
 title: LLM模型蒸馏与微调实操
 date: 2026-06-27
-categories: [教程, 知乎]
+categories: [教程]
 tags: [AI, LLM]
 ---
 
@@ -19,12 +19,12 @@ tags: [AI, LLM]
 
 **核心概念：**
 
-| 术语                       | 通俗解释                                                     |
-| -------------------------- | ------------------------------------------------------------ |
+| 术语                       | 通俗解释                                                                                                        |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | **Token（词元）**          | 模型处理文本的最小单位。一个中文字 ≈ 1-2个token，一个英文单词 ≈ 1-3个token。可以把token理解为"阅读时的最小片段" |
-| **参数（Parameter）**      | 模型内部的"记忆单元"数量。7B = 70亿个参数。参数越多，模型"脑容量"越大，但也越消耗计算资源 |
-| **预训练（Pre-training）** | 让模型在海量文本上"自学"的过程。相当于学霸的"九年义务教育"阶段 |
-| **推理（Inference）**      | 模型根据输入生成输出的过程。相当于你问学霸一个问题，他思考后给出答案 |
+| **参数（Parameter）**      | 模型内部的"记忆单元"数量。7B = 70亿个参数。参数越多，模型"脑容量"越大，但也越消耗计算资源                       |
+| **预训练（Pre-training）** | 让模型在海量文本上"自学"的过程。相当于学霸的"九年义务教育"阶段                                                  |
+| **推理（Inference）**      | 模型根据输入生成输出的过程。相当于你问学霸一个问题，他思考后给出答案                                            |
 
 ### 1.2 什么是模型微调（Fine-tuning）
 
@@ -165,6 +165,7 @@ flowchart TB
 
 > [!tip]
 > ⚠️ **一个重要认知**：在实际项目中，蒸馏和微调往往不是二选一，而是分阶段组合使用：
+>
 > - **Phase 1**：用大模型（教师）生成高质量训练数据（蒸馏）
 > - **Phase 2**：用小模型（学生）在该数据上做 SFT 微调
 > - **Phase 3**：用 GRPO 强化学习进一步提升推理能力
@@ -447,9 +448,9 @@ sequenceDiagram
 
 ```json
 {
-    "instruction": "计算这些物品的总费用。",
-    "input": "汽车-$3000，衣服-$100，书-$20。",
-    "output": "总费用为 $3000 + $100 + $20 = $3120。"
+  "instruction": "计算这些物品的总费用。",
+  "input": "汽车-$3000，衣服-$100，书-$20。",
+  "output": "总费用为 $3000 + $100 + $20 = $3120。"
 }
 ```
 
@@ -457,8 +458,8 @@ sequenceDiagram
 
 ```json
 {
-    "question": "Natalia sold clips to 48 friends in April, then half as many in May. How many total?",
-    "answer": "Natalia sold 48/2 = 24 clips in May.\n48+24 = 72 clips altogether.\n#### 72"
+  "question": "Natalia sold clips to 48 friends in April, then half as many in May. How many total?",
+  "answer": "Natalia sold 48/2 = 24 clips in May.\n48+24 = 72 clips altogether.\n#### 72"
 }
 ```
 
@@ -740,7 +741,8 @@ model = FastLanguageModel.get_peft_model(
 ```
 
 > [!tip]
->  ⚠️ **容易踩坑的地方**：
+> ⚠️ **容易踩坑的地方**：
+>
 > 1. `model_name`路径中的`___`不是打字错误，HuggingFace用`___`替代模型名中的`.`，实际对应`Qwen2.5-7B-Instruct`
 > 2. `r`值不是越大越好——r=16已经能覆盖90%的任务需求，r=128会让训练慢3-5倍
 > 3. 如果用老显卡（不支持bfloat16），`dtype=None`会自动降级为float16
@@ -813,7 +815,8 @@ dataset = dataset.map(formatting_prompts_func, batched=True)
 ```
 
 > [!tip]
->  ⚠️ **容易踩坑的地方**：
+> ⚠️ **容易踩坑的地方**：
+>
 > 1. 必须加 `EOS_TOKEN`！不加的话模型不知道什么时候停止生成，会一直输出到最大长度
 > 2. 返回的字典key必须是 `"text"`，因为 `SFTTrainer` 的 `dataset_text_field` 参数默认就是 `"text"`
 > 3. `batched=True` 很重要——同样是52K条数据，批量处理比逐条处理快10倍以上
@@ -947,7 +950,8 @@ reward_funcs = [
 ```
 
 > [!tip]
->  ⚠️ **容易踩坑的地方**：
+> ⚠️ **容易踩坑的地方**：
+>
 > 1. 奖励函数的设计要**由宽到严**——刚开始训练时，模型可能连基本格式都不会，先用宽松奖励引导，再逐渐收紧
 > 2. `correctness_reward_func`的权重（2.0）远高于其他（各0.5），这是因为**答案正确才是最终目标**
 > 3. 为什么GSM8K没有推理过程却能训练出推理能力？因为LLM本身已经具备推理能力，奖励函数只是在**引导它把内在的推理过程显式写出来**
@@ -1042,7 +1046,8 @@ print(f"Peak reserved memory % of max memory = {used_percentage} %.")
 ```
 
 > [!tip]
->  ⚠️ **容易踩坑的地方**：
+> ⚠️ **容易踩坑的地方**：
+>
 > 1. **max_steps=60 不是随便设的**：`2 × 4 × 60 = 480`条训练样本，对52K数据集来说是"浅尝辄止"。如果效果不好，可以增大max_steps或设置`num_train_epochs`
 > 2. `packing=False` 在数据长度差异大时是正确的，但如果数据都是短文本（<500 token），设为True可以提速5倍
 > 3. 训练过程中如果显存不够，优先减小`per_device_train_batch_size`，同时增大`gradient_accumulation_steps`保持有效批大小不变
@@ -1179,7 +1184,8 @@ class EvalMetrics:
 ```
 
 > [!tip]
->  ⚠️ **容易踩坑的地方**：
+> ⚠️ **容易踩坑的地方**：
+>
 > 1. `answer_accuracy`用的是**简化版F1**（基于字符集重叠），不是语义级别的准确率。对于严格的评估需求，应使用更大的模型（如GPT-4）做评判
 > 2. `reasoning_quality`中的步骤标志词列表可以根据具体任务扩展，比如代码推理任务可以加入`"def"`, `"import"`, `"class"`等
 > 3. 评估脚本中`demo_comparison()`用的是模拟数据，实际使用时需要替换为真实模型推理结果
@@ -1379,19 +1385,19 @@ flowchart LR
 
 **推荐学习资源：**
 
-| 阶段         | 资源                                                         | 说明                    |
-| ------------ | ------------------------------------------------------------ | ----------------------- |
+| 阶段         | 资源                                                              | 说明                    |
+| ------------ | ----------------------------------------------------------------- | ----------------------- |
 | **入门**     | [HuggingFace NLP Course](https://huggingface.co/learn/nlp-course) | 免费、系统、有代码      |
-| **微调**     | [Unsloth官方文档](https://docs.unsloth.ai/)                  | 本项目使用的框架        |
-| **强化学习** | [TRL官方文档](https://huggingface.co/docs/trl/)              | SFTTrainer、GRPOTrainer |
-| **部署**     | [Ollama](https://ollama.com/)                                | GGUF模型本地部署        |
-| **中文社区** | [Datawhale](https://github.com/datawhalechina)               | 中文AI学习社区          |
-| **论文**     | [s1: Simple test-time scaling](https://arxiv.org/abs/2501.19393) | 李飞飞$50复刻R1         |
+| **微调**     | [Unsloth官方文档](https://docs.unsloth.ai/)                       | 本项目使用的框架        |
+| **强化学习** | [TRL官方文档](https://huggingface.co/docs/trl/)                   | SFTTrainer、GRPOTrainer |
+| **部署**     | [Ollama](https://ollama.com/)                                     | GGUF模型本地部署        |
+| **中文社区** | [Datawhale](https://github.com/datawhalechina)                    | 中文AI学习社区          |
+| **论文**     | [s1: Simple test-time scaling](https://arxiv.org/abs/2501.19393)  | 李飞飞$50复刻R1         |
 
 ### 8.3 关键认知总结
 
 > [!tip]
-> 
+>
 > 1. **蒸馏不是万能的**：教师模型和学生模型参数量差距不能太大（建议4:1到10:1），否则学生"学不动"
 > 2. **SFT和GRPO是互补的**：SFT负责"背知识"，GRPO负责"学推理"，两者结合效果最好
 > 3. **数据质量 >> 数据数量**：s1模型仅用1000条高质量数据就达到了接近O1的效果
@@ -1411,7 +1417,8 @@ flowchart LR
 ---
 
 > [!tip]
->  📝 **文档信息**
+> 📝 **文档信息**
+>
 > - 原始课件：`1-LLM模型蒸馏与微调实操.pdf`（55页）
 > - 项目代码：4个Python训练/评估脚本
 > - 数据集：Alpaca-Cleaned（52K条指令）、GSM8K（8.5K数学题）

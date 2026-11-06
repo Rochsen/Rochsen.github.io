@@ -1,7 +1,7 @@
 ---
 title: AI 大模型应用公开课
 date: 2026-01-22
-category: [教程, 知乎]
+category: [教程]
 tag: [AI]
 sticky: false
 # article: false
@@ -111,8 +111,6 @@ flowchart TD
     style Step2 fill:#fff3e0,stroke:#e65100
     style Step3 fill:#e8f5e9,stroke:#2e7d32
 ```
-
-
 
 ```mermaid
 flowchart LR

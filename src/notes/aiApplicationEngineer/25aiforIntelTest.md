@@ -1,7 +1,7 @@
 ---
 title: AI赋能的智能测试与质量保障
 date: 2026-07-12
-categories: [教程, 知乎]
+categories: [教程]
 tags: [AI, 开发规范]
 ---
 
@@ -66,26 +66,33 @@ flowchart LR
 > 修改本文档时必须同步更新对应的测试和实现。
 
 ## 功能目标
+
 ## 系统架构
+
 ## 数据采集维度
+
 ## 输出格式
+
 ## 约束条件 (Constraints)
+
 ### C1: XX
+
 ### C2: XX
+
 ## API 依赖
 ```
 
 #### 约束条件 C1-C7
 
-| 编号   | 名称         | 描述                                                         | 验证方式          |
-| ------ | ------------ | ------------------------------------------------------------ | ----------------- |
+| 编号   | 名称         | 描述                                                          | 验证方式          |
+| ------ | ------------ | ------------------------------------------------------------- | ----------------- |
 | **C1** | 维度完整性   | 报告必须包含全部 4 个维度：fundamental, market, news, analyst | `validate_report` |
-| **C2** | 摘要最小长度 | 每个维度的 summary 不少于 100 个字符                         | `validate_report` |
-| **C3** | 置信度范围   | confidence 必须在 [0.0, 1.0] 闭区间                          | `validate_report` |
-| **C4** | 评级有效值   | overall_rating 只能取 buy / hold / sell                      | `validate_report` |
-| **C5** | 来源数量     | sources 列表至少 3 个 URL                                    | `validate_report` |
-| **C6** | 风险因素     | risk_factors 列表不能为空                                    | `validate_report` |
-| **C7** | 必填字段     | stock_code, stock_name, report_date 为必填                   | `validate_report` |
+| **C2** | 摘要最小长度 | 每个维度的 summary 不少于 100 个字符                          | `validate_report` |
+| **C3** | 置信度范围   | confidence 必须在 [0.0, 1.0] 闭区间                           | `validate_report` |
+| **C4** | 评级有效值   | overall_rating 只能取 buy / hold / sell                       | `validate_report` |
+| **C5** | 来源数量     | sources 列表至少 3 个 URL                                     | `validate_report` |
+| **C6** | 风险因素     | risk_factors 列表不能为空                                     | `validate_report` |
+| **C7** | 必填字段     | stock_code, stock_name, report_date 为必填                    | `validate_report` |
 
 ### 2.2 TDD — 测试驱动开发
 
@@ -94,7 +101,7 @@ flowchart TD
     R[🔴 Red<br/>写一个失败的测试] --> G[🟢 Green<br/>写最少代码让它通过]
     G --> F[🔵 Refactor<br/>重构改进设计]
     F --> R
-    
+
     R -.->|测试尚未实现| R1[NotImplementedError<br/>所有用例失败]
     G -.->|最小实现| G1[通过全部测试]
     F -.->|行为不变| F1[抽取公共方法<br/>优化结构]
@@ -130,7 +137,7 @@ flowchart LR
         Green --> Refactor[🔵 重构优化]
         Refactor --> Red
     end
-    
+
     Green --> Quality[✅ 质量保障]
 ```
 
@@ -145,11 +152,11 @@ flowchart TD
         G1[🚧 门1<br/>Spec 约束] --> G2[🚧 门2<br/>Test 验证]
         G2 --> G3[🚧 门3<br/>Linter 检查]
     end
-    
+
     G1 -->|C1-C7 约束<br/>转化为测试用例| G2
     G2 -->|pytest 红-绿循环| G3
     G3 -->|结构一致性<br/>强制执行| ACCEPT[✅ 通过]
-    
+
     ACCEPT -->|错误中含有<br/>修复指令| AGENT[🤖 AI Agent<br/>自我纠正闭环]
     AGENT --> G1
 ```
@@ -180,20 +187,20 @@ flowchart TD
     B -->|TDD 生成代码| C[🧐 Critic<br/>审查者]
     C -->|通过?| F[🏁 Finalizer<br/>终结者]
     F -->|LOOP_COMPLETE| DONE[✅ 完成]
-    
+
     C -->|失败| B
-    
+
     subgraph 背压门控
         TEST[测试未通过<br/>不进入下一阶段]
     end
-    
+
     B -->|未通过| TEST
     TEST --> B
-    
+
     subgraph 仓库即记录系统
         SP[scratchpad.md<br/>传递所有上下文]
     end
-    
+
     P --> SP
     B --> SP
     C --> SP
@@ -218,7 +225,7 @@ Ralph 的 mini 实现见 `ralph_demo.py`，通过 Qwen 模型模拟完整的编�
 ### 3.1 项目概述
 
 **项目名称**：Stock Deep Research  
-**目标**：输入股票代码（如 `600519`），自动从多个维度联网搜索信息，通过 Qwen 大模型分析，生成结构化深度研究报告  
+**目标**：输入股票代码（如 `600519`），自动从多个维度联网搜索信息，通过 Qwen 大模型分析，生成结构化深度研究报告
 
 **技术栈**：
 
@@ -232,28 +239,28 @@ Ralph 的 mini 实现见 `ralph_demo.py`，通过 Qwen 模型模拟完整的编�
 ```mermaid
 flowchart TB
     USER[👤 用户输入股票代码] --> CLIENT
-    
+
     subgraph 系统分层
         CLIENT[QwenClient<br/>API 客户端层]
         COLLECTOR[Collector<br/>数据采集层]
         ANALYZER[Analyzer<br/>分析层]
         REPORTER[Reporter<br/>报告层]
     end
-    
+
     CLIENT -->|联网搜索<br/>enable_search=True| COLLECTOR
-    
+
     subgraph 数据源
         AKSHARE[akshare<br/>A股真实数据]
         QWEN[Qwen 大模型<br/>联网搜索+分析]
     end
-    
+
     AKSHARE -->|个股信息/财务/新闻/评级| COLLECTOR
     QWEN -->|AI 分析总结| COLLECTOR
-    
+
     COLLECTOR -->|CollectionResult| ANALYZER
     ANALYZER -->|评分+风险| REPORTER
     REPORTER -->|validate_report| JSON[JSON 结构化报告]
-    
+
     JSON --> USER
 ```
 
@@ -265,9 +272,9 @@ flowchart LR
     CL --> COL[collector<br/>多维度数据采集]
     COL --> AN[analyzer<br/>汇总评分]
     AN --> RP[reporter<br/>报告生成+校验]
-    
+
     SD -.->|独立于 LLM| COL
-    
+
     style SD fill:#e1f5fe
     style CL fill:#fff3e0
     style COL fill:#e8f5e9
@@ -322,22 +329,22 @@ stock-research/
 ```mermaid
 flowchart TD
     CODE["600519<br/>贵州茅台"] --> COLLECT
-    
+
     COLLECT --> FUND[基本面 fundamental]
     COLLECT --> MKT[市场面 market]
     COLLECT --> NEWS[消息面 news]
     COLLECT --> ANL[分析师观点 analyst]
-    
+
     FUND --> |akshare: stock_individual_info_em<br/>+ stock_financial_abstract_ths| FUND_DATA[个股信息+财务摘要]
     MKT --> |akshare: stock_zh_a_hist| MKT_DATA[历史K线+量价关系]
     NEWS --> |akshare: stock_news_em| NEWS_DATA[近期新闻]
     ANL --> |akshare: stock_institute_recommend_detail| ANL_DATA[机构评级]
-    
+
     FUND_DATA --> QWEN1[Qwen AI 分析]
     MKT_DATA --> QWEN2[Qwen AI 分析]
     NEWS_DATA --> QWEN3[Qwen AI 分析]
     ANL_DATA --> QWEN4[Qwen AI 分析]
-    
+
     QWEN1 --> SUMMARY[结构化报告]
     QWEN2 --> SUMMARY
     QWEN3 --> SUMMARY
@@ -352,10 +359,13 @@ flowchart TD
   "stock_name": "贵州茅台",
   "report_date": "2026-04-12",
   "dimensions": {
-    "fundamental": { "summary": "不少于100字的基本面分析...", "confidence": 0.85 },
-    "market":      { "summary": "不少于100字的市场面分析...", "confidence": 0.78 },
-    "news":        { "summary": "不少于100字的消息面分析...", "confidence": 0.72 },
-    "analyst":     { "summary": "不少于100字的分析师观点...", "confidence": 0.80 }
+    "fundamental": {
+      "summary": "不少于100字的基本面分析...",
+      "confidence": 0.85
+    },
+    "market": { "summary": "不少于100字的市场面分析...", "confidence": 0.78 },
+    "news": { "summary": "不少于100字的消息面分析...", "confidence": 0.72 },
+    "analyst": { "summary": "不少于100字的分析师观点...", "confidence": 0.8 }
   },
   "overall_rating": "buy",
   "risk_factors": ["市场系统性风险", "行业竞争加剧"],
@@ -370,7 +380,7 @@ flowchart TD
     INPUT["分析内容"] --> CHECK{"内容是否为空?"}
     CHECK -->|是| ZERO["返回 0.0"]
     CHECK -->|否| BASE["基础分 0.3"]
-    
+
     BASE --> LEN["长度加分<br>每200字+0.1<br>上限+0.3"]
     LEN --> NUM["数字加分<br>包含数字+0.1"]
     NUM --> PCT["百分比加分<br>包含%+0.1"]
@@ -399,17 +409,17 @@ flowchart TD
         T3[test_analyzer.py<br/>14 个测试]
         T4[test_reporter.py<br/>18 个测试]
     end
-    
+
     subgraph 数据层测试
         T5[test_stock_data.py<br/>15 个测试]
     end
-    
+
     subgraph 集成测试层
         T6[test_integration.py<br/>2 个测试<br/>@pytest.mark.integration]
     end
-    
+
     T4 -->|C1-C7 约束验证| SPEC[spec/research_spec.md]
-    
+
     T5 -->|真实 akshare API| AK[akshare 真实数据]
     T6 -->|需要 DASHSCOPE_API_KEY| E2E[端到端流程]
 ```
@@ -447,14 +457,14 @@ python linters/check_report_structure.py     # 结构 lint 检查
 
 ### 4.1 AI 编程工具链
 
-| 概念       | 解释                                                         |
-| ---------- | ------------------------------------------------------------ |
-| **RAG**    | 基于用户 query 从知识库检索相关内容，先于工具运行            |
-| **MCP**    | 第三方服务通过协议接口形式提供能力                           |
-| **Skills** | 渐进式的 function call 加载                                  |
+| 概念       | 解释                                                                 |
+| ---------- | -------------------------------------------------------------------- |
+| **RAG**    | 基于用户 query 从知识库检索相关内容，先于工具运行                    |
+| **MCP**    | 第三方服务通过协议接口形式提供能力                                   |
+| **Skills** | 渐进式的 function call 加载                                          |
 | **CLI**    | 命令行工具（Claude Code CLI、Codex CLI），可直接在终端中驱动 AI 编程 |
-| **ReACT**  | Reasoning + Action，当前 Agent 默认的自主逻辑框架            |
-| **RALPH**  | 约束驱动的编排系统，Harness Engineering 的具体实现           |
+| **ReACT**  | Reasoning + Action，当前 Agent 默认的自主逻辑框架                    |
+| **RALPH**  | 约束驱动的编排系统，Harness Engineering 的具体实现                   |
 
 ### 4.2 AI 编程最佳实践
 
@@ -496,7 +506,7 @@ flowchart LR
         E --> F[✅ 验收]
         F -->|修复指令| D
     end
-    
+
     B -.-> |约束 C1-C7| C
     C -.-> |56 个测试| D
     D -.-> |validate_report| E

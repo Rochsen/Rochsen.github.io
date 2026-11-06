@@ -1,13 +1,11 @@
 ---
 title: pytorch与视觉检测
 date: 2026-03-29
-categories: [教程, 知乎]
+categories: [教程]
 tags: [AI, PyTorch]
 ---
 
 <!-- more -->
-
-
 
 ## 第一章：PyTorch 核心基础
 
@@ -70,13 +68,13 @@ print(temp.diag_embed())
 
 ```python
 # 定义需要计算梯度的张量
-x = torch.tensor(2.0, requires_grad=True) 
+x = torch.tensor(2.0, requires_grad=True)
 
 # 前向计算：y = x²
-y = x**2 
+y = x**2
 
 # 反向传播，自动计算梯度
-y.backward() 
+y.backward()
 
 # 梯度 dy/dx = 2x = 4
 print(x.grad)
@@ -104,7 +102,7 @@ PyTorch 支持多种分布式训练方案，帮助你快速利用多 GPU 加速�
 
 ```python
 # PyTorch Lightning 简化多GPU训练
-trainer = Trainer(accelerator="gpu", devices=4, strategy="ddp") 
+trainer = Trainer(accelerator="gpu", devices=4, strategy="ddp")
 trainer.fit(model)
 ```
 
@@ -152,7 +150,7 @@ class Net(nn.Module):
         self.fc1 = nn.Linear(13, 64)  # 输入层->隐藏层
         self.fc2 = nn.Linear(64, 32)  # 隐藏层->隐藏层
         self.fc3 = nn.Linear(32, 1)   # 隐藏层->输出层
-        
+
     def forward(self, x):
         x = torch.relu(self.fc1(x))
         x = torch.relu(self.fc2(x))
@@ -171,12 +169,12 @@ for epoch in range(epochs):
     # 前向传播
     y_pred = model(X_train)
     loss = criterion(y_pred, y_train)
-    
+
     # 反向传播和优化
     optimizer.zero_grad()  # 清空梯度
     loss.backward()        # 计算梯度
     optimizer.step()       # 更新权重
-    
+
     if epoch % 100 == 0:
         print(f'Epoch {epoch}, Loss: {loss.item():.4f}')
 ```
@@ -280,7 +278,7 @@ image = np.array([[1,1,1,0,0],
 
 # 2. 定义3x3的卷积核（滤波器），用于检测特征
 filter_1 = np.array([[1, 0, 1],
-                    [0, 1, 0], 
+                    [0, 1, 0],
                     [1, 0, 1]])
 filters = np.array([filter_1])
 
@@ -344,7 +342,7 @@ class Net(nn.Module):
         self.conv.weight = torch.nn.Parameter(weight)
         # 池化层
         self.pool = nn.MaxPool2d(2, 2)
-        
+
     def forward(self, x):
         # 计算三层的输出：卷积层、激活层、池化层
         conv_x = self.conv(x)
@@ -424,22 +422,21 @@ flowchart LR
 
 ```mermaid
 graph TD
-    subgraph "YOLO检测流程"        
+    subgraph "YOLO检测流程"      
         A[输入图像 640x640] --> B[划分网格<br/>例如 13x13]
-        B --> C[每个格子预测]       
-        C --> D[预测边界框<br/>x,y,w,h]       
-        C --> E[预测置信度]       
-        C --> F[预测类别概率]   
-        D --> G[合并所有预测]   
-        E --> G   
-        F --> G     
-        G --> H[非极大值抑制NMS]   
+        B --> C[每个格子预测]      
+        C --> D[预测边界框<br/>x,y,w,h]      
+        C --> E[预测置信度]      
+        C --> F[预测类别概率]  
+        D --> G[合并所有预测]  
+        E --> G  
+        F --> G    
+        G --> H[非极大值抑制NMS]  
         H --> I[去除重叠框]  
         I --> J[输出最终结果]  
     end
-    
-```
 
+```
 
 核心逻辑：
 
@@ -456,7 +453,7 @@ graph TD
 #### IOU（交并比）
 
 IOU 是衡量两个边界框重叠程度的指标，计算公式是：
- $IOU = \frac{A \cap B}{A \cup B}$ 
+$IOU = \frac{A \cap B}{A \cup B}$
 
 #### 非极大值抑制（NMS）
 
@@ -555,14 +552,14 @@ results[0].show()
 
 我们需要识别热轧带钢表面的 6 种缺陷：
 
-| ID   | 缺陷名称        | 说明         |
-| ---- | --------------- | ------------ |
-| 0    | crazing         | 开裂         |
-| 1    | inclusion       | 夹杂         |
-| 2    | pitted_surface  | 点蚀         |
-| 3    | scratches       | 划痕         |
-| 4    | patches         | 斑块         |
-| 5    | rolled-in_scale | 氧化铁皮压入 |
+| ID  | 缺陷名称        | 说明         |
+| --- | --------------- | ------------ |
+| 0   | crazing         | 开裂         |
+| 1   | inclusion       | 夹杂         |
+| 2   | pitted_surface  | 点蚀         |
+| 3   | scratches       | 划痕         |
+| 4   | patches         | 斑块         |
+| 5   | rolled-in_scale | 氧化铁皮压入 |
 
 #### 数据集结构
 
@@ -585,8 +582,8 @@ steel_data/
 ```yaml
 path: ./steel_data # 数据集根目录
 train: train/train.txt # 训练集路径
-val: train/val.txt     # 验证集路径
-test: train/test.txt   # 测试集路径
+val: train/val.txt # 验证集路径
+test: train/test.txt # 测试集路径
 
 # 6种缺陷的类别名称
 names:
@@ -652,11 +649,11 @@ def convert_to_submission_format(results, image_name, img_shape):
     """将YOLO的预测结果转换为比赛要求的submission格式"""
     # 获取图像ID（去掉.jpg后缀）
     image_id = int(image_name.split('.')[0])
-    
+
     # 获取预测框、类别和置信度
     boxes = results[0].boxes
     submission_rows = []
-    
+
     if len(boxes) > 0:
         # 获取xyxy格式的绝对坐标
         xyxy = boxes.xyxy.cpu().numpy()
@@ -664,7 +661,7 @@ def convert_to_submission_format(results, image_name, img_shape):
         conf = boxes.conf.cpu().numpy()
         # 获取类别ID
         cls = boxes.cls.cpu().numpy()
-        
+
         # 遍历每个预测框
         for box, category_id, confidence in zip(xyxy, cls, conf):
             # 转换为整数坐标
@@ -676,38 +673,38 @@ def convert_to_submission_format(results, image_name, img_shape):
                 'category_id': int(category_id),
                 'confidence': float(confidence)
             })
-    
+
     return submission_rows
 
 def main():
     # 1. 加载训练好的最佳模型
     model = YOLO('./runs/detect/train/weights/best.pt')
-    
+
     # 存储所有预测结果
     all_predictions = []
-    
+
     # 2. 遍历所有测试图片
     test_image_dir = './steel_data/test/images'
     if os.path.exists(test_image_dir):
         for image_name in os.listdir(test_image_dir):
             if not image_name.endswith('.jpg'):
                 continue
-                
+
             # 读取图片
             img_path = os.path.join(test_image_dir, image_name)
             img = Image.open(img_path)
             img_shape = img.size
-            
+
             # 3. 预测
             results = model(img_path)
-            
+
             # 保存可视化结果
             results[0].save(os.path.join('./runs/detect/predict', image_name))
-            
+
             # 4. 转换为提交格式
             submission_rows = convert_to_submission_format(results, image_name, img_shape)
             all_predictions.extend(submission_rows)
-    
+
     # 5. 保存为CSV文件
     if all_predictions:
         df = pd.DataFrame(all_predictions)

@@ -1,7 +1,7 @@
 ---
 title: 从Text-to-SQL到数据智能
 date: 2026-07-18
-categories: [教程, 知乎]
+categories: [教程]
 tags: [AI]
 ---
 
@@ -21,7 +21,7 @@ graph LR
     B --> C[结构化SQL<br/>查询]
     C --> D[数据库<br/>MySQL等]
     D --> E[数据结果<br/>表格/图表]
-    
+
     style A fill:#e1f5fe,stroke:#0288d1
     style B fill:#fff3e0,stroke:#f57c00
     style C fill:#e8f5e9,stroke:#388e3c
@@ -41,7 +41,7 @@ graph LR
 
 ## 2. 技术架构总览
 
-### 2.1 整体架构对比 
+### 2.1 整体架构对比
 
 ```mermaid
 flowchart TB
@@ -72,7 +72,7 @@ flowchart TB
         D3_3 --> E3
         E3 --> F3[返回结果]
     end
-    
+
     方案一 ~~~ 方案二 ~~~ 方案三
 ```
 
@@ -83,7 +83,7 @@ sequenceDiagram
     participant User as 用户
     participant LLM as LLM大模型
     participant DB as 数据库
-    
+
     User->>LLM: 自然语言问题
     Note over LLM: 注入表结构/DDL
     LLM->>LLM: 推理+生成SQL
@@ -101,19 +101,19 @@ sequenceDiagram
 
 ### 3.2 实现流程
 
-```mermaid
+````mermaid
 flowchart LR
     A[读取表结构<br/>字段说明文件] --> B[构建Prompt<br/>System + User]
     B --> C[调用LLM API<br/>dashscope.Generation]
     C --> D[提取SQL<br/>正则解析```sql]
     D --> E[保存结果<br/>Excel/DataFrame]
-    
+
     style A fill:#e3f2fd
     style B fill:#e3f2fd
     style C fill:#fff9c4
     style D fill:#fff9c4
     style E fill:#c8e6c9
-```
+````
 
 ### 3.3 核心代码详解
 
@@ -142,12 +142,12 @@ response = dashscope.Generation.call(
 
 **Step 3：提取 SQL**
 
-```python
+````python
 def get_sql_code(response):
     pattern = r'```sql(.*?)```'
     match = re.search(pattern, content, re.DOTALL)
     return match.group(1).strip() if match else content
-```
+````
 
 ### 3.4 CodeGeeX 本地模型方案
 
@@ -386,17 +386,17 @@ LangChain 提供了 `create_sql_agent` 工厂函数，创建一个内置 SQL 工
 flowchart TB
     A[用户输入] --> B[LLM<br/>DeepSeek/Qwen]
     B --> C{Agent 推理}
-    
+
     C -->|Tool 1| D[sql_db_list_tables<br/>列出所有表]
     C -->|Tool 2| E[sql_db_schema<br/>获取表结构+样例]
     C -->|Tool 3| F[sql_db_query<br/>执行SQL查询]
-    
+
     D --> B
     E --> B
     F --> B
-    
+
     B --> G[返回结果]
-    
+
     subgraph SQLDatabaseToolkit[SQLDatabaseToolkit]
         D
         E
@@ -542,7 +542,7 @@ erDiagram
     PolicyInfo }o--|| ProductInfo : "关联产品"
     PolicyInfo }o--|| AgentInfo : "代理"
     ClaimInfo ||--|| BeneficiaryInfo : "受益人"
-    
+
     CustomerInfo {
         int CustomerID PK
         string Name
@@ -559,7 +559,7 @@ erDiagram
         string CustomerType
         string CustomerStatus
     }
-    
+
     PolicyInfo {
         int PolicyNumber PK
         int CustomerID FK
@@ -571,7 +571,7 @@ erDiagram
         string PremiumPaymentStatus
         int AgentID FK
     }
-    
+
     ClaimInfo {
         int ClaimNumber PK
         int PolicyNumber FK
@@ -581,7 +581,7 @@ erDiagram
         string ClaimStatus
         int BeneficiaryID FK
     }
-    
+
     ProductInfo {
         int ProductID PK
         string ProductName
@@ -589,20 +589,20 @@ erDiagram
         decimal Premium
         string PaymentFrequency
     }
-    
+
     AgentInfo {
         int AgentID PK
         string Name
         string CertificateNumber
         date LicenseExpirationDate
     }
-    
+
     BeneficiaryInfo {
         int BeneficiaryID PK
         string Name
         string PhoneNumber
     }
-    
+
     EmployeeInfo {
         int EmployeeID PK
         string Name
@@ -674,12 +674,12 @@ API Base: https://dashscope.aliyuncs.com/compatible-mode/v1
 
 | 维度             | SQL Copilot   | Vanna.ai         | LangChain Agent    |
 | ---------------- | ------------- | ---------------- | ------------------ |
-| **实现复杂度**   | ⭐ 低          | ⭐⭐ 中            | ⭐⭐⭐ 较高           |
-| **查询准确率**   | ⭐⭐ 一般       | ⭐⭐⭐ 较好         | ⭐⭐⭐ 好             |
-| **多表JOIN能力** | ⭐⭐ 依赖模型   | ⭐⭐ 依赖模型      | ⭐⭐⭐ 自动推理       |
+| **实现复杂度**   | ⭐ 低         | ⭐⭐ 中          | ⭐⭐⭐ 较高        |
+| **查询准确率**   | ⭐⭐ 一般     | ⭐⭐⭐ 较好      | ⭐⭐⭐ 好          |
+| **多表JOIN能力** | ⭐⭐ 依赖模型 | ⭐⭐ 依赖模型    | ⭐⭐⭐ 自动推理    |
 | **上下文管理**   | 手动拼接      | 向量检索自动管理 | Agent 自动管理     |
-| **持续学习**     | ❌ 无          | ✅ auto_train     | ❌ 无               |
-| **交互反馈**     | ❌ 无          | ⭐ 有追问/摘要    | ⭐⭐⭐ 多轮推理       |
+| **持续学习**     | ❌ 无         | ✅ auto_train    | ❌ 无              |
+| **交互反馈**     | ❌ 无         | ⭐ 有追问/摘要   | ⭐⭐⭐ 多轮推理    |
 | **部署难度**     | 低            | 中（需ChromaDB） | 中（需LangChain）  |
 | **调试友好度**   | 低            | 中               | 高（verbose=True） |
 | **适合场景**     | 快速验证/原型 | 生产级、持续优化 | 复杂查询、需要交互 |
@@ -690,13 +690,13 @@ API Base: https://dashscope.aliyuncs.com/compatible-mode/v1
 flowchart TD
     Q1{表数量?} -->|1-3张| A[SQL Copilot<br/>直接调用LLM]
     Q1 -->|4张以上| Q2{是否需要<br/>持续学习?}
-    
+
     Q2 -->|是| B[Vanna.ai<br/>RAG+向量库]
     Q2 -->|否| Q3{是否需要<br/>多轮推理?}
-    
+
     Q3 -->|是| C[LangChain Agent<br/>Function Call]
     Q3 -->|否| A
-    
+
     A --> R1[推荐: 云端API Quick Start]
     B --> R2[推荐: 生产系统]
     C --> R3[推荐: 复杂查询场景]
@@ -723,18 +723,18 @@ flowchart LR
     B --> C[数据看板<br/>ChaiBI可视化]
     C --> D[数据洞察<br/>XGBoost建模]
     D --> E[AI驱动决策<br/>智能推荐]
-    
+
     subgraph 阶段一[Text-to-SQL]
         A
         B
     end
-    
+
     subgraph 阶段二[数据智能]
         C
         D
         E
     end
-    
+
     style 阶段一 fill:#e3f2fd,stroke:#1565c0
     style 阶段二 fill:#fce4ec,stroke:#c62828
 ```

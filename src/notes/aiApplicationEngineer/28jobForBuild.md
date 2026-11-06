@@ -1,7 +1,7 @@
 ---
 title: 部署及提效辅导
 date: 2026-07-23
-categories: [教程, 知乎]
+categories: [教程]
 tags: [AI, Agent, 低代码]
 ---
 
@@ -84,7 +84,7 @@ flowchart LR
     B --> C[分块Chunking<br/>200-1000 token/块]
     C --> D[向量化<br/>Embedding模型]
     D --> E[(向量库)]
-    
+
     F[用户提问] --> G[Query Embedding]
     G --> H[向量相似度检索<br/>Top-K]
     H --> I[可选Rerank<br/>精排]
@@ -180,19 +180,19 @@ graph TD
     subgraph "Pipeline 流水线"
         A1[Agent A<br/>搜索] --> B1[Agent B<br/>摘要] --> C1[Agent C<br/>写作]
     end
-    
+
     subgraph "Manager-Worker 经理-员工"
         M[Manager Agent<br/>拆任务+汇总] --> W1[Worker A<br/>基金选股]
         M --> W2[Worker B<br/>估值分析]
         M --> W3[Worker C<br/>风险评估]
     end
-    
+
     subgraph "Debate 辩论"
         D1[Agent A<br/>观点1] --> J[Judge Agent<br/>仲裁]
         D2[Agent B<br/>观点2] --> J
         D3[Agent C<br/>观点3] --> J
     end
-    
+
     subgraph "Group Chat 群组"
         G1[编剧Agent] <--> G2[导演Agent]
         G2 <--> G3[制片人Agent]
@@ -356,7 +356,7 @@ flowchart LR
         G --> F[🔵 Refactor<br/>保持绿下重构代码]
         F -.-> R
     end
-    
+
     G -.->|继续迭代| R
 ```
 
@@ -428,8 +428,8 @@ flowchart LR
 
 ```
 输入：最近30天销售额最高的5个商品
-输出：SELECT product_name, SUM(amount) FROM sales 
-      WHERE date >= NOW()-INTERVAL 30 DAY 
+输出：SELECT product_name, SUM(amount) FROM sales
+      WHERE date >= NOW()-INTERVAL 30 DAY
       GROUP BY product_name ORDER BY 2 DESC LIMIT 5
 ```
 
@@ -503,7 +503,7 @@ flowchart LR
         A["每张表生成NL描述<br>表名+字段+注释+示例值"] --> B["Embedding向量化"]
         B --> C[("向量库")]
     end
-    
+
     subgraph "在线检索"
         D["用户问题"] --> E["Query Embedding"]
         E --> F["向量相似度Top-K<br>K=10-20"]
@@ -655,12 +655,12 @@ flowchart LR
         B --> C[关键词提取<br/>情感打标]
         C --> D[生成热点词云]
     end
-    
+
     subgraph "子工作流: AppStoreEstimate"
         E[AppStore评论抓取] --> F[好评/差评分类]
         F --> G[生成词云]
     end
-    
+
     subgraph "子工作流: GenerateDailyReports"
         D --> H[多源数据汇总]
         G --> H
@@ -806,11 +806,11 @@ def get_user_tables(user_type: str) -> list:
 
 **项目经历准备 checklist**：
 
-| 项目                   | 重点准备                                                     |
-| ---------------------- | ------------------------------------------------------------ |
-| 市场舆情监测 Agent     | 多工作流嵌套编排、情感分析、Markdown 三段式人设、PDF 日报链  |
+| 项目                   | 重点准备                                                                    |
+| ---------------------- | --------------------------------------------------------------------------- |
+| 市场舆情监测 Agent     | 多工作流嵌套编排、情感分析、Markdown 三段式人设、PDF 日报链                 |
 | Dify 智能客服 ChatFlow | 私有化部署架构、ChatFlow vs Workflow 选型、RAG 分块 + Rerank 调优、引用归属 |
-| ChatBI 金融问答助手    | 五段式架构、ExcSQLTool 封装、归一化对比分析、Polars 计算而非 LLM 算数 |
+| ChatBI 金融问答助手    | 五段式架构、ExcSQLTool 封装、归一化对比分析、Polars 计算而非 LLM 算数       |
 
 **每个项目需要讲清楚**：
 
@@ -860,24 +860,24 @@ flowchart LR
 
 ### A. 关键术语速查
 
-| 术语           | 含义                                                         |
-| -------------- | ------------------------------------------------------------ |
-| Agent          | 能够自主推理、使用工具、记忆上下文的 AI 系统                 |
-| ReAct          | Reason + Act，最经典的 Agent 范式                            |
-| RAG            | Retrieval Augmented Generation，检索增强生成                 |
-| CTA            | Call to Action，行动号召（如"点赞关注"）                     |
-| SDD            | Specification-Driven Development，规范驱动开发               |
-| TDD            | Test-Driven Development，测试驱动开发                        |
+| 术语           | 含义                                                          |
+| -------------- | ------------------------------------------------------------- |
+| Agent          | 能够自主推理、使用工具、记忆上下文的 AI 系统                  |
+| ReAct          | Reason + Act，最经典的 Agent 范式                             |
+| RAG            | Retrieval Augmented Generation，检索增强生成                  |
+| CTA            | Call to Action，行动号召（如"点赞关注"）                      |
+| SDD            | Specification-Driven Development，规范驱动开发                |
+| TDD            | Test-Driven Development，测试驱动开发                         |
 | CTE            | Common Table Expression，公用表表达式，用 WITH 定义临时结果集 |
-| MCP            | Model Context Protocol，模型上下文协议                       |
-| ChatBI         | 对话式商业智能                                               |
-| PR             | Pull Request，代码变更申请                                   |
-| CI/CD          | 持续集成/持续交付部署                                        |
-| Onboarding     | 新人从入职到独立产出的上手适应期                             |
-| Schema Linking | 用语义检索召回相关数据库表/字段定义                          |
-| Few-shot       | 在 Prompt 中提供少量示例指导模型输出                         |
-| Rerank         | 对初次召回结果做精排以提高相关性                             |
-| ETL            | Extract-Transform-Load，数据抽取转换加载                     |
+| MCP            | Model Context Protocol，模型上下文协议                        |
+| ChatBI         | 对话式商业智能                                                |
+| PR             | Pull Request，代码变更申请                                    |
+| CI/CD          | 持续集成/持续交付部署                                         |
+| Onboarding     | 新人从入职到独立产出的上手适应期                              |
+| Schema Linking | 用语义检索召回相关数据库表/字段定义                           |
+| Few-shot       | 在 Prompt 中提供少量示例指导模型输出                          |
+| Rerank         | 对初次召回结果做精排以提高相关性                              |
+| ETL            | Extract-Transform-Load，数据抽取转换加载                      |
 
 ### B. 推荐资源
 
@@ -888,4 +888,3 @@ flowchart LR
 - **模型连接**：QwenLM GitHub：[https://github.com/QwenLM/qwen-code](https://github.com/QwenLM/qwen-code)
 - **量化研究**：Qlib（微软开源因子研究工具）
 - **数据源**：Tushare 金融数据、miniQMT 量化交易
-

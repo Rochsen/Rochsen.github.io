@@ -1,12 +1,11 @@
 ---
 title: Langchain 多任务应用开发
 date: 2026-03-22
-categories: [教程, 知乎]
+categories: [教程]
 tags: [AI, Langchain]
 ---
 
 <!-- more -->
-
 
 ## 第一部分：LangChain基础概念
 
@@ -77,7 +76,7 @@ import os
 # 从环境变量获取 dashscope 的 API Key
 api_key = os.getenv('DASHSCOPE_API_KEY')
 dashscope.api_key = api_key
- 
+
 # 加载 Tongyi 模型
 llm = Tongyi(model_name="qwen-turbo", dashscope_api_key=api_key)  # 使用通义千问qwen-turbo模型
 
@@ -112,11 +111,11 @@ graph LR
     C --> D[OutputParser]
     D --> E[最终输出]
 
-    
-    
-    
-    
-    
+
+
+
+
+
 ```
 
 LCEL的核心优势体现在多个方面。首先是**代码简洁**，传统的Chain定义需要继承基类并重写方法，而LCEL只需要一行管道表达式；其次是**逻辑清晰**，数据流向一目了然，每个组件的输入输出都明确可见；第三是**易于调试**，可以在管道中间插入日志或断点，追踪数据流转过程；第四是**支持复杂编排**，LCEL原生支持并行执行、条件分支、错误处理等高级特性。
@@ -170,10 +169,10 @@ flowchart TD
     G -->|否| B
     G -->|是| H[返回最终答案]
 
-    
-    
-    
-    
+
+
+
+
 ```
 
 LangChain内置了多种常用工具，开发者也可以根据自己的需求创建自定义工具。工具系统的工作原理是：Agent接收用户问题后，通过LLM的推理能力决定是否需要调用工具、调用哪个工具、以及传递什么参数；工具执行完成后，结果被返回给Agent，Agent根据结果决定是否继续调用其他工具或给出最终答案。
@@ -296,10 +295,10 @@ graph LR
         E --> D3
     end
 
-    
-    
-    
-    
+
+
+
+
 ```
 
 ### 4.2 LangChain中的记忆类型
@@ -468,9 +467,9 @@ flowchart LR
     D[问题] --> A
     C --> E[最终答案]
 
-    
-    
-    
+
+
+
 ```
 
 ReAct范式的灵感来自于对人类行为的观察：人们在从事需要多个步骤的任务时，在步骤和步骤之间通常会有推理过程。例如，当被问到"Apple Remote最初设计用来控制什么？"时，人类会先思考"我需要搜索Apple Remote的信息"，然后执行搜索，观察结果，再思考"我需要进一步搜索Front Row"，如此循环直到找到答案。
@@ -585,9 +584,9 @@ graph TD
     F --> G
     G --> H[最终答案]
 
-    
-    
-    
+
+
+
 ```
 
 工具链设计的核心价值在于**专业化分工**和**流程可控**。每个工具专注于特定的功能，通过组合形成完整能力；流程的每一步都由开发者明确定义，确保输出的可控性和可预测性。这与Agent的自主决策形成互补——工具链适合步骤明确、流程固定的场景，而Agent更适合需要灵活决策的场景。
@@ -709,19 +708,19 @@ text_processing = TextProcessingTool()
 # 工具链（LCEL风格）- 使用 RunnableLambda 包装工具函数
 text_analysis_chain = RunnableLambda(lambda x: text_analysis.run(x["text"]))
 data_conversion_chain = RunnableLambda(lambda x: data_conversion.run(
-    x["input_data"], 
-    x["input_format"], 
+    x["input_data"],
+    x["input_format"],
     x["output_format"]
 ))
 count_lines_chain = RunnableLambda(lambda x: text_processing.run("count_lines", x["content"]))
 find_text_chain = RunnableLambda(lambda x: text_processing.run(
-    "find_text", 
-    x["content"], 
+    "find_text",
+    x["content"],
     search_text=x.get("search_text", "")
 ))
 replace_text_chain = RunnableLambda(lambda x: text_processing.run(
-    "replace_text", 
-    x["content"], 
+    "replace_text",
+    x["content"],
     old_text=x.get("old_text", ""),
     new_text=x.get("new_text", "")
 ))
@@ -842,9 +841,9 @@ graph LR
     B --> |返回IP| C
     C --> |返回状态| D
 
-    
-    
-    
+
+
+
 ```
 
 ```python
@@ -873,7 +872,7 @@ DASHSCOPE_API_KEY = os.getenv("DASHSCOPE_API_KEY")
 @tool
 def ping_tool(target: str) -> str:
     """检查本机到指定主机名或 IP 地址的网络连通性。输入应该是目标主机名或 IP 地址。输出表明是否可达及延迟。
-    
+
     参数:
         target: 目标主机名或 IP 地址
     返回:
@@ -899,7 +898,7 @@ def ping_tool(target: str) -> str:
 @tool
 def dns_tool(hostname: str) -> str:
     """解析给定的主机名，获取其对应的 IP 地址。输入应该是要解析的主机名。输出是 IP 地址或解析失败信息。
-    
+
     参数:
         hostname: 要解析的主机名
     返回:
@@ -922,7 +921,7 @@ def dns_tool(hostname: str) -> str:
 @tool
 def interface_check_tool(interface_name: Optional[str] = None) -> str:
     """检查本机网络接口的状态（如 IP 地址、是否启用）。可选输入是接口名称，若不提供则检查默认接口。输出接口状态信息。
-    
+
     参数:
         interface_name: (可选) 要检查的接口名称
     返回:
@@ -938,7 +937,7 @@ def interface_check_tool(interface_name: Optional[str] = None) -> str:
 @tool
 def log_analysis_tool(keywords: str, time_range: Optional[str] = "过去1小时") -> str:
     """搜索系统或应用程序日志，查找与网络问题相关的条目。输入应该是描述问题的关键词（例如 'timeout', 'connection refused', 'dns error'）和可选的时间范围。输出是找到的相关日志条目摘要或未找到相关条目的消息。
-    
+
     参数:
         keywords: 用于搜索日志的关键词
         time_range: (可选) 要搜索的时间范围描述，默认为 '过去1小时'
@@ -1040,7 +1039,7 @@ if __name__ == "__main__":
     # print("诊断任务 4:")
     # result4 = diagnose_network_issue(task4)
     # print("\n--- 诊断任务 4 结束 ---")
-    # print(f"最终诊断结果: {result4}") 
+    # print(f"最终诊断结果: {result4}")
 ```
 
 **ZERO_SHOT_REACT_DESCRIPTION**是LangChain最常用的Agent类型之一。"Zero-Shot"意味着Agent在没有额外训练或示例的情况下，直接根据提示词和工具描述来推理如何调用工具；"ReAct"表示它遵循思考-行动-观察的循环范式。这种类型的Agent会自动读取传入的工具列表，将每个工具的name和description拼接到系统提示词中，让LLM能够智能选择合适的工具。
@@ -1068,8 +1067,8 @@ graph TD
     H --> I[固定执行顺序]
     I --> J[可控但欠灵活]
 
-    
-    
+
+
 ```
 
 **Agent模式**的核心特点是智能决策和动态调度。Agent将LLM作为推理引擎，让它根据当前状态自主决定下一步行动。这种方式适合任务流程不固定、需要根据上下文灵活调整的场景，例如智能客服、复杂问题解答等。Agent的优势在于强大的适应能力，但缺点是执行过程不可完全预测，调试相对困难。
@@ -1190,11 +1189,11 @@ graph TD
     E --> |"无代码、社交机器人"| E1[✅ 快速部署]
     F --> |"API优先、私有化"| F1[✅ 深度定制]
 
-    
-    
-    
-    
-    
+
+
+
+
+
 ```
 
 | 框架           | 核心定位                          | 架构特点                                   | 适用场景                                                         |
@@ -1231,7 +1230,7 @@ graph TD
 
 ### 进一步学习建议
 
-对于希望深入学习LangChain的开发者，建议按照以下路径循序渐进：首先熟练掌握基础Chain和Prompt模板的使用，理解LCEL的核心概念；然后学习工具系统的使用和自定义工具的开发；接着深入研究Agent和ReAct范式，尝试构建自己的智能Agent；最后根据实际项目需求，学习LangGraph等进阶框架，掌握复杂工作流的设计能力。  
+对于希望深入学习LangChain的开发者，建议按照以下路径循序渐进：首先熟练掌握基础Chain和Prompt模板的使用，理解LCEL的核心概念；然后学习工具系统的使用和自定义工具的开发；接着深入研究Agent和ReAct范式，尝试构建自己的智能Agent；最后根据实际项目需求，学习LangGraph等进阶框架，掌握复杂工作流的设计能力。
 
 ## requirement
 
@@ -1241,4 +1240,3 @@ langchain==1.0.2
 langchain_community==0.4
 langchain_core==1.0.1
 ```
-

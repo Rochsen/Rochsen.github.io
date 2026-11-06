@@ -1,13 +1,11 @@
 ---
 title: 神经网络基础与Tensorflow
 date: 2026-03-23
-categories: [教程, 知乎]
+categories: [教程]
 tags: [AI, TensorFlow]
 ---
 
 <!-- more -->
-
-
 
 ## 第一章：神经网络基础概念
 
@@ -206,8 +204,6 @@ $$L = -\frac{1}{n} \sum_{i=1}^{n} \sum_{c=1}^{C} y_{ic} \cdot \log(\hat{y}_{ic})
 ### 1.5 前向传播算法
 
 前向传播（Forward Propagation）是神经网络从输入到输出的计算过程。数据从输入层开始，经过每一层的线性变换和激活函数，最终到达输出层产生预测结果。
-
-
 
 ```mermaid
 flowchart LR
@@ -1522,4 +1518,3 @@ tensorflow==2.14.0
 tensorflow_intel==2.14.0
 torch==2.7.0
 ```
-

@@ -1,7 +1,7 @@
 ---
 title: Dify本地化部署和应用
 date: 2026-07-06
-categories: [教程, 知乎]
+categories: [教程]
 tags: [AI, Agent, 低代码]
 ---
 
@@ -39,14 +39,14 @@ mindmap
 
 ### 1.2 Dify vs 其他平台
 
-| 维度           | Dify                     | Coze                    | LangChain            |
-| -------------- | ------------------------ | ----------------------- | -------------------- |
-| **定位**       | 开源 LLM 应用平台        | 字节跳动智能体平台      | LLM 开发框架         |
-| **部署方式**   | 私有化 Docker / Cloud    | 云端 SaaS / Coze Studio | 代码库集成           |
+| 维度           | Dify                      | Coze                    | LangChain            |
+| -------------- | ------------------------- | ----------------------- | -------------------- |
+| **定位**       | 开源 LLM 应用平台         | 字节跳动智能体平台      | LLM 开发框架         |
+| **部署方式**   | 私有化 Docker / Cloud     | 云端 SaaS / Coze Studio | 代码库集成           |
 | **企业适用**   | ✅ 高（私有化、数据安全） | 中（国内生态好）        | 高（灵活但开发量大） |
-| **低代码程度** | 高（可视化编排）         | 高（拖拽式）            | 低（纯代码）         |
-| **工作流**     | ChatFlow + Workflow      | 单一流程                | 完全自定义           |
-| **开源**       | ✅ 是                     | ❌ 否                    | ✅ 是                 |
+| **低代码程度** | 高（可视化编排）          | 高（拖拽式）            | 低（纯代码）         |
+| **工作流**     | ChatFlow + Workflow       | 单一流程                | 完全自定义           |
+| **开源**       | ✅ 是                     | ❌ 否                   | ✅ 是                |
 
 ---
 
@@ -201,7 +201,7 @@ flowchart LR
 | 特性         | ChatFlow               | Workflow             |
 | ------------ | ---------------------- | -------------------- |
 | **核心场景** | 多轮对话、客服、咨询   | 自动化流程、数据处理 |
-| **状态管理** | ✅ 有记忆（Memory）     | ❌ 无状态             |
+| **状态管理** | ✅ 有记忆（Memory）    | ❌ 无状态            |
 | **交互方式** | 一问一答               | 一次输入 → 自动运行  |
 | **输出节点** | 必须包含 "Answer" 节点 | 最终节点输出         |
 | **适用举例** | 智能客服、AI 咨询      | 文档处理、批量分析   |
@@ -798,45 +798,30 @@ graph TB
 
 ### 更多 Q&A
 
-
 <b>Q: Coze 200万的方案凭什么值200万？</b>
-
 
 A: Coze 的 enterprise 解决方案包含专属部署、模型精调、运维支持和 SLA 保障，不仅是软件本身。
 
-
-
 <b>Q: 低代码方便但不可预测性和掌控性差？</b>
-
 
 A: 是的，这是固有取舍。低代码适合快速验证，纯代码（LangChain/LangGraph）适合复杂定制。实际项目中可以混合使用：低代码搭主体，代码做插件。
 
-
-
 <b>Q: AI 智能体架构师需要哪些技能？</b>
-
 
 1. **AI Agent 搭建**：RAG、工具调用、Workflow 编排
 2. **模型微调**：LoRA、数据工程
 3. **数据决策**：数据分析、策略设计
 
-
-
 <b>Q: 什么时候用私有化大模型？</b>
-
 
 1. **数据安全**：敏感数据不能上云
 2. **模型微调**：需要定制化模型能力
 
-
-
 <b>Q: Agent 可以 Coze + Trae 混合开发吗？怎么封装？</b>
-
 
 - Coze 搭建主体流程
 - Trae 进行插件搭建
 - 最终通过 API 或 SDK 封装为统一服务
-  
 
 ---
 
@@ -886,16 +871,16 @@ python-dotenv==1.0.0
 
 ### 10.3 参考链接
 
-| 资源           | 地址                                                         |
-| -------------- | ------------------------------------------------------------ |
-| Dify 官网      | [https://dify.ai](https://dify.ai)                           |
-| Dify Cloud     | [https://cloud.dify.ai/apps](https://cloud.dify.ai/apps)     |
-| Dify GitHub    | [https://github.com/langgenius/dify](https://github.com/langgenius/dify) |
-| Coze 中国      | [https://www.coze.cn](https://www.coze.cn)                   |
+| 资源           | 地址                                                                       |
+| -------------- | -------------------------------------------------------------------------- |
+| Dify 官网      | [https://dify.ai](https://dify.ai)                                         |
+| Dify Cloud     | [https://cloud.dify.ai/apps](https://cloud.dify.ai/apps)                   |
+| Dify GitHub    | [https://github.com/langgenius/dify](https://github.com/langgenius/dify)   |
+| Coze 中国      | [https://www.coze.cn](https://www.coze.cn)                                 |
 | Coze API Token | [https://www.coze.cn/open/oauth/pats](https://www.coze.cn/open/oauth/pats) |
-| Tavily Search  | [https://tavily.com](https://tavily.com)                     |
-| MinerU         | [https://mineru.net](https://mineru.net)                     |
-| Docker 官网    | [https://www.docker.com](https://www.docker.com)             |
+| Tavily Search  | [https://tavily.com](https://tavily.com)                                   |
+| MinerU         | [https://mineru.net](https://mineru.net)                                   |
+| Docker 官网    | [https://www.docker.com](https://www.docker.com)                           |
 
 ### 10.4 技术栈总览
 

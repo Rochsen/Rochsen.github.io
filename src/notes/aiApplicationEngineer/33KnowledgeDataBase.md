@@ -1,13 +1,11 @@
 ---
 title: 项目实战：企业知识库
 date: 2026-07-04
-categories: [教程, 知乎]
+categories: [教程]
 tags: [AI, Agent, 低代码]
 ---
 
 <!-- more -->
-
-
 
 ### 1. 项目背景与比赛任务
 
@@ -40,15 +38,15 @@ RAG-Challenge 系统在比赛中赢得了所有类别的奖项，在处理公司
 
 #### 1.3 工作区中的两个项目
 
-| 维度       | RAG-Challenge-2-main（原版）                                 | RAG-cy（改造版）                                           |
-| ---------- | ------------------------------------------------------------ | ---------------------------------------------------------- |
+| 维度       | RAG-Challenge-2-main（原版）                                   | RAG-cy（改造版）                                           |
+| ---------- | -------------------------------------------------------------- | ---------------------------------------------------------- |
 | 数据集     | `data/test_set`（5 份英文年报）+ `data/erc2_set`（完整竞赛集） | `data/stock_data/pdf_reports`（9 份中芯国际投研/财报 PDF） |
-| 解析方式   | Docling 本地解析 → JSON → Markdown                           | MinerU 云端解析，直接产出 `full.md`                        |
-| 问题类型   | boolean / number / name / names 模板题                       | 5 道 `kind = string` 的开放式中文问题                      |
-| 模型与接口 | OpenAI（o3-mini、GPT-4o 等）、`text-embedding-3-large`       | DashScope：`qwen-turbo-latest`、`text-embedding-v1`        |
-| 分块方式   | 按 token 分块（`split_all_reports`，JSON 输入）              | 按行分块（`split_markdown_reports`，30 行/块，重叠 5 行）  |
-| 结果去向   | `answers_*.json` 提交文件                                    | `answers_qwen_turbo_*.json` + Streamlit 界面展示           |
-| 交互方式   | 命令行（`python -m src.pipeline`、`main.py`）                | 命令行 + `app_streamlit.py` 可视化界面                     |
+| 解析方式   | Docling 本地解析 → JSON → Markdown                             | MinerU 云端解析，直接产出 `full.md`                        |
+| 问题类型   | boolean / number / name / names 模板题                         | 5 道 `kind = string` 的开放式中文问题                      |
+| 模型与接口 | OpenAI（o3-mini、GPT-4o 等）、`text-embedding-3-large`         | DashScope：`qwen-turbo-latest`、`text-embedding-v1`        |
+| 分块方式   | 按 token 分块（`split_all_reports`，JSON 输入）                | 按行分块（`split_markdown_reports`，30 行/块，重叠 5 行）  |
+| 结果去向   | `answers_*.json` 提交文件                                      | `answers_qwen_turbo_*.json` + Streamlit 界面展示           |
+| 交互方式   | 命令行（`python -m src.pipeline`、`main.py`）                  | 命令行 + `app_streamlit.py` 可视化界面                     |
 
 两个项目的 `docs/src_modules_overview.md` 对 `src` 各模块的职责说明一致，改造集中在 `pipeline.py`、`pdf_mineru.py`、`text_splitter.py`、`prompts.py`、`api_requests.py` 与新增的前端文件。
 
@@ -584,21 +582,21 @@ flowchart LR
 
 #### 10.3 src 模块职责
 
-| 模块                                | 职责                                                         |
-| ----------------------------------- | ------------------------------------------------------------ |
-| `api_requests.py`                   | 与各类模型 API 交互，封装消息发送、结构化输出、重试、计费等逻辑 |
-| `api_request_parallel_processor.py` | 并发、限流地批量处理 API 请求，支持重试、速率控制和日志记录  |
-| `ingestion.py`                      | `BM25Ingestor` 构建 BM25 索引；`VectorDBIngestor` 建立 Faiss 向量库 |
-| `parsed_reports_merging.py`         | 把复杂解析 JSON 规整为每页文本结构，可导出 Markdown          |
-| `pdf_parsing.py`                    | 调用 Docling 解析 PDF 为标准 JSON，支持并行、元数据补全、页码校正 |
-| `pipeline.py`                       | 主流程调度，串联解析、序列化、规整、分块、向量化、问题处理各阶段 |
-| `prompts.py`                        | 集中定义所有提示词与结构化输出 Schema（问答、重排、比较等）  |
+| 模块                                | 职责                                                                   |
+| ----------------------------------- | ---------------------------------------------------------------------- |
+| `api_requests.py`                   | 与各类模型 API 交互，封装消息发送、结构化输出、重试、计费等逻辑        |
+| `api_request_parallel_processor.py` | 并发、限流地批量处理 API 请求，支持重试、速率控制和日志记录            |
+| `ingestion.py`                      | `BM25Ingestor` 构建 BM25 索引；`VectorDBIngestor` 建立 Faiss 向量库    |
+| `parsed_reports_merging.py`         | 把复杂解析 JSON 规整为每页文本结构，可导出 Markdown                    |
+| `pdf_parsing.py`                    | 调用 Docling 解析 PDF 为标准 JSON，支持并行、元数据补全、页码校正      |
+| `pipeline.py`                       | 主流程调度，串联解析、序列化、规整、分块、向量化、问题处理各阶段       |
+| `prompts.py`                        | 集中定义所有提示词与结构化输出 Schema（问答、重排、比较等）            |
 | `questions_processing.py`           | 问题处理与答案生成：公司名抽取、检索调用、上下文构建、问答、引用页校验 |
-| `reranking.py`                      | 基于 Jina API 和 LLM 的重排序，结合向量分数与 LLM 分数加权   |
-| `retrieval.py`                      | BM25、向量、混合检索器，支持按公司名检索、父页面回溯与可选 LLM 重排 |
-| `tables_serialization.py`           | 通过 LLM 把表格序列化为结构化信息块（可选开关）              |
-| `text_splitter.py`                  | 按 Token 数分块，支持表格内容特殊处理                        |
-| `questions_processing.py` 等        | 详见 `docs/src_modules_overview.md`                          |
+| `reranking.py`                      | 基于 Jina API 和 LLM 的重排序，结合向量分数与 LLM 分数加权             |
+| `retrieval.py`                      | BM25、向量、混合检索器，支持按公司名检索、父页面回溯与可选 LLM 重排    |
+| `tables_serialization.py`           | 通过 LLM 把表格序列化为结构化信息块（可选开关）                        |
+| `text_splitter.py`                  | 按 Token 数分块，支持表格内容特殊处理                                  |
+| `questions_processing.py` 等        | 详见 `docs/src_modules_overview.md`                                    |
 
 #### 10.4 运行情况
 
@@ -657,11 +655,26 @@ DEBUG:docling.pipeline.base_pipeline:Finished converting page batch time=510847.
 
 ```json
 [
-  { "text": "中芯国际在晶圆制造行业中的地位如何？其服务范围和全球布局是怎样的？", "kind": "string" },
-  { "text": "半导体行业有哪些关键特性，这些特性如何助力中芯国际发展？", "kind": "string" },
-  { "text": "中芯国际的营收和利润情况近期有何变化？影响因素是什么？", "kind": "string" },
-  { "text": "中芯国际的收入结构有何变化？尤其是在中国大陆和北美市场的表现如何？", "kind": "string" },
-  { "text": "美国对中国半导体产业的限制政策对中芯国际有何影响？中芯国际如何应对？", "kind": "string" }
+  {
+    "text": "中芯国际在晶圆制造行业中的地位如何？其服务范围和全球布局是怎样的？",
+    "kind": "string"
+  },
+  {
+    "text": "半导体行业有哪些关键特性，这些特性如何助力中芯国际发展？",
+    "kind": "string"
+  },
+  {
+    "text": "中芯国际的营收和利润情况近期有何变化？影响因素是什么？",
+    "kind": "string"
+  },
+  {
+    "text": "中芯国际的收入结构有何变化？尤其是在中国大陆和北美市场的表现如何？",
+    "kind": "string"
+  },
+  {
+    "text": "美国对中国半导体产业的限制政策对中芯国际有何影响？中芯国际如何应对？",
+    "kind": "string"
+  }
 ]
 ```
 
@@ -967,9 +980,7 @@ root_path: .../data/stock_data
     "relevant_pages": [0],
     "final_answer": "中芯国际是世界领先的集成电路晶圆代工企业之一，也是中国大陆集成电路制造业的领导者。根据2024年全球纯晶圆代工企业的销售额数据，中芯国际位居全球第二，在中国大陆企业中排名第一。公司主要提供8英寸和12英寸晶圆代工与技术服务，并为客户提供设计服务与IP支持、光掩模制造等一站式配套服务。其客户服务团队覆盖上海、北京、天津、深圳、中国台湾、美国加州、德国慕尼黑、意大利米兰、日本东京等多个国家和地区，展现了广泛的全球布局。"
   },
-  "references": [
-    { "pdf_sha1": "stock_10001", "page_index": 0 }
-  ]
+  "references": [{ "pdf_sha1": "stock_10001", "page_index": 0 }]
 }
 ```
 

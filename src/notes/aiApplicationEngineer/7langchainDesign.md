@@ -1,7 +1,7 @@
 ---
 title: AI框架设计与选型
 date: 2026-03-22
-categories: [教程, 知乎]
+categories: [教程]
 tags: [AI, Langchain]
 ---
 
@@ -13,12 +13,11 @@ tags: [AI, Langchain]
 
 ---
 
-
 ## 1. 什么是 AI Agent?
 
 ### 1.1 通俗理解
 
-想象一个**虚拟员工**: 
+想象一个**虚拟员工**:
 
 - 🧠 **大脑**: 大语言模型(LLM),负责思考和决策
 - 🖐️ **双手**: 各种工具(搜索、计算、API调用),负责执行任务
@@ -33,7 +32,7 @@ graph TB
         Memory[💾 记忆<br/>Context管理]
         Control[🎯 中枢<br/>控制流编排]
     end
-    
+
     User[👤 用户] -->|提问| Brain
     Brain -->|需要工具| Hands
     Hands -->|返回结果| Brain
@@ -219,10 +218,10 @@ from langchain_core.tools import tool
 def ping_tool(target: str) -> str:
     """
     检查本机到指定主机名或IP地址的网络连通性。
-    
+
     参数:
         target: 目标主机名或IP地址
-        
+
     返回:
         模拟的ping结果
     """
@@ -244,7 +243,7 @@ import json5
 class MyImageGen(BaseTool):
     # 工具描述
     description = 'AI 绘画服务,输入文本描述,返回图像 URL'
-    
+
     # 参数定义(显式)
     parameters = [{
         'name': 'prompt',
@@ -252,7 +251,7 @@ class MyImageGen(BaseTool):
         'description': '期望的图像内容的详细描述',
         'required': True
     }]
-    
+
     def call(self, params: str, **kwargs) -> str:
         # params 是 LLM 生成的 JSON 字符串
         prompt = json5.loads(params)['prompt']
@@ -322,11 +321,11 @@ graph TB
         ShortTerm[短期记忆<br/>对话历史]
         LongTerm[长期记忆<br/>知识库/RAG]
     end
-    
+
     User[用户输入] --> ShortTerm
     ShortTerm -->|滑动窗口| LLM[LLM处理]
     LongTerm -->|向量检索| LLM
-    
+
     style ShortTerm fill:#e1f5ff
     style LongTerm fill:#e8f5e9
 ```
@@ -366,7 +365,7 @@ conversation = RunnableWithMessageHistory(
 # 使用:指定 session_id 即可保持对话上下文
 config = {"configurable": {"session_id": "user_123"}}
 output = conversation.invoke(
-    {"input": "你好!"}, 
+    {"input": "你好!"},
     config=config
 )
 ```
@@ -426,7 +425,7 @@ graph LR
     A[控制流模式] --> B[管道模式<br/>Pipeline]
     A --> C[循环模式<br/>ReAct]
     A --> D[图模式<br/>DAG]
-    
+
     style B fill:#fff3e0
     style C fill:#e3f2fd
     style D fill:#f3e5f5
@@ -493,7 +492,7 @@ sequenceDiagram
         Tool-->>LLM: Observation(观察结果)
         LLM->>LLM: Thought(再次思考)
     end
-    
+
     LLM-->>Agent: Final Answer(最终回答)
 ```
 
@@ -510,7 +509,7 @@ graph TB
         LI[LlamaIndex<br/>RAG专家]
         QA[Qwen-Agent<br/>轻量级选手]
     end
-    
+
     LC -->|适合| A[通用AI应用<br/>复杂流程编排]
     LI -->|适合| B[企业知识库<br/>文档问答]
     QA -->|适合| C[快速Demo<br/>数据分析]
@@ -656,7 +655,7 @@ graph LR
     B --> C[召回相关文档]
     C --> D[LLM生成回答]
     D --> E[返回答案]
-    
+
     style B fill:#e3f2fd
     style C fill:#e8f5e9
 ```
@@ -693,12 +692,12 @@ if not DASHSCOPE_API_KEY:
 
 
 def load_documents_and_create_index(
-    file_dir: str = './docs', 
+    file_dir: str = './docs',
     persist_dir: str = './langchain_storage'
 ):
     """
     加载文档文件夹中的所有文件并创建向量索引
-    
+
     流程:
     1. 检查索引是否已存在(避免重复创建)
     2. 加载文档
@@ -706,31 +705,31 @@ def load_documents_and_create_index(
     4. 创建向量索引
     5. 保存索引
     """
-    
+
     # 创建嵌入模型(将文本转换为向量)
     embeddings = DashScopeEmbeddings(
         model="text-embedding-v1",
         dashscope_api_key=DASHSCOPE_API_KEY,
     )
-    
+
     # 检查索引是否已存在
     if os.path.exists(persist_dir):
         try:
             vector_store = FAISS.load_local(
-                persist_dir, 
-                embeddings, 
+                persist_dir,
+                embeddings,
                 allow_dangerous_deserialization=True
             )
             print("✅ 从存储加载索引成功")
             return vector_store
         except Exception as e:
             print(f"⚠️ 加载索引失败: {e}，将重新创建索引")
-    
+
     # 如果索引不存在,创建新索引
     if not os.path.exists(file_dir):
         print(f"❌ 文档目录 {file_dir} 不存在")
         return None
-    
+
     # 加载目录下的所有 txt 文件
     loader = DirectoryLoader(
         file_dir,
@@ -740,11 +739,11 @@ def load_documents_and_create_index(
     )
     documents = loader.load()
     print(f"📄 加载了 {len(documents)} 个文档")
-    
+
     if not documents:
         print("❌ 没有找到任何文档")
         return None
-    
+
     # 文本分割(防止单段文本过长)
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=1000,      # 每块最大长度
@@ -753,25 +752,25 @@ def load_documents_and_create_index(
     )
     chunks = text_splitter.split_documents(documents)
     print(f"✂️ 文本被分割成 {len(chunks)} 个块")
-    
+
     # 创建向量索引
     vector_store = FAISS.from_documents(chunks, embeddings)
-    
+
     # 保存索引
     os.makedirs(persist_dir, exist_ok=True)
     vector_store.save_local(persist_dir)
     print(f"💾 索引已保存到 {persist_dir}")
-    
+
     return vector_store
 
 
 def create_qa_chain(llm):
     """
     创建 QA 问答链 (LangChain 1.x LCEL 写法)
-    
+
     使用管道语法: prompt | llm | parser
     """
-    
+
     # QA Prompt 模板
     qa_prompt = ChatPromptTemplate.from_messages([
         ("system", """你是一个乐于助人的AI助手。
@@ -782,10 +781,10 @@ def create_qa_chain(llm):
 {context}"""),
         ("human", "{question}")
     ])
-    
+
     # 创建问答链 (LCEL 管道语法)
     qa_chain = qa_prompt | llm | StrOutputParser()
-    
+
     return qa_chain
 
 
@@ -796,23 +795,23 @@ def main():
         model_name="deepseek-v3",
         dashscope_api_key=DASHSCOPE_API_KEY
     )
-    
+
     # 加载文档并创建索引
     vector_store = load_documents_and_create_index()
     if vector_store is None:
         print("❌ 无法创建索引,程序退出")
         return
-    
+
     # 创建问答链
     qa_chain = create_qa_chain(llm)
-    
+
     # 执行查询
     query = "介绍下雇主责任险"
     print(f"\n🙋 用户查询: {query}\n")
-    
+
     # 相似度搜索,找到相关文档
     docs = vector_store.similarity_search(query, k=5)
-    
+
     # 显示召回的文档内容
     print("📑 ===== 召回的文档内容 =====")
     if docs:
@@ -823,10 +822,10 @@ def main():
     else:
         print("⚠️ 没有召回任何文档内容")
     print("===========================\n")
-    
+
     # 格式化上下文
     context = "\n\n".join(doc.page_content for doc in docs)
-    
+
     # 执行问答链
     print("🤖 ===== AI 回复 =====")
     response = qa_chain.invoke({"context": context, "question": query})
@@ -869,10 +868,10 @@ from llama_index.embeddings.dashscope import (
 def setup_llm_and_embedding():
     """配置 LLM 和 Embedding"""
     api_key = os.getenv('DASHSCOPE_API_KEY')
-    
+
     if not api_key:
         raise ValueError("请设置环境变量 DASHSCOPE_API_KEY")
-    
+
     # 使用 DashScope LLM
     llm = DashScope(
         model="deepseek-v3",
@@ -880,26 +879,26 @@ def setup_llm_and_embedding():
         temperature=0.7,
         top_p=0.8,
     )
-    
+
     # 使用 DashScope Embedding
     embed_model = DashScopeEmbedding(
         model_name=DashScopeTextEmbeddingModels.TEXT_EMBEDDING_V2,
     )
-    
+
     return llm, embed_model
 
 
 def load_documents_and_create_index(file_dir: str = './docs'):
     """
     加载文档并创建向量索引
-    
+
     LlamaIndex 的优势:
     - 一行代码加载整个目录
     - 自动分块、Embedding
     - 支持索引持久化
     """
     persist_dir = "./storage"
-    
+
     # 检查索引是否已存在
     if os.path.exists(persist_dir):
         try:
@@ -911,29 +910,29 @@ def load_documents_and_create_index(file_dir: str = './docs'):
             return index
         except Exception as e:
             print(f"⚠️ 加载索引失败: {e}，将重新创建索引")
-    
+
     # 如果索引不存在,创建新索引
     if not os.path.exists(file_dir):
         print(f"❌ 文档目录 {file_dir} 不存在")
         return None
-    
+
     # 读取文档(一行代码搞定)
     reader = SimpleDirectoryReader(file_dir)
     documents = reader.load_data()
-    
+
     if not documents:
         print("❌ 没有找到任何文档")
         return None
-    
+
     print(f"📄 加载了 {len(documents)} 个文档")
-    
+
     # 创建向量索引(自动完成所有工作)
     index = VectorStoreIndex.from_documents(documents)
-    
+
     # 保存索引
     index.storage_context.persist(persist_dir=persist_dir)
     print(f"💾 索引已保存到 {persist_dir}")
-    
+
     return index
 
 
@@ -941,30 +940,30 @@ def create_agent(index, llm):
     """创建 ReAct 智能体"""
     # 创建检索器
     retriever = index.as_retriever(similarity_top_k=5)
-    
+
     # 创建查询引擎
     query_engine = index.as_query_engine(similarity_top_k=5)
-    
+
     # 定义系统提示词
     system_instruction = '''你是一个乐于助人的AI助手。
 你可以从给定的文档中检索相关信息来回答用户的问题。
 你总是用中文回复用户。'''
-    
+
     # 创建检索工具
     def retrieve_documents(query: str) -> str:
         """从文档中检索相关信息"""
         response = query_engine.query(query)
         return str(response)
-    
+
     retrieve_tool = FunctionTool.from_defaults(fn=retrieve_documents)
-    
+
     # 创建 ReAct 智能体
     agent = ReActAgent(
         tools=[retrieve_tool],
         llm=llm,
         system_prompt=system_instruction,
     )
-    
+
     return agent, retriever
 
 
@@ -974,20 +973,20 @@ async def main():
     llm, embed_model = setup_llm_and_embedding()
     Settings.llm = llm
     Settings.embed_model = embed_model
-    
+
     # 加载文档并创建索引
     index = load_documents_and_create_index()
     if index is None:
         print("❌ 无法创建索引,程序退出")
         return
-    
+
     # 创建智能体
     agent, retriever = create_agent(index, llm)
-    
+
     # 执行查询
     query = "介绍下雇主责任险"
     print(f"\n🙋 用户查询: {query}\n")
-    
+
     # 显示召回的文档内容
     print("\n📑 ===== 召回的文档内容 =====")
     retrieved_nodes = retriever.retrieve(query)
@@ -1001,7 +1000,7 @@ async def main():
     else:
         print("⚠️ 没有召回任何文档内容")
     print("===========================\n")
-    
+
     # 使用智能体回答问题
     print("\n🤖 ===== 智能体回复 =====")
     response = await agent.run(query)
@@ -1093,7 +1092,7 @@ def init_agent_service():
     """初始化智能体服务"""
     try:
         files = get_doc_files()
-        
+
         # 创建 Assistant
         # files 参数直接传入文档列表,自动完成 RAG
         bot = Assistant(
@@ -1115,34 +1114,34 @@ def app_tui():
     try:
         bot = init_agent_service()
         messages = []
-        
+
         while True:
             try:
                 query = input('\n🙋 用户问题: ')
-                
+
                 if not query:
                     print('⚠️ 用户问题不能为空!')
                     continue
-                    
+
                 messages.append({'role': 'user', 'content': query})
                 print("🤔 正在处理您的请求...")
-                
+
                 # 流式输出
                 current_index = 0
                 for response in bot.run(messages=messages):
                     current_response = response[0]['content'][current_index:]
                     current_index = len(response[0]['content'])
                     print(current_response, end='')
-                
+
                 messages.extend(response)
                 print("\n")
-                
+
             except KeyboardInterrupt:
                 print("\n\n👋 退出程序")
                 break
             except Exception as e:
                 print(f"❌ 处理请求时出错: {str(e)}")
-                
+
     except Exception as e:
         print(f"❌ 启动终端模式失败: {str(e)}")
 
@@ -1153,7 +1152,7 @@ def app_gui():
     try:
         print("🚀 正在启动 Web 界面...")
         bot = init_agent_service()
-        
+
         # 配置聊天界面
         chatbot_config = {
             'prompt.suggestions': [
@@ -1162,10 +1161,10 @@ def app_gui():
                 '分析一下文档中的关键信息',
             ]
         }
-        
+
         print("🌐 Web 界面准备就绪,正在启动服务...")
         WebUI(bot, chatbot_config=chatbot_config).run()
-        
+
     except Exception as e:
         print(f"❌ 启动 Web 界面失败: {str(e)}")
 
@@ -1196,15 +1195,15 @@ if __name__ == '__main__':
 ```mermaid
 graph TD
     A[选择Agent框架] --> B{主要需求是什么?}
-    
+
     B -->|企业知识库/RAG| C[选择 LlamaIndex]
     B -->|通用AI应用| D{需要复杂流程编排?}
     B -->|快速Demo/POC| E[选择 Qwen-Agent]
     B -->|多Agent协作| F[选择 AutoGen]
-    
+
     D -->|是| G[选择 LangChain]
     D -->|否| H{需要数据分析?}
-    
+
     H -->|是| E
     H -->|否| G
 ```
@@ -1291,7 +1290,7 @@ graph TB
         C[Context管理<br/>短期记忆+长期记忆]
         D[控制流编排<br/>管道/ReAct/图模式]
     end
-    
+
     A --> E[LangChain<br/>全能型]
     B --> F[Qwen-Agent<br/>轻量级]
     C --> G[LlamaIndex<br/>RAG专家]
@@ -1317,8 +1316,6 @@ llama_index==0.14.13
 qwen_agent==0.0.25
 ```
 
-
 ---
 
 本文档由Kimi生成，仅用于个人学习记录，勿用于商业用途
-

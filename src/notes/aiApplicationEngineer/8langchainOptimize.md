@@ -1,7 +1,7 @@
 ---
 title: HuggingFace生态实战：从模型应用到高效微调
 date: 2026-03-22
-categories: [教程, 知乎]
+categories: [教程]
 tags: [AI, HuggingFace]
 ---
 

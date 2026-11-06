@@ -1,12 +1,11 @@
 ---
 title: 高质量微调数据工程与评估
 date: 2026-06-25
-categories: [教程, 知乎]
+categories: [教程]
 tags: [AI, LLM]
 ---
 
 <!-- more -->
-
 
 ## 1. 前置知识：什么是 SFT 微调？
 
@@ -35,7 +34,7 @@ graph LR
     A[📦 原始数据<br/>79万条] -->|清洗| B[✨ 清洗数据<br/>60万条]
     B -->|采样| C[🎯 训练数据<br/>1200条]
     C -->|微调| D[🤖 领域模型]
-    
+
     style A fill:#ffcccc,stroke:#333
     style B fill:#ffffcc,stroke:#333
     style C fill:#ccffcc,stroke:#333
@@ -135,12 +134,12 @@ python run_full_pipeline.py --step 6    # 清洗价值验证
 
 | 步骤            | CPU 可运行？ | GPU 可运行？ | 预计耗时 (CPU) | 预计耗时 (GPU) |
 | --------------- | :----------: | :----------: | -------------- | -------------- |
-| Step 1 数据清洗 |      ✅       |      ✅       | 1-3 分钟       | < 1 分钟       |
-| Step 2 质量评估 |      ✅       |      ✅       | ~30 秒         | ~10 秒         |
-| Step 3 格式转换 |      ✅       |      ✅       | ~10 秒         | ~5 秒          |
-| Step 4 模型微调 |      ✅       |      ✅       | 1-3 分钟       | 5-15 分钟      |
-| Step 5 BLEU评估 |      ✅       |      ✅       | ~10 秒         | ~5 秒          |
-| Step 6 清洗验证 |      ✅       |      ✅       | 5-10 分钟      | 10-20 分钟     |
+| Step 1 数据清洗 |      ✅      |      ✅      | 1-3 分钟       | < 1 分钟       |
+| Step 2 质量评估 |      ✅      |      ✅      | ~30 秒         | ~10 秒         |
+| Step 3 格式转换 |      ✅      |      ✅      | ~10 秒         | ~5 秒          |
+| Step 4 模型微调 |      ✅      |      ✅      | 1-3 分钟       | 5-15 分钟      |
+| Step 5 BLEU评估 |      ✅      |      ✅      | ~10 秒         | ~5 秒          |
+| Step 6 清洗验证 |      ✅      |      ✅      | 5-10 分钟      | 10-20 分钟     |
 
 ---
 
@@ -157,14 +156,14 @@ python run_full_pipeline.py --step 6    # 清洗价值验证
 ```mermaid
 graph TB
     ROOT["【数据集】中文医疗数据/"]
-    
+
     ROOT --> IM["IM_内科/<br/>220,606 条"]
     ROOT --> SG["Surgical_外科/<br/>115,991 条"]
     ROOT --> PD["Pediatric_儿科/<br/>101,602 条"]
     ROOT --> OC["Oncology_肿瘤科/<br/>75,553 条"]
     ROOT --> OB["OAGD_妇产科/<br/>183,751 条"]
     ROOT --> AN["Andriatria_男科/<br/>94,596 条"]
-    
+
     IM --> TOT["📦 总计: 792,099 条"]
     SG --> TOT
     PD --> TOT
@@ -198,7 +197,7 @@ flowchart LR
 def is_valid_qa(question, answer, min_q_len=5, max_q_len=500, min_a_len=10, max_a_len=2000):
     """
     验证问答对是否有效，返回 (是否有效, 原因)
-    
+
     过滤条件：
     1. 非空 — 问题或回答为空 → 拒绝
     2. 长度在合理范围内 — 太短没信息量，太长不适配小模型
@@ -219,8 +218,8 @@ def is_valid_qa(question, answer, min_q_len=5, max_q_len=500, min_a_len=10, max_
 
 从原始 79 万条数据经过清洗流水线后的结果：
 
-| 过滤原因                | 被过滤数量 |
-| ----------------------- | ---------- |
+| 过滤原因                 | 被过滤数量 |
+| ------------------------ | ---------- |
 | ✅ 有效数据              | 693,506 条 |
 | ❌ 问题过短（< 5 字）    | 96,726 条  |
 | ❌ MD5 去重              | 87,722 条  |
@@ -280,7 +279,7 @@ xychart-beta
     title "清洗前后各维度评分对比"
     x-axis ["格式合规", "字段完整", "语言一致", "数据唯一", "长度合理", "多样性"]
     y-axis "得分" 0 --> 20
-    
+
     bar [8, 12, 10, 5, 6, 10]
     bar [18, 19, 14, 13, 14, 13]
 ```
@@ -355,9 +354,9 @@ flowchart LR
 ```json
 {
   "messages": [
-    {"role": "system", "content": "你是一个专业的医疗助手。"},
-    {"role": "user", "content": "我最近总是感觉头晕，应该怎么办？"},
-    {"role": "assistant", "content": "头晕的原因很多，可能与低血糖、贫血..."}
+    { "role": "system", "content": "你是一个专业的医疗助手。" },
+    { "role": "user", "content": "我最近总是感觉头晕，应该怎么办？" },
+    { "role": "assistant", "content": "头晕的原因很多，可能与低血糖、贫血..." }
   ]
 }
 ```
@@ -378,7 +377,7 @@ flowchart LR
 
 ## 6. Step 4：模型微调（SFT）
 
-> **对应脚本**：[Qwen3_5_医疗微调.py](Qwen3_5_医疗微调.py)
+> **对应脚本**：[Qwen3*5*医疗微调.py](Qwen3_5_医疗微调.py)
 >
 > **核心问题**：怎么用清洗好的数据让模型学会医疗领域知识？
 
@@ -417,20 +416,20 @@ flowchart TB
 ```mermaid
 flowchart TD
     START["检测环境"] --> CHECK{"torch.cuda.is_available()?"}
-    
+
     CHECK -->|"✅ 有 GPU"| GPU["GPU 模式 (Unsloth)"]
     CHECK -->|"❌ 无 GPU"| CPU["CPU 模式 (transformers+peft)"]
-    
+
     GPU --> G1["4bit 量化加载<br/>显存占用 ~1.5 GB"]
     G1 --> G2["LoRA rank=16<br/>训练 7 个模块"]
     G2 --> G3["max_steps=100<br/>batch=2, grad_accum=4"]
     G3 --> G4["⏱️ 约 5-15 分钟"]
-    
+
     CPU --> C1["float32 加载<br/>内存占用 ~3.2 GB"]
     C1 --> C2["LoRA rank=8<br/>训练 4 个模块"]
     C2 --> C3["max_steps=10<br/>batch=1, grad_accum=2"]
     C3 --> C4["⏱️ 约 1-3 分钟"]
-    
+
     style GPU fill:#c8e6c9,stroke:#388e3c
     style CPU fill:#fff9c4,stroke:#f9a825
 ```
@@ -444,20 +443,20 @@ graph LR
     subgraph ORIGINAL["原始权重矩阵 W（冻结，不训练）"]
         W["W (大矩阵<br/>例如 4096×4096)"]
     end
-    
+
     subgraph LORA["LoRA 分解（只训练这两个小矩阵）"]
         A["A 矩阵<br/>(4096×16)"]
         B["B 矩阵<br/>(16×4096)"]
     end
-    
+
     subgraph OUTPUT["最终输出"]
         O["h = W·x + B·A·x"]
     end
-    
+
     W --> O
     A -->|"B × A"| B
     B --> O
-    
+
     style W fill:#ffcccc,stroke:#333
     style A fill:#cce5ff,stroke:#2196f3
     style B fill:#cce5ff,stroke:#2196f3
@@ -495,7 +494,7 @@ BLEU（Bilingual Evaluation Understudy）原本用于评估机器翻译质量，
 flowchart LR
     REF["📝 标准答案<br/>「头晕可能与低血糖、<br/>贫血、颈椎病等有关」"]
     CAND["🤖 模型输出<br/>「头晕可能是因为低血糖<br/>或贫血引起的」"]
-    
+
     REF --> N1["1-gram 精度<br/>匹配词数/总词数"]
     CAND --> N1
     REF --> N2["2-gram 精度<br/>匹配词组数/总词组数"]
@@ -504,12 +503,12 @@ flowchart LR
     CAND --> N3
     REF --> N4["4-gram 精度"]
     CAND --> N4
-    
+
     N1 --> BP["✂️ 简短惩罚<br/>避免模型只说短句"]
     N2 --> BP
     N3 --> BP
     N4 --> BP
-    
+
     BP --> FINAL["📊 BLEU 分数<br/>0~1 之间，越高越好"]
 
     style REF fill:#ccffcc,stroke:#4caf50
@@ -612,7 +611,7 @@ graph LR
     subgraph BAD["❌ 原始数据训练的模型输出"]
         B1["「I can provide general<br/>health advice. Dizziness<br/>can be caused by many<br/>factors...」"]
     end
-    
+
     subgraph GOOD["✅ 清洗数据训练的模型输出"]
         G1["「头晕的原因很多，可能与<br/>低血糖、贫血、颈椎病等有关。<br/>建议首先注意休息，保证<br/>充足的睡眠...」"]
     end
@@ -688,18 +687,18 @@ graph TB
         PD["pandas<br/>CSV 读写"]
         DS["datasets<br/>HuggingFace Dataset"]
     end
-    
+
     subgraph 模型训练
         TR["transformers<br/>模型加载"]
         PF["peft<br/>LoRA 微调"]
         TRL["trl<br/>SFTTrainer"]
         US["unsloth<br/>GPU 加速+量化"]
     end
-    
+
     subgraph 评估
         JB["jieba<br/>中文分词"]
     end
-    
+
     subgraph 模型下载
         MS["modelscope<br/>国内模型下载"]
     end

@@ -1,7 +1,7 @@
 ---
 title: RAG技术与应用
 date: 2026-09-11
-categories: [教程, 知乎]
+categories: [教程]
 tags: [AI, RAG]
 ---
 
@@ -43,8 +43,8 @@ graph LR
 
 ### 2.2 RAG 的优势
 
-| 优势                       | 说明                                                |
-| -------------------------- | --------------------------------------------------- |
+| 优势                        | 说明                                                |
+| --------------------------- | --------------------------------------------------- |
 | 🕐 **解决知识时效性问题**   | 大模型训练数据是静态的，RAG可检索外部知识库实时更新 |
 | 🎯 **减少模型幻觉**         | 引入外部知识，减少虚假或不准确内容的生成            |
 | 🏥 **提升专业领域回答质量** | 结合垂直领域知识库，生成更具专业深度的回答          |
@@ -58,18 +58,18 @@ graph TD
         A2 --> A3["向量化 Embedding"]
         A3 --> A4["存入向量数据库"]
     end
-    
+
     subgraph Step2["Step 2: 检索阶段（在线）"]
         B1["用户输入问题"] --> B2["Query向量化"]
         B2 --> B3["向量相似度检索"]
         B3 --> B4["重排序 Rerank"]
     end
-    
+
     subgraph Step3["Step 3: 生成阶段（在线）"]
         C1["组装上下文"] --> C2["LLM生成回答"]
         C2 --> C3["输出答案"]
     end
-    
+
     A4 --> B3
     B4 --> C1
 ```
@@ -101,7 +101,7 @@ graph LR
     A["Indexing<br/>索引"] -->|"如何更好地把<br/>知识存起来"| B["Retrieval<br/>检索"]
     B -->|"如何在大量知识中<br/>找到一小部分有用的"| C["Generation<br/>生成"]
     C -->|"如何结合提问和<br/>检索到的知识生成答案"| D["有用的答案"]
-    
+
     style A fill:#e8f5e9
     style B fill:#fff3e0
     style C fill:#e3f2fd
@@ -127,30 +127,30 @@ graph TD
     A --> C["中文嵌入模型"]
     A --> D["指令驱动与复杂任务模型"]
     A --> E["企业级模型"]
-    
+
     B --> B1["BGE-M3（智源）"]
     B --> B2["text-embedding-3-large（OpenAI）"]
     B --> B3["Jina-embeddings-v2-small"]
-    
+
     C --> C1["xiaobu-embedding-v2"]
     C --> C2["M3E-Base"]
     C --> C3["stella-mrl-large-zh-v3.5"]
-    
+
     D --> D1["gte-Qwen2-7B-instruct（阿里）"]
     D --> D2["E5-mistral-7B（微软）"]
 ```
 
 ### 4.2 常见 Embedding 模型对比
 
-| 模型                         | 机构       | 特点                                                         | 适用场景                    | 文件大小 |
-| ---------------------------- | ---------- | ------------------------------------------------------------ | --------------------------- | -------- |
+| 模型                         | 机构       | 特点                                                            | 适用场景                    | 文件大小 |
+| ---------------------------- | ---------- | --------------------------------------------------------------- | --------------------------- | -------- |
 | **BGE-M3**                   | 智源研究院 | 支持100+语言，输入长度8192 tokens，融合密集/稀疏/多向量混合检索 | 跨语言长文档检索、高精度RAG | 2.3G     |
-| **text-embedding-3-large**   | OpenAI     | 向量维度3072，长文本语义捕捉能力强                           | 英文内容优先的全球化应用    | -        |
-| **Jina-embeddings-v2-small** | Jina AI    | 参数量仅35M，RT<50ms                                         | 轻量级文本处理、实时推理    | -        |
-| **xiaobu-embedding-v2**      | -          | 针对中文语义优化                                             | 中文文本分类、语义检索      | -        |
-| **M3E-Base**                 | -          | 针对中文优化的轻量模型                                       | 中文法律、医疗领域检索      | 0.4G     |
-| **gte-Qwen2-7B-instruct**    | 阿里巴巴   | 基于Qwen大模型微调，支持代码与文本跨模态检索                 | 复杂指令驱动任务、智能问答  | -        |
-| **E5-mistral-7B**            | Microsoft  | 基于Mistral架构，Zero-shot表现优异                           | 动态调整语义密度的复杂系统  | -        |
+| **text-embedding-3-large**   | OpenAI     | 向量维度3072，长文本语义捕捉能力强                              | 英文内容优先的全球化应用    | -        |
+| **Jina-embeddings-v2-small** | Jina AI    | 参数量仅35M，RT<50ms                                            | 轻量级文本处理、实时推理    | -        |
+| **xiaobu-embedding-v2**      | -          | 针对中文语义优化                                                | 中文文本分类、语义检索      | -        |
+| **M3E-Base**                 | -          | 针对中文优化的轻量模型                                          | 中文法律、医疗领域检索      | 0.4G     |
+| **gte-Qwen2-7B-instruct**    | 阿里巴巴   | 基于Qwen大模型微调，支持代码与文本跨模态检索                    | 复杂指令驱动任务、智能问答  | -        |
+| **E5-mistral-7B**            | Microsoft  | 基于Mistral架构，Zero-shot表现优异                              | 动态调整语义密度的复杂系统  | -        |
 
 ---
 
@@ -166,19 +166,19 @@ model_dir = snapshot_download('BAAI/bge-m3', cache_dir='/root/autodl-tmp/models'
 # 使用 BGE-M3 进行文本编码和相似度计算
 from FlagEmbedding import BGEM3FlagModel
 
-model = BGEM3FlagModel('/root/autodl-tmp/models/BAAI/bge-m3',  
+model = BGEM3FlagModel('/root/autodl-tmp/models/BAAI/bge-m3',
                        use_fp16=True)  # 使用FP16加速计算
 
 # 定义查询和文档
 sentences_1 = ["What is BGE M3?", "Defination of BM25"]  # Query
 sentences_2 = [
-    "BGE M3 is an embedding model supporting dense retrieval, lexical matching and multi-vector interaction.", 
+    "BGE M3 is an embedding model supporting dense retrieval, lexical matching and multi-vector interaction.",
     "BM25 is a bag-of-words retrieval function that ranks a set of documents based on the query terms appearing in each document"
 ]  # Chunk
 
 # 编码为向量
-embeddings_1 = model.encode(sentences_1, 
-                            batch_size=12, 
+embeddings_1 = model.encode(sentences_1,
+                            batch_size=12,
                             max_length=8192,
                             )['dense_vecs']
 embeddings_2 = model.encode(sentences_2)['dense_vecs']
@@ -225,8 +225,8 @@ similarity[i, j] = Σ(k=0 to 1023) embeddings_1[i, k] × embeddings_2[j, k]
 
 |                                  | Chunk1: "BGE M3 is an embedding..." | Chunk2: "BM25 is a bag-of-words..." |
 | -------------------------------- | ----------------------------------- | ----------------------------------- |
-| **Query1**: "What is BGE M3?"    | **0.6265** ✅ 高相关                 | 0.3477                              |
-| **Query2**: "Defination of BM25" | 0.3499                              | **0.6780** ✅ 高相关                 |
+| **Query1**: "What is BGE M3?"    | **0.6265** ✅ 高相关                | 0.3477                              |
+| **Query2**: "Defination of BM25" | 0.3499                              | **0.6780** ✅ 高相关                |
 
 > 💡 **关键理解**：矩阵乘法实际上是在计算所有query和chunk之间的成对相似度。向量点积的几何意义：`q · c = ||q|| × ||c|| × cos(θ)`，点积越大，夹角越小，相似度越高。
 
@@ -289,7 +289,7 @@ def last_token_pool(last_hidden_states: Tensor,
     else:
         sequence_lengths = attention_mask.sum(dim=1) - 1
         batch_size = last_hidden_states.shape[0]
-        return last_hidden_states[torch.arange(batch_size, 
+        return last_hidden_states[torch.arange(batch_size,
             device=last_hidden_states.device), sequence_lengths]
 
 def get_detailed_instruct(task_description: str, query: str) -> str:
@@ -317,12 +317,12 @@ model = AutoModel.from_pretrained(model_dir, trust_remote_code=True)
 max_length = 8192
 
 # 分词处理
-batch_dict = tokenizer(input_texts, max_length=max_length, 
+batch_dict = tokenizer(input_texts, max_length=max_length,
     padding=True, truncation=True, return_tensors='pt')
 outputs = model(**batch_dict)
 
 # 提取最后一个token的表示
-embeddings = last_token_pool(outputs.last_hidden_state, 
+embeddings = last_token_pool(outputs.last_hidden_state,
     batch_dict['attention_mask'])
 
 # L2归一化
@@ -352,24 +352,24 @@ graph TD
     subgraph 输入
         A1["PDF文件<br/>（如：客户经理考核办法.pdf）"]
     end
-    
+
     subgraph Step1["Step 1: 文档预处理"]
         B1["PyPDF2 提取文本"] --> B2["RecursiveCharacterTextSplitter<br/>文本分块"]
         B2 --> B3["页码映射<br/>（众数统计）"]
     end
-    
+
     subgraph Step2["Step 2: 知识库构建"]
         C1["DashScope Embedding<br/>text-embedding-v1"] --> C2["FAISS 向量数据库"]
         C2 --> C3["本地持久化<br/>index.faiss + page_info.pkl"]
     end
-    
+
     subgraph Step3["Step 3: 问答查询"]
         D1["用户问题"] --> D2["similarity_search<br/>Top-K检索"]
         D2 --> D3["构建上下文"]
         D3 --> D4["DeepSeek-V3<br/>LLM生成回答"]
         D4 --> D5["输出答案 + 来源页码"]
     end
-    
+
     A1 --> B1
     B3 --> C1
     C3 --> D2
@@ -396,7 +396,7 @@ from typing import List, Tuple
 def extract_text_with_page_numbers(pdf) -> Tuple[str, List[int]]:
     """
     从PDF中提取文本并记录每个字符对应的页码
-    
+
     参数:
         pdf: PDF文件对象
     返回:
@@ -426,10 +426,10 @@ from langchain_community.embeddings import DashScopeEmbeddings
 from langchain_community.vectorstores import FAISS
 import pickle
 
-def process_text_with_splitter(text: str, char_page_mapping: List[int], 
+def process_text_with_splitter(text: str, char_page_mapping: List[int],
                                 save_path: str = None) -> FAISS:
     """处理文本并创建向量存储"""
-    
+
     # 创建文本分割器
     text_splitter = RecursiveCharacterTextSplitter(
         separators=["\n\n", "\n", ".", " ", ""],
@@ -442,13 +442,13 @@ def process_text_with_splitter(text: str, char_page_mapping: List[int],
     # 切分文本
     docs = text_splitter.create_documents([text])
     print(f"文本被分割成 {len(docs)} 个块。")
-    
+
     # 创建嵌入模型
     embeddings = DashScopeEmbeddings(
         model="text-embedding-v1",
         dashscope_api_key=DASHSCOPE_API_KEY,
     )
-    
+
     # 按原文真实位置取该块覆盖的页码，再取众数
     page_info = {}
     for doc in docs:
@@ -467,14 +467,14 @@ def process_text_with_splitter(text: str, char_page_mapping: List[int],
     # 从带页码 metadata 的 Document 创建知识库
     knowledgeBase = FAISS.from_documents(docs, embeddings)
     knowledgeBase.page_info = page_info
-    
+
     # 保存到磁盘
     if save_path:
         os.makedirs(save_path, exist_ok=True)
         knowledgeBase.save_local(save_path)
         with open(os.path.join(save_path, "page_info.pkl"), "wb") as f:
             pickle.dump(page_info, f)
-    
+
     return knowledgeBase
 ```
 
@@ -504,7 +504,7 @@ if query:
     # 调用 LLM
     response = llm.invoke(prompt)
     print(response)
-    
+
     # 显示来源页码
     unique_pages = set()
     for doc in docs:
@@ -545,7 +545,7 @@ graph TD
     A --> C["map_reduce"]
     A --> D["refine"]
     A --> E["map_rerank"]
-    
+
     B --> B1["直接把所有文档<br/>拼接作为prompt<br/>一次性输入LLM"]
     C --> C1["每个chunk单独处理<br/>然后合并结果"]
     D --> D1["在第一个chunk上做prompt<br/>得到结果后合并下一个<br/>逐步refine"]
@@ -589,7 +589,7 @@ graph TD
     A --> D["模糊指代型"]
     A --> E["多意图型"]
     A --> F["反问型"]
-    
+
     B --> B1["还有其他设施吗？<br/>→ 除了疯狂动物城XX之外，<br/>还有其他设施吗？"]
     C --> C1["哪个更好玩？<br/>→ 疯狂动物城和蜘蛛侠<br/>哪个游玩时间更长、更有趣？"]
     D --> D1["都什么时候开始？<br/>→ 上海迪士尼和香港迪士尼<br/>的烟花表演都什么时候开始？"]
@@ -731,7 +731,7 @@ graph TD
     E --> F["调用搜索API<br/>（如 Tavily）"]
     F --> G["获取搜索结果"]
     G --> H["将搜索结果作为上下文<br/>输入LLM生成回答"]
-    
+
     D --> I["本地向量检索"]
     I --> H
 ```
@@ -745,7 +745,7 @@ def identify_web_search_needs(query, conversation_history):
     """识别查询是否需要联网搜索"""
     instruction = """
     你是一个智能的查询分析专家。请分析用户的查询，判断是否需要联网搜索。
-    
+
     需要联网搜索的情况包括：
     1. 时效性信息 - 包含"最新"、"今天"、"现在"等时间相关词汇
     2. 价格信息 - 包含"多少钱"、"价格"、"费用"等价格相关词汇
@@ -755,7 +755,7 @@ def identify_web_search_needs(query, conversation_history):
     6. 交通信息 - 包含"怎么去"、"交通"等交通方式
     7. 预订信息 - 包含"预订"、"预约"、"购票"等预订相关
     8. 实时状态 - 包含"排队"、"拥挤"、"人流量"等实时状态
-    
+
     请返回JSON格式：
     {
         "need_web_search": true/false,
@@ -773,7 +773,7 @@ def rewrite_for_web_search(query, search_type="general"):
     """为联网搜索改写查询"""
     instruction = """
     你是一个专业的搜索查询优化专家。请将用户的查询改写为更适合搜索引擎检索的形式。
-    
+
     改写技巧：
     1. 添加具体地点 - 如"上海迪士尼乐园"
     2. 添加时间范围 - 如"2024年"、"今天"
@@ -781,7 +781,7 @@ def rewrite_for_web_search(query, search_type="general"):
     4. 添加搜索意图 - 明确搜索目的
     5. 去除口语化表达 - 转换为标准搜索词
     6. 添加相关词汇 - 增加同义词或相关词
-    
+
     请返回JSON格式：
     {
         "rewritten_query": "改写后的搜索查询",
@@ -802,7 +802,7 @@ def generate_search_strategy(query, search_type="general"):
     instruction = f"""
     你是一个搜索策略专家。请为用户的查询制定详细的搜索策略。
     当前日期：{current_date}
-    
+
     搜索策略包括：
     1. 主要搜索词 - 核心关键词
     2. 扩展搜索词 - 相关词汇和同义词
@@ -893,4 +893,3 @@ A：向量数据库专门用于相似度检索和模糊查询，而关系型数�
 
 **Q：如果LLM可以处理无限上下文了，RAG还有意义吗？**
 A：仍有意义。RAG在效率与成本、知识更新、可解释性、定制化、数据隐私等方面仍有优势。
-

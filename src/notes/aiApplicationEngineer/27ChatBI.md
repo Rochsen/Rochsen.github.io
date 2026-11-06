@@ -1,7 +1,7 @@
 ---
 title: 项目实战：ChatBI开发实战
 date: 2026-07-19
-categories: [教程, 知乎]
+categories: [教程]
 tags: [AI, Agent, 低代码]
 ---
 
@@ -375,20 +375,20 @@ def calculate_macd(data, fast=12, slow=26, signal=9):
 flowchart TB
     A[获取过去1年收盘价] --> B[计算MACD/信号线/柱状图]
     B --> C[逐日扫描交叉点]
-    
+
     C --> D{MACD 上穿<br/>信号线?}
     D -->|金叉| E[记录买入信号 BUY]
-    
+
     C --> F{MACD 下穿<br/>信号线?}
     F -->|死叉| G[记录卖出信号 SELL]
-    
+
     E --> H[配对买卖信号]
     G --> H
-    
+
     H --> I{最后信号是买入?}
     I -->|是| J[追加最后一天为卖出]
     I -->|否| K[直接计算收益率]
-    
+
     J --> K
     K --> L[模拟交易:<br/>初始10000元满仓操作]
     L --> M[生成双面板图表]
@@ -467,16 +467,16 @@ forecast = model.predict(future)
 
 ```json
 {
-    "mcpServers": {
-        "tavily-mcp": {
-            "command": "npx",
-            "args": ["-y", "tavily-mcp@0.1.4"],
-            "autoApprove": [],
-            "env": {
-                "TAVILY_API_KEY": "tvly-dev-xxxxxxxxxxxxxxxx"
-            }
-        }
+  "mcpServers": {
+    "tavily-mcp": {
+      "command": "npx",
+      "args": ["-y", "tavily-mcp@0.1.4"],
+      "autoApprove": [],
+      "env": {
+        "TAVILY_API_KEY": "tvly-dev-xxxxxxxxxxxxxxxx"
+      }
     }
+  }
 }
 ```
 
@@ -529,21 +529,21 @@ sequenceDiagram
     participant DB as SQLite
 
     U->>LLM: 对比2025年中芯国际和贵州茅台的涨跌幅
-    
+
     LLM->>RAG: 检索涨跌幅计算FAQ
     RAG-->>LLM: "计算涨跌幅 = (最后一天价格 - 第一天价格) / 第一天价格 * 100%"
-    
+
     LLM->>SQL: 生成SQL查询
     Note over LLM,SQL: SELECT stock_name, trade_date, close<br/>FROM stock_history<br/>WHERE stock_name IN ('中芯国际','贵州茅台')<br/>AND trade_date BETWEEN '20250101' AND '20251231'<br/>ORDER BY stock_name, trade_date
-    
+
     SQL->>DB: 执行查询
     DB-->>SQL: 返回全年价格数据
-    
+
     SQL-->>LLM: {"result": [...], "chart": "![股票数据图表](image_show/...png)"}
-    
+
     LLM->>LLM: 分析数据
     Note over LLM: 中芯国际: 89.96 → 1377.18 (+1431.3%)<br/>贵州茅台: 1414.17 → 1377.18 (-2.62%)
-    
+
     LLM-->>U: 📊 中芯国际2025年涨幅达1431.3%，远超贵州茅台的-2.62%
 ```
 
@@ -822,16 +822,20 @@ keywords: ARIMA, 预测, 未来价格, 时间序列
 # arima-predict 技能指南
 
 ## 适用场景
+
 用户明确要求 ARIMA 预测、未来 N 天收盘价时调用。
 
 ## 执行命令
+
 python skills/arima-predict/scripts/run_arima.py --ts-code 600519.SH --n 7
 
 ## 参数
+
 - `--ts-code` 必填
 - `--n` 必填，正整数，预测天数
 
 ## 输出
+
 JSON 含 `predictions`、`chart`；须在回复中原样附带 `chart` 的 markdown。
 ```
 
@@ -846,15 +850,16 @@ JSON 含 `predictions`、`chart`；须在回复中原样附带 `chart` 的 markd
 
 ## 能力概览
 
-| 能力 | 何时使用 | 如何调用 |
-|------|----------|----------|
-| SQL 查询 + 自动走势图 | 查历史 K 线、多股对比 | 先读 `stock-sql` 技能，再 `exec` 运行脚本 |
-| MACD | 近一年买卖点与简易回测 | 读 `macd-analysis` 技能后执行脚本 |
-| ARIMA 预测 | 未来 N 天价格预测 | 读 `arima-predict` 技能 |
-| 布林带 | 超买超卖与回测 | 读 `bollinger` 技能 |
-| Prophet 季节性 | 趋势/周/年季节分解 | 读 `prophet-cycle` 技能 |
+| 能力                  | 何时使用               | 如何调用                                  |
+| --------------------- | ---------------------- | ----------------------------------------- |
+| SQL 查询 + 自动走势图 | 查历史 K 线、多股对比  | 先读 `stock-sql` 技能，再 `exec` 运行脚本 |
+| MACD                  | 近一年买卖点与简易回测 | 读 `macd-analysis` 技能后执行脚本         |
+| ARIMA 预测            | 未来 N 天价格预测      | 读 `arima-predict` 技能                   |
+| 布林带                | 超买超卖与回测         | 读 `bollinger` 技能                       |
+| Prophet 季节性        | 趋势/周/年季节分解     | 读 `prophet-cycle` 技能                   |
 
 ## 回答规范
+
 - 脚本返回的 JSON 中含有 `table`、`chart` 等 markdown 字段时，**须原样输出**
 - 使用简体中文；涉及投资建议时附加风险提示
 ```
@@ -923,17 +928,21 @@ result = await bot.run(user_input, session_key="quant:interactive")
 {
   "name": "ARIMA收盘价短期预测",
   "inputs": [
-    {"name": "ts_code", "type": "string", "required": true},
-    {"name": "n", "type": "integer", "required": true}
+    { "name": "ts_code", "type": "string", "required": true },
+    { "name": "n", "type": "integer", "required": true }
   ],
   "steps": [
-    {"id": "load_data", "type": "tool", "label": "加载历史收盘价"},
-    {"id": "fit_arima_model", "type": "tool", "label": "拟合ARIMA(5,1,5)模型"},
-    {"id": "plot_chart", "type": "tool", "label": "绘制预测曲线图"}
+    { "id": "load_data", "type": "tool", "label": "加载历史收盘价" },
+    {
+      "id": "fit_arima_model",
+      "type": "tool",
+      "label": "拟合ARIMA(5,1,5)模型"
+    },
+    { "id": "plot_chart", "type": "tool", "label": "绘制预测曲线图" }
   ],
   "edges": [
-    {"from": "load_data", "to": "fit_arima_model"},
-    {"from": "fit_arima_model", "to": "plot_chart"}
+    { "from": "load_data", "to": "fit_arima_model" },
+    { "from": "fit_arima_model", "to": "plot_chart" }
   ]
 }
 ```
@@ -1032,4 +1041,3 @@ flowchart TB
         D4[CLI / GUI 双版本]
     end
 ```
-
