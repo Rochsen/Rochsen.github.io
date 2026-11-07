@@ -38,8 +38,8 @@
           <!-- 心动值 -->
           <a-space :gutter="[16, 16]">
             <HeartFilled style="color: red;" />
-            <a-tooltip title="喜爱度">
-              <span style="color: red;">{{ item.myScore }}</span>
+            <a-tooltip title="好评率">
+              <span style="color: red;">{{ item.rating }}</span>
             </a-tooltip>
           </a-space>
         </template>
