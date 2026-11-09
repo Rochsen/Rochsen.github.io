@@ -2,10 +2,10 @@
 title: 将静态博客部署到Github
 date: 2026-01-21
 order: 1
-category: 部署
+category: [工作台]
 tag:
-    - 指南
-    - 博客
+  - 指南
+  - 博客
 breadcrumb: true
 sticky: true
 star: true
@@ -14,6 +14,7 @@ star: true
 <!-- more -->
 
 ## 第一步：本地创建项目
+
 ```powershell
 
 PS D:\project> pnpm create vuepress-theme-hope ./Vuepress-Version-Blog-Pnpm
@@ -80,14 +81,19 @@ Port 8080 is in use, trying another one...
 - 添加README
 
 ## 第三步：github仓库创建新的分支
+
 - 作用：用于存储静态html编译好的代码
 - 方法：在github点击分支创建，分支名称为blog_pages
+
 ## 第四步：需要让github支持对外访问
+
 1. 点击仓库的Setting
 2. 选择左侧侧边栏的`Github Pages `
 3. 选择将什么分支映射为可访问的静态站点，选择刚才创建的新分支`blog_pages`
 4. 点击save保存
+
 ## 第五步：去github生成一个Access Token
+
 1. 点击你的头像
 2. 选择下方的设置Settings
 3. 选择左侧侧边栏的开发者设置`developer Settings`
@@ -98,13 +104,16 @@ Port 8080 is in use, trying another one...
 8. 令牌复制，比如：XXXXXXXX
 
 ## 第六步：将令牌设置到博客仓库
+
 1. 在左侧侧边栏，选择安全-机密和变量（secrets and variables）- 代码空间
 2. 点击新建机密
 3. 标题为ACCESS_TOKEN，将密钥复制到密钥处
 4. 点击添加机密
 
 ## 第七步：vscode修改仓库.github/workflows下方的yml文件
+
 1. 修改部署文档的分支
+
 ```yaml
 - name: 部署文档
   uses: JamesIves/github-pages-deploy-action@v4
@@ -115,32 +124,40 @@ Port 8080 is in use, trying another one...
 	  branch: blog_pages
 	  folder: src\.vuepress\dist
 ```
+
 ## 第八步：绑定远程仓库
+
 - 将远程仓库的git地址添加到远程仓库
 - 将本地代码和远程的main分支进行合并
 - 发布到远程
+
 ## 第九步：修改部署的bug
+
 - 指定pnpm版本，如下
+
 ```shell
   - name: 设置 pnpm
 	uses: pnpm/action-setup@v4
 	with:
 	  version: 10
 ```
+
 - 将下斜杠windows的路径修改为上斜杠linux路径
+
 ## 第十步：修改src下的config.ts
+
 - 已经可以访问，但是样式不对，所以需要修改
 - 修改base键值，根据访问的github提供的名称
+
 ```ts
 export default defineUserConfig({
-  base: "/Vuepress-Version-Blog-Pnpm/",
-  lang: "zh-CN",
-  title: "博客演示",
-  description: "vuepress-theme-hope 的博客演示", 
-  theme,
-  // 和 PWA 一起启用
-  // shouldPrefetch: false,
+  base: "/Vuepress-Version-Blog-Pnpm/",
+  lang: "zh-CN",
+  title: "博客演示",
+  description: "vuepress-theme-hope 的博客演示",
+  theme, // 和 PWA 一起启用
+  // shouldPrefetch: false,
 });
-
 ```
+
 - 重新上传

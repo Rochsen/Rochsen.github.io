@@ -203,7 +203,7 @@ export default hopeTheme(
 
       // 调用 阿里云 图标库可以防止导航栏扰动
       icon: {
-        assets: "//at.alicdn.com/t/c/font_5224531_ae0oz2ruois.css", // 阿里云图标库
+        assets: "//at.alicdn.com/t/c/font_5224531_855pfng2ggl.css", // 阿里云图标库
       },
 
       // 被 algolia 拒绝，暂不使用

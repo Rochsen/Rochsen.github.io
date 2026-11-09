@@ -4,11 +4,10 @@ import { NoteSideBar, zhihuAiSideBar } from "./notes/index.ts";
 import { InvestmentSideBar } from "./investment/investment.ts";
 // import { SoftwaresSideBar } from "./softwares/softwares.ts";
 
-
 export const zhSideBarConfig = sidebar({
   // 学习 - 侧边栏
   "/notes/": NoteSideBar,
-  "/notes/deploy/": "structure",
+  "/notes/workbench/": "structure",
   "/notes/aiApplicationEngineer": zhihuAiSideBar,
   "/notes/bioinformatics/": "structure",
   "/notes/computerSci/": "structure",
