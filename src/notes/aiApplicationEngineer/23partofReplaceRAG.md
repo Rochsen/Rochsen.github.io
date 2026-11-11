@@ -1,6 +1,6 @@
 ---
 title: 部分场景中可以取代RAG的技术
-date: 2026-07-04
+date: 2026-09-28
 categories: [教程]
 tags: [AI, RAG]
 ---

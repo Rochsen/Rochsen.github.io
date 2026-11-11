@@ -1,6 +1,6 @@
 ---
 title: 封装Gateway模块，让你的Agent和IM连通
-date: 2026-07-04
+date: 2026-10-22
 categories: [教程]
 tags: [AI, Agent]
 ---

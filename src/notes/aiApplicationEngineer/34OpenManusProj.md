@@ -1,6 +1,6 @@
 ---
 title: OpenManus开发实战
-date: 2026-07-04
+date: 2026-11-06
 categories: [教程]
 tags: [AI, Agent]
 ---

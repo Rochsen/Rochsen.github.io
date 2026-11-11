@@ -1,6 +1,6 @@
 ---
 title: AI Coding中的团队重新分工与新协作模式
-date: 2026-07-04
+date: 2026-10-22
 categories: [教程]
 tags: [AI, vibeCoding]
 ---

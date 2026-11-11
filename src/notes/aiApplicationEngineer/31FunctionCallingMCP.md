@@ -1,6 +1,6 @@
 ---
 title: Function Calling与MCP
-date: 2026-07-04
+date: 2026-10-30
 categories: [教程]
 tags: [AI, mcp]
 ---

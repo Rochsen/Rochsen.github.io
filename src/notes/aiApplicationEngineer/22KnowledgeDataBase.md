@@ -1,6 +1,6 @@
 ---
 title: 项目实战：企业知识库
-date: 2026-07-04
+date: 2026-09-23
 categories: [教程]
 tags: [AI, Agent, 低代码]
 ---
