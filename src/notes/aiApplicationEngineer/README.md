@@ -9,7 +9,7 @@ timeline: false
 > [!tip]
 > 所有内容为AI Agent编写，仅供个人学习和研究，请勿用于商业用途
 >
-> 目前文档用到的Agent举例：Kimi、千问、Minimax、GLM等
+> 目前文档用到的Agent举例：Kimi、Minimax、GLM、DeepSeek等
 
 ## AI通识
 
@@ -38,7 +38,7 @@ timeline: false
 - [视觉与多模态模型](./15cvandMultiModal.md)
 - [项目实战：AI质检](./16aiChecK.md)
 
-## RAG
+## RAG专题
 
 - [Embeddings和向量数据库](./18Embeddings.md)
 - [RAG技术与应用](./19RAGTechApply.md)
@@ -55,12 +55,15 @@ timeline: false
 - [AI Coding中的团队重新分工与新协作模式](./28aiTeamMode.md)
 - [封装Gateway模块，让你的Agent和IM连通](./30gatewayAgentIM.md)
 
-## Agent
+## Agent专题
 
 - [Function Calling与MCP](./31FunctionCallingMCP.md)
 - [Agent的自主规划与工具开发](./32AgentRuler.md)
 - [Agent的能力优化与效果评估](./33AgentEnchance.md)
 - [OpenManus开发实战](./34OpenManusProj.md)
+
+## Harness专题
+
 - [Harness Engineering](./35HarnessEngineering.md)
 - [搭建Hermes Agent中的长期记忆和自进化能力](./36HermesAgentAbility.md)
 - [实现Hermes中的多Agent协作、主Agent调度](./37HermesAgentRuler.md)

@@ -2,7 +2,7 @@
 title: Harness Engineering
 date: 2026-11-11
 categories: [教程]
-tags: [AI, Agent]
+tags: [AI, Harness]
 ---
 
 <!-- more -->

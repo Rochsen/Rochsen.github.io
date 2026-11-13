@@ -21,7 +21,7 @@ export const zhihuAiSideBar = arraySidebar([
     ],
   },
   {
-    text: "深度学习",
+    text: "深度学习专题",
     children: ["9networkbaseTensorflow", "10cnnPytorch"],
   },
   {
@@ -35,7 +35,7 @@ export const zhihuAiSideBar = arraySidebar([
     ],
   },
   {
-    text: "RAG",
+    text: "RAG专题",
     children: [
       "18Embeddings",
       "19RAGTechApply",
@@ -56,12 +56,17 @@ export const zhihuAiSideBar = arraySidebar([
     ],
   },
   {
-    text: "Agent",
+    text: "Agent专题",
     children: [
       "31FunctionCallingMCP",
       "32AgentRuler",
       "33AgentEnchance",
       "34OpenManusProj",
+    ],
+  },
+  {
+    text: "Harness专题",
+    children: [
       "35HarnessEngineering",
       "36HermesAgentAbility",
       "37HermesAgentRuler",
