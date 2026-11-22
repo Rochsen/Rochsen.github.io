@@ -15,10 +15,16 @@ head:
       content: D61755CAE312F955
 projects:
   - icon: folderopen
-    name: 个人博客
+    name: 博客
     type: project
-    desc: 博客仓库
+    desc: 当前博客仓库位置
     link: https://github.com/Rochsen/Rochsen.github.io
+
+  - icon: link1
+    name: 简历
+    type: project
+    desc: 个人线上简历链接
+    link: https://intro.rochsen.cn/
 
   - icon: code
     name: 提示词生成和改进
@@ -32,7 +38,7 @@ projects:
     desc: 输入url可调用deepseek对网页内容总结
     link: https://github.com/Rochsen/web_summarizer
 
-  - icon: link
+  - icon: link1
     name: 任务清单
     type: link
     desc: vibe coding
