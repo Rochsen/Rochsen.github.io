@@ -1,14 +1,16 @@
-## title: loguru库的使用
+---
+title: loguru库的使用
 date: 2026-11-23
 order: 5
 category: [教程, python库]
 tag: [python]
 article: true
 star: true
+---
 
 给 Python 打日志。导入就能用，不用先配 Handler。
 
-
+<!-- more -->
 
 ```shell
 pip install loguru
@@ -17,8 +19,6 @@ pip install loguru
 Windows 上会自动装 `colorama` 和 `win32-setctime`。前者给控制台颜色，后者给轮转日志写创建时间。
 
 本文按 loguru 0.8.0 的源码核对过。包根只导出 `logger`。下文用到它的 `add`、`remove`、`trace`、`debug`、`info`、`success`、`warning`、`error`、`critical`、`exception`、`log`、`catch`、`bind`、`contextualize`、`patch`、`opt`、`level`、`disable`、`enable`、`configure`、`complete`、`parse`。
-
----
 
 下面两个值贯穿全文。为了结果稳定，先去掉默认的 stderr，把日志收到列表里。
 
