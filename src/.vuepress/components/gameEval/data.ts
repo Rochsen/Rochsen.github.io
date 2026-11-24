@@ -23,8 +23,8 @@ export const gameEvalColumns = [
     dataIndex: "gameCategory",
     key: "gameCategory",
     width: 200,
-    render: (_, record) => {
-      return record.gameCategory.map((category, index) =>
+    render: (_: any, record: GameEvaluation) => {
+      return record.gameCategory.map((category: string, index: number) =>
         h(
           "span",
           {
