@@ -1,7 +1,7 @@
 ---
 title: 保险
 icon: baoxian
-index: true
+index: false
 article: false
 timeline: false
 ---

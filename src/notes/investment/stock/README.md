@@ -1,7 +1,7 @@
 ---
 title: 股票
 icon: gupiao
-index: true
+index: false
 article: false
 timeline: false
 ---

@@ -1,8 +1,8 @@
 import { sidebar } from "vuepress-theme-hope";
 import { gamesSideBar } from "./games/index.js";
 import { NoteSideBar, zhihuAiSideBar } from "./notes/index.ts";
-import { InvestmentSideBar } from "./investment/investment.ts";
 import {
+  InvestmentSideBar,
   assetsSideBar,
   bondSideBar,
   fundSideBar,
@@ -19,7 +19,7 @@ export const zhSideBarConfig = sidebar({
   "/notes/bioinformatics/": "structure",
   "/notes/computerSci/": "structure",
   "/notes/py/": "structure",
-  // 投资：一级列出分类，更长前缀匹配后只显示对应分类
+  // 投资首页列出分类；stock/fund 等用更长前缀单独开栏
   "/notes/investment/": InvestmentSideBar,
   "/notes/investment/stock/": stockSideBar,
   "/notes/investment/bond/": bondSideBar,

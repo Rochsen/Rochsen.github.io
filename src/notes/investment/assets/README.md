@@ -1,7 +1,7 @@
 ---
 title: 资产
 icon: zichan
-index: true
+index: false
 article: false
 timeline: false
 ---

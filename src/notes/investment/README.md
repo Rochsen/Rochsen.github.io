@@ -1,9 +1,9 @@
 ---
-title: 投资
+title: 投资学习笔记
 index: false
 icon: moneybagfill
 article: false
-breadcrumb: false
+breadcrumb: true
 timeline: false
 ---
 

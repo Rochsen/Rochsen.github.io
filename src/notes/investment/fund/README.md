@@ -1,7 +1,7 @@
 ---
 title: 基金
 icon: jijin
-index: true
+index: false
 article: false
 timeline: false
 ---
