@@ -21,7 +21,7 @@ date: 2026-03-17
 
 
 <script setup>
-    import gameEvalCard from '@source/.vuepress/components/gameEval/gameStorage.vue'
+    import gameEvalCard from '@source/.vuepress/views/gameEval/gameStorage.vue'
 </script>
 
 

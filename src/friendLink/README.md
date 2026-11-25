@@ -16,4 +16,13 @@ timeline: false
 
 <!-- more -->
 
-正在建设中...
+
+<friendLinks />
+
+
+<script setup>
+    import friendLinks from '@source/.vuepress/views/friendLinks/App.vue'
+</script>
+
+
+
