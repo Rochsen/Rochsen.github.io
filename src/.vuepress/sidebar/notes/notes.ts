@@ -11,13 +11,15 @@ export const NoteSideBar = arraySidebar([
   {
     text: "投资学习笔记",
     icon: "moneybagfill",
+    prefix: "investment/",
     collapsible: true,
+    expanded: false,
     children: [
-      { text: "股票", icon: "gupiao", link: "investment/stock/" },
-      { text: "债券", icon: "zhaiquan", link: "investment/bond/" },
-      { text: "基金", icon: "jijin", link: "investment/fund/" },
-      { text: "资产", icon: "zichan", link: "investment/assets/" },
-      { text: "保险", icon: "baoxian", link: "investment/insurance/" },
+      { text: "股票", icon: "gupiao", link: "stock/" },
+      { text: "债券", icon: "zhaiquan", link: "bond/" },
+      { text: "基金", icon: "jijin", link: "fund/" },
+      { text: "资产", icon: "zichan", link: "assets/" },
+      { text: "保险", icon: "baoxian", link: "insurance/" },
     ],
   },
 ]);
