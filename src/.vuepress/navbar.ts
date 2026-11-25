@@ -5,6 +5,8 @@ export const zhNavbarConfig = navbar([
   "/notes/",
   "/softwares/",
   "/games/",
+  // "/anime/",
+  // "/movie/",
   "/friendLink/",
 ]);
 export const enNavbarConfig = navbar([

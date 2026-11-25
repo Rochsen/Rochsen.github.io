@@ -32,6 +32,12 @@ export const zhSideBarConfig = sidebar({
 
   // 软件 - 侧边栏
   "/softwares/": "structure",
+
+  // // 番剧 - 侧边栏
+  // "/anime/": "structure",
+
+  // // 电影 - 侧边栏
+  // "/movie/": "structure",
 });
 
 // 英文语言下的侧边栏

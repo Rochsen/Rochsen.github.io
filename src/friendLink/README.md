@@ -17,11 +17,11 @@ timeline: false
 <!-- more -->
 
 
-<friendLinks />
+<FriendApp />
 
 
 <script setup>
-    import friendLinks from '@source/.vuepress/views/friendLinks/App.vue'
+    import FriendApp from '@source/.vuepress/views/friendLinks/App.vue'
 </script>
 
 
