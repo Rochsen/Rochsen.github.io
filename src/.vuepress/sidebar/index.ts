@@ -2,6 +2,13 @@ import { sidebar } from "vuepress-theme-hope";
 import { gamesSideBar } from "./games/index.js";
 import { NoteSideBar, zhihuAiSideBar } from "./notes/index.ts";
 import { InvestmentSideBar } from "./investment/investment.ts";
+import {
+  assetsSideBar,
+  bondSideBar,
+  fundSideBar,
+  insuranceSideBar,
+  stockSideBar,
+} from "./investment/index.ts";
 // import { SoftwaresSideBar } from "./softwares/softwares.ts";
 
 export const zhSideBarConfig = sidebar({
@@ -12,17 +19,16 @@ export const zhSideBarConfig = sidebar({
   "/notes/bioinformatics/": "structure",
   "/notes/computerSci/": "structure",
   "/notes/py/": "structure",
+  // 投资：一级列出分类，更长前缀匹配后只显示对应分类
+  "/notes/investment/": InvestmentSideBar,
+  "/notes/investment/stock/": stockSideBar,
+  "/notes/investment/bond/": bondSideBar,
+  "/notes/investment/fund/": fundSideBar,
+  "/notes/investment/assets/": assetsSideBar,
+  "/notes/investment/insurance/": insuranceSideBar,
 
   // 游戏 - 侧边栏
   "/games/": gamesSideBar,
-
-  // 投资 - 侧边栏
-  "/investment/": InvestmentSideBar,
-  "/investment/stock/": "structure",
-  "/investment/fund/": "structure",
-  "/investment/bond/": "structure",
-  "/investment/insurance/": "structure",
-  "/investment/assets/": "structure",
 
   // 软件 - 侧边栏
   "/softwares/": "structure",

@@ -8,4 +8,5 @@ export const NoteSideBar = arraySidebar([
   "bioinformatics/", // 生物信息学笔记
   "computerSci/", // 计算机科学笔记
   "py/", // Python编程笔记
+  "investment/" // 投资学习笔记
 ]);

@@ -4,7 +4,6 @@ export const zhNavbarConfig = navbar([
   "/",
   "/notes/",
   "/softwares/",
-  "/investment/",
   "/games/",
   "/friendLink/",
 ]);
